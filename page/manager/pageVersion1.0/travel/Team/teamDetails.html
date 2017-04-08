@@ -1,0 +1,328 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>团队详情</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link href="../../../../../commonSkin/css/html_tools.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../../../../commonSkin/css/hDate.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../../../../managerSkin/bluecssboot1.0/css/pageStyle.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../../../../managerSkin/bluecssboot1.0/css/btnStyle.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../../../../managerSkin/bluecssboot1.0/css/popModal.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../../../../managerSkin/bluecssboot1.0/css/page_new.css" rel="stylesheet" type="text/css" media="screen"/>
+	<script src="../../../../../commonSkin/js/jquery-1.8.3.min.js"></script>
+	<script  language="javascript" src="../../../../../commonSkin/js/window_open.js"> </script>
+    <!-- DIV 弹出层-->
+    <link href="../../../../../managerSkin/bluecssboot1.0/js/divjquery/popup.css" rel="stylesheet" type="text/css" media="screen" />
+	<script language="javascript" src="../../../../../managerSkin/bluecssboot1.0/js/divjquery/popup.js"></script>
+    
+</head>
+
+<body>
+
+   <form method="post" name="myform" id="myform" action="chooseTraffic.html">
+	<!-- -right -->
+	<div class="ht_right">
+		<div class="clearfix h20"></div>
+		<div class="clearfix h5"></div>
+		<div class="position">您的位置：<a href="#">首页 - 计调中心 - 团队详情</a></div>
+		<!--<div class="clearfix h20"></div>-->
+		<div class="clearfix h5"></div>
+		<table class="mainTable" cellspacing="0" cellpadding="0" >
+			<tr>
+			<td colspan="4" class="mainTableBody">
+				<table class="inmainTable" cellspacing="0" cellpadding="0">
+					<tbody>
+						<tr class="inmainTable_title">
+							<td colspan="1"><strong class="f_16">团队详情</strong></td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- a标签添加跳转页面 -->
+				<div>
+					<a class="ht_btn_blue pull-left" href="javascript:newopenwindowshow();" style="height: 20px; line-height: 20px;">修改行程</a>   
+                     <a class="ht_btn_blue pull-left MARGIN_L_5" href="javascript:newopenwindowshow('chooseTraffic.html');" style="height: 20px; line-height: 20px;">设置交通</a>
+		             <a class="ht_btn_blue pull-left MARGIN_L_5" href="javascript:void(0);" id="divbtn" style="height: 20px; line-height: 20px;">设置导游</a>   
+				</div>
+				
+				<div class="clearfix h10"></div>
+                    <!--订单信息 -->
+				<div class="order_wrap">
+					<p>产品名称：【纵情版纳】直飞五日</p>
+                        <p>组团类型：散拼</p>
+					<p>团队状态：<span style="color: red;">销售中</span></p>
+                        <p>责任计调：吴美玲</p>
+                        <p>团队编号：SH160910024</p>
+                        <p>出团日期：2016/9/10</p>
+                        <p>返程日期：2016/9/14</p>
+                        <p>组团日期：2016/12/20</p>
+                        <p>计划人数：3人</p>
+                        <p>实际人数：3人</p>
+						<p>所属销售：那谁</p>
+                        <p>入住酒店：</p>
+                        <div class="title_ts">昆明  共3人  去程：09-10  虹桥-版纳 FM9453 (08 ：35 ) - 回程：09-14  版纳-虹桥 FM9454 (15 ：00  )</div>
+				</div>
+				<div class="clearfix h20"></div>
+				<!--报名记录 -->
+				<table class="inmainTable" cellspacing="0" cellpadding="0">
+					<tbody>
+							<tr class="inmainTable_title">
+								<td colspan="1"><strong class="f_16">报名记录</strong></td>
+							</tr>
+						</tbody>
+				</table>
+			
+				<table class="inmainTable" cellspacing="0" cellpadding="0">
+					<tr class="inmainTable_title">
+							<td>序号</td>
+							<td>销售底价</td>
+							<td>销售价</td>
+							<td>姓名</td>
+							<td>年龄阶段</td>
+                            <td>证件类型</td>
+                            <td>证件号</td>
+                            <td>性别</td>
+                            <td>年龄</td>
+                            <td>联系电话</td>
+                            <td>地区</td>
+						</tr>
+						<tr class="inmainTable_res">
+							<td>1</td>
+							<td >￥<span style="color:red;">522.00</span></td>
+							<td>￥<span style="color:red;">522.00</span></td>
+							<td>张三</td>
+							<td>成人</td>
+                            <td>身份证</td>
+                            <td>2122222222222</td>
+                            <td>男</td>
+                            <td>16</td>
+                            <td>13122123213</td>
+                            <td>湖南|株洲</td>
+						</tr>
+						<tr class="inmainTable_res">
+							<td>2</td>
+							<td >￥<span style="color:red;">522.00</span></td>
+							<td>￥<span style="color:red;">522.00</span></td>
+							<td>张三</td>
+							<td>成人</td>
+                            <td>身份证</td>
+                            <td>2122222222222</td>
+                            <td>男</td>
+                            <td>16</td>
+                            <td>13122123213</td>
+                            <td>湖南|株洲</td>
+						</tr>
+						<tr class="inmainTable_res">
+							<td>3</td>
+							<td >￥<span style="color:red;">522.00</span></td>
+							<td>￥<span style="color:red;">522.00</span></td>
+							<td>张三</td>
+							<td>成人</td>
+                            <td>身份证</td>
+                            <td>2122222222222</td>
+                            <td>男</td>
+                            <td>16</td>
+                            <td>13122123213</td>
+                            <td>湖南|株洲</td>
+						</tr>
+						<tr class="inmainTable_res">
+							<td>4</td>
+							<td >￥<span style="color:red;">522.00</span></td>
+							<td>￥<span style="color:red;">522.00</span></td>
+							<td>张三</td>
+							<td>成人</td>
+                            <td>身份证</td>
+                            <td>2122222222222</td>
+                            <td>男</td>
+                            <td>16</td>
+                            <td>13122123213</td>
+                            <td>湖南|株洲</td>
+						</tr>
+				</table>
+				<div class="clearfix h5"></div>
+				<!--<div class="tishi">
+                  <span class="pull-left">备注：这是为什么呢</span>
+                   <span class="pull-right">报名合计： 3人    33333元</span>
+                </div> -->  
+                <div class="clearfix h20"></div>
+                
+                <!--毛利统计--->
+				<table class="inmainTable" cellspacing="0" cellpadding="0">
+					<tbody>
+						<tr class="inmainTable_title">
+							<td colspan="1"><strong class="f_16">业绩统计</strong></td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="inmainTable" cellspacing="0" cellpadding="0">
+					<tr class="inmainTable_title">
+							<td>收入合计</td>
+							<td>成本合计</td>
+							<td>毛利</td>
+					</tr>
+					<tr class="inmainTable_res">
+							<td>￥<strong class="f_16 f_red">1523.12</strong></td>
+							<td>￥<strong class="f_16 f_red">1523.12</strong></td>
+							<td>￥<strong class="f_16 f_red">0.00</strong></td>
+							
+					</tr>
+				</table>
+				<div class="clearfix h5"></div>
+				<table class="inmainTable" cellspacing="0" cellpadding="0">
+					<tbody>
+						<tr class="inmainTable_res_noHover">
+								<td style="width: 80px;"><span class="pull-right f_14" style="position:relative;top:-10px;">结算备注：</span></td>
+								<td>
+									<textarea class="pull-left" style="width: 530px; margin-bottom: 20px; padding: 0; height:60px;"></textarea>
+								</td>								
+							</tr>		
+					</tbody>
+				</table>
+				<!--<div>
+					<a class="ht_btn_blue pull-left" id="gaojisuo" href="javascript:void(0);" style="height: 20px; line-height: 20px;">保存团队</a>
+				</div>-->
+				<table class="inmainTable" cellspacing="0" cellpadding="0">
+					<tbody>
+						<tr class="inmainTable_title">
+							<td colspan="1"><strong class="f_16">团队日记</strong></td>
+						</tr>
+						
+					</tbody>
+				</table>
+				<table class="inmainTable" cellspacing="0" cellpadding="0">
+					<tr class="inmainTable_res">
+							<td>操作人</td>
+							<td>操作时间</td>					
+							<td>团队状态</td>
+							<td>操作内容</td>		
+						</tr>
+						<tr class="inmainTable_res">
+							<td>张丽</td>
+							<td>2016-12-24 16:24:10</td>
+							<td><strong>待出行</strong></td>
+							<td>增加交通费用500</td>			
+						</tr>
+				</table>
+			
+				<div class="clearfix h20"></div>
+	<div class="clearfix h20"></div>
+	<div class="clearfix h20"></div>
+	<div class="clearfix h20"></div>
+	<div id="ht_bottom_price_zone" class="ht_bottom_price_zone">
+		<div class="clearfix h5"></div>
+        <a href="javascript:void(0)" onclick="toMyform();" class=" price_zone_ok" style="margin-left: 150px;">已出行</a>
+		<a href="customer_list.html" class="price_zone_cancel" style="margin-left: 5px;"><span class="f_darkgray">取消团队</span></a>
+		
+		<a href="javascript:void(0)" onClick="toMyform();" class="price_zone_cancel" style="margin-left: 5px;"><span class="f_darkgray">出行失败</span></a>
+	</div>
+
+	
+	<script src="../../../../managerSkin/bluecssboot1.0/js/page_public.js"></script>
+	<script src="../../../../commonSkin/js/popModal.js"/></script>
+      <script type="text/javascript"> 
+ 		$(function() {
+	 		/*控制按钮悬浮*/
+			$("#ht_bottom_price_zone").show();
+		});
+	</script>
+				<div class="clearfix h20"></div>
+			
+			</td>
+		</tr>
+		</table>
+	</div>
+	
+    <!--设置导游 start-->
+    <div id="popup" style="">
+      <div class="title">
+    <p data-title="设置导游"></p>
+    <span>x</span> </div>
+      <div class="cont">
+      <table class="mainTable" cellspacing="0" cellpadding="0">
+      <tr class="mainTableBody">
+      <td>
+     <table class="inmainTable" cellspacing="0" cellpadding="0">
+     <tr class=" inmainTable_res_noHover">
+     <td><span class="pull-right f_14">团编号：</span></td>
+      <td colspan="3">HS3523453</td>
+     </tr>
+     <tr class=" inmainTable_res_noHover">
+     <td><span class="pull-right f_14">全陪导游：</span></td>
+      <td colspan="3"><input type="text" class="ht_def_text pull-left" style="width: 300px;" /></td>
+     </tr>
+     <tr class=" inmainTable_res_noHover">
+     <td><span class="pull-right f_14">联系电话：</span></td>
+      <td colspan="3"><input type="text" class="ht_def_text pull-left" style="width: 300px;" /></td>
+     </tr>
+     <tr class=" inmainTable_res_noHover">
+     <td><span class="pull-right f_14">地接导游：</span></td>
+      <td colspan="3"><input type="text" class="ht_def_text pull-left" style="width: 300px;" /></td>
+     </tr>
+      <tr class=" inmainTable_res_noHover">
+     <td><span class="pull-right f_14">联系电话：</span></td>
+      <td colspan="3"><input type="text" class="ht_def_text pull-left" style="width: 300px;" /></td>
+     </tr>
+     <tr class=" inmainTable_res_noHover">
+     <td><span class="pull-right f_14">备注:</span></td>
+      <td colspan="3">
+      <textarea class="ht_def_text" style="width:300px; height:100px;"></textarea>
+      </td>
+     </tr>
+     <tr class=" inmainTable_res_noHover">
+      <td></td>
+      <td colspan="4" align="center">
+      <a class="price_zone_ok" style=" width:100px;" href="#">保存</a>&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;
+      <a class="price_zone_cancel"  style=" width:100px;" href="#">取消</a>
+      </td>
+       <td></td>
+        <td></td>
+     </tr>
+     </table>
+       </td>
+      </tr>
+      </table>
+      </div>
+      </div>
+<div id="mask_shadow"></div>
+    <!--设置导游 end-->
+	</form>
+    <script language="javascript">
+$(function () {
+
+  /**
+	  ifDrag: 是否拖拽
+	  dragLimit: 拖拽限制范围
+   */
+  $('#popup').popup({ifDrag: true, dragLimit: true});
+  
+});
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

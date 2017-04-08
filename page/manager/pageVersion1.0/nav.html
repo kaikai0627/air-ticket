@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>订单中心</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="../../../commonSkin/css/html_tools.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="../../../commonSkin/css/hDate.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="../../../managerSkin/bluecssboot1.0/css/pageStyle.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="../../../managerSkin/bluecssboot1.0/css/btnStyle.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="../../../managerSkin/bluecssboot1.0/css/popModal.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="../../../managerSkin/bluecssboot1.0/css/nav.css" rel="stylesheet" type="text/css" media="screen"/>
+</head>
+<body>
+
+<!-- top-->
+<div class="ht_top">
+  <div class="logo">
+  <span class="logo_img"></span> </div>
+  <div class="lf lf_animate"><a href=""> <span class="menu"></span></a> </div>
+  <div class="dh">
+    <ul>
+      <!--机票-->
+      <li class="mmouse on" id="t_sel1"><span class="ticket_img"></span><i>&nbsp;&nbsp;&nbsp;机票</i></li>
+      <!--旅游-->
+      <li class="mmouse" id="t_sel2"><span class="tour_img"></span><i>&nbsp;&nbsp;&nbsp;旅游</i></li>
+      <!--客户中心-->
+      <li class="mmouse" id="t_sel3"><span class="client_img"></span><i>&nbsp;&nbsp;&nbsp;客户中心</i></li>
+      <!--系统-->
+      <li class="mmouse" id="t_sel4"><span class="system_img"></span><i>&nbsp;&nbsp;&nbsp;系统</i></li>
+    </ul>
+  </div>
+  <div class="dh_r">
+      <ul>
+       <li> <a class="mail" href="#"><i class="msgNum">11</i><span class="name"></span></a> </li>
+      <li class="mop mop_user"> <span class="name"></span>
+        <div id="menuOpen_name" class="menuOpen" style="display: none">
+          <ul>
+            <li><a href="my_info.html">我的资料</a></li>
+            <li><a href="pwd_edit.html">密码修改</a></li>
+          </ul>
+        </div>
+      </li>
+      <li onclick="location.href='service.html'" class="service"> <span class="name"></span> </li>
+      <li onclick="location.href='login.html'" class="news"> <span class="name"></span> </li>
+    </ul>
+  </div>
+</div>
+
+<!-- top ed-->
+<div class="clearfix"></div>
+
+<!-- left -->
+<div class="ht_left" id="crippled">
+  <div class="clearfix h20"></div>
+  <ul>
+    <!--    线路-->
+    <li class="mop"> <a class="user circuit" href="#"><span class="circuit_img"></span><b>线路</b></a></li>
+    
+    <!--    计调-->
+    <li class="mop"> <a class="user operator" href="#"><span class="operator_img"></span><b>计调计调</b></a></li>
+    <li class="mop"><a class="order" href="#"><span class="order_img"></span><b>订单</b></a>
+     <div class="suspend" style="width: 2000px;float: left">
+      <div class="suspend suspend_top">
+        <div class="one">
+          <ul class="lf">
+            <li><a href="order_manager.html">订单中心</a></li>
+            <li><a href="order_refund.html">退票订单</a></li>
+            <li><a href="order_temp.html">暂存订单</a></li>
+            <li><a href="order_faild.html">作废订单</a></li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </li>
+    
+    <li class="mop"> <a class="user operator" href="#"><span class="operator_img"></span><b>计调</b></a></li>
+    <li class="mop"><a class="order" href="#"><span class="order_img"></span><b>订单</b></a>
+     <div class="suspend" style="width: 2000px;float: left">
+      <div class="suspend">
+        <div class="one">
+          <ul class="lf">
+            <li><a href="order_manager.html">订单中心</a></li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </li>
+    <!--    结算-->
+    <li class="mop"> 
+    	<a class="calculate" href="#" style="height:50px;">
+    		<span class="calculate_img"></span><b>结算</b>
+    	</a> 
+    </li>
+    <!--   	报表-->
+    <li class="mop mop_report"> <a class="report" href="#"><span class="report_img"></span><b>报表</b></a>
+     <div class="suspend" style="width: 2000px;float: left">
+      <div class="suspend" style="width: auto;">
+        <ul class="lf" style="float: left">
+          <li><strong class="f_gray f_14">财务报表</strong></li>
+          <li><a href="order_get.html">应收订单</a></li>
+          <li><a href="order_pay.html">应付订单</a></li>
+        </ul>
+        <ul class="lf" style="float: left">
+          <li><strong class="f_gray f_14">销售报表</strong></li>
+          <li><a href="sale_count.html">销售统计</a></li>
+          <li><a href="sale_rank.html">业绩排行</a></li>
+          <li><a href="receivable_count.html">未收款统计</a></li>
+        </ul>
+        <ul class="lf" style="float: left">
+          <li><strong class="f_gray f_14">返扣报表</strong></li>
+          <li><a href="order_noReturn.html">未返扣订单</a></li>
+          <li><a href="order_hasReturn.html">已反扣订单</a></li>
+        </ul>
+      </div>
+     </div>
+    </li>
+    
+    <!-- 	 配置-->
+    <li class="mop"> <a class="user configuration" href="#"><span class="configuration_img"></span><b>配置</b></a></li>
+  </ul>
+</div>
+<!-- left ed -->
+
+<div class="clearfix h20"></div>
+<div class="clearfix h20"></div>
+<div class="clearfix h20"></div>
+<div class="clearfix h20"></div>
+<script src="../../../commonSkin/js/jquery-1.8.3.min.js"></script>
+<script src="../../../managerSkin/bluecssboot1.0/js/page_public.js"></script>
+<script src="../../../commonSkin/js/hDate.js"></script>
+<script src="../../../commonSkin/js/popModal.js"></script>
+
+<script>
+$(function(){
+
+//	点击汉堡包 执行动画  改变样式
+	$('.ht_top .lf').toggle(function(){
+		$('.suspend').addClass('lf100');
+		$('.menuOpen').addClass('lf100');
+        $('.ht_left .mop b').stop().animate({'opacity':0},0);
+		$('.logo,.logo>span').stop().animate({"width":0});
+        $('.lf_animate span').removeClass('menu');
+        $('.lf_animate span').addClass('addmenu');
+		$('#main').css('margin-left','120px');
+		$('.ht_left').stop().animate({"width":100},100);
+
+	},function(){
+		$('.menuOpen').removeClass('lf100');
+		$('.suspend').removeClass('lf100');
+		$('.logo,.logo>span').stop().animate({"width":128})
+		$('.ht_left .mop b').stop().animate({'opacity':1},500);
+        $('.lf_animate span').removeClass('addmenu');
+        $('.lf_animate span').addClass('menu');
+		$('#main').css('margin-left','220px');
+        $('.ht_left').stop().animate({"width":200},100);
+
+	})
+//	菜单栏移入移出
+	$('.dh_r>ul>li').hover(function(){
+		$(this).addClass('active');
+	},function(){
+		$(this).removeClass('active');
+	})
+
+//  /*侧边栏 移入移除 显示隐藏*/
+  $('.mop').mouseover(function(){
+    $(this).find('.suspend').css('display','block');
+  });
+  $('.mop').mouseout(function(){
+    $(this).find('.suspend').css('display','none');
+  });
+})
+
+	
+</script>
+</body>
+</html>

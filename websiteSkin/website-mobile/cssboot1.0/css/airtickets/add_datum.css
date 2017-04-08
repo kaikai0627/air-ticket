@@ -1,0 +1,263 @@
+/*大容器*/
+
+/*字体图标*/
+@font-face {
+    font-family: 'iconfont';  /* project id 268261 */
+    src: url('//at.alicdn.com/t/font_d9c3fien1edygb9.eot');
+    src: url('//at.alicdn.com/t/font_d9c3fien1edygb9.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_d9c3fien1edygb9.woff') format('woff'),
+    url('//at.alicdn.com/t/font_d9c3fien1edygb9.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_d9c3fien1edygb9.svg#iconfont') format('svg');
+}
+.iconfontyyy{
+    font-family:"iconfontyyy" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
+
+/*头部 时间确认*/
+.main{
+    width: 100%;
+    height: 100%;
+    font-size: .7rem;
+    color: #607D8B;
+    padding: 0;
+}
+.main>.top{
+    width: 100%;
+    height: 2.8rem;
+}
+.main>.top .top_box{
+    box-shadow: 1px 1px 2px #A6DAF4;
+    width: 96%;
+    height: 2.4rem;
+    line-height: 2.4rem;
+    margin: .3rem auto;
+    background: #fff;
+    border: 1px solid #A6DAF4;
+}
+
+/*添加  选择乘机人*/
+.add{
+    width: 100%;
+    background: #fff;
+}
+.add>.select p{
+    margin: 0 1rem;
+}
+.add>.select p span{
+    color: #BDBFBF;
+}
+.add .passenger{
+    border-bottom: 1px solid #E8E8E8;
+}
+.add .passenger .not_add,.add .passenger .added{
+    border: 1px solid #039BE5;
+    width: 5rem;
+    height: 2rem;
+    line-height: 2rem;
+    border-radius: 3px;
+    text-align: center;
+    color: #039bf5;
+    margin: .3rem 1rem;
+}
+.add .passenger .added{
+    border:1px solid #9C989C;
+    color: #9C989C;
+}
+.add .passenger .not_add span,.add .passenger .added span,.add .passenger .not_add span a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    line-height: 2rem;
+    text-align: center;
+}
+/*乘客人详情*/
+.particulars{
+    width: 100%;
+    height: 2rem;
+    margin-top: .5rem;
+    border-bottom: 1px solid #F0EDF0;
+    padding-bottom: 2.5rem;
+    display: none;
+}
+.particulars>div:last-child{
+    color: #A8A4C4;
+    width: 90%;
+}
+.particulars>div:first-child{
+    width: 10%;
+    text-align: center;
+    line-height: 2rem;
+}
+
+.add .add_passenger{
+    width: 100%;
+}
+.add .add_passenger strong{
+    display: inline-block;
+    color: #039fe5;
+    font-weight: 500;
+}
+.add .add_passenger strong b,.particulars>div:first-child b{
+    display: inline-block;
+    border: 1px solid #039fe5;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    font-weight: 900;
+    margin: .5rem;
+}
+.particulars>div:first-child b{
+    color: #E51C23;
+    border:1px solid #E51C23;
+}
+
+/*填写手机号 & email*/
+.add_phone{
+    width: 100%;
+    background:#fff;
+    margin-top: .5rem;
+}
+.add_phone>ul{
+    display: flex;
+    width: 94%;
+    margin: 0 auto;
+}
+.add_phone>ul li{
+    height: 2rem;
+    line-height: 2rem;
+}
+.right_bor{
+    border-right: 1px solid #E8E8E8;
+}
+.bottom_bor{
+    border-bottom: 1px solid #e8e8e8;
+}
+.add_phone>ul li.area_code{
+    flex:1 ;
+}
+.add_phone>ul li.phone{
+    flex: 2;
+}
+.add_phone>ul li.phone input{
+    height: 2rem;
+    border: none;
+    margin-left: 1rem;
+}
+.add_phone>ul li.frontier{
+    flex: 1;
+}
+.add_phone>ul li.frontier select{
+    border: none;
+}
+.add_phone>ul li.frontier select option{
+    border: none;
+}
+.add_phone .email{
+    width: 94%;
+    margin: 0 auto;
+    height: 2rem;
+    line-height: 2rem;
+}
+.add_phone .email input{
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    border: none;
+}
+/*保险*/
+.insurance{
+    width: 100%;
+    background: #fff;
+    margin-top: .5rem;
+}
+.insurance>div{
+    width: 94%;
+    display: flex;
+    height: 3rem;
+    padding: .5rem .2rem;
+    margin: 0 auto;
+    border-bottom: 1px solid #F0F0F2;
+
+}
+.accident .iconfont,.delay .iconfont{
+    color: #039FE5;
+    margin-left: .2rem;
+}
+.accident>.left p,.delay>.left p{
+    color:#FF9E77;
+}
+p{
+    margin: 0;
+}
+.insurance .accident ul.left,.insurance .delay ul.left,.insurance .certificate ul.right{
+    flex: 3;
+}
+.insurance .accident ul.left li:last-child,.insurance .delay ul.left li:last-child{
+    color: #D9D9D9;
+}
+.insurance .accident ul.right,.insurance .delay ul.right,.insurance .certificate ul.right{
+    flex: 1;
+}
+.item-input{
+    text-align: right;
+}
+.certificate{
+    line-height: 2rem;
+}
+/*优惠券*/
+.favorable{
+    width: 100%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding-left: .8rem;
+    margin-top: .5rem;
+    background: #fff;
+    display: flex;
+}
+.favorable div:first-child{
+    flex: 3;
+}
+.favorable div:last-child{
+    flex: 1;
+    text-align: right;
+    padding-right: 1rem;
+}
+/*底部*/
+.footer{
+    width: 100%;
+    height: 3rem;
+    line-height: 3rem;
+    padding-left: 1rem;
+    font-size: .5rem;
+}
+/*去支付*/
+.payment{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 3rem;
+    background: #fff;
+    line-height: 3rem;
+    text-align: right;
+}
+.pay strong{
+    float: left;
+    color:#FF9B09;
+    padding-left: 1rem;
+}
+.pay a{
+    display: inline-block;
+    width: 8rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    background: #FFA726;
+    color: #fff;
+    text-align: center;
+    border-radius: 3px;
+    margin: 0 .5rem;
+}

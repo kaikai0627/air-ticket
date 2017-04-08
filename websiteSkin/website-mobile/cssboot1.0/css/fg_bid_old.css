@@ -1,0 +1,266 @@
+@charset "utf-8";
+
+/******************** def **************************/
+
+body { font-family: Microsoft YaHei,"微软雅黑"; margin: 0px auto; text-align:center; background-color: #f5f5f5; }
+a.mainColor:link { color: #0f7ef1; font-weight:600; text-decoration: none; }
+a.mainColor:visited { color: #0f7ef1; font-weight:600; text-decoration: none;}
+a.mainColor:hover { color: #0f7ef1; font-weight:600; text-decoration: none; }
+
+
+.pubMain { width: 850px; text-align: center; margin: 0px auto 0px auto; }
+
+.lanview { height: 60px; background-color: white; border-top: 1px #ccc solid; position:fixed; bottom:0; text-align: center;  z-index: 82; display: ;  width: 850px; }
+.lanTab { color: #333; width: 920px; height: 60px; font-size: 15px; margin: 0px auto; }
+.lanTab .price { color: #0f7ef1; font-size: 25px; text-align: center; }
+.lanTab .btn { background: orange; cursor: pointer; font-size: 18px;  color: white; text-align: center; padding: 0px 100px 0px 100px; height: 35px; line-height: 35px; border:0px; border-radius:3px;}
+.sky { width: 830px; background-color: #e2e0e0; padding: 10px; text-align: center;  }
+.sky .top_def { background-color: white; border-top-left-radius:5px; border-top-right-radius:5px; margin: 0px auto; cursor: pointer; text-align: center; }
+.sky .sp_info_blue { border-radius:5px; float: left; height: 22px; line-height: 20px;  padding:0px 3px 0px 3px; background-color: #0f7ef1;  text-align:center; font-size: 14px; color: white; margin: 2px 10px 0px 15px; } 
+.sky .fst { font-size: 20px; color: #777; }
+.sky .fst_t { font-size: 23px; color: #777; }
+.sky .bot_def { background-color: #f4f2f2; border-bottom-left-radius:5px; border-bottom-right-radius:5px; margin: 0px auto; }
+.bot_def .in_bot_def { width: 100%;}
+.in_bot_def td { width: 20%; padding: 0px 0px 0px 0px; text-align:center; }
+.in_bot_def .td_1 { border-right: 1px #ccc solid; }
+.in_bot_def .title { font-size: 16px; color: #888;  }
+.in_bot_def .price { color: #FF3333; font-size: 16px; }
+.in_bot_def .alink { color: #FF3333; font-size: 14px; text-decoration: underline; cursor:pointer; }
+.top_def .inFullDet { margin: 0 auto; width: 70%; }
+.inFullDet .date { font-size: 16px; color: #777; }
+.inFullDet .time { font-size: 30px; }
+.inFullDet .port { font-size: 16px; color: #777;}
+.inFullDet .img_arrow { width: auto; height: auto; }
+.guest { width: 100%; height: 50px; line-height: 50px; text-align: left; text-indent: 1em; border-bottom: 1px #dadada solid; background-color: white; }
+.guest .title { font-size: 18px; color: #333;}
+.guest .fz { color: #888; font-size: 14px; }
+
+.oneGuest { margin: 0 auto; background-color: white; width: 100%; }
+.oneGuestNb { margin: 0 auto; background-color: white; width: 100%; border-top: 1px #dadada solid; border-bottom: 1px #dadada solid;  }
+.oneGuestNb .pic_l { width:5%; }
+.oneGuest .pic_l { width:5%; }
+.oneGuestNb .bid_del { width: 30px; height: 30px; cursor: pointer; margin-top: 8px; }
+.oneGuest .bid_del { width: 30px; height: 30px; cursor: pointer; margin-top: 8px; }
+.oneGuest .bid_plus { width: 30px; height: 30px; cursor: pointer; margin-top: 2px; }
+.oneGuest .inputPb { background-color: white;  border-radius: 0px; float: left; font-size: 20px; color: #777; height: 40px; line-height: 40px; border-top: 0px; border-left: 0px; border-right: 0px; border-bottom: 1px #ccc solid; width: 90%; font-family: Microsoft YaHei,"微软雅黑";  outline:none; }
+.oneGuestNb .inputPb { background-color: white;  border-radius: 0px; float: left; text-indent: 0.5em; font-size: 22px; color: #777; height: 40px; line-height: 40px; border-top: 0px; border-bottom: 0px;  border-left: 0px; border-right: 0px; width: 90%; font-family: Microsoft YaHei,"微软雅黑"; outline:none;  }
+.oneGuestNb .inputPbNb { background-color: white;  border-radius: 0px; text-indent: 1em; float: left; font-size: 22px; color: #777; height: 40px; line-height: 40px; border-top: 0px; border-left: 0px; border-right: 0px; border-bottom: 0px; width: 90%; font-family: Microsoft YaHei,"微软雅黑"; outline:none;  }
+
+.icc_xx { float: left; width: 20px; height: 20px; }
+.icc_font { float: left; color: red; font-size: 12px; }
+
+.oneGuest .inputEn {  border-radius: 0px; float: left; font-size: 22px; color: #777; height: 40px; line-height: 40px; border-top: 0px; border-left: 0px; border-right: 0px; border-bottom: 1px #ccc solid; width: 40%; margin-right: 10px; outline:none;  }
+.oneGuest .font_plus { color: #0f7ef1; font-weight: 600; float: left; cursor: pointer; font-size: 18px;  font-family: Microsoft YaHei,"微软雅黑";  }
+.oneGuest .font_plus_gray { color: #666; font-weight: 600; float: left; cursor: pointer;  font-size: 18px;   font-family: Microsoft YaHei,"微软雅黑";}
+.oneGuest .selbook { border-bottom: 1px #ccc solid; text-align: right; width: 150px; font-size: 18px; cursor: pointer; position: relative; }
+.oneGuestNb .title { font-size: 20px; color: #666; text-indent: 0.5em; font-family: Microsoft YaHei;}
+.oneGuestNb .titleSel { font-size: 20px; color: #0f7ef1; text-indent: 0.5em; font-family: Microsoft YaHei; }
+.oneGuestNb .fuz { font-size: 14px; color: #888; text-indent: 0.5em;}
+.icon_sel { width: 40px; height: 40px; cursor: pointer;  }
+.icon_def { width: 40px; height: 40px; cursor: pointer; }
+.f_yourC { font-size: 14px;} 
+.hySelect { cursor: pointer; width: 80px; text-align: left; }
+.boSelect { cursor: pointer; width: 100px; text-align: left;}
+.boSelect2 { cursor: pointer; width: 70px; text-align: left;}
+.bo_def { width: 60px; height: 31px; cursor: pointer; float: left;}
+.bo_on { width: 60px; height: 31px; cursor: pointer; float: left;}
+.en_cn { width: 80px; height: 34px; position: absolute; z-index: 5; right: 15px; top: 4px; cursor: pointer;  }
+.show_zj_zone { position: absolute; z-index: 83; right: 0px; top: 40px; display: none;  }
+.show_zj_zone .tab { font-size: 16px; background-color: #0f7ef1; border-radius:3px; width: 400px; color: white; text-align:center;   filter:alpha(opacity:90); opacity:0.9;}
+#Ps_fs { font-size: 20px; text-indent: 2em;}
+.oneGuestNb .pos { width: 10px; height: 15px;  }
+.lj_info { font-size: 16px; color: #888; text-align:left; padding: 10px; }
+#showMyDet { height: auto; background-color: #f1f7fe; position:fixed; bottom:60px; text-align: center;  z-index: 81; display: none;  width: 850px; display: none; border-top: 3px #0f7ef1 solid; }
+#showMyDet .inShowMyDet { width: 95%; margin: 0px auto; font-size: 16px; }
+#showMyDet .inShowMyDet .price { color: #ff7d27;}
+#showMyDet .inShowMyDet td { height: 25px; }
+#showMyDet .inShowMyDet .new_title { height: 30px; color #888; text-align: left; background-color: #eee; text-indent: 1em; }
+
+#selGuestNum { height: 300px; background-color: #f1f7fe; position:fixed; bottom:0px; text-align: center;  z-index: 102; display: none;  width: 100%; display: none; border-top: 3px #0f7ef1 solid; overflow:hidden; overflow:scroll; overflow-x: hidden; overflow-y: auto;}
+#selGuestNum .inShowMyDet { width: 90%; margin: 0px auto; font-size: 14px;  }
+#selGuestNum .inShowMyDet .price { color: #ff7d27;}
+#selGuestNum .inShowMyDet td { height: 50px; height: 50px; border-bottom: 1px  #eee solid; font-size: 20px; }
+
+#selGuestType { height: 100px; background-color: #f1f7fe; position:fixed; bottom:0px; text-align: center;  z-index: 999; display: none;  width: 100%; display: none; border-top: 3px #0f7ef1 solid; overflow:hidden; overflow:scroll; overflow-x: hidden; overflow-y: auto;}
+#selGuestType .inShowMyDet { width: 90%; margin: 0px auto; font-size: 20px;  }
+#selGuestType .inShowMyDet .price { color: #ff7d27;}
+#selGuestType .inShowMyDet td { height: 50px; height: 50px; border-bottom: 1px  #eee solid; font-size: 20px; cursor: pointer; }
+
+
+#buy_read { height: auto; background-color: white; position:fixed; bottom:60px; text-align: center;  z-index: 81; display: none;  width: 100%; display: none; }
+#buy_read .inShowMyDet { width: 70%; margin: 0px auto; font-size: 16px; }
+#buy_read .inShowMyDet ul { margin: 0px 0px 10px 10px ; padding: 0px; color: #666; }
+#buy_read .inShowMyDet li { height:45px;  }
+.det_font_s { display: ; }
+
+.sky_pay { width: 100%;  margin: 0 auto; background-color: white; text-align: center; padding: 0px 0px 1px 0px; border-bottom: 1px #dadada solid;  }
+.in_bot_def_pay { width: 96%; margin: 0 auto; }
+.in_bot_def_pay .title { font-size: 16px;  color: black; }
+.in_bot_def_pay .td_1 { text-align: left; }
+.in_bot_def_pay .price { color: #FF3333; font-size: 30px; font-weight: 600; }
+.in_bot_def_pay .hud { font-size: 12px; color: #777; }
+.wx_icon { width: 31px; height: 26px; margin: 3px 0px 0px 10px; cursor: pointer;}
+.alipay_icon { width: 31px; height: auto; margin: 3px 0px 0px 10px; cursor: pointer; }
+.pay_font .titleSel { font-size: 20px; color: #FF3300; text-indent: 0.5em; float: left; margin: 3px 0px 0px 0px; cursor: pointer; font-family: Microsoft YaHei;}
+.pay_font .title { font-size: 20px; color: #999; text-indent: 0.5em; float: left; margin: 3px 0px 0px 0px; cursor: pointer; font-family: Microsoft YaHei;}
+.lanTabPay { color: #333; width: 100%; height: 70px; font-size: 15px;  margin: 0px auto;  }
+.lanTabPay .btn { background: orange; cursor: pointer; font-size: 18px;  color: white; text-align: center; padding: 0px 0px 0px 0px; width: 850px; height: 45px; line-height: 45px; border:0px; border-radius:0px; margin-bottom: 10px; }
+.lanTabPay .btn2 { background: #dadada; cursor: pointer; font-size: 18px;  color: #888; text-align: center; padding: 0px 0px 0px 0px; width: 850px; height: 45px; line-height: 45px; border:0px; border-radius:0px; margin-bottom: 10px; }
+
+.boSelect_pay { cursor: pointer; width: 60px; text-align: left; color: #555;}
+.boSelect_mobile_code_td { border-left: 1px #dedbdb solid; text-align: center; }
+.date_arrow_pubstyle { height: 20px; width: 15px; }
+
+.order_c_1 { width: 100%; margin: 20px auto 0px auto; background-color: white; border-radius:5px; cursor: pointer; }
+.hasCancel { color: #666; }
+.order_c_1 .btn { background: white; cursor: pointer; font-size: 18px;  color: #0f7ef1; text-align: center; padding: 0px 20px 0px 20px; width: auto; height: 40px; line-height: 40px; border:1px #0f7ef1 solid; ; border-radius: 5px; }
+
+.order_c_1 .line_1_f_1 { padding: 0px 10px 0px 10px; height: 40px; border-right: 1px #ccc solid; line-height: 40px; font-size: 20px; float: left; }
+.order_c_1 .line_1_f_2 { padding: 0px 10px 0px 10px; height: 40px; line-height: 40px; font-size: 20px; float: left; }
+.order_c_1 .line_1_f_3 { float: right; font-size: 20px; line-height:40px; height: 40px; }
+
+.detX_style { width: 20px; height: 20px; border: 0px; }
+
+/******************** small **************************/
+
+@media screen and (max-width:640px){
+
+body { font-family: Microsoft YaHei,"微软雅黑"; margin: 0px auto; text-align:center; background-color: #f5f5f5; }
+a.mainColor:link { color: #0f7ef1; font-weight:600; text-decoration: none; }
+a.mainColor:visited { color: #0f7ef1; font-weight:600; text-decoration: none;}
+a.mainColor:hover { color: #0f7ef1; font-weight:600; text-decoration: none; }
+
+.pubMain { width: 100%; margin: 0px auto 0px auto; text-align: center;  }
+.lanview { height: 60px; background-color: white; border-top: 1px #ccc solid; position:fixed; bottom:0; text-align: center;  z-index: 82; display: ;  width: 100%;  font-family: Arial, Helvetica, sans-serif; }
+.lanTab { color: #333; width: 100%; height: 60px; font-size: 15px;  margin: 0px auto; }
+.lanTab .price { color: #FF6600; font-size: 25px; text-align: center; }
+.lanTab .btn { background: #0f7ef1; cursor: pointer; font-size: 20px;  color: white; text-align: center; padding: 0px 15px 0px 15px; height: 35px; line-height: 30px; border:0px; border-radius:3px;}
+.sky { width: 100%; background-color: #dadada; text-align: center; padding: 0px 0px 1px 0px; font-family: Arial, Helvetica, sans-serif;   }
+.sky .top_def { background-color: white; border-top-left-radius:0px; border-top-right-radius:0px; margin: 0px auto; cursor: pointer; text-align: center; }
+.sky .sp_info_blue { border-radius:5px; float: left; height: 18px; line-height: 16px;  padding:0px 3px 0px 3px; background-color: #0f7ef1;  text-align:center; font-size: 12px; color: white; margin: 0px 10px 0px 15px; } 
+.sky .fst { font-size: 14px; color: #777; font-family: Microsoft YaHei; }
+.sky .fst_t { font-size: 15px; color: #777; font-family: Microsoft YaHei; }
+.sky .bot_def { background-color: #eef2fc; border-bottom-left-radius:0px; border-bottom-right-radius:0px; margin: 0px auto; }
+.bot_def .in_bot_def { width: 100%;}
+.in_bot_def td { width: 20%; padding: 0px 0px 0px 0px; text-align:center; }
+.in_bot_def .td_1 { border-right: 1px #dadada solid; }
+.in_bot_def .title { font-size: 12px; color: #888; }
+.in_bot_def .price { color: #FF3333; font-size: 13px; }
+.in_bot_def .alink { color: #FF3333; font-size: 12px; text-decoration: underline; cursor:pointer; }
+.top_def .inFullDet { margin: 0 auto; width: 70%; }
+.inFullDet .date { font-size: 12px; color: #777; }
+.inFullDet .time { font-size: 16px; }
+.inFullDet .port { font-size: 12px; color: #777;}
+.inFullDet .img_arrow { width: 50px; height: auto; }
+
+.guest { width: 100%; height: 40px; line-height: 40px; text-align: left; text-indent: 1em; border-bottom: 1px #dadada solid; }
+.guest .title { font-size: 16px; color: #333;}
+.guest .fz { color: #888; font-size: 12px; }
+.oneGuest { margin: 0 auto; background-color: white; width: 100%;  font-family: Arial, Helvetica, sans-serif;  }
+.oneGuestNb { margin: 0 auto; background-color: white; width: 98%; border-top: 1px #dedbdb solid; border-bottom: 1px #dedbdb solid; font-family: Arial, Helvetica, sans-serif;  }
+.oneGuestNb .pic_l { width:5%; }
+.oneGuest .pic_l { width:5%; }
+.oneGuestNb .bid_del { width: 20px; height: 20px; cursor: pointer; margin-top: 5px; }
+.oneGuest .bid_del { width: 20px; height: 20px; cursor: pointer; margin-top: 13px; }
+.oneGuest .bid_plus { width: 20px; height: 20px; cursor: pointer; margin-top: 3px; }
+
+.oneGuest .inputPb { background-color: white; border-radius: 0px; float: left; font-size: 17px; color: #777; height: 40px; line-height: 40px; border-top: 0px; border-left: 0px; border-right: 0px; border-bottom: 1px #ccc solid; width: 95%; font-family: Microsoft YaHei,"微软雅黑";}
+
+.oneGuest .inputPb_alert { background-color: white; border-radius: 0px; float: left; font-size: 17px; color: #777; height: 40px; line-height: 40px; border-top: 0px; border-left: 0px; border-right: 0px; border-bottom: 1px red solid; width: 95%; font-family: Microsoft YaHei,"微软雅黑";}
+
+.icc_xx { float: left; width: 15px; height: 15px; }
+.icc_font { float: left; color: red; font-size: 12px; margin-left: 5px; }
+
+.oneGuestNb .inputPb { background-color: white; border-radius: 0px; float: left; text-indent: 0.5em; font-size: 17px; color: #777; height: 40px; line-height: 40px; border-top: 0px; border-bottom: 0px;  border-left: 0px; border-right: 0px; width: 95%; font-family: Microsoft YaHei,"微软雅黑";}
+
+.oneGuestNb .inputPb_alert { background-color: white; border-radius: 0px; float: left; text-indent: 0.5em; font-size: 17px; color: #777; height: 40px; line-height: 40px; border-top: 0px; border-bottom: 0px;  border-left: 0px; border-right: 0px; width: 95%; font-family: Microsoft YaHei,"微软雅黑";}
+
+
+.oneGuestNb .inputPbNb { background-color: white; border-radius: 0px; text-indent: 1em; float: left; font-size: 17px; color: #777; height: 40px; line-height: 40px; border-top: 0px; border-left: 0px; border-right: 0px; border-bottom: 0px #ccc solid; width: 95%; font-family: Microsoft YaHei,"微软雅黑"; }
+
+.oneGuestNb .inputCNB { background-color: white; border-radius: 0px; text-indent: 1em; float: left; font-size: 17px; color: #777; height: 40px; line-height: 40px; border-top: 0px; border-left: 0px; border-right: 0px; border-bottom: 1px #ccc solid; width: 95%; font-family: Microsoft YaHei,"微软雅黑"; }
+
+.oneGuestNb .inputCNB_alert { background-color: white; border-radius: 0px; text-indent: 1em; float: left; font-size: 17px; color: #777; height: 40px; line-height: 40px; border-top: 0px; border-left: 0px; border-right: 0px; border-bottom: 1px red solid; width: 95%; font-family: Microsoft YaHei,"微软雅黑"; }
+
+
+.oneGuest .inputEn { border-radius: 0px; float: left; font-size: 17px; color: #777; height: 40px; line-height: 40px; border-top: 0px; border-left: 0px; border-right: 0px; border-bottom: 1px #ccc solid; width: 32%; margin-right: 10px;  }
+.oneGuest .font_plus { color: #0f7ef1; font-weight: 600; float: left; cursor: pointer;  font-size: 17px;   font-family: Microsoft YaHei,"微软雅黑";}
+.oneGuest .font_plus_gray { color: #ccc; font-weight: 600; float: left; cursor: pointer;  font-size: 17px;   font-family: Microsoft YaHei,"微软雅黑";}
+.oneGuest .selbook { border-bottom: 1px #ccc solid; text-align: right; width: 115px; font-size: 16px; cursor: pointer; position: relative; }
+.oneGuestNb .title { font-size: 17px; color: #666; text-indent: 0.5em;}
+.oneGuestNb .titleSel { font-size: 17px; color: #0f7ef1; text-indent: 0.5em; font-family: Microsoft YaHei;}
+.oneGuestNb .fuz { font-size: 12px; color: #c6c6c6; text-indent: 0.5em;}
+.icon_sel { width: 25px; height: 25px; cursor: pointer;  }
+.icon_def { width: 25px; height: 25px; cursor: pointer; }
+.f_yourC { font-size: 15px;} 
+.hySelect { cursor: pointer; width: 40px; text-align: left;}
+.boSelect { cursor: pointer; width: 55px; text-align: left;}
+.boSelect2 { cursor: pointer; width: 20px; text-align: left;}
+.bo_def { width: 48px; height: 26px; cursor: pointer; float: left;}
+.bo_on { width: 48px; height: 26px; cursor: pointer; float: left;}
+.en_cn { width: 76px; height: 30px; position: absolute; z-index: 5; right: 0px; top: 8px; cursor: pointer;  }
+.show_zj_zone { position: absolute; z-index: 83; right: 0px; top: 40px; display: none;  }
+.show_zj_zone .tab { font-size: 20px; background-color: #0f7ef1; border-radius:3px; width: 350px; color: white; text-align:center;   filter:alpha(opacity:90); opacity:0.9;}
+#Ps_fs { font-size: 16px; text-indent: 2em;}
+.oneGuestNb .pos { width: 10px; height: 15px;  }
+.lj_info { font-size: 12px; color: #888; text-align:left; padding: 10px; }
+#showMyDet { height: auto; background-color: #f1f7fe; position:fixed; bottom:60px; text-align: center;  z-index: 81; display: none;  width: 100%; display: none; border-top: 3px #0f7ef1 solid; }
+#showMyDet .inShowMyDet { width: 90%; margin: 0px auto; font-size: 15px;  }
+#showMyDet .inShowMyDet .price { color: #ff7d27;}
+#showMyDet .inShowMyDet td { height: 25px; }
+#showMyDet .inShowMyDet .new_title { height: 30px; color #888; text-align: left; background-color: #eee; text-indent: 1em; }
+
+
+#selGuestNum { height: 300px; background-color: #f1f7fe; position:fixed; bottom:0px; text-align: center;  z-index: 999; display: none;  width: 100%; display: none; border-top: 3px #0f7ef1 solid; overflow:hidden; overflow:scroll; overflow-x: hidden; overflow-y: auto;}
+#selGuestNum .inShowMyDet { width: 90%; margin: 0px auto; font-size: 20px;  }
+#selGuestNum .inShowMyDet .price { color: #ff7d27;}
+#selGuestNum .inShowMyDet td { height: 50px; height: 50px; border-bottom: 1px  #eee solid; font-size: 20px; cursor: pointer; }
+
+
+#selGuestType { height: 100px; background-color: #f1f7fe; position:fixed; bottom:0px; text-align: center;  z-index: 999; display: none;  width: 100%; display: none; border-top: 3px #0f7ef1 solid; overflow:hidden; overflow:scroll; overflow-x: hidden; overflow-y: auto;}
+#selGuestType .inShowMyDet { width: 90%; margin: 0px auto; font-size: 20px;  }
+#selGuestType .inShowMyDet .price { color: #ff7d27;}
+#selGuestType .inShowMyDet td { height: 50px; height: 50px; border-bottom: 1px  #eee solid; font-size: 20px; cursor: pointer; }
+
+
+#buy_read { height: auto; background-color: white; position:fixed; bottom:60px; text-align: center;  z-index: 81; display: none;  width: 100%; display: none; }
+#buy_read .inShowMyDet { width: 90%; margin: 0px auto; font-size: 12px; }
+#buy_read .inShowMyDet ul { margin: 0px 0px 10px 10px ; padding: 0px; color: #666; }
+#buy_read .inShowMyDet li { height:35px;  }
+.det_font_s { display: none; }
+
+.sky_pay { margin: 0 auto; width: 100%; background-color: white; text-align: center; padding: 0px 0px 0px 0px; border-bottom: 1px #dadada solid;  }
+.in_bot_def_pay { width: 90%; margin: 0 auto; }
+.in_bot_def_pay .title { font-size: 16px;  color: black; }
+.in_bot_def_pay .td_1 { text-align: left; }
+.in_bot_def_pay .price { color: #FF3333; font-size: 23px; font-weight: 600; }
+.in_bot_def_pay .hud { font-size: 12px; color: #777; }
+.wx_icon { width: 31px; height: 26px; margin: 3px 0px 0px 10px; cursor: pointer;}
+.alipay_icon { width: 31px; height: auto; margin: 3px 0px 0px 10px; cursor: pointer; }
+.pay_font .titleSel { font-size: 20px; color: #FF3300; text-indent: 0.5em; float: left; margin: 3px 0px 0px 0px; cursor: pointer; font-family: Microsoft YaHei;}
+.pay_font .title { font-size: 20px; color: #999; text-indent: 0.5em; float: left; margin: 3px 0px 0px 0px; cursor: pointer; font-family: Microsoft YaHei;}
+.lanTabPay { color: #333; width: 100%; height: 70px; font-size: 15px;  margin: 0px auto;  }
+.lanTabPay .btn { background: orange; cursor: pointer; font-size: 18px;  color: white; text-align: center; width: 95%; padding: 0px 0px 0px 0px; height: 45px; line-height: 45px; border:0px; border-radius:3px; margin-bottom: 10px; }
+.lanTabPay .btn2 { background: #dadada; cursor: pointer; font-size: 18px;  color: #888; text-align: center; padding: 0px 0px 0px 0px; width: 95%; height: 45px; line-height: 45px; border:0px; border-radius:0px; margin-bottom: 10px; }
+.boSelect_pay { cursor: pointer; width: 60px; text-align: left; color: #555;}
+.boSelect_mobile_code_td { border-left: 1px #dedbdb solid; text-align: center; }
+.date_arrow_pubstyle { height: 20px; width: 15px; }
+
+.detX_style { width: 20px; height: 20px; border: 0px; }
+}
+
+
+
+
+
+/********************** 4s 5s 6 ***********************/
+@media screen and (min-width:640px) and (max-width:750px){
+
+
+
+
+
+
+}
+
+

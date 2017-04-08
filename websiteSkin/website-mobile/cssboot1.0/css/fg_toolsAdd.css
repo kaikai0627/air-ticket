@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+body { font-family: Microsoft YaHei,"微软雅黑"; margin: 0px auto; text-align:center; background-color: #eee; }
+
+/***bottom ***/
+.newIndexBottom {
+	background-color: white;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	z-index: 10;
+	text-align: center;
+	box-shadow: 1px 1px 5px 2px #888888;
+}
+
+.newIndexBottom .xiaoTb {
+	width: 100%;
+	margin: 0px auto 10px auto;
+	font-size: 14px;
+}
+
+.newIndexBottom .icon_myorder {
+	margin: 10px auto 0px auto;
+	width: 45px;
+	height: 45px;
+}
+
+.newIndexBottom .icon_dt {
+	margin: 10px auto 0px auto;
+	width: 45px;
+	height: 45px;
+}
+
+.newIndexBottom a:link {
+	color: #333;
+	text-decoration: none;
+}
+
+.newIndexBottom a:visited {
+	color: #333;
+	text-decoration: none;
+}
+
+.newIndexBottom a:hover {
+	color: #333;
+	text-decoration: none;
+}
+
+
+
+/******pub top*******/
+
+.tempTitle {
+	background-color: transparent;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.tempTitle .titleFont_style {
+	color: white;
+	font-size: 20px;
+	font-family: Microsoft YaHei,"微软雅黑";
+}
+
+.tempTitle .ts_font_style {
+	color: #666;
+	font-size: 16px;
+	font-family: Microsoft YaHei,"微软雅黑";
+}
+
+.tempTitle .td_w {
+	width: 35px;
+}
+
+.date_arrow_pubstyle {
+	width: 13px;
+	height: 22px;
+	margin-top: 6px;
+}

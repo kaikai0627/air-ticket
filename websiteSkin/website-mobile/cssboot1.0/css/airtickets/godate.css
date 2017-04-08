@@ -1,0 +1,49 @@
+body{
+	font-family: Microsoft YaHei,"微软雅黑";
+}
+.dateBgColor,table,.bgWhite{
+	background: #78909C;
+	/*color:#fff;*/
+}
+.dateFontStyle_date_s td{
+	color: #ADBBC3;
+}
+.dateFontStyle_date_s td .hasPrice{
+	color: #fff;
+}
+.dateFontStyle_date{
+	color: #fff;
+}
+.f_orange{
+	color:	#ADBBC3;
+}
+.dateFontStyle_cnTitle{
+	color: #fff;
+}
+.clearfixBgColor,.ttop_changed{
+	background: #78909C;
+	color: #fff;
+}
+.td_l_sel{
+	border-bottom: 2px solid #444444;
+}
+.bgWhite table.MARGINAUTO{
+	background: #fff;
+	border-radius: 4px;
+	padding: .5rem 0;
+}
+.dateFontStyle_date_s td .hasSelect{
+	background-color: #E4A23D;
+}
+.select_info_alert{
+	background-color: #E4A23D;
+}
+.mainColor{
+	color: #fff;
+}
+.dd_l,.icon_fg_go{
+	padding-left: 1rem;
+}
+.icon_fg_date_r,.icon_fg_back  {
+	padding-right: 1rem;
+}

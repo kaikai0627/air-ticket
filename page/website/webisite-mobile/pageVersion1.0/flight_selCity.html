@@ -1,0 +1,458 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>机票查询</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+<meta name="screen-orientation" content="portrait"><!-- uc强制竖屏 -->
+<meta name="x5-orientation" content="portrait"><!-- QQ强制竖屏 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit">
+
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link href="../../../../websiteSkin/website-mobile/cssboot1.0/css/fg_pageMain_old.css" rel="stylesheet" type="text/css" />
+<link href="../../../../commonSkin/css/html_tools.css" rel="stylesheet" type="text/css" media="screen"/>
+<style type="text/css">
+</style>
+</head>
+
+
+<body>
+<div class="pubMain">
+
+
+<div class="fixtop">
+	<div class="ttop_changed" id="ttop_changed">
+	<table width="95%" class="MARGINAUTO">
+			<tr>
+				<td width="35" class="tpp_tab_height cur" onclick="location.href='flight_index.html'">
+				<img src="../../../../websiteSkin/website-mobile/cssboot1.0/img/date_left.png" class='date_arrow_pubstyle' />
+				</td>
+				<td class="text-center">
+					
+					<span class="f_20">选择<span id="dateSel_hand">出发</span>城市</span>
+				</td>
+				<td class="font_finish_td_w"><a class="mainColor font_finish" href="javascript:finishCitySel();">完成</a></td>
+			</tr>
+		</table>
+	</div>
+
+	
+		<div class="clearfix h10 bgWhite"></div>
+		<div class="bgWhite">
+		<table width="95%" class="MARGINAUTO" cellpadding="0" cellspacing="0">
+			<tr>
+				<td id="td_l" class="td_l_sel" onClick="toSelectFlightDate(0);">
+					<div class="clearfix h5"></div>
+					<input type="text" id="date_l_ip" class="dd_l" value="" placeholder="--"  />
+					<div class="icon_fg_go">出发</div>
+					<div class="icon_position" onClick="getYourPosition();"></div>
+	
+				</td>
+			<td class="td_change_selCity" onClick="changeIt();" >
+				<img src="../../../../websiteSkin/website-mobile/cssboot1.0/img/switchimg.png" class="icon_change"  />
+			</td>
+				<td id="td_r" class="td_l" onClick="toSelectFlightDate(1);">
+					<div class="clearfix h5"></div>
+				   <input type="text" id="date_r_ip" class="dd_r_date" dir="rtl" value="" placeholder="--" />
+				   <div class="icon_fg_back">到达</div>
+				 
+				   
+				  </td>
+			</tr>
+		</table>
+		</div>
+		<div class="clearfix h20 bgWhite"></div>
+</div>
+	
+	<div class="clearfix selClearHeight clearfixBgColor"></div>
+	
+	
+					
+	<table width="100%" cellspacing="0" cellpadding="0" class="MARGINAUTO dateBgColor">
+
+		
+		<tr>
+			<td class="city_title" id="flyTopp">热门城市</td>
+			
+		</tr>
+		
+		<tr>
+			<td class="cityTD_padding">
+				
+				<ul id="cityUl">
+								<!---one city start-->
+								<li class="city"onClick="selMyCity(this)">上海</li>
+   							 	<li class="fenf"></li>
+								<!---one city end-->
+								<li class="city"onClick="selMyCity(this)">北京</li>
+   							 	<li class="fenf"></li>
+								<li class="city" onClick="selMyCity(this)">广州</li>
+								<li class="fenf"></li>
+								<li class="city" onClick="selMyCity(this)">深圳</li>
+								<li class="fenf"></li>
+								<li class="city" onClick="selMyCity(this)">长沙</li>
+								<li class="fenf"></li>
+								<li class="city" onClick="selMyCity(this)">武汉</li>
+								<li class="fenf"></li>
+								<li class="city" onClick="selMyCity(this)">成都</li>
+								<li class="fenf"></li>
+								<li class="city" onClick="selMyCity(this)">乌鲁木齐</li>
+								<li class="fenf"></li>
+								
+							
+							
+					</ul>
+				
+					
+			</td>
+		</tr>
+		
+		<tr >
+			<td class="city_title" id="flyTop">拼音首字母检索</td>
+			
+		</tr>
+		
+		<tbody id="city_Hand">
+		<tr>
+			<td class="cityTD_padding">
+				
+				<ul id="cityM">
+								<!---one city start-->
+								<li class="city" onClick="selMyM(this)">A</li>
+   							 	<li class="fenf"></li>
+								<!---one city end-->
+								<li class="city" onClick="selMyM(this)">B</li>
+								<li class="fenf"></li>
+								<li class="city" onClick="selMyM(this)">C</li>
+								<li class="fenf"></li>
+								<li class="city" onClick="selMyM(this)">D</li>
+								<li class="fenf"></li>
+								<li class="city" onClick="selMyM(this)">E</li>
+								<li class="fenf"></li>
+								<li class="city" onClick="selMyM(this)">F</li>
+								<li class="fenf"></li>
+								<li class="city" onClick="selMyM(this)">G</li>
+								<li class="fenf"></li>
+								<li class="city" onClick="selMyM(this)">H</li>
+								<li class="fenf"></li>
+								<li class="city" onClick="selMyM(this)">I</li>
+								<li class="fenf"></li>
+								<li class="city" onClick="selMyM(this)">J</li>
+								<li class="fenf"></li>
+								<li class="city" onClick="selMyM(this)">K</li>
+								<li class="fenf"></li>
+								<li class="city" onClick="selMyM(this)">L</li>
+								<li class="fenf"></li>
+								<li class="city" onClick="selMyM(this)">M</li>
+								<li class="fenf"></li>
+								<li class="city" onClick="selMyM(this)">N</li>
+								<li class="fenf"></li>
+								<li class="city" onClick="selMyM(this)">O</li>
+								<li class="fenf"></li>
+								<li class="city" onClick="selMyM(this)">P</li>
+								<li class="fenf"></li>
+								<li class="city" onClick="selMyM(this)">Q</li>
+								<li class="fenf"></li>
+								<li class="city" onClick="selMyM(this)">R</li>
+								<li class="fenf"></li>
+								<li class="city" onClick="selMyM(this)">S</li>
+								<li class="fenf"></li>
+								<li class="city" onClick="selMyM(this)">T</li>
+								<li class="fenf"></li>
+								<li class="city" onClick="selMyM(this)">U</li>
+								<li class="fenf"></li>
+								<li class="city" onClick="selMyM(this)">V</li>
+								<li class="fenf"></li>
+								<li class="city" onClick="selMyM(this)">W</li>
+								<li class="fenf"></li>
+								<li class="city" onClick="selMyM(this)">X</li>
+								<li class="fenf"></li>
+								<li class="city" onClick="selMyM(this)">Y</li>
+								<li class="fenf"></li>
+								<li class="city" onClick="selMyM(this)">Z</li>
+								<li class="fenf"></li>
+					</ul>
+					
+			</td>
+		</tr>
+		</tbody>
+		
+		<tbody id="cityM_sel">
+		<tr>
+			<td class="cityTD_padding">
+				
+				<ul id="cityM">
+								<!---one city start-->
+								<li id="city_target" class="city">A</li>
+   							 	<li class="fenf"></li>
+								<!---one city end-->
+								<li class="city" onClick="closeM();">A-Z</li>
+								<li class="fenf"></li>
+								
+					</ul>
+					
+			</td>
+		</tr>
+		</tbody>
+		
+		
+		<tbody id="city_results">
+		<tr>
+			<td class=" bgWhite">
+				
+				<ul id="city_res">
+				
+								<li class="city" onClick="selMyCity_byM(this);"><span id="city_name">成都</span>&nbsp;-&nbsp;<span id="city_name_airport" class="f_gray">双流国际机场</span></li>
+								<li class="city" onClick="selMyCity_byM(this);"><span id="city_name">重庆</span>&nbsp;-&nbsp;<span id="city_name_airport" class="f_gray">江北国际机场</span></li>
+								<li class="city" onClick="selMyCity_byM(this);"><span id="city_name">长沙</span>&nbsp;-&nbsp;<span id="city_name_airport" class="f_gray">黄花国际机场</span></li>
+								<li class="city" onClick="selMyCity_byM(this);"><span id="city_name">长白山</span>&nbsp;-&nbsp;<span id="city_name_airport" class="f_gray">长白山机场</span></li>
+								<li class="city" onClick="selMyCity_byM(this);"><span id="city_name">长春</span>&nbsp;-&nbsp;<span id="city_name_airport" class="f_gray">龙嘉国际机场</span></li>
+								
+								
+				</ul>
+					
+			</td>
+		</tr>
+		</tbody>
+		
+		
+	</table>
+
+				
+		
+<div class="clearfix h30 clearfixBgColor"></div>
+<div class="clearfix h20 clearfixBgColor"></div>
+<div class="clearfix h20 clearfixBgColor"></div>
+<div class="clearfix h20 clearfixBgColor"></div>	
+	
+
+<script src="../../../../websiteSkin/website-mobile/cssboot1.0/js/weui/lib/jquery-2.1.4.js"></script>   
+<script type="text/javascript">
+
+
+/***** core code ****/
+
+var theDateType = "0";  //0 大框停留在去程; 1 停留在回程
+
+
+
+function selMyM(obj){
+	
+	$("#city_target").html($(obj).html());
+	$("#cityM_sel").show();
+	$("#city_Hand").hide();
+	$("#city_results").show();
+	$("body,html").animate({scrollTop:$("#flyTop").offset().top-158});
+	
+	
+}
+
+
+
+function closeM(){
+	
+	$("#cityM_sel").hide();
+	$("#city_Hand").show();
+	$("#city_results").hide();
+	$("body,html").animate({scrollTop:$("#flyTopp").offset().top-158});
+	
+	
+}
+
+
+
+
+
+
+
+
+function changeIt(){
+	
+	var dateSel_hand_go2 = $("#date_l_ip").val();	
+	var dateSel_hand_back2 = $("#date_r_ip").val();
+	
+	//alert(dateSel_hand_go);
+	$("#date_l_ip").val(dateSel_hand_back2);	
+	$("#date_r_ip").val(dateSel_hand_go2);	
+}
+
+function getYourPosition(){
+
+	alert("将自动获得您的所在城市");
+	$("#date_l_ip").val("上海");	
+}
+
+
+
+
+//回到顶部
+function goTop(){
+	$('html,body').animate({'scrollTop':0},600);
+}
+
+
+
+
+
+function toSelectFlightDate(i){  //按了大日期框
+
+	switch(i)
+	{
+	case 0:
+	
+	theDateType = "0";
+
+	
+	 $("#dateSel_hand").html("出发");
+	 $("#td_l").removeClass().addClass("td_l_sel");
+	 $("#td_r").removeClass().addClass("td_l");
+	 
+	  break;
+	case 1:
+		theDateType = "1";
+		
+	
+	 $("#dateSel_hand").html("到达");
+	 $("#td_l").removeClass().addClass("td_l");
+	 $("#td_r").removeClass().addClass("td_l_sel");
+	 
+	  break;
+	default:
+	 
+	}
+
+}
+
+
+
+$(document).ready(function(){ 
+
+	$("#date_r_ip").css("text-align","right");
+	theDateType = 0;
+
+	//setTimeout("fadeAlert()",1000);
+	//$('#tab-title li:first').addClass("active").show();
+	//$('.hasPrice').click(function(){ 
+	//$(".hasSelect").removeClass().addClass("hasPrice");
+	//$(this).removeClass().addClass("hasSelect").siblings().removeClass().addClass("hasPrice");
+    // $("#tab-content > div").hide().eq($('#tab-title li').index(this)).show(); 
+	//}); 
+	
+});
+
+
+
+</script>
+
+
+<script type="text/javascript">
+
+function finishCitySel(){
+
+	if($("#date_l_ip").val()==""){
+		
+		alert("请选择出发城市");
+		toSelectFlightDate(0);
+		$("#date_l_ip").focus();
+		
+	
+	}else if($("#date_r_ip").val()==""){
+	
+	   alert("请选择到达城市");
+	   toSelectFlightDate(1);
+		$("#date_r_ip").focus();
+		
+	}else  if( $("#date_l_ip").val()==$("#date_r_ip").val() ){
+				
+		alert("出发城市与到达城市不能相同");	
+	
+	}else{
+	
+	 window.location.href="flight_index.html"; 
+		
+	
+	}
+
+	
+
+}
+
+
+function selMyCity(obj){
+	
+		
+	if(theDateType=="0"){  
+	
+		$("#date_l_ip").val($(obj).html());
+		toSelectFlightDate(1);
+	
+	}else{
+		
+		$("#date_r_ip").val($(obj).html());
+		
+		
+			 if( $("#date_l_ip").val()==$("#date_r_ip").val() ){
+				
+				alert("出发城市与到达城市不能相同");	
+				
+			}else if( $("#date_l_ip").val()!=="" && $("#date_r_ip").val()!==""){
+			
+			    window.location.href="flight_selDate.html"; 
+			
+			}else{
+			
+				alert("请选择出发城市或到达城市");	
+				
+			}
+			
+		
+		}
+	
+	
+}
+
+
+
+function selMyCity_byM(obj){
+	
+		
+	if(theDateType=="0"){  
+		
+	
+		$("#date_l_ip").val($(obj).find("#city_name").html());
+		toSelectFlightDate(1);
+	
+	
+	}else{
+		
+		$("#date_r_ip").val($(obj).find("#city_name").html());
+		
+		
+			 if( $("#date_l_ip").val()==$("#date_r_ip").val() ){
+				
+				alert("出发城市与到达城市不能相同");	
+				
+			}else if( $("#date_l_ip").val()!=="" && $("#date_r_ip").val()!==""){
+			
+			    window.location.href="flight_selDate.html"; 
+			
+			}else{
+			
+				alert("请选择出发城市或到达城市");	
+				
+			}
+		
+		
+		
+	}
+	
+}
+
+</script>
+
+</div>
+</body>
+</html>

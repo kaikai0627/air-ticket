@@ -1,0 +1,560 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>机票查询</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+</style>
+
+<link href="../../../../commonSkin/css/flights_logo.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="../../../../commonSkin/css/html_tools.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="../../../../websiteSkin/website-mobile/cssboot1.0/css/fg_toolsAdd.css" rel="stylesheet" type="text/css" />
+<link href="../../../../websiteSkin/website-mobile/cssboot1.0/css/fg_pageMain.css" rel="stylesheet" type="text/css" />
+
+<link href="../../../../websiteSkin/website-mobile/cssboot1.0/js/weui/lib/weui.min.css" rel="stylesheet" type="text/css" />
+<link href="../../../../websiteSkin/website-mobile/cssboot1.0/js/weui/css/jquery-weui.css" rel="stylesheet" type="text/css" />
+
+<!-- <link href="js/citySearch/style.css" rel="stylesheet" type="text/css" media="screen"/> -->
+   
+</head>
+<body style="background-color: #dee9ee;">
+
+<!--  <div class="weui-pull-to-refresh-layer"> -->
+<!--       <div class='pull-to-refresh-arrow'></div> -->
+<!--       <div class='pull-to-refresh-preloader'></div> -->
+<!--       <div class="down">下拉刷新</div> -->
+<!--       <div class="up">释放刷新</div> -->
+<!--       <div class="refresh">正在刷新</div> -->
+<!--     </div> -->
+ 
+ <div class="newPageBody">  
+    
+<table id="tempTitle_fg_list" class="tempTitle" width="100%" class="MARGINAUTO" >
+    <tr>
+        <td height="35" class="cur td_w" valign="middle" onclick="location.href='flight_index.html'">
+           
+                <img src="../../../../websiteSkin/website-mobile/cssboot1.0/img/back_icon_w@3x.png" class='date_arrow_pubstyle'/>
+   
+        </td>
+        <td class="text-center"><span class="titleFont_style">去：上海&nbsp;→&nbsp;北京</span></td>
+        <td class="cur td_w" valign="middle"></td>
+    </tr>
+</table>
+
+<!-- 已选去程的显示 -->
+<!-- <div id="hasSelectZone"> -->
+<!-- <table width="100%"> -->
+<!-- 	<tr> -->
+<!-- 		<td class="td1"> -->
+<!-- 			<div class="go_back_home">去</div> -->
+			
+<!-- 			<span class="font"> -->
+<!-- 			2016-10-12&nbsp;&nbsp; -->
+<!-- 			09:20-11:15&nbsp;&nbsp; -->
+<!-- 			KN5977 -->
+<!-- 			</span> -->
+<!-- 		</td> -->
+		
+	
+<!-- 	</tr> -->
+<!-- </table> -->
+<!-- </div> -->
+<!-- 已选去程的显示 -->
+
+
+<table id="unTitle" width="100%" class="MARGINAUTO " >
+    <tr>
+        <td height="35" class="cur td_w" valign="middle" onclick="location.href='flight_index.html'"><img src="../../../../websiteSkin/website-mobile/cssboot1.0/img/back_icon_w@3x.png" class='un_arrow_pubstyle'/></td>
+        <td class="unPrice_l">
+        	<h5>前一天</h5>
+        	&yen;853
+        </td>
+        <td class="unPrice_m cur" onclick="location.href='flight_selDate.html'">
+        	<div class="block">
+        		<table class="inBlockTab">
+        			<tr>
+        				<td><img src="../../../../websiteSkin/website-mobile/cssboot1.0/img/icon_date.png" class='icon_date'/></td>
+        				<td>10-26&nbsp;周三&nbsp;&yen;780</td>
+        				<td><img src="../../../../websiteSkin/website-mobile/cssboot1.0/img/icon_ar_down.png" class='icon_ar_down'/></td>
+        			</tr>
+        		</table>
+        	</div>
+        </td>
+        <td class="unPrice_r">
+        	<h5>后一天</h5>
+        	&yen;853
+        </td>
+        <td class="cur td_w" valign="middle"><img src="../../../../websiteSkin/website-mobile/cssboot1.0/img/back_icon_w@3x_r.png" class='un_arrow_pubstyle'/></td>
+    </tr>
+</table>
+
+<div class="oneRes f_12 f_gray_q">当天无直飞航班，推荐中转航班</div>
+
+<span id="listFather">
+<!-- one result -->
+<div class="oneRes" onclick="location.href='flight_list_2.html'">
+
+	<div class="left">
+	
+		<div class="go">
+			<div class="time">22:25</div>
+			<div class="ap">首都T3</div>
+		</div>
+		
+		<div class="fg">
+			<div class="jt">经停</div>
+			<div class="border"></div>
+			<div class="jt2">杭州</div>
+		</div>
+		
+		<div class="ed">
+			<div class="time">00:45</div>
+			<div class="ap">浦东T2</div>
+		</div>
+		
+		<div class="clearfix"></div>
+		<div class="fg_cp">
+			<div class="pf_mu pull-left"></div>
+			<div class="font">东航MU9107&nbsp;|&nbsp;<span style="color: #03a9f4">共享</span></div>
+		</div>
+		
+	
+	</div>
+	
+	<div class="right">
+	
+		<div class="price">
+			<div class="pp"><span class="f12">&yen;</span>1780</div>
+			<div class="cw">3折</div>
+<!-- 			<div class="chd">儿童价&nbsp;&yen;780</div> -->
+		</div>
+	
+	</div>
+	
+	
+</div>
+<div class="clearfix"></div>
+<!-- one result ed-->
+
+
+
+<!-- one result -->
+<div class="oneRes" onclick="location.href='flight_list_2.html'">
+
+	<div class="left">
+	
+		<div class="go">
+			<div class="time">22:25</div>
+			<div class="ap">首都T3</div>
+		</div>
+		
+		<div class="fg">
+			<div class="jt">经停</div>
+			<div class="border"></div>
+			<div class="jt2">杭州</div>
+		</div>
+		
+		<div class="ed">
+			<div class="time">00:45</div>
+			<div class="ap">浦东T2</div>
+		</div>
+		
+		<div class="clearfix"></div>
+		<div class="fg_cp">
+			<div class="pf_mu pull-left"></div>
+			<div class="font">东航MU9107&nbsp;|&nbsp;<span style="color: #03a9f4">共享</span></div>
+		</div>
+		
+	
+	</div>
+	
+	<div class="right">
+	
+		<div class="price">
+			<div class="pp"><span class="f12">&yen;</span>31780</div>
+			<div class="cw">3折</div>
+<!-- 			<div class="chd">儿童价&nbsp;&yen;780</div> -->
+		</div>
+	
+	</div>
+	
+	
+</div>
+<div class="clearfix"></div>
+<!-- one result ed-->
+
+
+
+
+<!-- one result -->
+<div class="oneRes" onclick="location.href='flight_list_2.html'">
+
+	<div class="left">
+	
+		<div class="go">
+			<div class="time">22:25</div>
+			<div class="ap">首都T3</div>
+		</div>
+		
+		<div class="fg">
+			<div class="jt">经停</div>
+			<div class="border"></div>
+			<div class="jt2">杭州</div>
+		</div>
+		
+		<div class="ed">
+			<div class="time">00:45</div>
+			<div class="ap">浦东T2</div>
+		</div>
+		
+		<div class="clearfix"></div>
+		<div class="fg_cp">
+			<div class="pf_mu pull-left"></div>
+			<div class="font">东航MU9107&nbsp;|&nbsp;<span style="color: #03a9f4">共享</span></div>
+		</div>
+		
+	
+	</div>
+	
+	<div class="right">
+	
+		<div class="price">
+			<div class="pp"><span class="f12">&yen;</span>1780</div>
+			<div class="cw">3折</div>
+<!-- 			<div class="chd">儿童价&nbsp;&yen;780</div> -->
+		</div>
+	
+	</div>
+	
+	
+</div>
+<div class="clearfix"></div>
+<!-- one result ed-->
+
+
+
+
+<!-- one result -->
+<div class="oneRes" onclick="location.href='flight_list_2.html'">
+
+	<div class="left">
+	
+		<div class="go">
+			<div class="time">22:25</div>
+			<div class="ap">首都T3</div>
+		</div>
+		
+		<div class="fg">
+			<div class="jt"></div>
+			<div class="border"></div>
+			<div class="jt2"></div>
+		</div>
+		
+		<div class="ed">
+			<div class="time">00:45</div>
+			<div class="ap">浦东T2</div>
+		</div>
+		
+		<div class="clearfix"></div>
+		<div class="fg_cp">
+			<div class="pf_mu pull-left"></div>
+			<div class="font">东航MU9107&nbsp;|&nbsp;机型330</div>
+		</div>
+		
+	
+	</div>
+	
+	<div class="right">
+	
+		<div class="price">
+			<div class="pp"><span class="f12">&yen;</span>1780</div>
+			<div class="cw">3折</div>
+<!-- 			<div class="chd">儿童价&nbsp;&yen;780</div> -->
+		</div>
+	
+	</div>
+	
+	
+</div>
+<div class="clearfix"></div>
+<!-- one result ed-->
+
+
+
+
+<!-- one result -->
+<div class="oneRes" onclick="location.href='flight_list_2.html'">
+
+	<div class="left">
+	
+		<div class="go">
+			<div class="time">22:25</div>
+			<div class="ap">首都T3</div>
+		</div>
+		
+		<div class="fg">
+			<div class="jt"></div>
+			<div class="border"></div>
+			<div class="jt2"></div>
+		</div>
+		
+		<div class="ed">
+			<div class="time">00:45</div>
+			<div class="ap">浦东T2</div>
+		</div>
+		
+		<div class="clearfix"></div>
+		<div class="fg_cp">
+			<div class="pf_mu pull-left"></div>
+			<div class="font">东航MU9107&nbsp;|&nbsp;机型330&nbsp;|&nbsp;6H</div>
+		</div>
+		
+	
+	</div>
+	
+	<div class="right">
+	
+		<div class="price">
+			<div class="pp"><span class="f12">&yen;</span>1780</div>
+			<div class="cw">3折</div>
+<!-- 			<div class="chd">儿童价&nbsp;&yen;780</div> -->
+		</div>
+	
+	</div>
+	
+	
+</div>
+<div class="clearfix"></div>
+<!-- one result ed-->
+
+
+<!-- one result -->
+<div class="oneRes" onclick="location.href='flight_list_2.html'">
+
+	<div class="left">
+	
+		<div class="go">
+			<div class="time">22:25</div>
+			<div class="ap">首都T3</div>
+		</div>
+		
+		<div class="fg">
+			<div class="jt"></div>
+			<div class="border"></div>
+			<div class="jt2"></div>
+		</div>
+		
+		<div class="ed">
+			<div class="time">00:45</div>
+			<div class="ap">浦东T2</div>
+		</div>
+		
+		<div class="clearfix"></div>
+		<div class="fg_cp">
+			<div class="pf_mu pull-left"></div>
+			<div class="font">东航MU9107&nbsp;|&nbsp;机型330</div>
+		</div>
+		
+	
+	</div>
+	
+	<div class="right">
+	
+		<div class="price">
+			<div class="pp"><span class="f12">&yen;</span>1780</div>
+			<div class="cw">3折</div>
+<!-- 			<div class="chd">儿童价&nbsp;&yen;780</div> -->
+		</div>
+	
+	</div>
+	
+	
+</div>
+<div class="clearfix"></div>
+<!-- one result ed-->
+
+
+</span>
+
+</div> 
+
+
+<!-- <div class="weui-infinite-scroll"> -->
+<!--       <div class="infinite-preloader"></div> -->
+<!--       加载更多 -->
+<!--     </div> -->
+
+
+<div style="height: 65px;"></div>
+
+
+<span id="addThing" style="display: none;">
+
+<div class="oneRes" onclick="location.href='flight_list_2.html'">
+
+	<div class="left">
+	
+		<div class="go">
+			<div class="time">22:25</div>
+			<div class="ap">首都T3</div>
+		</div>
+		
+		<div class="fg">
+			<div class="jt"></div>
+			<div class="border"></div>
+			<div class="jt2"></div>
+		</div>
+		
+		<div class="ed">
+			<div class="time">00:45</div>
+			<div class="ap">浦东T2</div>
+		</div>
+		
+		<div class="clearfix"></div>
+		<div class="fg_cp">
+			<div class="pf_mu pull-left"></div>
+			<div class="font">东航MU9107&nbsp;|&nbsp;机型330</div>
+		</div>
+		
+	
+	</div>
+	
+	<div class="right">
+	
+		<div class="price">
+			<div class="pp"><span class="f12">&yen;</span>1780</div>
+			<div class="cw">3折</div>
+<!-- 			<div class="chd">儿童价&nbsp;&yen;780</div> -->
+		</div>
+	
+	</div>
+	
+	
+</div>
+<div class="clearfix"></div>
+
+</span>
+<!--lan--->
+<div id="lanview" class="lanview" style="width: 100%; display: block;">
+    <table class="lanTab" style="width: 100%; ">
+        <tr>
+        
+         <td onClick="sx_the_line(0);" >
+             
+                    <img src="../../../../websiteSkin/website-mobile/cssboot1.0/img/miss_2.png" class="miss_1" />
+                    <br/>
+                    筛选
+             
+            </td>
+
+            <td onClick="sx_the_time(this);" >
+             
+                    <img src="../../../../websiteSkin/website-mobile/cssboot1.0/img/miss_1.png" class="miss_1" />
+                    <br/>
+                    <span id="sx_t">时间</span>
+             
+            </td>
+
+            <td onClick="sx_the_price(this);" >
+                    <img src="../../../../websiteSkin/website-mobile/cssboot1.0/img/miss_3.png" class="miss_3" />
+                    <br/>
+                    <span id="sx_p">价格</span>
+                
+            </td>
+        </tr>
+    </table>
+</div>
+
+<!---lan end-->
+
+
+<!---sx the line --->
+
+<div id="sx_the_line">
+	<table class="linTab">
+			<tr>
+			 <td>
+			 <button class="btn" onClick="sx_the_line(1);">取消</button>
+			 </td>
+			 <td> <button class="btn2" onClick="sx_the_line(2);">清空筛选</button></td>
+			 <td>
+			 <button class="btn" onClick="sx_the_line(3);">确定</button>
+			 </td>
+			</tr>
+			<tr>
+				<td colspan="3" class="bgWhite">
+					<ul class="lineUL">
+						<li class="on" id="onenav" onClick="changeFgListSx(0)">起飞时间</li>
+						<li class="def" id="twonav" onClick="changeFgListSx(1)">舱位</li>
+						<li class="def" id="threenav" onClick="changeFgListSx(2)">航空公司</li>
+					</ul>
+					<div class="lineUL_r">
+						<div class="scrollZone">
+							<ul id="one" class="inz f_en">
+<!-- 									<li><a href="#" class="mainColor">全天</a></li> -->
+									<li><label><input class="ckck" type="checkbox" name="orgtime" value="0" />&nbsp;00:00-06:00</label></li>
+									<li><label><input class="ckck" type="checkbox" name="orgtime" value="1" />&nbsp;06:00-12:00</label></li>
+									<li><label><input class="ckck" type="checkbox" name="orgtime" value="2" />&nbsp;12:00-18:00</label></li>
+									<li><label><input class="ckck" type="checkbox" name="orgtime" value="3" />&nbsp;18:00-24:00</label></li>
+							</ul>
+							<ul id="two" class="inz" style="display: none;">
+<!-- 									<li><a href="#" class="mainColor">不限</a></li> -->
+									<li><label><input class="ckck" type="checkbox" name="code" value="经济舱" />&nbsp;经济舱</label></li>
+									<li><label><input class="ckck" type="checkbox" name="code" value="公务舱" />&nbsp;公务舱</label></li>
+									<li><label><input class="ckck" type="checkbox" name="code" value="头等舱" />&nbsp;头等舱</label></li>
+									
+							</ul>
+							<ul id="three" class="inz" style="display: none;">
+<!-- 							<c:forEach var="code" items="${codelist }"> -->
+
+<!-- 									<li><label><input class="ckck" type="checkbox" name="company" value="${code}" />&nbsp;${code}</label></li> -->
+<!-- 									</c:forEach> -->
+<!-- 			<li><a href="#" class="mainColor">不限</a></li> -->
+									<li><label><input class="ckck" type="checkbox" name="company" />&nbsp;南方航空</label></li>
+									<li><label><input class="ckck" type="checkbox" name="company" />&nbsp;中国国航</label></li>
+									<li><label><input class="ckck" type="checkbox" name="company" />&nbsp;海南航空</label></li>
+							</ul>
+							<ul id="four" class="inz" style="display: none;">
+<!-- 							<c:forEach var="code" items="${codebackList }"> -->
+							
+<!-- 									<li><label><input class="ckck" type="checkbox" name="company" value="${code}" />&nbsp;${code}</label></li> -->
+<!-- 									</c:forEach> -->
+											<li><a href="#" class="mainColor">不限</a></li>
+									<li><label><input class="ckck" type="checkbox" name="company" />&nbsp;南方航空</label></li>
+									<li><label><input class="ckck" type="checkbox" name="company" />&nbsp;中国国航</label></li>
+									<li><label><input class="ckck" type="checkbox" name="company" />&nbsp;海南航空</label></li>
+							</ul>
+						</div>
+					</div>
+				</td>
+			</tr>
+			
+		</table>
+
+</div>
+
+<!---end----->
+
+
+
+<div id="theSide" class="side"><a href="javascript:goTop();"><img src="../../../../websiteSkin/website-mobile/cssboot1.0/img/side_icon05.png" class="side_icon"></a></div> 
+  
+<!---引入顺序不能乱--->
+
+<script src="../../../../websiteSkin/website-mobile/cssboot1.0/js/weui/lib/jquery-2.1.4.js"></script>   
+<script src="../../../../websiteSkin/website-mobile/cssboot1.0/js/weui/lib/fastclick.js"></script>
+<script src="../../../../websiteSkin/website-mobile/cssboot1.0/js/weui/js/jquery-weui.js"></script>
+<script src="../../../../websiteSkin/website-mobile/cssboot1.0/js/weui/js/city-picker.js"></script>
+
+<script src="../../../../websiteSkin/website-mobile/cssboot1.0/js/fg_order_add.js"></script>
+<script src="../../../../websiteSkin/website-mobile/cssboot1.0/js/fg_page_private.js"></script>
+<script src="../../../../websiteSkin/website-mobile/cssboot1.0/js/fg_page_public.js"></script>
+<script src="../../../../websiteSkin/website-mobile/cssboot1.0/js/fg_bid_add.js"></script>
+
+
+
+</body>
+</html>

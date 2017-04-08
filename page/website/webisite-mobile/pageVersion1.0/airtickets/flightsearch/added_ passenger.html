@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>确认你的航班</title>
+    <link rel="stylesheet" href="../../../../../../websiteSkin/website-mobile/cssboot1.0/css/airtickets/light7.css">
+    <link rel="stylesheet" href="../../../../../../websiteSkin/website-mobile/cssboot1.0/css/airtickets/font/demo.css"/>
+    <link rel="stylesheet" href="../../../../../../websiteSkin/website-mobile/cssboot1.0/css/airtickets/font/iconfont.css"/>
+    <link rel="stylesheet" href="../../../../../../websiteSkin/website-mobile/cssboot1.0/css/airtickets/base.css"/>
+    <link rel="stylesheet" href="../../../../../../websiteSkin/website-mobile/cssboot1.0/css/airtickets/added_passenger.css"/>
+</head>
+<body>
+<div class="page">
+
+<div class="main f_14">
+    <!--标题-->
+    <div class="passenger_title">
+        <ul>
+            <li onclick="window.open('add_datum.html','_self')">取消</li>
+            <li>新增乘机人</li>
+            <li onclick="window.open('add_datum.html','_self')">完成</li>
+        </ul>
+    </div>
+    <!--表单-->
+    <div class="form">
+        <ul>
+            <li>
+                <div>姓(英文) <i class="iconfont" style="color: #29b6f6;font-weight: 900">&#xe620;</i></div>
+                <div><input type="text" placeholder="Lastname,如LI"/></div>
+            </li>
+            <li>
+                <div>名(英文)</div>
+                <div><input type="text" placeholder="Lastname,如SHIMIN"/></div>
+            </li>
+            <li class="flex certificate_click">
+                <div>证件类型</div>
+                <div class="type">护照</div>
+                <div style="flex: 1"><i class="iconfont" style="color:#29B6F6;">&#xe605;</i></div>
+            </li>
+            <li>
+                <div>证件号码</div>
+                <div><input type="text" placeholder="确保与乘机证件一致"/></div>
+            </li>
+            <li>
+                <div>证件有效期</div>
+                <div><input type="text" id='picker-name' placeholder="请确保有效期大于6个月"/></div>
+            </li>
+            <li class="flex">
+                <div>国籍</div>
+                <div onclick="window.open('state.html','_self')">中国</div>
+                <div style="flex: 1"><i class="iconfont" style="color:#29B6F6;">&#xe605;</i></div>
+            </li>
+            <li class="gender">
+                <div>性别</div>
+                <div><i class="iconfont" style="display: none">&#xe862;男</i><i class="iconfont" style="color:#29B6F6">&#xe862;男</i></div>
+                <div><i class="iconfont" style="display: none">&#xe611;女</i><i class="iconfont" style="color:#FF6091">&#xe611;女</i></div>
+            </li>
+            <li class="flex">
+                <div>出生日期</div>
+                <div style="width: 8rem;padding-left: .3rem"><input type="text" id='picker-date' placeholder="请选择您的出生日期"/></div>
+                <div style="flex: 1"><i class="iconfont" style="color:#29B6F6;">&#xe605;</i></div>
+            </li>
+            <li>
+                <div>乘机人手机号</div>
+                <div><input type="text" placeholder="接受航班动态信息,请准确填写"/></div>
+            </li>
+        </ul>
+    </div>
+
+</div>
+<!--护照的弹出框-->
+<div class="up_container" style="display: none;">
+    <div class="up">
+        <div>
+            <div class="up_title"><b>选择证件</b></div>
+            <ul class=" up_box">
+                <li class="active">护照<span class="iconfont">&#xe63a;</span></li>
+                <li class="a1">港澳通行证</li>
+                <li>台胞证</li>
+                <li>回乡证</li>
+                <li>台湾通行证</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</div>
+<script src="../../../../../../commonSkin/js/jquery-1.8.3.min.js"> </script>
+<script type='text/javascript' src='../../../../../../websiteSkin/website-mobile/cssboot1.0/js/light7/light7.js' charset='utf-8'></script>
+<script>
+    $(function(){
+        $('.certificate_click').click(function(){
+            $('.up_container').css('display','block');
+        })
+        $('.up_box li').click(function(){
+            $('.up_container').css('display','none');
+        })
+    })
+
+    $("#picker-name").picker({
+        toolbarTemplate: '<header class="bar bar-nav up_flex" style="background: #666666;">\
+  <!--<div class="adult"> 成人</div><div class="children">儿童(2-12岁)</div><div class="infant">婴儿(小于2岁)</div>-->\
+  <ul style="font-size: .7rem"><li style="width: 33%;text-align: left;line-height: 2rem"><button class="button button-link pull-left close-picker" style="color: #fff;">取消</button></li>\
+  <li style="width: 33%;text-align: center;line-height: 2rem;color: #fff;">选择有效证件</li>\
+  <li style="width:33%;text-align: right;line-height: 2rem"><button class="button button-link pull-right close-picker" style="color: #fff;">确定</button></li></ul>\
+  </header>',
+        cols: [
+            {
+                textAlign: 'center',
+                values: ['2017年', '2017年', '2017年', '2017年', '2017年', '2017年', '2017年', '2017年']
+            },
+            {
+                textAlign: 'center',
+                values: [ '1月', '2月', '3月', '4月', '5月', '6月', '7月']
+            },
+            {
+                textAlign: 'center',
+                values: ['1日', '2日', '3日', '4日', '5日', '6日', '7日']
+            }
+        ]
+    });
+
+
+    $("#picker-date").picker({
+        toolbarTemplate: '<header class="bar bar-nav up_flex" style="background: #666666;">\
+  <!--<div class="adult"> 成人</div><div class="children">儿童(2-12岁)</div><div class="infant">婴儿(小于2岁)</div>-->\
+  <ul style="font-size: .7rem"><li style="width: 33%;text-align: left;line-height: 2rem"><button class="button button-link pull-left close-picker" style="color: #fff;">取消</button></li>\
+  <li style="width: 33%;text-align: center;line-height: 2rem;color: #fff;">选择出生日期</li>\
+  <li style="width:33%;text-align: right;line-height: 2rem"><button class="button button-link pull-right close-picker" style="color: #fff;">确定</button></li></ul>\
+  </header>',
+        cols: [
+            {
+                textAlign: 'center',
+                values: ['1970年', '1971年', '1972年', '1973年', '1974年', '1975年', '1976年', '1977年']
+            },
+            {
+                textAlign: 'center',
+                values: [ '1月', '2月', '3月', '4月', '5月', '6月', '7月']
+            },
+            {
+                textAlign: 'center',
+                values: ['1日', '2日', '3日', '4日', '5日', '6日', '7日']
+            }
+        ]
+    });
+</script>
+</body>
+</html>

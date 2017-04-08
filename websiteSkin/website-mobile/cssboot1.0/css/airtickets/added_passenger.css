@@ -1,0 +1,185 @@
+.main{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+/*头部title*/
+.passenger_title{
+    width: 100%;
+    height: 2rem;
+    background: #29B6F6;
+}
+.passenger_title>ul{
+    display: flex;
+    width: 100%;
+    height:100%;
+    line-height: 2rem;
+    color: #fff;
+
+}
+.passenger_title>ul li{
+    text-align: center;
+}
+.passenger_title>ul li:first-child{
+    flex:1;
+}
+.passenger_title>ul li:nth-child(2){
+    flex: 3;
+}
+.passenger_title>ul li:last-child{
+    flex:1;
+}
+
+/*填写资料*/
+.form{
+    width:100%;
+    background: #fff;
+    margin-top: .5rem;
+    border-top: 1px solid #e8e8e8;
+    color: #607D8B;
+}
+.form>ul li{
+    border-bottom: 1px solid #E8E8E8;
+}
+.form>ul li input{
+    border: none;
+    font-size: .6rem;
+    width: 10rem;
+}
+.form>ul li>div{
+    height: 2rem;
+    line-height: 2rem;
+}
+.form>ul li>div:first-child{
+    padding-left: 1rem;
+}
+.form>ul li:not(.gender),.form>ul li.gender{
+    display: flex;
+}
+.form>ul li:not(.gender)>div:last-child{
+    flex: 3;
+}
+.form>ul li:not(.gender)>div:first-child{
+    flex: 1;
+}
+
+.form>ul li.gender div{
+    flex: 1;
+    border-right: 1px solid #e8e8e8;
+    text-align: center;
+}
+.form>ul li.gender div:first-child{
+    text-align: left;
+}
+.form li.flex{
+    width: 100%;
+    display: flex;
+}
+.form li.flex>div:first-child{
+    flex: 1;
+}
+
+.form li.flex>div:nth-child(2){
+    flex: 2;
+}
+.form li.flex>div:last-child{
+    text-align: right;
+    padding-right: 1rem;
+    font-weight: 900;
+}
+
+/*证件类型的弹出框*/
+.up_container{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    background: rgba(0,0,0,.3)
+}
+.up{
+    position: fixed;
+    top: 25%;
+    left: 10%;
+    background-color: #fff;
+    width: 80%;
+    height: 12rem;
+    font-size: .7rem;
+}
+.up>div{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+.up .up_title{
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    background: #29b6f6;
+    color: #fff;
+}
+.up .up_box li{
+    height: 2rem;
+    width: 100%;
+    line-height: 2rem;
+    text-align: left;
+    border-bottom: 1px solid #e8e8e8;
+    color: #8496A2;
+    padding-left: 1rem;
+}
+
+.up .up_box li span{
+    display: inline-block;
+    width: 30%;
+    padding-right: 1rem;
+    text-align: right;
+    float: right;
+    height: 2rem;
+    line-height: 3.5rem;
+    color: #29b6f6;
+}
+
+/*弹出框*/
+.up_flex,.up_flex ul{
+    display: flex;
+    width: 100%;
+}
+.picker-modal .picker-modal-inner{
+    font-size: .7rem;
+    background: #F0EDF0;
+}
+.picker-modal .picker-modal-inner .picker-items-col:first-child{
+    margin: 0;
+    width: 6rem;
+    z-index: 10;
+}
+.picker-modal .picker-modal-inner .picker-items-col:nth-child(2){
+    margin-left: 10%;
+    width: 6rem;
+    z-index: 10;
+}
+.picker-modal .picker-modal-inner .picker-items-col:nth-child(3){
+    margin: 0 0 0 10%;
+    width: 6rem;
+    z-index: 10;
+}
+.picker-item.picker-selected{
+    color: #29b6f6;
+}
+.picker-modal .picker-center-highlight{
+
+    background: #fff;
+    border: none;
+    z-index: 0;
+}
+.picker-items{
+    -webkit-mask-box-image:none;
+}
+body{
+    background: none;
+}
+.txt_center{
+    text-align: center;
+}

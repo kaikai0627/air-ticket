@@ -1,0 +1,204 @@
+<!doctype html>
+<html>
+<head>
+<title>收付款方式</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link href="../../../../../commonSkin/css/html_tools.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../../../../commonSkin/css/hDate.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../../../../managerSkin/bluecssboot1.0/css/pageStyle.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../../../../managerSkin/bluecssboot1.0/css/btnStyle.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../../../../managerSkin/bluecssboot1.0/css/popModal.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../../../../managerSkin/bluecssboot1.0/css/page_new.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../../../../managerSkin/bluecssboot1.0/css/saveopendiv.css" rel="stylesheet" type="text/css" media="screen">	
+	<!--弹出层js与样式-->
+<link href="../../../../../managerSkin/bluecssboot1.0/js/textsearchdiv/jquery-ui.min.css" rel="stylesheet" /> 
+<script type="text/javascript" src="../../../../../websiteSkin/website-mobile/cssboot1.0/js/weui/lib/jquery-2.1.4.js"></script>
+<script src="../../../../../managerSkin/bluecssboot1.0/js/textsearchdiv/jquery-ui.min.js" type="text/javascript"></script>
+<script language="javascript" >
+function opendialog() {
+$("#dialog").dialog(
+{
+	 autoOpen: true, // 是否打开
+	 resizable: false,
+     height:500,
+	 width:800,
+     modal: true //蒙层（弹出会影响页面大小） 
+	
+});
+}
+	
+	</script>
+</head>
+
+<body>
+<div class="ht_right">
+      
+      <div class="position">首页&nbsp;-&nbsp;<a href="#">系统中心</a>&nbsp;-&nbsp;<a href="customer_add.html">参数设置</a>&nbsp;-&nbsp;<a href="customer_add.html">财务类</a>&nbsp;-&nbsp;<a href="customer_add.html">收/付方式</a></div>
+      <div class="clearfix h20"></div>
+
+<table class="mainTable" cellspacing="0" cellpadding="0" >
+    <tr>
+		<td id="p1nav" class="onTab" onclick="">收/付款方式管理</td>
+		<td id="p2nav" onclick=""></td>
+		<td id="p3nav"  onclick=""></td>
+		<td class="onNor">
+		<span id="">
+		<a id="paytype_add" class="ht_btn_blue_add pull-right MARGIN_R_10" href="javascript:void(0)" onClick="opendialog();">添加</a>
+		</span>
+
+	
+		</td>
+	</tr>
+	<!--收付方式开始-->
+	<tr class="mainTableBody">
+	<td colspan="10">
+	<div class="clearfix h20"></div>
+	<table class="inmainTable" cellspacing="0" cellpadding="0">
+               <tr>
+                <td style="width:150px;"><span class="pull-right f_14">收/付方式名称：</span></td>
+                <td style="width: 220px;"><center>
+                    <input type="text" id="payment" name="payment" class="ht_def_text pull-left" style="width: 200px;" />
+                  </center></td>
+                <td colspan="8">
+                	  <span id="">
+		<a id="order_add" class="ht_btn_blue_search pull-left MARGIN_R_10" href="order_add.html">搜索</a>
+		</span>
+                	
+                </td>
+
+	</tr>
+	</table>
+	</td>
+	</tr>
+	<tr class="mainTableBody">
+	<td colspan="10">
+	<table class="inmainTable" cellspacing="0" cellpadding="0">
+	   <div class="clearfix h20"></div>
+	   <tr class="inmainTable_title">
+                <th class="form_td_ipt_100" >收/付款方式名称</th>
+                <th class="form_td_ipt_100">适用</th>
+                <th class="form_td_ipt_100">&nbsp;&nbsp;创建人</th>
+                <th class="form_td_ipt_100">&nbsp;&nbsp;更新时间</th>
+                <th class="form_td_ipt_100">&nbsp;&nbsp;状态</th>
+                <th class="form_td_ipt_100">&nbsp;&nbsp;操作</th>
+                </tr>
+               <tr class="inmainTable_res">
+						<td class="form_td_ipt_80">支付宝</td>
+						<td class="form_td_ipt_80">收款</td>
+						<td class="form_td_ipt_80">susan</td>
+						<td class="form_td_ipt_80">2016-12-25 11:29:00</td>
+						<td class="form_td_ipt_80">可用</td>
+					    <td class="form_td_ipt_80"><a href="#">设置收银账号|</a><a href="#">编辑|</a>锁定|删除</td>
+				</tr>
+					<tr class="inmainTable_res">
+						<td class="form_td_ipt_80">支付宝</td>
+						<td class="form_td_ipt_80">收款</td>
+						<td class="form_td_ipt_80">susan</td>
+						<td class="form_td_ipt_80">2016-12-25 11:29:00</td>
+						<td class="form_td_ipt_80"><span class="_calcolse">锁定</span></td>
+					    <td class="form_td_ipt_80"><a href="#">设置收银账号|</a><a href="#">编辑|</a>锁定|删除</td>
+				</tr>
+					<tr class="inmainTable_res">
+						<td class="form_td_ipt_80">财付通</td>
+						<td class="form_td_ipt_80">收款</td>
+						<td class="form_td_ipt_80">susan</td>
+						<td class="form_td_ipt_80">2016-12-25 11:29:00</td>
+						<td class="form_td_ipt_80">可用</td>
+					    <td class="form_td_ipt_80"><a href="#">设置收银账号|</a><a href="#">编辑|</a>锁定|删除</td>
+				</tr>
+				
+						
+					<div class="clearfix h10"></div>
+					<table class="ht_pageTab">		
+						<tr>
+						<td class="td1"><a href="#" class="ht_btn_refs_orb " title="刷新列表"></a></td>
+						<td class="td2">
+								<div class="page_out">
+								<div class="page_f_font">共10条 </div>	
+								<div class="page_f_font">每页显示</div>
+								<select class="page_f_select">
+									<option>10</option>
+									<option>50</option>
+									<option>100</option>
+								</select>
+								<div class="page_f_font">条</div>
+								<div class="page_f_font">&nbsp;第</div>
+								<input type="text" class="page_f_input" />
+								<div class="page_f_font">页&nbsp;共1页</div>
+								<a href="#" class="page_f_btn_p" title="上一页"></a>
+								<a href="#" class="page_f_btn_n" title="下一页"></a>
+							</div>			
+						
+						</td>
+ 						
+					</tr>		
+							</table>
+<!--收付方式结束-->
+							
+					
+	</table>
+	</td>
+	</tr>
+	</table>
+	</div>
+	<!--点击添加弹跳出页面开始-->
+	<div id="dialog" class="title" title="收/付款方式添加">
+ <div class="cont"> 
+      <table class="mainTable" cellspacing="0" cellpadding="0">
+             <tr class="mainTableBody">
+             	<td>
+             		<table class="inmainTable">
+                          		
+               <tr class="inmainTable_res">
+                <td style="width:150px;"><span class="pull-right f_14">收/付方式名称：</span></td>
+                <td style="width: 220px;"><center>
+                    <input type="text" id="paymentMethod" name="paymentMethod" class="ht_def_text pull-left" style="width: 200px;" />
+                  </center>
+                  </td>
+		  </tr>
+		    <tr class="inmainTable_res">
+                <td style="width:150px;"><span class="pull-right f_14">适用类型：</span></td>
+                <td style="width: 220px;"><center>
+                  <select class=" pull-left" style="width: 200px;right: 50px;" >
+						<option>全部</option>
+						<option>付款</option>
+						<option>收款</option>
+					</select>
+                  </center>
+                  </td>
+		  </tr>
+		  <tr class="inmainTable_res">
+		  	
+                <td style="width:150px;">
+                <span class="pull-right f_14">备注：</span>
+                </td>
+				<td>
+				  <textarea class="ht_def_text pull-left" style="width: 200px;height: 150px;"></textarea>
+					
+				</td>
+            
+				   
+		  </tr>
+		 <tr>
+		 	
+		 	<td  colspan="4">
+		 	<div class="clearfix h20"></div>
+		 		<a href="javascript:void(0)" onclick="toMyform();" class=" price_zone_ok" style="margin-left: 150px;">保存</a>
+		<a href="customer_list.html" class="price_zone_cancel" style="margin-left: 5px;"><span class="f_darkgray">关闭</span></a>
+		 	</td>
+		 </tr>
+		 </table>
+             	</td>
+             </tr>
+		 
+		  </table>
+
+      
+		</div>
+	</div>
+		
+	<!--点击添加弹跳出页面结束-->
+</body>
+</html>

@@ -1,0 +1,244 @@
+/*主内容  第一块div*/
+p{
+    padding: 0;
+    margin: 0;
+}
+.clear:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+/*航班详情*/
+.path{
+    margin: .3rem;
+    color:#607D8B;
+    background: #fff;
+    padding: .8em 0;
+}
+strong{
+    font-weight: 100;
+}
+.path .path_box{
+    width: 70%;
+    padding: .5em 0 0 2em;
+    position: relative;
+}
+.path .path_box span.add{
+    position: absolute;
+    left: -0.1em;
+    color: #42AEF4;
+}
+.path .path_box:last-child{
+    padding-top: 0;
+}
+.path .path_box i{
+    display: inline-block;
+    width: .8em;
+    height: .8em;
+    border-radius: 50%;
+    background: #B8B8B8;
+    margin: 0 1rem;
+}
+.path .path_box i:last-child{
+    background: #fff;
+    border: 1px solid #b8b8b8;
+}
+.path .path_box b{
+    display: inline-block;
+    width: .2em;
+    height: 2.6em;
+    background: #b8b8b8;
+    position: absolute;
+    left: 4.2rem;
+    top: 1rem;
+}
+.path>.rt{
+    width: 30%;
+    padding: .5rem 1rem 0 0;
+    font-size: .6rem;
+    color: #B4B4B4;
+}
+.path>.txt{
+    width: 100%;
+    padding:.5rem 0 .5rem 2.2rem;
+    clear:both;
+}
+.path>.txt span{
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    border: 1px solid #FFAC47;
+    border-radius: 50%;
+    line-height: 1.5em;
+    text-align: center;
+    color: #FFAC47;
+}
+
+/*总价*/
+.tank>.total_prices{
+    width: 100%;
+    clear: both;
+}
+.flight_title{
+    height: 2.5em;
+    width: 100%;
+    line-height: 2.5em;
+    background: #666;
+    color: #fff;
+}
+.flight_title p{
+    padding-left: 2em;
+    margin: 0;
+    height: 100%;
+    line-height: 2rem;
+    position: relative;
+}
+.flight_title p span:first-child{
+    position: absolute;
+}
+.flight_title p span:last-child{
+    padding-left: 2rem;
+}
+.tank>.total_prices .price_box{
+    margin: .3rem;
+    font-size: .7rem;
+    color: #6E8992;
+    background: #fff;
+}
+.tank>.total_prices .price_box ul{
+    width: 80%;
+    height: 2rem;
+    margin-left: 10%;
+}
+.tank>.total_prices .price_box ul:nth-child(2){
+    border-bottom: 1px solid #EBE8EB;
+}
+.tank>.total_prices .price_box ul li{
+    width: 50%;
+    height: 100%;
+    line-height: 2rem;
+}
+.tank>.total_prices .price_box ul li:last-child{
+    float:right;
+}
+.tank>.total_prices .price_box ul li:first-child{
+    float: left;
+}
+/*退改签说明*/
+.tank>.retreat{
+    width: 100%;
+    clear: both;
+    background: #fff;
+}
+/*说明 详情*/
+.explain{
+    width: 100%;
+    color: #6E858B;
+}
+
+.explain tr td.left{
+    width: 25%;
+    text-align: center;
+}
+.explain tr td.right{
+    width: 75%;
+}
+.explain tr td{
+    width: 5rem;
+    height:2rem;
+}
+/*留白*/
+.spacer{
+   padding-left: .5rem;
+}
+.rt_bor{
+    border-right: 1px solid #ddd;
+}
+.explain table.explain_box{
+    width: 80%;
+    margin-left: 10%;
+}
+.bottom_bor{
+    border-bottom: 1px solid #ddd;
+}
+
+/*行李规定*/
+.tank>.stipulate{
+    width: 100%;
+    clear: both;
+    background: #fff;
+    color: #6E8992;
+}
+.tank>.stipulate .stipulate_box{
+    width: 80%;
+    margin-left: 10%;
+}
+.tank .stipulate_lf{
+    width: 25%;
+    height: 5.5rem;
+    line-height: 5.5rem;
+    text-align: center;
+}
+.tank .stipulate_rt{
+    width: 75%;
+    height: 5.5rem;
+
+}
+.tank .stipulate_rt ul{
+    padding: .5rem 1rem;
+}
+/*购票须知*/
+.infuse{
+    color: #607D8B;
+    background-color: #fff;
+    width: 100%;
+}
+.tank>.infuse .infuse_box{
+    width: 80%;
+    margin-left: 10%;
+}
+.infuse_box .infuse_top,.infuse_box .infuse_bottom{
+    display: flex;
+}
+.infuse_box .left{
+    flex: 1;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+}
+.infuse_box .left i{
+    display: inline-block;
+    width: .8rem;
+    height: .8rem;
+}.infuse_box .left span{
+     display: inline-block;
+     width: 3rem;
+     height: 1rem;
+     line-height: 1rem;
+     border: 1px solid #bbb;
+    text-align: center;
+ }
+
+.infuse_box .right{
+    flex: 3;
+    height: 3rem;
+    padding-top: .7rem;
+}
+/*底部按钮*/
+.seek{
+    width:100%;
+    height:2.5rem;
+    position: fixed;
+    bottom: 0;
+}
+.seek .seek_btn{
+    width:100%;
+}
+.seek .seek_btn a{
+    height:2.5rem;
+    line-height:2.5rem;
+    background: #FFA726;
+}
+.seek .seek_btn a:hover{
+    background: #FFA726;
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>机票查询</title>
+    <link rel="stylesheet" href="websiteSkin/website-mobile/cssboot1.0/css/airtickets/light7.css">
+    <link rel="stylesheet" href="websiteSkin/website-mobile/cssboot1.0/css/airtickets/weui.min.css">
+    <link rel="stylesheet" href="websiteSkin/website-mobile/cssboot1.0/css/airtickets/font/iconfont.css"/>
+    <!--myStyle-->
+    <link rel="stylesheet" href="websiteSkin/website-mobile/cssboot1.0/css/airtickets/base.css"/>
+    <link rel="stylesheet" href="websiteSkin/website-mobile/cssboot1.0/css/airtickets/querystyle.css"/>
+</head>
+<body>
+<!-- page 容器 -->
+<div class="page">
+    <!-- 这里是页面内容区 -->
+    <div class="main">
+        <div class="banana">
+            <span class="homepage"><i class="iconfont">&#xe616;</i></span>
+            <span class="register"><i class="iconfont">&#xe602;</i></span>
+        </div>
+        <div class="content_box">
+            <div class="buttons-tab">
+                <a href="#tab1" class="tab-link button tab-btn">国内</a>
+                <a href="#tab2" class="tab-link active button tab-btn">国际</a>
+            </div>
+            <div class="content-block container">
+                <div class="tabs">
+                    <div id="tab1" class="tab">
+                        <div class="content-block">
+                            <p>空</p>
+                        </div>
+                    </div>
+                    <div id="tab2" class="tab active">
+                        <div class="content-block clear">
+                            <!--start  出发-->
+                            <div class="start lf">
+                                <div class="clear">
+                                   <ul class="lf">
+                                       <li>
+                                           <span class="f_14"> 出发</span>
+                                       </li>
+                                       <li>
+                                           <input type="text" class="ipt_1_text" value="北京" placeholder="出发城市" readonly="readonly"  />
+                                       </li>
+                                   </ul>
+                                </div>
+                            </div>
+                            <!--p_ico  小飞机图标-->
+                            <div class="p_ico lf">
+                                <i></i>
+                            </div>
+                            <!--arrive  到达-->
+                            <div class="arrive lf">
+                                <div class="clear">
+                                    <ul class="rt">
+                                        <li>
+                                            <span class="f_14">到达</span>
+                                        </li>
+                                        <li>
+                                            <input type="text" class="ipt_1_text" value="上海" placeholder="出发城市" readonly="readonly"  />
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- trip旅途 去程-->
+                            <div class="trip lf">
+                                <div class="clear">
+                                    <ul class="lf">
+                                        <li>
+                                            <span class="f_14"> 去程</span>
+                                        </li>
+                                        <li style="padding-left:.5rem" onclick="window.open('ticket_inquires.html','_self')">
+                                            <input type="text" value="11月10号 周四" placeholder="去程" readonly="readonly"  />
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--leave  返程-->
+                            <div class="leave rt">
+                                <div class="clear">
+                                    <ul class="rt">
+                                        <li>
+                                            <span class="f_14">返程</span>
+
+                                        </li>
+                                        <li class="txt_center" onclick="window.open('ticket_inquires.html','_self')">
+                                            <input type="text" value="11月11号" placeholder="返程" readonly="readonly"/>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!--成人 儿童-->
+                            <div class="option lf">
+                                <div class="clear">
+                                    <ul class="lf f_black f_14">
+                                        <li>成人&nbsp;儿童/婴儿</li>
+                                        <li>
+                                            <input id='picker-name' type="text" readonly="readonly"/>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--  搜索-->
+                            <div class="seek lf" onclick="window.open('page/website/webisite-mobile/pageVersion1.0/airtickets/flightsearch/reserve.html','_self')">
+                            	<div class="seek_btn">
+                            		<a href="javascript:;" class="weui-btn weui-btn_primary">搜索</a>
+                            	</div>
+                            </div>
+                            <div class="spacer lf">
+                            </div>
+							<!--  订单  & 动态-->
+                            <div class="examine lf">
+                            	<div class="clear">
+                            		<ul class="lf"> 
+                            			<li>
+                            				<b><i class="iconfont" style="font-size: 1.6rem">&#xe610;</i></b>
+                            			</li>
+                            			<li>
+                            				<span class="f_14">我的订单</span>
+                            			</li>	
+                            		</ul>
+                            		<ul class="rt"> 
+                            			<li>
+                                            <b><i class="iconfont" style="font-size: 1.6rem">&#xe6dd;</i></b>
+                            			</li>
+                            			<li class="rt">
+                            				<span class="f_14">航班动态</span>
+                            			</li>	
+                            		</ul>
+                            	</div>
+                            </div>
+                            
+						<!-- 底部-->
+                       		<div class="footer lf">
+                       			<div class="txt f_14">
+                       				全程预订保障，去哪都放心
+                       			</div>
+                       		</div>
+                        </div>
+                    </div>
+                </div>     
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type='text/javascript' src='websiteSkin/website-mobile/cssboot1.0/js/weui/lib/jquery-2.1.4.js' charset='utf-8'></script>
+<script type='text/javascript' src='websiteSkin/website-mobile/cssboot1.0/js/light7/light7.js' charset='utf-8'></script>
+<script>
+    $("#picker-name").picker({
+        toolbarTemplate: '<header class="bar bar-nav">\
+  <button class="button button-link pull-right close-picker" style="color: #fff;">确定</button>\
+  <button class="button button-link pull-left close-picker" style="color: #fff;">取消</button>\
+  </header><header class="bar bar-nav up_flex" style="background: #F5F5F5;">\
+  <ul style="font-size: .7rem"><li style="width: 33%;text-align: center;line-height: 2rem"> 成人</li><li style="width: 33%;text-align: center;line-height: 2rem">儿童(2-12岁)</li><li style="width:33%;text-align: center;line-height: 2rem">婴儿(小于2岁)</li></ul>\
+  </header>',
+        cols: [
+            {
+                textAlign: 'center',
+                values: ['0', '1', '2', '3', '4', '5', '6', '7']
+            },
+            {
+                textAlign: 'center',
+                values: ['0', '1', '2', '3', '4', '5', '6', '7']
+            },
+            {
+                textAlign: 'center',
+                values: ['0', '1', '2', '3', '4', '5', '6', '7']
+            }
+        ]
+    });
+</script>
+
+
+
+</body>
+</html>

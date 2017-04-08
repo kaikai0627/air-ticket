@@ -1,0 +1,343 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>供应商退款明细</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="../../../../../../commonSkin/css/html_tools.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="../../../../../../commonSkin/css/hDate.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="../../../../../../managerSkin/bluecssboot1.0/css/pageStyle.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="../../../../../../managerSkin/bluecssboot1.0/css/btnStyle.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="../../../../../../managerSkin/bluecssboot1.0/css/popModal.css" rel="stylesheet" type="text/css" media="screen"/>
+<!--弹出层js与样式-->
+<link href="../../../../../../managerSkin/bluecssboot1.0/js/textsearchdiv/jquery-ui.min.css" rel="stylesheet" />
+<script type="text/javascript" src="../../../../../../websiteSkin/website-mobile/cssboot1.0/js/weui/lib/jquery-2.1.4.js"></script>
+<script src="../../../../../../managerSkin/bluecssboot1.0/js/textsearchdiv/jquery-ui.min.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="ht_right">
+<div class="position"> 您的位置：<a href="#">首页</a>&nbsp;>&nbsp;<a href="#">财务管理</a>&nbsp;>&nbsp;<a href="#">费用变更审核</a><a href="#">&nbsp;>&nbsp;退款审核</a> </div>
+<div class="clearfix h20"></div>
+<table class="mainTable" cellspacing="0" cellpadding="0" >
+<tr>
+  <td id="p1nav" class="onTab" onclick="">退票流水明细</td>
+  <td class="onNor"></td>
+</tr>
+<tr>
+  <td colspan="10"><div class="clearfix h5"></div>
+    <a class="ht_btn_blue_search pull-left MARGIN_R_10" href="javascript:void(0)" onClick="keleyidialog()" style="margin-left:20px; background-image:url();">确认退款&nbsp;&nbsp;</a> <a class="ht_btn_blue_search pull-left MARGIN_R_10" href="javascript:void(0)" onClick="keleyidialogTwo()" style="background-image:url();">拒单&nbsp;&nbsp;</a> <a class="ht_btn_blue_search pull-left MARGIN_R_10" href="javascript:void(0)" onClick="keleyidialogThree()" style="background-image:url();">取消&nbsp;&nbsp;</a> <a class="ht_btn_blue_search pull-left MARGIN_R_10" href="javascript:void(0)" style="background-image:url();">解锁&nbsp;&nbsp;</a>
+    <div class="clearfix h20"></div></td>
+</tr>
+<tr class="inmainTable_title">
+  <td colspan="10"><strong class="f_16">退款单信息</strong></td>
+</tr>
+<tr class="mainTableBody">
+  <td colspan="2"><table class="inmainTable"  cellspacing="0" cellpadding="0">
+      <tr class="inmainTable_res">
+        <td align="right"><span class="pull-right"> 退款单流水号：</span></td>
+        <td align="left"><span class="pull-left">12312312312</span></td>
+        <td><span class="pull-right"> 创建时间：</span></td>
+        <td> 2017-12-12 12:00 </td>
+        <td><span class="pull-right"> 状态：</span></td>
+        <td><span class="f_red">等待审核</span></td>
+        <td><span class="pull-right"> 订单来源:</span></td>
+        <td> 线下 </td>
+        <td><span class="pull-right"> 所属销售:</span></td>
+        <td> 小九 </td>
+      </tr>
+      <tr class="inmainTable_res">
+        <td align="right"><span class="pull-right"> 供应商：</span></td>
+        <td align="left"><span class="pull-left">某某</span></td>
+        <td><span class="pull-right"> 联系人：</span></td>
+        <td><span class="pull-left"> 某某</span></td>
+        <td><span class="pull-right">联系方式：</span></td>
+         <td colspan="5"><span class="pull-left">  18328271631</span></td>
+      </tr>
+      <tr class="inmainTable_res">
+        <td align="right"><span class="pull-right"> 订单号：</span></td>
+        <td align="left"><span class="pull-left">1231231</span></td>
+        <td><span class="pull-right"> 产品编号：</span></td>
+        <td colspan="7"><span class="pull-left"> 123123123113</span></td> 
+      </tr>
+      <tr class="inmainTable_res">
+        <td align="right"><span class="pull-right"> 退款备注：</span></td>
+        <td align="left" colspan="9"><span class="pull-left">1243撒的12123131231231</span></td>
+      </tr>
+    </table>
+    <div class="clearfix h20"></div></td>
+</tr>
+<tr class="td_center f_12">
+  <td class="mainTableBody" colspan="2"><table class="inmainTable"  cellspacing="0" cellpadding="0">
+      <tr class="inmainTable_title">
+        <td colspan="3" style="text-align: left"><strong class="f_16">销售单费用</td>
+      </tr>
+      <tr>
+        <td><div class="clearfix h5"></div></td>
+      </tr>
+      <tr class="inmainTable_title">
+        <td>费用名称</td>
+        <td>费用说明</td>
+        <td>成本总价</td>
+      </tr>
+      <tr class="inmainTable_res">
+        <td>成人</td>
+        <td>成人团费</td>
+        <td>￥8988.00X 10人=￥<strong class="f_red">89010.00</strong></td>
+      </tr>
+      <tr class="inmainTable_res">
+        <td>儿童</td>
+        <td>儿童团费</td>
+        <td>￥8988.00X 10人=￥<strong class="f_red">89010.00</strong></td>
+      </tr>
+      <tr class="inmainTable_res">
+        <td>导游费</td>
+        <td>导游费</td>
+        <td>￥<strong class="f_red">1000</strong></td>
+      </tr>
+      <tr class="inmainTable_res">
+        <td colspan="2"></td>
+        <td>总计：￥<strong class="f_red">1000</strong></td>
+      </tr>
+    </table></td>
+</tr>
+<tr class="td_center f_12">
+  <td class="mainTableBody" colspan="2"><table class="inmainTable"  cellspacing="0" cellpadding="0">
+      <tr class="inmainTable_title">
+        <td colspan="10" style="text-align: left"><strong class="f_16">退款名单</td>
+      </tr>
+      <tr>
+        <td><div class="clearfix h5"></div></td>
+      </tr>
+      <tr class="inmainTable_title">
+        <td>序号</td>
+        <td>成本价</td>
+        <td>姓名</td>
+        <td>年龄阶段</td>
+        <td>证件类型</td>
+        <td>证件号</td>
+        <td>性别</td>
+        <td>年龄</td>
+        <td>联系电话</td>
+        <td>地区</td>
+      </tr>
+      <tr class="inmainTable_res">
+        <td>1</td>
+        <td>32321</td>
+        <td>姓名</td>
+        <td>成人</td>
+        <td>身份证</td>
+        <td>3412269283912850983</td>
+        <td>男</td>
+        <td>18</td>
+        <td>18328327162</td>
+        <td>安徽</td>
+      </tr>
+      <tr class="inmainTable_res">
+        <td>2</td>
+        <td>32322</td>
+        <td>儿童</td>
+        <td>成人</td>
+        <td>护照</td>
+        <td>3412269283912850983</td>
+        <td>女</td>
+        <td>18</td>
+        <td>18328327222</td>
+        <td>广州</td>
+      </tr>
+    </table></td>
+</tr>
+<tr class="td_center f_12">
+  <td class="mainTableBody" colspan="2"><table class="inmainTable"  cellspacing="0" cellpadding="0">
+      <tr class="inmainTable_title">
+        <td colspan="13" style="text-align: left"><strong class="f_16">退款结算明细</td>
+      </tr>
+      <tr>
+        <td><div class="clearfix h5"></div></td>
+      </tr>
+      <tr class="inmainTable_title">
+        <td>客户名称</td>
+        <td>收/支</td>
+        <td>出账日期</td>
+        <td>结算说明</td>
+        <td>金额</td>
+        <td>入账银行</td>
+        <td>入账账号</td>
+        <td>流水号</td>
+        <td>结算状态</td> 
+        <td>结算状态</td>
+        <td>结算人</td>
+        <td>结算时间</td>
+      </tr>
+      <tr class="inmainTable_res">
+        <td>不夜城</td>
+        <td >收入</span></td>
+        <td>2017/08/08 20:00</td>
+        <td class="f_red">888</td>
+        <td>转账</td>
+        <td>中国银行</td>
+        <td>2122222222222</td>
+        <td>1231312312313</td>
+        <td>qwer@116.com</td>
+        <td class="f_green">已结算</td>
+        <td>谭笑笑</td>
+        <td>2017/08/08 20:00</td>
+      </tr>
+    </table></td>
+</tr>
+<tr class="td_center f_12">
+  <td class="mainTableBody" colspan="2"><table class="inmainTable"  cellspacing="0" cellpadding="0">
+      <tr class="inmainTable_title">
+        <td colspan="4" style="text-align: left"><strong class="f_16">订单日志</td>
+      </tr>
+      <tr>
+        <td><div class="clearfix h5"></div></td>
+      </tr>
+      <tr class="inmainTable_title">
+        <td>操作人</td>
+        <td>操作时间</td>
+        <td>状态</td>
+        <td>操作内容</td>
+      </tr>
+      <tr class="inmainTable_res">
+        <td>张俪</td>
+        <td>2016-12-24 16:24:10</td>
+        <td>待审核</td>
+        <td>出票订单出票底价修改：修改前底价:1015.0修改后底价:1015.0</td>
+      </tr>
+      <tr class="inmainTable_res">
+        <td>张俪</td>
+        <td>2016-12-24 16:24:10</td>
+        <td>已退款</td>
+        <td>附加费用：<strong class="f_red">234</strong></td>
+      </tr>
+    </table></td>
+</tr>
+</table>
+</div>
+<!--确认退款的弹出框-->
+<div id="dialog" class="title" title="确认已退款" style="display: none">
+  <div class="cont">
+    <table class="mainTable" cellspacing="0" cellpadding="0" >
+      <tr>
+        <td colspan="4" class="mainTableBody"><table id="dateGoT" class="" cellspacing="0" cellpadding="5px" align="center">
+            <tr>
+              <td>供应商名称：</td>
+              <td>上海八爪鱼</td>
+            </tr>
+            <tr>
+              <td>已退款金额：</td>
+              <td><input type="text" class="ht_def_text"/></td>
+              <td class="f_red">*</td>
+            </tr>
+            <tr>
+              <td>公司入账方式：</td>
+              <td><select class="ht_def_select" >
+                  <option>请选择</option>
+                  <option>支付宝</option>
+                  <option>工商银行</option>
+                </select></td>
+              <td class="f_red">*</td>
+            </tr>
+              <td>入账账号：</td>
+              <td><select class="ht_def_select" >
+                  <option>请选择</option>
+                  <option>支付宝</option>
+                  <option>工商银行</option>
+                </select></td>
+              <td class="f_red">*</td>
+            </tr>
+            <tr>
+              <td>备注：</td>
+              <td><input type="text" class="ht_def_text pull-left" style="width: 300px; height:100px" /></td>
+            </tr>
+            <tr>
+              <td colspan="6"><a href="javascript:void(0)" onClick="toMyform();" class="price_zone_ok" style="margin-left: 60px; background:#3399CC;" >结算</a> <a href="javascript:void(0)" onClick="toMyform();" class="price_zone_ok" style="margin-left: 60px;background:#3399CC;" >取消</a></td>
+            </tr>
+          </table></td>
+      </tr>
+    </table>
+  </div>
+</div>
+<!--拒单的弹出框-->
+  <div id="dialogTwo" class="title f_12" title="拒单" style="display: none;">
+  <div class="cont">
+      <table class="mainTable" cellspacing="0" cellpadding="0" >
+      <tr>
+          <td colspan="4" class="mainTableBody"><table id="dateGoT" class="" cellspacing="0" cellpadding="5px" align="center">
+            <tr>
+              <td ><span class="pull-right">拒退说明</span></td>
+              <td class="form_td_ipt_200" colspan=""><input type="text" class="ht_def_text pull-left" style="width: 400px; height:260px" /></td>
+            </tr>
+            <tr>
+            	<td colspan="2"><a href="javascript:void(0)" onClick="toMyform();" class="price_zone_ok" style="margin-left: 100px;">确认</a></td>
+            </tr>
+            
+            </table></td>
+        </tr>
+    </table>
+    </div>
+</div>
+<!--取消的弹出框-->
+<div id="dialogThree" class="title f_12" title="取消" style="display: none;">
+  <div class="cont">
+      <table class="mainTable" cellspacing="0" cellpadding="0" >
+      <tr>
+          <td colspan="4" class="mainTableBody"><table id="dateGoT" class="" cellspacing="0" cellpadding="5px" align="center">
+            <tr>
+              <td ><span class="pull-right">取消备注</span></td>
+              <td class="form_td_ipt_200" colspan=""><input type="text" class="ht_def_text pull-left" style="width: 400px; height:260px" /></td>
+            </tr>
+            <tr>
+            	<td colspan="2"><a href="javascript:void(0)"; class="price_zone_ok" style="margin-left: 100px;">确认拒单</a></td>
+            </tr>
+            
+            </table></td>
+        </tr>
+    </table>
+    </div>
+</div>
+<script type="text/javascript">
+function keleyidialog() {
+$("#dialog").dialog(
+{
+	 autoOpen: true, // 是否打开
+	 resizable: false,
+     height:600,
+	 width:800,
+     modal: true //蒙层（弹出会影响页面大小） 
+	
+});
+}
+function keleyidialogTwo() {
+$("#dialogTwo").dialog(
+{
+	 autoOpen: true, // 是否打开
+	 resizable: false,
+     height:600,
+	 width:800,
+     modal: true //蒙层（弹出会影响页面大小） 
+	
+});
+}
+function keleyidialogThree() {
+$("#dialogThree").dialog(
+{
+	 autoOpen: true, // 是否打开
+	 resizable: false,
+     height:600,
+	 width:800,
+     modal: true //蒙层（弹出会影响页面大小） 
+	
+});
+}
+	
+	
+  //打开按钮ID
+	 function  opens()
+	{
+      $( "#dialog" ).dialog( "close" );
+   }
+</script>
+</body>
+</html>

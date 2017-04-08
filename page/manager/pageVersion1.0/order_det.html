@@ -1,0 +1,1087 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>订单中心-订单详细</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<link href="../../../commonSkin/css/html_tools.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="../../../commonSkin/css/hDate.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="../../../managerSkin/bluecssboot1.0/css/pageStyle.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="../../../managerSkin/bluecssboot1.0/css/btnStyle.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="../../../managerSkin/bluecssboot1.0/css/popModal.css" rel="stylesheet" type="text/css" media="screen"/>
+
+</head>
+<body>
+
+<!-- top-->
+<div class="ht_top">
+	<div class="logo">
+		<img src="../../../managerSkin/bluecssboot1.0/img/tempLog1o.png"  />
+	</div>
+	<div class="dh">
+		<ul>
+			<li class="mmouse on" id="t_sel1">大菜单1</li>
+			<li class="mmouse" id="t_sel2">大菜单2</li>
+			<li class="mmouse" id="t_sel3">大菜单3</li>
+		</ul>
+	</div>
+	
+	<div class="dh_r">
+		<ul >
+			<li><a class="mail" href="#"><div class="msgNum">11</div></a></li>
+			<li><div class="name">消息</div></li>
+			<li><div class="head"><img src="../../../managerSkin/bluecssboot1.0/img/icon_center_head.png" class="inhead"/></div></li>
+			<li class="mop">
+			<div class="name">小陈</div>
+			<div id="arrow_name" class="arrow"></div>
+				<div id="menuOpen_name" class="menuOpen">
+						<ul>
+							<li><a href="my_info.html">我的资料</a></li>
+							<li><a href="pwd_edit.html">密码修改</a></li>
+						</ul>
+				</div>
+			</li>
+			<li><a class="sett" href="#"></a></li>
+			<li class="mop">
+			<div class="name">设置</div>
+			<div id="arrow_sett" class="arrow"></div>
+				<div id="menuOpen_sett" class="menuOpen">
+						<ul>
+							<li><a href="company_info">公司信息</a></li>
+							<li><a href="emp_dep.html">部门与员工</a></li>
+							<li><a href="system_sett.html">系统设置</a></li>
+						</ul>
+				</div>
+			</li>
+			<li onclick="location.href='service.html'"><a class="service" href="#"></a></li>
+			<li onclick="location.href='service.html'"><div class="name">客服</div></li>
+			<li onclick="location.href='login.html'"><a class="exit" href="#"></a></li>
+			<li onclick="location.href='login.html'"><div class="name">退出</div></li>
+		</ul>
+	</div>
+</div>
+
+<!-- top ed-->
+<div class="clearfix"></div>
+
+<!-- left -->
+<div class="ht_left" style="display: ;">
+<div class="clearfix h30"></div>
+<div class="clearfix h30"></div>
+<div class="clearfix h10"></div>
+		<ul>
+			<li class="mop">
+				<a class="order" href="#"></a>
+				<div class="arrow"></div>
+				<div class="menuOpen">
+						<div class="one">
+						<ul>
+							<li><a href="order_manager.html">订单中心</a></li>
+							<li><a href="order_refund.html">退票订单</a></li>
+							<li><a href="order_temp.html">暂存订单</a></li>
+							<li><a href="order_faild.html">作废订单</a></li>
+						</ul>
+						</div>
+				</div>
+			</li>
+			
+				<li class="mop" onclick="location.href='customer_list.html'">
+				<a class="user" href="#"></a>
+<!-- 				<div class="menuOpen"> -->
+<!-- 					<div class="one"> -->
+<!-- 						<ul> -->
+<!-- 							<li><strong>个人资料</strong></li> -->
+<!-- 							<li><a href="#">修改个人信息</a></li> -->
+<!-- 							<li><a href="#">修改密码</a></li> -->
+<!-- 						</ul> -->
+<!-- 					</div> -->
+
+<!-- 				</div> -->
+			</li>
+			
+				<li class="mop">
+				<a class="report" href="#"></a>
+				<div class="arrow"></div>
+				<div class="menuOpen" style="width: 300px;">
+						<ul>
+							<li><strong class="f_gray_m f_15">财务报表</strong></li>
+							<li><a href="order_get.html">应收订单</a></li>
+							<li><a href="order_pay.html">应付订单</a></li>
+						</ul>
+						<ul>
+							<li><strong class="f_gray_m f_15">销售报表</strong></li>
+							<li><a href="sale_count.html">销售统计</a></li>
+							<li><a href="sale_rank.html">业绩排行</a></li>
+							<li><a href="receivable_count.html">未收款统计</a></li>
+						</ul>
+					
+						<ul>
+							<li><strong class="f_gray_m f_15">返扣报表</strong></li>
+							<li><a href="order_noReturn.html">未返扣订单</a></li>
+							<li><a href="order_hasReturn.html">已反扣订单</a></li>
+						</ul>
+				</div>
+			</li>
+			
+			
+		</ul>
+</div>
+<!-- left ed -->
+
+<!-- -right -->
+<div class="ht_right">
+<div class="clearfix h30"></div>
+<div class="clearfix h20"></div>
+<div class="clearfix h5"></div>
+<div class="position">您的位置：<a href="#">首页</a>&nbsp;>&nbsp;<a href="order_manager.html">订单中心</a>&nbsp;>&nbsp;<a href="order_det.html">订单详细</a></div>
+
+
+<div class="clearfix h20"></div>
+
+
+<table class="mainTable" cellspacing="0" cellpadding="0" >
+	<tr>
+		<td id="p1nav" class="onTab" onclick="">订单信息</td>
+		<td id="p2nav" class="onDef" ></td>
+		<td id="p3nav" class="onDef"></td>
+		<td class="onNor">
+		<span id="">
+		<a id="order_add" class="ht_btn_blue pull-right MARGIN_R_10" href="order_add.html">这是按钮</a>
+		</span>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" class="mainTableBody">
+				
+				<table id="" class="" cellspacing="0" cellpadding="0" >
+					<tr>
+						<td class="form_td_title">订单号：</td>
+						<td class="form_td_ipt_150 f_b f_15">
+						492394929342343
+						</td>
+						<td class="form_td_title">类型：</td>
+						<td class="form_td_ipt_200 f_b">
+						待审核订单
+						</td>
+						<td class="form_td_title">订单状态：</td>
+						<td class="form_td_ipt_200">
+						<span class="ht_state_alert">待审核订单</span>
+						</td>
+					</tr>
+				
+				</table> 
+				
+		</td>
+	</tr>
+</table>
+
+
+
+	
+<div class="clearfix h20"></div>
+
+
+<table class="mainTable" cellspacing="0" cellpadding="0" >
+	<tr>
+		<td id="p1nav" class="onTab" onclick="">客户资料</td>
+		<td id="p2nav" class="onDef" ></td>
+		<td id="p3nav" class="onDef"></td>
+		<td class="onNor">
+<!-- 		<span id=""> -->
+<!-- 		<a id="order_add" class="ht_btn_blue_add pull-right MARGIN_R_10" href="order_add.html">新增订单</a> -->
+<!-- 		</span> -->
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" class="mainTableBody">
+				
+				
+					<table id="" class="" cellspacing="0" cellpadding="0" >
+					<tr>
+						<td class="form_td_title">客户名称：</td>
+						<td class="form_td_ipt_300">
+							爱奇艺旅行社有限公司
+						</td>
+					</tr>
+					
+				</table> 
+				
+				
+				<table id="" class="" cellspacing="0" cellpadding="0" >
+					
+					<tr>
+						<td class="form_td_title">客户类型：</td>
+						<td class="form_td_ipt_150">
+普通
+
+						</td>
+						<td class="form_td_title">业务员：</td>
+						<td class="form_td_ipt_200">
+							孙航
+						</td>
+						<td class="form_td_title">联系人：</td>
+						<td class="form_td_ipt_200">孙伟</td>
+						<td class="form_td_title">联系电话：</td>
+						<td class="form_td_ipt_200">
+						1399192919212
+						</td>
+					</tr>
+				</table> 
+				
+		</td>
+	</tr>
+</table>
+
+<div class="clearfix h20"></div>
+
+<table class="mainTable" cellspacing="0" cellpadding="0" >
+	<tr>
+		<td id="p1nav" class="onTab" onclick="">PNR信息</td>
+		<td id="p2nav" class="onDef" ></td>
+		<td id="p3nav" class="onDef"></td>
+		<td class="onNor">
+<!-- 		<span id=""> -->
+<!-- 		<a id="" class="ht_btn_blue_add pull-right MARGIN_R_10" href="javascript:showDiv('pnr_add','0');">添加PNR</a> -->
+<!-- 		</span> -->
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" class="mainTableBody">
+	<!--  -->
+				<table class="inmainTable" cellspacing="0" cellpadding="0">
+					<tr class="inmainTable_title">
+						<td>PNR</td>
+						<td>航程</td>
+						<td>乘客信息</td>
+						<td>航程时间</td>
+						<td>航空公司</td>
+						<td>航班号</td>
+						<td>仓位</td>
+						<td>面价</td>
+						<td>张数</td>
+						<td>单价</td>
+						<td>底价/税</td>
+						<td>手续费</td>
+						<td>金额</td>
+<!-- 						<td class="inmainTable_title_caozuo">操作</td> -->
+					</tr>
+					<tr class="inmainTable_res">
+						<td>国内<span class="f_red f_b">KGQE2F</span></td>
+						<td>上海-北京</td>
+						<td><a href="order_det.html" class="ht_btn_default">详情</a></td>
+						<td>2016-12-22&nbsp;12:33</td>
+						<td>MU</td>
+						<td>5163</td>
+						<td><span class="f_red f_b">Y</span></td>
+						<td><span class="f_gray_m">&yen;</span><span class="f_red f_14">260</span></td>
+						<td>2</td>
+						<td><a href="order_det.html" class="ht_btn_default">详情</a></td>
+						<td><span class="f_gray_m">&yen;</span><span class="f_red f_14">60/40</span></td>
+						<td><span class="f_gray_m">&yen;</span><span class="f_red f_14">20</span></td>
+						<td><span class="f_gray_m">&yen;</span><span class="f_red f_14 f_b">1260</span></td>
+<!-- 						<td> -->
+<!-- 							<a title="编辑" href="javascript:addEmp()" class="ht_btn_edit_orb MARGIN_L_10"></a> -->
+<!-- 							<a title="删除" href="#" class="ht_btn_del_orb MARGIN_L_10"></a> -->
+<!-- 						</td> -->
+					</tr>
+					
+					<tr class="inmainTable_res">
+						<td>国际<span class="f_red f_b">KGQE2F</span></td>
+						<td>上海-北京</td>
+						<td><a href="order_det.html" class="ht_btn_default">详情</a></td>
+						<td>2016-12-22&nbsp;12:33</td>
+						<td>MU</td>
+						<td>5163</td>
+						<td><span class="f_red f_b">Y</span></td>
+						<td><span class="f_gray_m">&yen;</span><span class="f_red f_14">260</span></td>
+						<td>2</td>
+						<td><a href="order_det.html" class="ht_btn_default">详情</a></td>
+						<td><span class="f_gray_m">&yen;</span><span class="f_red f_14">60/40</span></td>
+						<td><span class="f_gray_m">&yen;</span><span class="f_red f_14">20</span></td>
+						<td><span class="f_gray_m">&yen;</span><span class="f_red f_14 f_b">1260</span></td>
+<!-- 						<td> -->
+<!-- 							<a title="编辑" href="javascript:addEmp()" class="ht_btn_edit_orb MARGIN_L_10"></a> -->
+<!-- 							<a title="删除" href="#" class="ht_btn_del_orb MARGIN_L_10"></a> -->
+<!-- 						</td> -->
+					</tr>
+					
+				</table> 
+				
+				
+	
+				<!-- 列表ed-->
+			
+		</td>
+	</tr>
+</table>
+
+
+<div class="clearfix h20"></div>
+
+<table class="mainTable" cellspacing="0" cellpadding="0" >
+	<tr>
+		<td id="p1nav" class="onTab" onclick="">结算信息</td>
+		<td id="p2nav" class="onDef" ></td>
+		<td id="p3nav" class="onDef"></td>
+		<td class="onNor">
+<!-- 		<span id=""> -->
+<!-- 		<a id="" class="ht_btn_blue_add pull-right MARGIN_R_10" href="javascript:showDiv('pnr_add','0');">添加PNR</a> -->
+<!-- 		</span> -->
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" class="mainTableBody">
+	<!--  -->
+				<table class="inmainTable" cellspacing="0" cellpadding="0">
+					<tr class="inmainTable_title">
+						<td>销售价</td>
+						<td>底价</td>
+						<td>税费</td>
+						<td>总税费</td>
+						<td>额外费用</td>
+						<td>佣金利润</td>
+						<td>卖家佣金</td>
+						<td>结算总额</td>
+						<td>支付方式</td>
+						<td>支付时间</td>
+						<td style="width: 200px;">备注</td>
+					</tr>
+						<tr class="inmainTable_res">
+						<td><span class="f_gray_m">&yen;</span><span class="f_red f_14">60</span></td>
+						<td><span class="f_gray_m">&yen;</span><span class="f_red f_14">60</span></td>
+						<td><span class="f_gray_m">&yen;</span><span class="f_red f_14">60</span></td>
+						<td><span class="f_gray_m">&yen;</span><span class="f_red f_14 f_b">60</span></td>
+						<td><span class="f_gray_m">&yen;</span><span class="f_red f_14">60</span></td>
+						<td><span class="f_gray_m">&yen;</span><span class="f_red f_14">60</span></td>
+						<td><span class="f_gray_m">&yen;</span><span class="f_red f_14">60</span></td>
+						<td><span class="f_gray_m">&yen;</span><span class="f_red f_14 f_b">60</span></td>
+						<td>支付宝</td>
+						<td>2015-12-12</td>
+						<td style="padding: 5px; text-indent: 0px;">呵呵呵呵呵呵，我是备注军</td>
+					</tr>
+					
+				</table> 
+				
+				
+	
+				<!-- 列表ed-->
+			
+		</td>
+	</tr>
+</table>
+
+<div class="clearfix h20"></div>
+
+
+<table class="mainTable" cellspacing="0" cellpadding="0" >
+	<tr>
+		<td id="p1nav" class="onTab" onclick="">发票/结算/配送</td>
+		<td id="p2nav" class="onDef" ></td>
+		<td id="p3nav" class="onDef"></td>
+		<td class="onNor">
+<!-- 		<span id=""> -->
+<!-- 		<a id="order_add" class="ht_btn_blue_add pull-right MARGIN_R_10" href="order_add.html">新增订单</a> -->
+<!-- 		</span> -->
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" class="mainTableBody">
+				
+				<table id="" class="" cellspacing="0" cellpadding="0" >
+					<tr>
+						<td class="form_td_title">发票方式：</td>
+						<td class="form_td_ipt_150">
+							急开
+						</td>
+						<td class="form_td_title">发票说明：</td>
+						<td class="form_td_ipt_200">
+							
+								立即开
+						</td>
+						<td class="form_td_title">发票抬头：</td>
+						<td class="form_td_ipt_200">爱奇艺旅行社有限公司</td>
+						<td class="form_td_title">结算方式：</td>
+						<td class="form_td_ipt_200">
+						
+								电汇
+						</td>
+					</tr>
+					<tr>
+						<td class="form_td_title">配送方式：</td>
+						<td class="form_td_ipt_150">
+							需要配送
+<!-- 							<span class="sendChd_none pub_relative" > -->
+<!-- 								<span id="insendChd_none" style="display: none;">自取地址：上海市徐汇区虹桥路233号12号333 工作时间周一至周五9:00-18:00</span> -->
+<!-- 							</span> -->
+						</td>
+						
+						<td class="form_td_title"><span class="sendChd">配送时间：</span></td>
+						<td class="form_td_ipt_200">2015-12-12</td>
+						<td class="form_td_title"><span class="sendChd">配送地址：</span></td>
+						<td  colspan="3" class="text-left">
+上海市嘉定区南翔镇中间科技  园18栋13单元1008室						</td>
+					</tr>
+				</table> 
+				
+		</td>
+	</tr>
+</table>
+
+<div class="clearfix h20"></div>
+
+
+<div class="f_gray_q">Copyright © 2008-2020 LANTUTONG.COM All Rights Reserved 沪ICP备09032149号</div>
+</div>
+<!-- -right ed-->
+
+<div class="clearfix h20"></div>
+<div class="clearfix h20"></div>
+<div class="clearfix h20"></div>
+<div class="clearfix h20"></div>
+
+<div id="ht_bottom_price_zone" class="ht_bottom_price_zone">
+	<div class="clearfix h5"></div>
+<!-- 	<a href="#" class="price_zone_ok" style="margin-left: 150px;">确认保存</a> -->
+<!-- 	<a href="#" class="price_zone_ok" style="margin-left: 5px;">暂时保存</a> -->
+	<a href="order_manager.html" class="price_zone_ok" style="margin-left: 150px;">返回订单列表</a>
+</div>
+
+
+
+<!-- 角色编辑-->
+
+<div id="js_edit" class="pop">
+	<div class="popMain">
+		<div class="popTop">修改角色名称</div>
+		<div class="popMiddle">
+				
+				<p>
+					<div class="bxpz_title">角色名称</div>
+					<div class="bxpz_zone"><input type="text" class="txt" value="系统管理员" placeholder='请填写角色名' style="width: 370px;"/></div>	
+<!-- 			    	<div class="clearfix"></div> -->
+<!-- 			    	<div class="bxpz_title">证件信息</div> -->
+<!-- 					<div class="bxpz_zone_select"> -->
+<!-- 						<select class="select"> -->
+<!-- 							<option>身份证</option> -->
+<!-- 							<option>护照</option> -->
+<!-- 							<option>港澳</option> -->
+							
+<!-- 							<option>军人证</option> -->
+<!-- 							<option>回乡证</option> -->
+<!-- 							<option>台胞证</option> -->
+<!-- 							<option>港澳通行证</option> -->
+<!-- 							<option>户口簿</option> -->
+<!-- 							<option>出生证明</option> -->
+<!-- 						</select> -->
+<!-- 						<input type="text"  class="txt" placeholder='请填证件号码'  style="width: 245px;"/> -->
+<!-- 					</div>	 -->
+<!-- 					<div class="clearfix"></div> -->
+<!-- 			    	<div class="bxpz_title">出生年月</div> -->
+<!-- 					<div class="bxpz_zone"><input type="text" class="txt" placeholder='出生日期 ，格式 YYYY-MM-DD' readonly="readonly" onclick="WdatePicker({startDate:'1980-05-10'})" style="width: 370px;"/></div>	 -->
+<!-- 			    	<div class="clearfix"></div>	 -->
+			
+			</p>
+		</div>
+		<div id="js_edit_btn" class="popBottom">
+			<span class="confirm">确认保存</span>
+			<span class="cancel">取消</span>
+		</div>
+	</div>
+</div>
+<!-- 角色编辑-->
+ 
+ 
+ 
+<!-- 角色添加-->
+
+<div id="js_add" class="pop">
+	<div class="popMain">
+		<div class="popTop">添加角色名称</div>
+		<div class="popMiddle">
+				
+				<p>
+					<div class="bxpz_title">角色名称</div>
+					<div class="bxpz_zone"><input type="text" class="txt" placeholder='请填写角色名' style="width: 370px;"/></div>	
+<!-- 			    	<div class="clearfix"></div> -->
+<!-- 			    	<div class="bxpz_title">证件信息</div> -->
+<!-- 					<div class="bxpz_zone_select"> -->
+<!-- 						<select class="select"> -->
+<!-- 							<option>身份证</option> -->
+<!-- 							<option>护照</option> -->
+<!-- 							<option>港澳</option> -->
+							
+<!-- 							<option>军人证</option> -->
+<!-- 							<option>回乡证</option> -->
+<!-- 							<option>台胞证</option> -->
+<!-- 							<option>港澳通行证</option> -->
+<!-- 							<option>户口簿</option> -->
+<!-- 							<option>出生证明</option> -->
+<!-- 						</select> -->
+<!-- 						<input type="text"  class="txt" placeholder='请填证件号码'  style="width: 245px;"/> -->
+<!-- 					</div>	 -->
+<!-- 					<div class="clearfix"></div> -->
+<!-- 			    	<div class="bxpz_title">出生年月</div> -->
+<!-- 					<div class="bxpz_zone"><input type="text" class="txt" placeholder='出生日期 ，格式 YYYY-MM-DD' readonly="readonly" onclick="WdatePicker({startDate:'1980-05-10'})" style="width: 370px;"/></div>	 -->
+<!-- 			    	<div class="clearfix"></div>	 -->
+			
+			</p>
+		</div>
+		<div id="js_add_btn" class="popBottom">
+			<span class="confirm">确认保存</span>
+			<span class="cancel">取消</span>
+		</div>
+	</div>
+</div>
+<!-- 角色添加-->
+ 
+ 
+ 
+ 
+<!-- 删除确认-->
+
+<div id="pnr_add" class="pop">
+	<div class="popMain_blue">
+		<div class="popTop_gray">PNR添加 <span class="pull-right cur MARGIN_R_10" onclick="javascript:$('#pnr_add').fadeOut()">X</span></div>
+		<div class="popMiddle_blue">
+		
+				<div id="body_p">
+					<div class="popTop_blue">[国内]PNR运价(HNR15E)<span id="china_torist" class="pull-right cur MARGIN_R_10" >收起</span></div>
+					<div style="padding: 10px;">
+					
+					
+						<div id="china_torist_body">
+							<!-- one -->
+							<div id="aa0">
+									<div class="blueScr_layer_title_s">
+											<div class="title">航程：</div>
+											<div class="font">SYX-HGH</div>
+											<div class="title">文件价：</div>
+											<div class="font"><span class="f_gray_m">&yen;</span><span class="f_red f_b">260</span></div>
+											<div class="title">票面价：</div>
+											<div class="font"><span class="f_gray_m">&yen;</span><span class="f_red f_b">260</span></div>
+											<div class="title">税费：</div>
+											<div class="font"><input type="text" class="ht_def_txt" placeholder='' /></div>
+											<div class="title">基建费：</div>
+											<div class="font"><input type="text" class="ht_def_txt" placeholder='' /></div>
+											<div class="title">额外费用：</div>
+											<div class="font"><input type="text" class="ht_def_txt" placeholder='' /></div>
+											<div class="font" style="float: right;"><a href="#" style="color: blue;">[删除]</a></div>
+									</div>
+									
+									<div class="blueScr_layer_title_s" style="background-color: white; border-bottom: 1px #dadada solid;">
+											<div class="title"><strong>底价</strong></div>
+											<div class="title">代理费：</div>
+											<div class="font"><input type="text" class="ht_def_txt " placeholder='单位元' /></div>
+											<div class="title">百分之&nbsp;</div>
+											<div class="font"><input type="text" class="ht_def_txt" placeholder='%' /></div>
+											<div class="title">奖励：</div>
+											<div class="font"><input type="text" class="ht_def_txt " placeholder='单位元' /></div>
+											<div class="title">百分之&nbsp;</div>
+											<div class="font"><input type="text" class="ht_def_txt" placeholder='%' /></div>
+											<div class="title">底价：</div>
+											<div class="font"><input type="text" class="ht_def_txt " placeholder='单位元' /></div>
+									</div>
+									
+									<div class="blueScr_layer_title_s" style="background-color: white;">
+											<div class="title"><strong>销售价</strong></div>
+											<div class="title">返利：</div>
+											<div class="font"><input type="text" class="ht_def_txt " placeholder='单位元' /></div>
+											<div class="title">百分之&nbsp;</div>
+											<div class="font"><input type="text" class="ht_def_txt" placeholder='%' /></div>
+											<div class="title">奖励：</div>
+											<div class="font"><input type="text" class="ht_def_txt " placeholder='单位元' /></div>
+											<div class="title">百分之&nbsp;</div>
+											<div class="font"><input type="text" class="ht_def_txt" placeholder='%' /></div>
+											<div class="title">销售价：</div>
+											<div class="font"><input type="text" class="ht_def_txt " placeholder='单位元' /></div>
+									</div>
+							</div>
+								<!-- one end-->
+								
+								
+										<!-- one -->
+							<div id="aa1">
+									<div class="blueScr_layer_title_s">
+											<div class="title">航程：</div>
+											<div class="font">SYX-HGH</div>
+											<div class="title">文件价：</div>
+											<div class="font"><span class="f_gray_m">&yen;</span><span class="f_red f_b">260</span></div>
+											<div class="title">票面价：</div>
+											<div class="font"><span class="f_gray_m">&yen;</span><span class="f_red f_b">260</span></div>
+											<div class="title">税费：</div>
+											<div class="font"><input type="text" class="ht_def_txt" placeholder='' /></div>
+											<div class="title">基建费：</div>
+											<div class="font"><input type="text" class="ht_def_txt" placeholder='' /></div>
+											<div class="title">额外费用：</div>
+											<div class="font"><input type="text" class="ht_def_txt" placeholder='' /></div>
+											<div class="font" style="float: right;"><a href="#" style="color: blue;">[删除]</a></div>
+									</div>
+									
+									<div class="blueScr_layer_title_s" style="background-color: white; border-bottom: 1px #dadada solid;">
+											<div class="title"><strong>底价</strong></div>
+											<div class="title">代理费：</div>
+											<div class="font"><input type="text" class="ht_def_txt " placeholder='单位元' /></div>
+											<div class="title">百分之&nbsp;</div>
+											<div class="font"><input type="text" class="ht_def_txt" placeholder='%' /></div>
+											<div class="title">奖励：</div>
+											<div class="font"><input type="text" class="ht_def_txt " placeholder='单位元' /></div>
+											<div class="title">百分之&nbsp;</div>
+											<div class="font"><input type="text" class="ht_def_txt" placeholder='%' /></div>
+											<div class="title">底价：</div>
+											<div class="font"><input type="text" class="ht_def_txt " placeholder='单位元' /></div>
+									</div>
+									
+									<div class="blueScr_layer_title_s" style="background-color: white;">
+											<div class="title"><strong>销售价</strong></div>
+											<div class="title">返利：</div>
+											<div class="font"><input type="text" class="ht_def_txt " placeholder='单位元' /></div>
+											<div class="title">百分之&nbsp;</div>
+											<div class="font"><input type="text" class="ht_def_txt" placeholder='%' /></div>
+											<div class="title">奖励：</div>
+											<div class="font"><input type="text" class="ht_def_txt " placeholder='单位元' /></div>
+											<div class="title">百分之&nbsp;</div>
+											<div class="font"><input type="text" class="ht_def_txt" placeholder='%' /></div>
+											<div class="title">销售价：</div>
+											<div class="font"><input type="text" class="ht_def_txt " placeholder='单位元' /></div>
+									</div>
+							</div>
+								<!-- one end-->
+								</div>
+					</div>
+					<div class="popTop_blue"> [国际]乘客信息（HNR15E）<span id="inter_torist" class="pull-right cur MARGIN_R_10">收起</span></div>
+							
+						
+							
+							<div id="inter_torist_body">
+							
+							
+								<!-- one -->
+									<div class="blueScr_layer_title_s" style="background-color: white; border-bottom: 1px #dadada solid;">
+											<div class="title">第1位</div>
+											<div class="title">姓名：</div>
+											<div class="font">李天一</div>
+											<div class="title">票号：</div>
+											<div class="font" style="width: 200px;"><input type="text" class="ht_def_txt" placeholder='' /></div>
+											<div class="title">保险：</div>
+											<div class="font" style="width: 150px;">
+												<select class="ht_def_select">
+													<option>1111</option>
+													<option>1111</option>
+													<option>1111</option>
+													<option>1111</option>
+												</select>
+											</div>
+											<div class="title">状态：</div>
+											<div class="font" style="width: 150px;">
+												<select class="ht_def_select">
+													<option>1111</option>
+													<option>1111</option>
+													<option>1111</option>
+													<option>1111</option>
+												</select>
+											</div>
+											
+											<div class="font" style="float: right;"><a href="#" style="color: blue;">[删除]</a></div>
+									</div>
+		
+								<!-- one end-->
+								
+								<!-- one -->
+									<div class="blueScr_layer_title_s" style="background-color: white; border-bottom: 1px #dadada solid;">
+											<div class="title">第2位</div>
+											<div class="title">姓名：</div>
+											<div class="font">李天一</div>
+											<div class="title">票号：</div>
+											<div class="font" style="width: 200px;"><input type="text" class="ht_def_txt" placeholder='' /></div>
+											<div class="title">保险：</div>
+											<div class="font" style="width: 150px;">
+												<select class="ht_def_select">
+													<option>1111</option>
+													<option>1111</option>
+													<option>1111</option>
+													<option>1111</option>
+												</select>
+											</div>
+											<div class="title">状态：</div>
+											<div class="font" style="width: 150px;">
+												<select class="ht_def_select">
+													<option>1111</option>
+													<option>1111</option>
+													<option>1111</option>
+													<option>1111</option>
+												</select>
+											</div>
+											
+											<div class="font" style="float: right;"><a href="#" style="color: blue;">[删除]</a></div>
+									</div>
+		
+								<!-- one end-->
+								
+								
+								<!-- one -->
+									<div class="blueScr_layer_title_s" style="background-color: white; border-bottom: 1px #dadada solid;">
+											<div class="title">第3位</div>
+											<div class="title">姓名：</div>
+											<div class="font">李天一</div>
+											<div class="title">票号：</div>
+											<div class="font" style="width: 200px;"><input type="text" class="ht_def_txt" placeholder='' /></div>
+											<div class="title">保险：</div>
+											<div class="font" style="width: 150px;">
+												<select class="ht_def_select">
+													<option>1111</option>
+													<option>1111</option>
+													<option>1111</option>
+													<option>1111</option>
+												</select>
+											</div>
+											<div class="title">状态：</div>
+											<div class="font" style="width: 150px;">
+												<select class="ht_def_select">
+													<option>1111</option>
+													<option>1111</option>
+													<option>1111</option>
+													<option>1111</option>
+												</select>
+											</div>
+											
+											<div class="font" style="float: right;"><a href="#" style="color: blue;">[删除]</a></div>
+									</div>
+		
+								<!-- one end-->
+								
+								
+								<!--temp-->
+									<div class="blueScr_layer_title_s" style="background-color: white; border-bottom: 1px #dadada solid; margin-top: 10px;">
+											<div class="title"></div>
+											<div class="font" style="width: 350px;">
+												<a class="ht_btn_blue_add pull-left" href="javascript:showDiv('js_add','0');">新增乘客</a>
+											</div>
+									</div>
+		
+								<!--temp-->
+								
+							</div>
+								
+				
+				</div>
+		</div>
+		
+		<div id="pnr_add_btn" class="popBottom_blue">
+			<span class="price">
+<div class="pull-left MARGIN_L_10">总航程：<span class="f_red f_16 f_b">1</span></div>					
+<div class="pull-left MARGIN_L_10">总票面价：<span class="f_gray_m">&yen;</span><span class="f_red f_16 f_b">260</span></div>					
+<div class="pull-left MARGIN_L_10">总底价：<span class="f_gray_m">&yen;</span><span class="f_red f_16 f_b">260</span></div>					
+<div class="pull-left MARGIN_L_10">总销售价：<span class="f_gray_m">&yen;</span><span class="f_red f_16 f_b">260</span></div>					
+<div class="pull-left MARGIN_L_10">税费：<span class="f_gray_m">&yen;</span><span class="f_red f_16 f_b">60</span></div>					
+			</span>
+			<span class="confirm">确认保存</span>
+<!-- 			<span class="cancel">取消</span> -->
+		</div>
+	</div>
+</div>
+<!-- 删除添加-->
+ 
+
+<script src="../../../commonSkin/js/jquery-1.8.3.min.js"></script>
+<script src="../../../managerSkin/bluecssboot1.0/js/page_public.js"></script>
+<script src="../../../commonSkin/js/popModal.js"/></script>
+<script src="../../../commonSkin/js/hDate.js"/></script>
+       <script type="text/javascript"> 
+       
+       
+       function showDiv(id,show_type){
+    	   
+    	   
+    	   if(show_type=='0'){
+    		   
+    		   $("#"+id).show();
+    		   
+    	   }else{
+    		   
+    		   $("#"+id).fadeIn();
+    	   }
+    	   
+       }
+       
+   
+
+
+     //初始的日期设置与控件绑定
+		var mydate = new Date();
+		var fy = mydate.getFullYear(); 
+		var fm = mydate.getMonth()+1; 
+		var fd = mydate.getDate();
+		var fdate = fy+"-"+fm+"-"+fd;    //正常当前日期
+
+		
+		
+       
+ $(function() {
+	 
+	 $("#ht_bottom_price_zone").show();
+	 
+	 $("#order_mg_adv_btn").click(function(){   //高级搜索点击后的框展开和收缩效果
+			
+			if($("#formTable_0").is(":hidden")){
+				$("#formTable_0").show();
+				$("#order_mg_adv_btn").removeClass().addClass('ht_btn_blue_arrow_up pull-left MARGIN_L_10').html("收起");
+				$("#order_mg_adv_btn2").removeClass().addClass('ht_btn_blue_arrow_up pull-left MARGIN_L_10').html("收起");
+			}else{
+				$("#formTable_0").hide();
+				$("#order_mg_adv_btn").removeClass().addClass('ht_btn_blue_arrow_down pull-left MARGIN_L_10').html("高级查询");
+				$("#order_mg_adv_btn2").removeClass().addClass('ht_btn_blue_arrow_down pull-left MARGIN_L_10').html("高级查询");
+			}
+		 
+	});
+	 
+	 $("#order_mg_adv_btn2").click(function(){   //高级搜索点击后的框展开和收缩效果
+			
+			if($("#formTable_0").is(":hidden")){
+				$("#formTable_0").show();
+				$("#order_mg_adv_btn").removeClass().addClass('ht_btn_blue_arrow_up pull-left MARGIN_L_10').html("收起");
+				$("#order_mg_adv_btn2").removeClass().addClass('ht_btn_blue_arrow_up pull-left MARGIN_L_10').html("收起");
+			}else{
+				$("#formTable_0").hide();
+				$("#order_mg_adv_btn").removeClass().addClass('ht_btn_blue_arrow_down pull-left MARGIN_L_10').html("高级查询");
+				$("#order_mg_adv_btn2").removeClass().addClass('ht_btn_blue_arrow_down pull-left MARGIN_L_10').html("高级查询");
+			}
+		 
+	});
+	 
+	 
+	 
+ 
+ 
+ 
+ 
+ //模糊查询弹出菜单内的点击
+ $('.mh_chd').on('click', function() {
+		
+	 $("#cutm_name").val($(this).text());
+	 $("#mh_search").hide();
+	 
+	 if($("#cutm_name").val().trim()==''){
+			
+			$("#cust_type").val("");
+			$("#cust_man").val("");
+			$("#cust_name").val("");
+			$("#cust_tel").val("");
+			setTimeout("$('#mh_search').hide()",200);
+			
+		}else{
+			
+			$("#cust_type").val("散客");
+			$("#cust_man").val("老张");
+			$("#cust_name").val("老张的爸");
+			$("#cust_tel").val("1391929921");
+			setTimeout("$('#mh_search').hide()",200);
+			
+			
+		}
+			
+			
+});
+	 
+ 
+ 
+ //模糊查询弹出菜单的展示与关闭
+ $('#cutm_name').on('focus', function() {
+		
+		var objPosTop;
+		var objPosLeft;
+		var objWidth;
+		var objHeight;
+		
+			objPosTop = $(this).offset().top;
+			objPosLeft = $(this).offset().left;
+			objWidth  = $(this).width();
+			objHeight  = $(this).height()+4;
+			
+			$("#mh_search").css({
+				
+				'top':objPosTop+objHeight,
+				'left':objPosLeft,
+				'width':objWidth
+				
+			}).show();
+			
+			
+	}).on('blur', function() {
+	
+		
+		
+		 if($("#cutm_name").val().trim()==''){
+				
+				$("#cust_type").val("");
+				$("#cust_man").val("");
+				$("#cust_name").val("");
+				$("#cust_tel").val("");
+				setTimeout("$('#mh_search').hide()",100);
+				
+	     }else{
+	    	 
+	    	 
+				setTimeout("$('#mh_search').hide()",100);
+	     }
+		
+});
+	
+ 
+ $("#sendTime").click(function(){   //开始日期控件
+	 
+		 var ths = this;
+
+		 calendar.show({
+				id: this,
+				minDay:fdate
+			});	
+	 
+});
+ 
+ 
+ 
+ $("#sendTime").click(function(){   //开始日期控件
+	 
+	 var ths = this;
+
+	 calendar.show({
+			id: this,
+			minDay:fdate
+		});	
+ 
+});
+ 
+ 
+ 
+ 
+ 
+ $('#sendHand').on('change', function() {
+		
+	 
+	 if($(this).val()=='0'){  //需要配送
+			
+			$(".sendChd").each(function(){
+				$(this).show();
+			});
+				
+			$("#insendChd_none").hide();
+	 
+		}else if($(this).val()=='1'){  //不需要
+			
+			$(".sendChd").each(function(){
+				$(this).hide();
+			});
+			
+			$("#insendChd_none").hide();
+			
+		}else{ //自提
+			
+			$(".sendChd").each(function(){
+				$(this).hide();
+			});
+			$("#insendChd_none").show();
+		}
+			
+			
+});
+	 
+ 
+ 
+ 
+		$('#blueScr').on('focus', function() {
+				
+			$("#blueScr").css({
+				'background':'url(../../../managerSkin/bluecssboot1.0/img/mmtishi.pn) blue no-repeat 5px 5px',
+			});
+					
+		}).on('blur', function() {
+			
+			if($("#blueScr").val().trim()==""){
+				
+				$("#blueScr").val("");
+				$("#blueScr").css({
+					'background':'url(../../../managerSkin/bluecssboot1.0/img/mmtishi.png) blue no-repeat 5px 5px',
+				});
+			}
+					
+					
+		});
+			 
+	 
+		$("#clearBlue").click(function(){   //清空蓝屏按钮
+			
+			$("#blueScr").val("");
+			$("#blueScr").css({
+				'background':'url(../../../managerSkin/bluecssboot1.0/img/mmtishi.png) blue no-repeat 5px 5px',
+			});
+			
+		});
+		
+		
+		$("#pnr_add_btn").on('click', 'span', function(event) {
+			event.preventDefault();
+			if($(this).hasClass('confirm')){
+				$("#pnr_add").fadeOut();
+			}
+		});
+		
+		
+		$("#body_p").height($(window).height()-120);
+		
+		
+		$("#inter_torist").on('click',function(){
+			
+			if($("#inter_torist_body").is(":hidden")){
+				
+				$(this).html('收起');
+				$("#inter_torist_body").slideToggle();
+				
+			}else{
+			
+				$(this).html('展开');
+				$("#inter_torist_body").slideToggle();
+				
+			}
+		
+		});
+		
+		
+		$("#china_torist").on('click',function(){
+			
+			if($("#china_torist_body").is(":hidden")){
+				
+				$(this).html('收起');
+				$("#china_torist_body").slideToggle();
+				
+			}else{
+			
+				$(this).html('展开');
+				$("#china_torist_body").slideToggle();
+				
+			}
+		
+		});
+		
+			
+ 				
+        
+});
+ 
+ </script>
+ 
+ <div id="mh_search">
+ 	<ul>
+ 		<li class="mh_chd"><a href="javascript:void(0)">程冠希</a></li>
+ 		<li class="mh_chd"><a href="javascript:void(0)">刘德华</a></li>
+ 		<li class="mh_chd"><a href="javascript:void(0)">张学友</a></li>
+ 		<li class="mh_chd"><a href="javascript:void(0)">郭峰恒</a></li>
+ 		<li class="mh_chd"><a href="javascript:void(0)">韩国欧巴</a></li>
+ 	</ul>
+ </div>
+
+ 
+ 
+</body>
+</html>

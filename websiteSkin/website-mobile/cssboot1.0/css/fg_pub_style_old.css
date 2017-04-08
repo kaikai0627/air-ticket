@@ -1,0 +1,141 @@
+@charset "utf-8";
+
+
+/**pub**/
+input { font-family: Microsoft YaHei,"微软雅黑"; }
+.mainColor { color: #4abff5; }
+.mainTitleSize { font-size: 25px;}
+.delLine{ text-decoration:line-through;}
+.clearfix { clear: both; }
+.h40 { height: 40px; }
+.h30 { height: 30px; }
+.h20 { height: 20px; }
+.h15 { height: 15px; }
+.h10 { height: 10px; }
+.h5 { height: 5px; }
+.MARGINAUTO { margin: 0px auto 0px auto; }
+.MARGIN10 { margin: 5px auto 5px auto; }
+.MARGIN20 { margin: 10px auto 10px auto; }
+.MARGIN_RIGHT_5 { margin-right: 5px; }
+.MARGIN_LEFT_5 { margin-left: 5px; }
+.PADDING10 { padding: 10px; }
+.PADDING20 { padding: 20px; }
+.f_small { font-size: 18px; }
+.f_small_xs { font-size: 14px; }
+.f_12 { font-size: 12px; }
+.f_14 { font-size: 14px; }
+.f_15 { font-size: 15px; }
+.f_16 { font-size: 16px; }
+.f_18 { font-size: 18px; }
+.f_20 { font-size: 20px; }
+.f_22 { font-size: 22px; }
+.f_24 { font-size: 24px; }
+.f_26 { font-size: 26px; }
+.f_28 { font-size: 28px; }
+.f_30 { font-size: 30px; }
+.f_en { font-family: Arial, Helvetica, sans-serif; }
+.f_orange { color: #ff7d27; }
+.f_black { color: black; }
+.f_red { color: red; }
+.f_green { color: #46b017; }
+.f_gray_s { color: #555; }
+.f_gray { color: #888; }
+.f_gray_q { color: #999; }
+.f_white { color: white; }
+.f_range,.f_black,.f_red,.f_green,.f_gray_s,.f_gray,.f_gray_q,.f_white { font-family: Microsoft YaHei,"微软雅黑"; }
+.f_b { font-weight: 600; }
+.pull-left { float: left; }
+.pull-right { float: right; }
+.floatLeft{ float: left; }
+.floatRight{ float: right; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+.bgWhite { background-color: white;}
+.bgGray { background-color: #f9f9f9;}
+.cur { cursor: pointer; }
+.border1 { border: 1px #dadada solid;}
+.border2_white { border: 2px white solid; }
+.dot { height: 3px; background: url(../img/dot.gif) repeat-x left center; }
+.pub_shadow { -webkit-box-shadow: 1px 1px 3px 1px #717171;   -moz-box-shadow: 1px 1px 3px 1px #717171;   box-shadow: 1px 1px 3px 1px #717171;}
+.pub_relative { position: relative; }
+.pub_yuanj_5 {  border-radius: 5px;  -webkit-border-radius: 5px;  -moz-border-radius: 5px;  }
+.pub_yuanj_10 { border-radius: 10px;  -webkit-border-radius: 10px;  -moz-border-radius: 10px;   }
+.pub_yuanj_20 { border-radius: 20px;  -webkit-border-radius: 20px;  -moz-border-radius: 20px;   }
+.pub_yuanj_50 { border-radius: 50px;  -webkit-border-radius: 50px;  -moz-border-radius: 50px;   }
+.noStrong { font-weight: normal;}
+.noUL { list-style: none; text-indent: 0px; margin:0; padding: 0; }
+.RELATIVE { position: relative; }
+
+/*** loading style in large view ***/
+.lod_title { color: #4abff5; font-size: 40px; }
+.lod_fz { color: #888; font-size: 20px; }
+.lod_fz a:link { color: #888; text-decoration: none; }
+.lod_fz a:visited { color: #888; text-decoration: none; }
+.lod_fz a:hover { color: #888; text-decoration: none; }
+.lod_style { width: auto; height: auto; }
+
+.miss_3 { width: 25px; height: 25px; }
+.miss_2 { width: 25px; height: 25px; }
+.miss_1 { width: 25px; height: 25px; }
+.date_arrow_pubstyle {  height: 20px; width: 15px; }
+.date_arrow_pubstyle_spicon { width: 20px; height: 20px; }
+
+
+#tempTitle { background: #4abff5; color: white; font-family: Arial, Helvetica, sans-serif; }
+#tempTitle .titleFont_style { color: white; font-size: 20px; font-family: Microsoft YaHei,"微软雅黑"; }
+#tempTitle .ts_font_style { color: #666; font-size: 16px; font-family: Microsoft YaHei,"微软雅黑"; }
+#tempTitle .td_w { width: 35px; }
+
+.pay_info { margin-left: 5px; color: #62c03d; float: left; font-size: 25px; font-weight: 600; font-family: Microsoft YaHei,"微软雅黑";  }
+.pay_info_icon { width: 50px; height: 50px; }
+.pay_info_td_l { width: 80px; }
+.pay_l_font { text-align: left; float: left; text-indent: 1em;  }
+.pay_r_font { text-align: left; float: left; color: #555;   }
+.pay_r_font a:link{ color: #555; text-decoration: none; }
+.pay_r_font a:visited{ color: #555; text-decoration: none; }
+.pay_r_font a:hover { color: #555; text-decoration: none; }
+.pay_td_height { height: 50px; font-family: Microsoft YaHei,"微软雅黑";}
+.pay_td_height td { border-bottom: 1px #dadada solid; }
+
+.btn_pay_page { background: #4abff5; cursor: pointer; font-size: 14px;  color: white; text-align: center; padding: 0px 10px 0px 10px; height: 35px; line-height: 35px; border:0px; border-radius:3px;}
+.bto_font { font-size: 16px; color: #666;}
+.bto_font2 { font-size: 16px; color: #666; }
+
+@media screen and (max-width:640px){
+input { font-family: Microsoft YaHei,"微软雅黑"; }
+.mainTitleSize { font-size: 24px;}
+.lod_title { color: #4abff5; font-size: 24px; }
+.lod_fz { color: #888; font-size: 14px; }
+.lod_fz a:link { color: #888; text-decoration: none; }
+.lod_fz a:visited { color: #888; text-decoration: none; }
+.lod_fz a:hover { color: #888; text-decoration: none; }
+.lod_style { width: auto; height: auto; }
+
+.miss_3 { width: 20px; height: 20px; }
+.miss_2 { width: 20px; height: 20px; }
+.miss_1 { width: 20px; height: 20px; }
+.date_arrow_pubstyle { height: 23px; width: 13px; margin-top: 5px; }
+.date_arrow_pubstyle_spicon { width: 21px; height: 21px; }
+
+#tempTitle { background: #4abff5; color: white; font-family: Arial, Helvetica, sans-serif; }
+#tempTitle .titleFont_style { color:white; font-size: 18px; font-family: Microsoft YaHei,"微软雅黑"; }
+#tempTitle .ts_font_style { color: #666; font-size: 18px; font-family: Microsoft YaHei,"微软雅黑"; }
+#tempTitle .td_w { width: 35px; }
+
+.pay_info { margin-left: 0px; color: #62c03d; float: left; font-size: 23px; font-weight: 600; font-family: Microsoft YaHei,"微软雅黑";  }
+.pay_info_icon { width: 30px; height: 30px; }
+.pay_info_td_l { width: 80px; }
+.pay_l_font { text-align: left; float: left; text-indent: 1em;  }
+.pay_r_font { text-align: left; float: left; color: #555;   }
+.pay_r_font a:link{ color: #555; text-decoration: none; }
+.pay_r_font a:visited{ color: #555; text-decoration: none; }
+.pay_r_font a:hover { color: #555; text-decoration: none; }
+.pay_td_height { height: 50px; font-family: Microsoft YaHei,"微软雅黑";}
+.pay_td_height td { border-bottom: 1px #dadada solid; }
+
+.btn_pay_page { background: #4abff5; cursor: pointer; font-size: 14px;  color: white; text-align: center; padding: 0px 10px 0px 10px; height: 35px; line-height: 35px; border:0px; border-radius:3px;}
+.bto_font { font-size: 12px; color: #666; }
+.bto_font2 { font-size: 12px; color: #666;}
+
+}

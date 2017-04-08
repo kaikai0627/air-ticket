@@ -1,0 +1,328 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>部门与员工</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<link href="../../../commonSkin/css/html_tools.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="../../../managerSkin/bluecssboot1.0/css/pageStyle.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="../../../managerSkin/bluecssboot1.0/css/btnStyle.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="../../../managerSkin/bluecssboot1.0/css/popModal.css" rel="stylesheet" type="text/css" media="screen"/>
+
+</head>
+<body>
+
+<!-- top-->
+<div class="ht_top">
+	<div class="logo">
+		<img src="../../../managerSkin/bluecssboot1.0/img/tempLog1o.png"  />
+	</div>
+	<div class="dh">
+		<ul>
+			<li class="mmouse on" id="t_sel1">大菜单1</li>
+			<li class="mmouse" id="t_sel2">大菜单2</li>
+			<li class="mmouse" id="t_sel3">大菜单3</li>
+		</ul>
+	</div>
+	
+	<div class="dh_r">
+		<ul >
+			<li><a class="mail" href="#"><div class="msgNum">11</div></a></li>
+			<li><div class="name">消息</div></li>
+			<li><div class="head"><img src="../../../managerSkin/bluecssboot1.0/img/icon_center_head.png" class="inhead"/></div></li>
+			<li class="mop">
+			<div class="name">小陈</div>
+			<div id="arrow_name" class="arrow"></div>
+				<div id="menuOpen_name" class="menuOpen">
+						<ul>
+							<li><a href="my_info.html">我的资料</a></li>
+							<li><a href="pwd_edit.html">密码修改</a></li>
+						</ul>
+				</div>
+			</li>
+			<li><a class="sett" href="#"></a></li>
+			<li class="mop">
+			<div class="name">设置</div>
+			<div id="arrow_sett" class="arrow"></div>
+				<div id="menuOpen_sett" class="menuOpen">
+						<ul>
+							<li><a href="company_info">公司信息</a></li>
+							<li><a href="emp_dep.html">部门与员工</a></li>
+							<li><a href="system_sett.html">系统设置</a></li>
+						</ul>
+				</div>
+			</li>
+			<li onclick="location.href='service.html'"><a class="service" href="#"></a></li>
+			<li onclick="location.href='service.html'"><div class="name">客服</div></li>
+			<li onclick="location.href='login.html'"><a class="exit" href="#"></a></li>
+			<li onclick="location.href='login.html'"><div class="name">退出</div></li>
+		</ul>
+	</div>
+</div>
+
+<!-- top ed-->
+<div class="clearfix"></div>
+
+<!-- left -->
+<div class="ht_left" style="display: ;">
+<div class="clearfix h30"></div>
+<div class="clearfix h30"></div>
+<div class="clearfix h10"></div>
+		<ul>
+			<li class="mop">
+				<a class="order" href="#"></a>
+				<div class="arrow"></div>
+				<div class="menuOpen">
+						<div class="one">
+						<ul>
+							<li><a href="order_manager.html">订单中心</a></li>
+							<li><a href="order_refund.html">退票订单</a></li>
+							<li><a href="order_temp.html">暂存订单</a></li>
+							<li><a href="order_faild.html">作废订单</a></li>
+						</ul>
+						</div>
+				</div>
+			</li>
+			
+				<li class="mop" onclick="location.href='customer_list.html'">
+				<a class="user" href="#"></a>
+<!-- 				<div class="menuOpen"> -->
+<!-- 					<div class="one"> -->
+<!-- 						<ul> -->
+<!-- 							<li><strong>个人资料</strong></li> -->
+<!-- 							<li><a href="#">修改个人信息</a></li> -->
+<!-- 							<li><a href="#">修改密码</a></li> -->
+<!-- 						</ul> -->
+<!-- 					</div> -->
+
+<!-- 				</div> -->
+			</li>
+			
+				<li class="mop">
+				<a class="report" href="#"></a>
+				<div class="arrow"></div>
+				<div class="menuOpen" style="width: 300px;">
+						<ul>
+							<li><strong class="f_gray_m f_15">财务报表</strong></li>
+							<li><a href="order_get.html">应收订单</a></li>
+							<li><a href="order_pay.html">应付订单</a></li>
+						</ul>
+						<ul>
+							<li><strong class="f_gray_m f_15">销售报表</strong></li>
+							<li><a href="sale_count.html">销售统计</a></li>
+							<li><a href="sale_rank.html">业绩排行</a></li>
+							<li><a href="receivable_count.html">未收款统计</a></li>
+						</ul>
+					
+						<ul>
+							<li><strong class="f_gray_m f_15">返扣报表</strong></li>
+							<li><a href="order_noReturn.html">未返扣订单</a></li>
+							<li><a href="order_hasReturn.html">已反扣订单</a></li>
+						</ul>
+				</div>
+			</li>
+			
+			
+		</ul>
+</div>
+<!-- left ed -->
+
+<!-- -right -->
+<div class="ht_right">
+<div class="clearfix h30"></div>
+<div class="clearfix h20"></div>
+<div class="clearfix h5"></div>
+<div class="position">您的位置：<a href="#">首页</a>&nbsp;>&nbsp;<a href="customer_add.html">新增客户</a></div>
+
+	
+<div class="clearfix h20"></div>
+<table class="mainTable" cellspacing="0" cellpadding="0" >
+	<tr>
+		<td id="p1nav" class="onTab" onclick="">新增客户</td>
+		<td id="p2nav" class="onDef" onclick=""></td>
+		<td id="p3nav" class="onDef" onclick=""></td>
+		<td class="onNor">
+<!-- 		<span id="btn_zone"> -->
+<!-- 		<a id="" class="ht_btn_default_sm pull-right MARGIN_R_10" href="customer_list.html">返回</a> -->
+<!-- 		</span> -->
+		</d>
+	</tr>
+	<tr>
+		<td colspan="4" class="mainTableBody">
+		
+				
+				
+				<!-- 添加 -->
+				<span id="p4" style="display: ;">
+				<table class="inmainTable" cellspacing="0" cellpadding="0">
+					<tr class="inmainTable_title">
+						<td colspan="2"><strong class="f_16">客户信息</strong></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td style="width: 130px;"><span class="pull-right f_14">客户名称：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;" /><div class="ht_def_font f_red"></div></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14">客户编码：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;" /><div class="ht_def_font f_red">*</div></td>
+					</tr>
+					
+					<tr class="inmainTable_res_noHover">
+						<td><span class="pull-right f_14">客户类型：</span></td>
+						<td >
+							<select class="ht_def_select pull-left" style="width: 300px;">
+								<option>请选择</option>
+								<option>1</option>
+								<option>2</option>
+							</select>
+							<div class="ht_def_font f_red">*</div>
+						</td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14">联系人：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;" /><div class="ht_def_font f_red">*</div></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14">联系电话：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;"/><div class="ht_def_font f_red">*</div></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td><span class="pull-right f_14">签约日期：</span></td>
+						<td >
+							<select class="ht_def_select pull-left" style="width: 300px;">
+								<option>请选择</option>
+								<option>1</option>
+								<option>2</option>
+							</select>
+							<div class="ht_def_font f_red"></div>
+						</td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td><span class="pull-right f_14">业务员：</span></td>
+						<td >
+							<select class="ht_def_select pull-left" style="width: 300px;">
+								<option>请选择</option>
+								<option>1</option>
+								<option>2</option>
+							</select>
+							<div class="ht_def_font f_red"></div>
+						</td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14">送票地址：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;"/><div class="ht_def_font f_red"></div></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td><span class="pull-right f_14">备注：</span></td>
+					<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;"/><div class="ht_def_font f_red"></div></td>
+					</tr>
+					
+					
+				</table> 
+				
+				
+				
+				</span>				
+				
+				<!-- 添加 -->
+				
+				<!-- 部门添加 -->
+				<span id="p5" style="display: none;">
+				<table class="inmainTable" cellspacing="0" cellpadding="0">
+					<tr class="inmainTable_title">
+						<td colspan="2"><strong class="f_16">部门信息</strong></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td style="width: 130px;"><span class="pull-right f_14">部门编号：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;"/><div class="ht_def_font f_red"></div></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14">部门名称：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;"/><div class="ht_def_font f_red">*</div></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14">部门描述：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;"/><div class="ht_def_font f_red">*</div></td>
+					</tr>
+					
+					
+				</table> 
+				
+				
+				</span>				
+				
+				<!-- 部门添加 -->
+		</td>
+	</tr>
+</table>
+<div class="clearfix h20"></div>
+<div class="f_gray_q">Copyright © 2008-2020 LANTUTONG.COM All Rights Reserved 沪ICP备09032149号</div>
+</div>
+<!-- -right ed-->
+
+<div class="clearfix h20"></div>
+<div class="clearfix h20"></div>
+<div class="clearfix h20"></div>
+<div class="clearfix h20"></div>
+
+<div id="ht_bottom_price_zone" class="ht_bottom_price_zone">
+	<div class="clearfix h5"></div>
+	<a href="#" class="price_zone_ok" style="margin-left: 150px;">确认保存</a>
+	<a href="customer_list.html" class="price_zone_cancel" style="margin-left: 5px;">取消返回</a>
+</div>
+
+
+ 
+ 
+ 
+ 
+ 
+
+<script src="../../../commonSkin/js/jquery-1.8.3.min.js"></script>
+<script src="../../../managerSkin/bluecssboot1.0/js/page_public.js"></script>
+<script src="../../../commonSkin/js/popModal.js"/></script>
+       <script type="text/javascript"> 
+       
+       
+ $(function() {
+	 
+		$("#ht_bottom_price_zone").show();
+				
+        	$("#js_edit_btn").on('click', 'span', function(event) {
+				event.preventDefault();
+				if($(this).hasClass('confirm')){
+					$("#js_edit").fadeOut();
+				}else{
+					$("#js_edit").fadeOut();
+				}
+			});
+        	
+        	$("#js_add_btn").on('click', 'span', function(event) {
+				event.preventDefault();
+				if($(this).hasClass('confirm')){
+					$("#js_add").fadeOut();
+				}else{
+					$("#js_add").fadeOut();
+				}
+			});
+        	
+        	$("#js_del_btn").on('click', 'span', function(event) {
+				event.preventDefault();
+				if($(this).hasClass('confirm')){
+					$("#js_del").fadeOut();
+				}else{
+					$("#js_del").fadeOut();
+				}
+			});
+			
+});
+ </script>
+ 
+ 
+
+ 
+ 
+</body>
+</html>

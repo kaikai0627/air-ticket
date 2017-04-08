@@ -1,0 +1,277 @@
+.main{
+    height: 100%;
+}
+.banana{
+    height: 10rem;
+    position: relative;
+    background: url(../../img/planebanana.jpeg) center -4rem no-repeat;
+}
+
+.banana span{
+    position: absolute;
+    top:.5rem;
+}
+.banana span i{
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 900;
+}
+.banana span.homepage{
+    right: .5rem;
+}
+.banana span.register{
+    left: .5rem;
+}
+
+.content_box {
+    width: 100%;
+    height: 100%;
+}
+
+/*国内 国际选择按钮*/
+div.buttons-tab {
+  	position: absolute;
+   top:7.5rem;
+    left: 10%;
+    height: 2.5rem;
+}
+
+
+.buttons-tab .tab-btn{
+    background:#fff;
+    color:#29B6F6;
+    height:2.5rem;
+    line-height: 2.5rem;
+    width:50%;
+    border:1px solid #29B6F6;
+    border-radius:0.2rem;
+}
+.content_box .buttons-tab a.active{
+    color:#fff;
+    background:#29b6f6;
+}
+
+/**/
+.content-block{
+    margin: 0;
+    padding: 0;
+}
+.content_box .container{
+    background:#fff;
+    height:100%;
+}
+
+.clear:after{
+    content:'';
+    display: block;
+    clear:both;
+}
+
+/*出发*/
+.start{
+    width:44%;
+    height:3.5rem;
+    margin-left: 3px;
+    border-bottom: 1px solid #BDBBBD;
+}
+.start .clear ul.lf{
+    padding-left: 4px;
+    width:100%;
+
+}
+.start .clear ul.lf li{
+    padding-left:.5rem
+}
+.start .clear ul.lf input{
+    width: 100%;
+    height: 2rem;
+    border: none;
+}
+
+/*飞机图标*/
+.p_ico{
+    width:10%;
+    height:3.5rem;
+    background: url("../../img/plane.png")0 no-repeat;
+}
+
+/*到达*/
+.arrive{
+    width:44%;
+    height:3.5rem;
+	margin-right: 3px;
+    border-bottom: 1px solid #BDBBBD;
+}
+.arrive .clear ul.rt{
+    padding-right: .5rem;
+}
+.arrive .clear ul li{
+    text-align: right;
+}
+.arrive .clear ul.rt input{
+    width: 100%;
+    height: 2rem;
+    border: none;
+    text-align: right;
+}
+/*旅程 去程*/
+.trip{
+   width:44%;
+    height:3.5rem;
+    margin-left: 3px;
+    border-bottom: 1px solid #BDBBBD;
+}
+.trip .clear ul.lf{
+    padding-left: 4px;
+
+}
+
+.trip input{
+    width: 100%;
+    height: 2rem;
+    border: none;
+}
+.trip .clear ul.lf li{
+    padding-left:.5rem
+}
+
+/*返程*/
+.leave{
+   width:44%;
+    height:3.5rem;
+    margin-right: 3px;
+    border-bottom: 1px solid #BDBBBD;
+}
+.leave .clear ul.rt{
+    padding-right: .5rem;
+}
+.leave .clear ul li{
+    text-align: right;
+}
+.leave input{
+    width: 100%;
+    height: 2rem;
+    border: none;
+    text-align: right;
+}
+/*成人 儿童ͯ*/
+.option{
+    width:98%;
+    height:3.5rem;
+    margin:0 3px;
+	line-height: 3rem;
+    border-bottom: 1px solid #BDBBBD;
+}
+.option .clear ul.lf{
+    padding-left: 1rem;
+    width: 100%;
+}
+.option .clear ul.lf li{
+    width: 100%;
+    float:left;
+    height:1rem;
+}
+.option .clear ul.lf li input{
+    border: none;
+    width: 100%;
+    height:1rem;
+}
+
+/*搜索*/
+.seek{
+	width:100%;
+	height:3.5rem;
+}
+.seek .seek_btn{
+	width:90%;
+	position: relative;
+	margin:1rem 0;
+	left:5%;	
+}
+.seek .seek_btn a{
+	height:2.5rem;
+	line-height:2.5rem;
+	background: #FFA726;
+    color:#fff;
+}
+.seek .seek_btn a:hover{
+    background: #FFA726;
+}
+.spacer{
+	width:100%;
+    height:.5rem;
+	margin-top:1rem; 
+	background: #EBE8EB;
+}
+
+/*动态 & 订单̬*/
+.examine{
+	width:100%;
+	height:3.2rem;
+}
+.examine .lf{
+	margin:5% 0 0 16%; 
+}
+.examine>.clear>.rt{
+	margin:5% 16% 0 0; 
+}
+
+.examine .lf b{
+	display: inline-block;
+	width:2.5rem;
+	height:2.5rem;
+	background:#29B6F6;
+	border-radius:50%;
+    color: #fff;
+    line-height: 3.2rem;
+    text-align: center;
+}
+.examine .rt b{
+	display: inline-block;
+	width:2.5rem;
+	height:2.5rem;
+	background:#AB47BC;
+	border-radius:50%;
+    color: #fff;
+    line-height: 3.2rem;
+    text-align: center;
+}
+
+/*底部*/
+.footer{
+	width:100%;
+	height:2.2rem;
+	line-height: 2.2rem;
+	background: #EBE8EB;
+	color:#03A9F4;
+	position:fixed;
+	bottom:0;
+	text-align: center;
+}
+
+/*弹出框*/
+.up_flex,.up_flex ul{
+    display: flex;
+    width: 100%;
+}
+.picker-modal .picker-modal-inner{
+    background: #fff;
+}
+.picker-modal .picker-modal-inner .picker-items-col:first-child{
+    margin: 0 10% 0 3%;
+}
+.picker-modal .picker-modal-inner .picker-items-col:nth-child(2){
+    margin: 0 15%;
+}
+.picker-modal .picker-modal-inner .picker-items-col:nth-child(3){
+    margin: 0 3% 0 10%;
+}
+.picker-items{
+    -webkit-mask-box-image:none;
+}
+body{
+    background: none;
+}
+.txt_center{
+    text-align: center;
+}

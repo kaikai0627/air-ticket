@@ -1,0 +1,814 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>部门与员工</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<link href="../../../commonSkin/css/html_tools.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="../../../managerSkin/bluecssboot1.0/css/pageStyle.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="../../../managerSkin/bluecssboot1.0/css/btnStyle.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="../../../managerSkin/bluecssboot1.0/css/popModal.css" rel="stylesheet" type="text/css" media="screen"/>
+
+</head>
+<body>
+
+<!-- top-->
+<div class="ht_top">
+	<div class="logo">
+		<img src="../../../managerSkin/bluecssboot1.0/img/logo1.png"  />
+	</div>
+	<div class="dh">
+		<ul>
+			<li class="mmouse on" id="t_sel1">大菜单1</li>
+			<li class="mmouse" id="t_sel2">大菜单2</li>
+			<li class="mmouse" id="t_sel3">大菜单3</li>
+		</ul>
+	</div>
+	
+	<div class="dh_r">
+		<ul >
+			<li><a class="mail" href="#"><div class="msgNum">11</div></a></li>
+			<li><div class="name">消息</div></li>
+			<li><div class="head"><img src="../../../managerSkin/bluecssboot1.0/img/icon_center_head.png" class="inhead"/></div></li>
+			<li class="mop">
+			<div class="name">小陈</div>
+			<div id="arrow_name" class="arrow"></div>
+				<div id="menuOpen_name" class="menuOpen">
+						<ul>
+							<li><a href="my_info.html">我的资料</a></li>
+							<li><a href="pwd_edit.html">密码修改</a></li>
+						</ul>
+				</div>
+			</li>
+			<li><a class="sett" href="#"></a></li>
+			<li class="mop">
+			<div class="name">设置</div>
+			<div id="arrow_sett" class="arrow"></div>
+				<div id="menuOpen_sett" class="menuOpen">
+						<ul>
+							<li><a href="company_info">公司信息</a></li>
+							<li><a href="emp_dep.html">部门与员工</a></li>
+							<li><a href="system_sett.html">系统设置</a></li>
+						</ul>
+				</div>
+			</li>
+			<li onclick="location.href='service.html'"><a class="service" href="#"></a></li>
+			<li onclick="location.href='service.html'"><div class="name">客服</div></li>
+			<li onclick="location.href='login.html'"><a class="exit" href="#"></a></li>
+			<li onclick="location.href='login.html'"><div class="name">退出</div></li>
+		</ul>
+	</div>
+</div>
+
+<!-- top ed-->
+<div class="clearfix"></div>
+
+<!-- left -->
+<div class="ht_left" style="display: ;">
+<div class="clearfix h30"></div>
+<div class="clearfix h30"></div>
+<div class="clearfix h10"></div>
+		<ul>
+			<li class="mop">
+				<a class="order" href="#"></a>
+				<div class="arrow"></div>
+				<div class="menuOpen">
+						<div class="one">
+						<ul>
+							<li><a href="order_manager.html">订单中心</a></li>
+							<li><a href="order_refund.html">退票订单</a></li>
+							<li><a href="order_temp.html">暂存订单</a></li>
+							<li><a href="order_faild.html">作废订单</a></li>
+						</ul>
+						</div>
+				</div>
+			</li>
+			
+				<li class="mop" onclick="location.href='customer_list.html'">
+				<a class="user" href="#"></a>
+<!-- 				<div class="menuOpen"> -->
+<!-- 					<div class="one"> -->
+<!-- 						<ul> -->
+<!-- 							<li><strong>个人资料</strong></li> -->
+<!-- 							<li><a href="#">修改个人信息</a></li> -->
+<!-- 							<li><a href="#">修改密码</a></li> -->
+<!-- 						</ul> -->
+<!-- 					</div> -->
+
+<!-- 				</div> -->
+			</li>
+			
+				<li class="mop">
+				<a class="report" href="#"></a>
+				<div class="arrow"></div>
+				<div class="menuOpen" style="width: 300px;">
+						<ul>
+							<li><strong class="f_gray_m f_15">财务报表</strong></li>
+							<li><a href="order_get.html">应收订单</a></li>
+							<li><a href="order_pay.html">应付订单</a></li>
+						</ul>
+						<ul>
+							<li><strong class="f_gray_m f_15">销售报表</strong></li>
+							<li><a href="sale_count.html">销售统计</a></li>
+							<li><a href="sale_rank.html">业绩排行</a></li>
+							<li><a href="receivable_count.html">未收款统计</a></li>
+						</ul>
+					
+						<ul>
+							<li><strong class="f_gray_m f_15">返扣报表</strong></li>
+							<li><a href="order_noReturn.html">未返扣订单</a></li>
+							<li><a href="order_hasReturn.html">已反扣订单</a></li>
+						</ul>
+				</div>
+			</li>
+			
+			
+		</ul>
+</div>
+<!-- left ed -->
+
+<!-- -right -->
+<div class="ht_right">
+<div class="clearfix h30"></div>
+<div class="clearfix h20"></div>
+<div class="clearfix h5"></div>
+<div class="position">您的位置：<a href="#">首页</a>&nbsp;>&nbsp;设置&nbsp;>&nbsp;<a href="emp_dep.html">部门与员工</a></div>
+
+	
+<div class="clearfix h20"></div>
+<table class="mainTable" cellspacing="0" cellpadding="0" >
+	<tr>
+		<td id="p1nav" class="onTab" onclick="changeMe(0)">员工账号</td>
+		<td id="p2nav" class="onDef" onclick="changeMe(1)">部门设置</td>
+		<td id="p3nav" class="onDef" onclick="changeMe(2)">角色权限设置</td>
+		<td class="onNor">
+		<span id="btn_zone">
+		<a id="emp_add" class="ht_btn_blue_add pull-right MARGIN_R_10" href="javascript:addEmp();">添加员工</a>
+		<a id="dep_add" class="ht_btn_blue_add pull-right MARGIN_R_10" href="javascript:addDep();" href="#" style="display:none;">添加部门</a>
+		</span>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" class="mainTableBody">
+		
+		<!-- 员工账号 -->
+			<span id="p1">
+				<table class="inmainTable" cellspacing="0" cellpadding="0">
+					<tr class="inmainTable_title">
+						<td>员工姓名</td>
+						<td>员工手机</td>
+						<td>登录账号</td>
+						<td>账号状态</td>
+						<td>登录限制</td>
+						<td>角色</td>
+						<td>部门</td>
+						<td class="inmainTable_title_caozuo">操作</td>
+					</tr>
+					<tr class="inmainTable_res">
+						<td>Jack</td>
+						<td>13919292912</td>
+						<td>myadmin</td>
+						<td><label class="ht_state_alert">冻结</label></td>
+						<td>已限制</td>
+						<td>超级管理员</td>
+						<td>总经办</td>
+						<td>
+							<a href="javascript:addEmp()" class="ht_btn_edit_orb MARGIN_L_10"></a>
+<!-- 							<a href="#" class="ht_btn_del_orb MARGIN_L_10"></a> -->
+						</td>
+					</tr>
+					<tr class="inmainTable_res">
+						<td>Jack</td>
+						<td>13919292912</td>
+						<td>myadmin</td>
+						<td><label class="ht_state_success">正常</label></td>
+						<td>已限制</td>
+						<td>超级管理员</td>
+						<td>总经办</td>
+						<td>
+							<a href="javascript:addEmp()" class="ht_btn_edit_orb MARGIN_L_10"></a>
+<!-- 							<a href="#" class="ht_btn_del_orb MARGIN_L_10"></a> -->
+						</td>
+					</tr>
+					<tr class="inmainTable_res">
+						<td>Jack</td>
+						<td>13919292912</td>
+						<td>myadmin</td>
+						<td><label class="ht_state_success">正常</label></td>
+						<td>已限制</td>
+						<td>超级管理员</td>
+						<td>总经办</td>
+						<td>
+							<a href="javascript:addEmp()" class="ht_btn_edit_orb MARGIN_L_10"></a>
+<!-- 							<a href="#" class="ht_btn_del_orb MARGIN_L_10"></a> -->
+						</td>
+					</tr>
+					<tr class="inmainTable_res">
+						<td>Jack</td>
+						<td>13919292912</td>
+						<td>myadmin</td>
+						<td><label class="ht_state_success">正常</label></td>
+						<td>已限制</td>
+						<td>超级管理员</td>
+						<td>总经办</td>
+						<td>
+							<a href="javascript:addEmp()" class="ht_btn_edit_orb MARGIN_L_10"></a>
+<!-- 							<a href="#" class="ht_btn_del_orb MARGIN_L_10"></a> -->
+						</td>
+					</tr>
+					<tr class="inmainTable_res">
+						<td>Jack</td>
+						<td>13919292912</td>
+						<td>myadmin</td>
+						<td><label class="ht_state_success">正常</label></td>
+						<td>已限制</td>
+						<td>超级管理员</td>
+						<td>总经办</td>
+						<td>
+							<a href="javascript:addEmp()" class="ht_btn_edit_orb MARGIN_L_10"></a>
+<!-- 							<a href="#" class="ht_btn_del_orb MARGIN_L_10"></a> -->
+						</td>
+					</tr>
+					
+				</table> 
+				<div class="clearfix h10"></div>
+				<table class="ht_pageTab">
+					<tr>
+						<td class="td1"><a href="#" class="ht_btn_refs_orb " title="刷新列表"></a></td>
+						<td class="td2">
+								<div class="page_out">
+								<div class="page_f_font">共10条 </div>	
+								<div class="page_f_font">每页显示</div>
+								<select class="page_f_select">
+									<option>10</option>
+									<option>50</option>
+									<option>100</option>
+								</select>
+								<div class="page_f_font">条</div>
+								<div class="page_f_font">&nbsp;第</div>
+								<input type="text" class="page_f_input" />
+								<div class="page_f_font">页&nbsp;共1页</div>
+								<a href="#" class="page_f_btn_p" title="上一页"></a>
+								<a href="#" class="page_f_btn_n" title="下一页"></a>
+							</div>			
+						
+						</td>
+<!-- 						<td class="td1"></td> -->
+					</tr>
+				</table>
+				</span>
+				<!-- 员工账号 ed-->
+				
+				<!-- 部门设置 -->
+			<span id="p2" style="display: none;">
+				<table class="inmainTable" cellspacing="0" cellpadding="0">
+					<tr class="inmainTable_title">
+						<td>部门编号</td>
+						<td>部门名称</td>
+						<td>部门描述</td>
+						<td class="inmainTable_title_caozuo">操作</td>
+					</tr>
+					<tr class="inmainTable_res">
+						<td>0000001</td>
+						<td>财务部门</td>
+						<td>负责公司财务的一切事物</td>
+						<td>
+						<a href="javascript:addDep()" class="ht_btn_edit_orb MARGIN_L_10"></a>
+							<a href="#" class="ht_btn_del_orb MARGIN_L_10"></a>
+						</td>
+					</tr>
+					<tr class="inmainTable_res">
+						<td>0000001</td>
+						<td>财务部门</td>
+						<td>负责公司财务的一切事物</td>
+						<td>
+							<a href="javascript:addDep()" class="ht_btn_edit_orb MARGIN_L_10"></a>
+							<a href="#" class="ht_btn_del_orb MARGIN_L_10"></a>
+						</td>
+					</tr>
+					<tr class="inmainTable_res">
+						<td>0000001</td>
+						<td>财务部门</td>
+						<td>负责公司财务的一切事物</td>
+						<td>
+							<a href="javascript:addDep()" class="ht_btn_edit_orb MARGIN_L_10"></a>
+							<a href="#" class="ht_btn_del_orb MARGIN_L_10"></a>
+						</td>
+					</tr>
+					<tr class="inmainTable_res">
+						<td>0000001</td>
+						<td>财务部门</td>
+						<td>负责公司财务的一切事物</td>
+						<td>
+							<a href="javascript:addDep()" class="ht_btn_edit_orb MARGIN_L_10"></a>
+							<a href="#" class="ht_btn_del_orb MARGIN_L_10"></a>
+						</td>
+					</tr>
+					<tr class="inmainTable_res">
+						<td>0000001</td>
+						<td>财务部门</td>
+						<td>负责公司财务的一切事物</td>
+						<td>
+							<a href="javascript:addDep()" class="ht_btn_edit_orb MARGIN_L_10"></a>
+							<a href="#" class="ht_btn_del_orb MARGIN_L_10"></a>
+						</td>
+					</tr>
+					
+					
+				</table> 
+				<div class="clearfix h10"></div>
+				<table class="ht_pageTab">
+					<tr>
+						<td class="td1"><a href="#" class="ht_btn_refs_orb " title="刷新列表"></a></td>
+						<td class="td2">
+								<div class="page_out">
+								<div class="page_f_font">共10条 </div>	
+								<div class="page_f_font">每页显示</div>
+								<select class="page_f_select">
+									<option>10</option>
+									<option>50</option>
+									<option>100</option>
+								</select>
+								<div class="page_f_font">条</div>
+								<div class="page_f_font">&nbsp;第</div>
+								<input type="text" class="page_f_input" />
+								<div class="page_f_font">页&nbsp;共1页</div>
+								<a href="#" class="page_f_btn_p" title="上一页"></a>
+								<a href="#" class="page_f_btn_n" title="下一页"></a>
+							</div>			
+						
+						</td>
+<!-- 						<td class="td1"></td> -->
+					</tr>
+				</table>
+				</span>
+				<!-- 部门设置 ed-->
+				
+				
+				<!-- 权限 -->
+				<span id="p3" style="display: none;">
+				<table class="inmainTable" cellspacing="0" cellpadding="0">
+					<tr class="inmainTable_title">
+						<td><strong class="f_16">角色权限管理</strong></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td>
+							<select class="ht_def_select pull-left" style="width: 300px;" >
+								<option>系统管理员</option>
+								<option>审核员</option>
+								<option>出票员</option>
+							</select>
+							
+							
+							
+							
+							<a class="ht_btn_blue_edit pull-left MARGIN_L_10" href="javascript:showDiv('js_edit','0');">修改角色名称</a>
+							<a class="ht_btn_blue_del pull-left MARGIN_L_10"  href="javascript:showDiv('js_del','0');">删除此角色</a>
+							
+						</td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td>
+							<a class="ht_btn_blue_add pull-left" href="javascript:showDiv('js_add','0');">新增角色</a>
+							
+						</td>
+					</tr>
+					
+				</table> 
+				
+				<table class="inmainTable" cellspacing="0" cellpadding="0">
+					<tr class="inmainTable_title">
+						<td><strong class="f_16">角色权限明细</strong></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td>
+							<div class="ht_mylabel_title">作废管理</div>
+							<div class="ht_mylabel_body">
+								<label><input type="checkbox" />&nbsp;已提交订单</label>
+								<label><input type="checkbox" />&nbsp;作废订单</label>
+							</div>
+							
+						</td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td>
+							<div class="ht_mylabel_title">退票管理</div>
+							<div class="ht_mylabel_body">
+								<label><input type="checkbox" />&nbsp;我的退废订单</label>
+								<label><input type="checkbox" />&nbsp;作废订单</label>
+								<label><input type="checkbox" />&nbsp;退票完成交易报表</label>
+								<label><input type="checkbox" />&nbsp;已提交退票</label>
+								<label><input type="checkbox" />&nbsp;卖家已退退票单</label>
+								<label><input type="checkbox" />&nbsp;出票完成</label>
+								<label><input type="checkbox" />&nbsp;所有退票单</label>
+							</div>
+							
+						</td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td>
+							<div class="ht_mylabel_title">配送管理</div>
+							<div class="ht_mylabel_body">
+
+								<label><input type="checkbox" />&nbsp;所有订单</label>
+								<label><input type="checkbox" />&nbsp;待配送</label>
+								<label><input type="checkbox" />&nbsp;配送中</label>
+								<label><input type="checkbox" />&nbsp;已配送</label>
+							</div>
+							
+						</td>
+					</tr>
+					
+				</table> 
+				
+				</span>				
+				
+				<!-- 权限 -->
+				
+				
+				<!-- 员工添加 -->
+				<span id="p4" style="display: none;">
+				<table class="inmainTable" cellspacing="0" cellpadding="0">
+					<tr class="inmainTable_title">
+						<td colspan="2"><strong class="f_16">账号信息</strong></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td style="width: 130px;"><span class="pull-right f_14">登录账号：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;" /><div class="ht_def_font f_red">*</div></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14">密码：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;" /><div class="ht_def_font f_red">*</div></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14">确认密码：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;" /><div class="ht_def_font f_red">*</div></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14">姓名：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;"/><div class="ht_def_font f_red">*</div></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14">手机：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;"/><div class="ht_def_font f_red">*</div></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td><span class="pull-right f_14">部门：</span></td>
+						<td >
+							<select class="ht_def_select pull-left" style="width: 300px;">
+								<option>请选择</option>
+								<option>技术部</option>
+								<option>财务部</option>
+								<option>理赔部</option>
+								<option>吉泽明步</option>
+							</select>
+						</td>
+					</tr>
+					
+					
+				</table> 
+				
+				<table class="inmainTable" cellspacing="0" cellpadding="0">
+					<tr class="inmainTable_title">
+						<td><strong class="f_16">账号权限</strong></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td>
+							<div class="ht_mylabel_title">角色权限</div>
+							<div class="ht_mylabel_body">
+								<label><input type="checkbox" />&nbsp;审单员</label>
+								<label><input type="checkbox" />&nbsp;出票员</label>
+								<label><input type="checkbox" />&nbsp;财务</label>
+								<label><input type="checkbox" />&nbsp;部门经理</label>
+								<label><input type="checkbox" />&nbsp;送票员</label>
+								<label><input type="checkbox" />&nbsp;仓库管理员</label>
+							</div>
+							
+						</td>
+					</tr>
+					
+				</table> 
+				
+					<table class="inmainTable" cellspacing="0" cellpadding="0">
+					<tr class="inmainTable_title">
+						<td><strong class="f_16">账号明细</strong></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td>
+							<div class="ht_mylabel_title">作废管理</div>
+							<div class="ht_mylabel_body">
+							
+								<label><input type="checkbox" />&nbsp;已提交订单</label>
+								<label><input type="checkbox" />&nbsp;作废订单</label>
+							</div>
+							
+						</td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td>
+							<div class="ht_mylabel_title">退票管理</div>
+							<div class="ht_mylabel_body">
+								<label><input type="checkbox" />&nbsp;我的退废订单</label>
+								<label><input type="checkbox" />&nbsp;作废订单</label>
+								<label><input type="checkbox" />&nbsp;退票完成交易报表</label>
+								<label><input type="checkbox" />&nbsp;已提交退票</label>
+								<label><input type="checkbox" />&nbsp;卖家已退退票单</label>
+								<label><input type="checkbox" />&nbsp;出票完成</label>
+								<label><input type="checkbox" />&nbsp;所有退票单</label>
+							</div>
+							
+						</td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td>
+							<div class="ht_mylabel_title">配送管理</div>
+							<div class="ht_mylabel_body">
+
+								<label><input type="checkbox" />&nbsp;所有订单</label>
+								<label><input type="checkbox" />&nbsp;待配送</label>
+								<label><input type="checkbox" />&nbsp;配送中</label>
+								<label><input type="checkbox" />&nbsp;已配送</label>
+							</div>
+							
+						</td>
+					</tr>
+					
+				</table> 
+				
+				</span>				
+				
+				<!-- 员工添加 -->
+				
+				<!-- 部门添加 -->
+				<span id="p5" style="display: none;">
+				<table class="inmainTable" cellspacing="0" cellpadding="0">
+					<tr class="inmainTable_title">
+						<td colspan="2"><strong class="f_16">部门信息</strong></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td style="width: 130px;"><span class="pull-right f_14">部门编号：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;"/><div class="ht_def_font f_red"></div></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14">部门名称：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;"/><div class="ht_def_font f_red">*</div></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14">部门描述：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;"/><div class="ht_def_font f_red">*</div></td>
+					</tr>
+					
+					
+				</table> 
+				
+				
+				</span>				
+				
+				<!-- 部门添加 -->
+		</td>
+	</tr>
+</table>
+<div class="clearfix h20"></div>
+<div class="f_gray_q">Copyright © 2008-2020 LANTUTONG.COM All Rights Reserved 沪ICP备09032149号</div>
+</div>
+<!-- -right ed-->
+
+<div class="clearfix h20"></div>
+<div class="clearfix h20"></div>
+<div class="clearfix h20"></div>
+<div class="clearfix h20"></div>
+
+<div id="ht_bottom_price_zone" class="ht_bottom_price_zone">
+	<div class="clearfix h5"></div>
+	<a href="#" class="price_zone_ok" style="margin-left: 150px;">确认保存</a>
+	<a href="#" class="price_zone_cancel" style="margin-left: 5px;">取消</a>
+</div>
+
+
+
+<!-- 角色编辑-->
+
+<div id="js_edit" class="pop">
+	<div class="popMain">
+		<div class="popTop">修改角色名称</div>
+		<div class="popMiddle">
+				
+				<p>
+					<div class="bxpz_title">角色名称</div>
+					<div class="bxpz_zone"><input type="text" class="txt" value="系统管理员" placeholder='请填写角色名' style="width: 370px;"/></div>	
+<!-- 			    	<div class="clearfix"></div> -->
+<!-- 			    	<div class="bxpz_title">证件信息</div> -->
+<!-- 					<div class="bxpz_zone_select"> -->
+<!-- 						<select class="select"> -->
+<!-- 							<option>身份证</option> -->
+<!-- 							<option>护照</option> -->
+<!-- 							<option>港澳</option> -->
+							
+<!-- 							<option>军人证</option> -->
+<!-- 							<option>回乡证</option> -->
+<!-- 							<option>台胞证</option> -->
+<!-- 							<option>港澳通行证</option> -->
+<!-- 							<option>户口簿</option> -->
+<!-- 							<option>出生证明</option> -->
+<!-- 						</select> -->
+<!-- 						<input type="text"  class="txt" placeholder='请填证件号码'  style="width: 245px;"/> -->
+<!-- 					</div>	 -->
+<!-- 					<div class="clearfix"></div> -->
+<!-- 			    	<div class="bxpz_title">出生年月</div> -->
+<!-- 					<div class="bxpz_zone"><input type="text" class="txt" placeholder='出生日期 ，格式 YYYY-MM-DD' readonly="readonly" onclick="WdatePicker({startDate:'1980-05-10'})" style="width: 370px;"/></div>	 -->
+<!-- 			    	<div class="clearfix"></div>	 -->
+			
+			</p>
+		</div>
+		<div id="js_edit_btn" class="popBottom">
+			<span class="confirm">确认保存</span>
+			<span class="cancel">取消</span>
+		</div>
+	</div>
+</div>
+<!-- 角色编辑-->
+ 
+ 
+ 
+<!-- 角色添加-->
+
+<div id="js_add" class="pop">
+	<div class="popMain">
+		<div class="popTop">添加角色名称</div>
+		<div class="popMiddle">
+				
+				<p>
+					<div class="bxpz_title">角色名称</div>
+					<div class="bxpz_zone"><input type="text" class="txt" placeholder='请填写角色名' style="width: 370px;"/></div>	
+<!-- 			    	<div class="clearfix"></div> -->
+<!-- 			    	<div class="bxpz_title">证件信息</div> -->
+<!-- 					<div class="bxpz_zone_select"> -->
+<!-- 						<select class="select"> -->
+<!-- 							<option>身份证</option> -->
+<!-- 							<option>护照</option> -->
+<!-- 							<option>港澳</option> -->
+							
+<!-- 							<option>军人证</option> -->
+<!-- 							<option>回乡证</option> -->
+<!-- 							<option>台胞证</option> -->
+<!-- 							<option>港澳通行证</option> -->
+<!-- 							<option>户口簿</option> -->
+<!-- 							<option>出生证明</option> -->
+<!-- 						</select> -->
+<!-- 						<input type="text"  class="txt" placeholder='请填证件号码'  style="width: 245px;"/> -->
+<!-- 					</div>	 -->
+<!-- 					<div class="clearfix"></div> -->
+<!-- 			    	<div class="bxpz_title">出生年月</div> -->
+<!-- 					<div class="bxpz_zone"><input type="text" class="txt" placeholder='出生日期 ，格式 YYYY-MM-DD' readonly="readonly" onclick="WdatePicker({startDate:'1980-05-10'})" style="width: 370px;"/></div>	 -->
+<!-- 			    	<div class="clearfix"></div>	 -->
+			
+			</p>
+		</div>
+		<div id="js_add_btn" class="popBottom">
+			<span class="confirm">确认保存</span>
+			<span class="cancel">取消</span>
+		</div>
+	</div>
+</div>
+<!-- 角色添加-->
+ 
+ 
+ 
+ 
+<!-- 删除确认-->
+
+<div id="js_del" class="pop">
+	<div class="popMain">
+		<div class="popTop">操作提示</div>
+		<div class="popMiddle">
+				
+				<p>
+				确认要删除这个角色吗？
+			</p>
+		</div>
+		<div id="js_del_btn" class="popBottom">
+			<span class="confirm">确认删除</span>
+			<span class="cancel">取消</span>
+		</div>
+	</div>
+</div>
+<!-- 删除添加-->
+ 
+
+<script src="../../../commonSkin/js/jquery-1.8.3.min.js"></script>
+<script src="../../../managerSkin/bluecssboot1.0/js/page_public.js"></script>
+<script src="../../../commonSkin/js/popModal.js"/></script>
+       <script type="text/javascript"> 
+       
+       function addEmp(){
+    	   
+    	   $("#p1").hide();
+    	   $("#p4").show();
+    	   $("#p5").hide();
+    	   $("#ht_bottom_price_zone").show();
+    	   
+       }
+       function addDep(){
+    	   
+    	   $("#p1").hide();
+    	   $("#p4").hide();
+    	   $("#p5").show();
+    	   $("#p2").hide();
+    	   $("#ht_bottom_price_zone").show();
+    	   
+       }
+       
+       function showDiv(id,show_type){
+    	   
+    	   
+    	   if(show_type=='0'){
+    		   
+    		   $("#"+id).show();
+    		   
+    	   }else{
+    		   
+    		   $("#"+id).fadeIn();
+    	   }
+    	   
+       }
+       
+       function changeMe(j){
+
+    		var Tabs = new Array("p1","p2","p3");
+    		
+    		for ( var i = 0; i <Tabs.length; i++) {
+    			if (i == j) {
+    				document.getElementById(Tabs[i]).style.display = "";
+    				document.getElementById(Tabs[i] + "nav").className = "onTab";
+    				
+    				if(j==0){
+    					$("#btn_zone").show();
+    					$("#emp_add").show();
+    					$("#dep_add").hide();
+    					$("#ht_bottom_price_zone").hide();
+    					 $("#p4").hide();
+    					 $("#p5").hide();
+    				}else if(j==2){
+    					 $("#p4").hide();
+    					 $("#p5").hide();
+    					$("#btn_zone").hide();
+    					$("#ht_bottom_price_zone").show();
+    					
+    				}else{
+    					 $("#p4").hide();
+    					 $("#p5").hide();
+    					$("#btn_zone").show();
+    					$("#emp_add").hide();
+    					$("#dep_add").show();
+    					$("#ht_bottom_price_zone").hide();
+    				}
+    				
+    			} else {
+    				document.getElementById(Tabs[i]).style.display = "none";
+    				document.getElementById(Tabs[i] + "nav").className = "onDef";
+    				}
+
+    		}
+    	}
+       
+       
+ $(function() {
+				
+        	$("#js_edit_btn").on('click', 'span', function(event) {
+				event.preventDefault();
+				if($(this).hasClass('confirm')){
+					$("#js_edit").fadeOut();
+				}else{
+					$("#js_edit").fadeOut();
+				}
+			});
+        	
+        	$("#js_add_btn").on('click', 'span', function(event) {
+				event.preventDefault();
+				if($(this).hasClass('confirm')){
+					$("#js_add").fadeOut();
+				}else{
+					$("#js_add").fadeOut();
+				}
+			});
+        	
+        	$("#js_del_btn").on('click', 'span', function(event) {
+				event.preventDefault();
+				if($(this).hasClass('confirm')){
+					$("#js_del").fadeOut();
+				}else{
+					$("#js_del").fadeOut();
+				}
+			});
+			
+});
+ </script>
+ 
+ 
+
+ 
+ 
+</body>
+</html>

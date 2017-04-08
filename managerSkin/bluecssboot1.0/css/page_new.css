@@ -1,0 +1,80 @@
+.form_td_title.sen_border{ border-bottom: 1px #eee dashed; text-align: left; font-weight: bold;  padding-bottom:0px; padding-left:5px; margin-bottom:10px;height: 30px;}
+.add_radio_body{    text-align: left;    width: 330px;    height: 30px;    line-height: 30px;    float: left; font-size: 14px;}
+.add_radio_body label{width: 100px; display: inline-block;}
+.strategy_one{ border: 1px #dad7d7 solid; margin-right: 20px; margin-left: 20px; margin-top: 10px; border-radius: 5px; margin-bottom: 20px;}
+.strategy_one_hread{width: 100%; background: #f3f3f3; color: #999; line-height: 40px; text-align: left; border-radius: 5px; padding-left: 10px; -moz-box-sizing: border-box; 
+-webkit-box-sizing: border-box; /*Safari3.2+*/
+-o-box-sizing: border-box; /*Opera9.6*/
+-ms-box-sizing: border-box; /*IE8*/
+box-sizing: border-box;}
+.add_celue{height: 20px; margin-top: 10px; line-height: 20px; margin-left: 10px;}
+.num_tqyd{ font-size: 14px; color: #333; padding-left: 15px; line-height: 30px;}
+.width150px{width: 100px; text-align: right;}
+.fangshi_secound{display: none;}
+/*旅游*/
+.xc_box{  padding-left:10px; background: #f9f7f7;  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; /*Safari3.2+*/
+-o-box-sizing: border-box; /*Opera9.6*/
+-ms-box-sizing: border-box; /*IE8*/
+box-sizing: border-box; padding: 10px 10px; line-height: 40px;}
+.xc_box:after{ content: " "; display: block; clear: both; }
+.input_mub input{
+    -webkit-appearance: none;
+    height: 30px;
+    border: 1px #ccc solid;
+    border-radius: 0px;
+    background: url(../img/ht_select_arrow_icon.pn) #fdfdfd no-repeat 95% 11px;
+    outline:none;
+    text-indent: 5px;
+   }
+.lit_add{font-size: 14px;}
+.tare_xc{width: 100%; min-height:200px;-moz-box-sizing: border-box; -webkit-box-sizing: border-box; /*Safari3.2+*/-o-box-sizing: border-box; /*Opera9.6*/-ms-box-sizing: border-box; /*IE8*/
+box-sizing: border-box; border: 0;outline:none;}
+.xk_text-center{ text-align: center !important;}
+.color45c{color: #d8cc02;}
+.color22a{ color: #22ac38;}
+.clearfix{ content: " "; display: block; clear: both;}
+.popMiddle_new{padding: 25px;}
+
+/*订单信息*/
+.order_wrap {border:1px solid #eae9e9;overflow:hidden;padding:15px;}
+.order_wrap > p { float:left;font-size:14px;color:#333;width:25%;padding-bottom:15px;text-align:left;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.order_wrap > .title_ts {color:#4f9fdf;font-size:16px;clear:both;text-align:left;}
+.table_a { color:#4f9fdf;border-bottom:1px solid #4f9fdf;}
+.tishi { font-size:12px;color:#333;overflow:hidden;}
+.tishi > .pull-right { font-size:14px;color:#4f9fdf;}
+
+/*我要报名提示窗*/
+.pop .bm_main { width:1000px;}
+.bm_main >.popMiddle {padding:0px 15px;overflow:hidden; }
+.bm_main td{white-space:nowrap;text-align:center;}       
+.pop .bm_main { margin-left:-500px;}
+.pop .bm_main input{width:80px;}
+.bm_main .fj_table td{text-align:left;}
+.bm_main .fj_table .form_td_title { width:65px;} 
+ .pop .bm_main .radio>input{width:auto;}
+ .pop .bm_main .radio{margin-right:20px;}
+
+.popTop { position:relative;}
+.popTop > span { position:absolute;top:5px;right:10px;cursor:pointer;}
+.bm_main .sk_table td {text-align:left; }
+.bm_main .sk_table td > input { width:300px;}
+.popMiddle { position:relative;}
+
+.sk_histroy { position:absolute;right:20px;top:0px;width:400px;}
+.sk_histroy > p { font-size:14px;color:#666;padding:15px 0px;}
+.jilu { border:1px solid #ccc;padding:10px;}
+.jilu > span { display:block;font-size:13px;color:#333;padding-bottom:10px;}
+
+/*2017-3-11新增css样式*/
+.mpt_txt{ color: #666; font-size: 12px; margin-left: 5px;}
+.tba_input{ width: 80%; margin-left: 5%; border-radius: 2px; height: 20px; border: 1px #C6C6C6 solid; line-height: 20px; text-indent: 5px;}
+.inmainTable_res.table_td td{border-right: 1px #eae9e9 solid;}
+.inmainTable_res.table_td td:first-child{ border-left: 1px #eae9e9 solid;}
+.day_num{ width: 30px; height: 20px; border-radius: 2px; border: 1px #C6C6C6 solid; margin-left: 10px; margin-right: 10px;}
+.txt_trea{width: 100%; height: 100px;}
+.txt_dent{text-indent: 0 !important;}
+.pop_input{width: 80%; margin-left: 10%; height: 20px; border: 1px #999 solid; border-radius: 2px;}
+.mohu_seach_box{ width: 100%; display: none; position: absolute; right: 0; left: 0; top: 34px; background: #fff; line-height: 25px; font-size: 14px; color: #999; text-align: center; border: 1px #EAE9E9 solid; border-bottom: 0;}
+.mohu_seach_box ul li{ border-bottom: 1px #EAE9E9 solid; cursor: pointer;}
+.mohu_seach_box ul li:hover{background: #EAE9E9;}
+.pr{position: relative;}

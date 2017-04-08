@@ -1,0 +1,309 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>选择交通</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link href="../../../../../commonSkin/css/html_tools.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../../../../commonSkin/css/hDate.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../../../../managerSkin/bluecssboot1.0/css/pageStyle.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../../../../managerSkin/bluecssboot1.0/css/btnStyle.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../../../../managerSkin/bluecssboot1.0/css/popModal.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../../../../managerSkin/bluecssboot1.0/css/page_new.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../../../../managerSkin/bluecssboot1.0/css/saveopendiv.css" rel="stylesheet" type="text/css" media="screen">
+	<script language="javascript" src="../../../../../commonSkin/js/jquery-1.9.1.min.js"  ></script>
+	<script language="javascript" src="../../../../../commonSkin/js/window_open.js"></script>
+	<script language="javascript" src="../../../../../managerSkin/bluecssboot1.0/js/saveopendiv.js"></script>
+	<script language="javascript">
+		
+		// 开发人员自行移入js包下面
+		function   tobackflight()
+		{
+			//获取选中单选按钮值
+		     var flightTypes= $('input[name="flight_Type"]:checked').val();
+			if(flightTypes==0)
+				{
+					$("#backflights").hide();
+					
+				}
+			else
+				{
+					$("#backflights").show();
+				}
+		}
+		
+		function tobacktraffic()
+		{
+			
+			//获取选中单选按钮值
+		     var trafficTy= $('input[name="traffic_Type"]:checked').val();
+			if(trafficTy==0)
+				{
+					$("#trafficTypes").hide();
+					
+				}
+			else
+				{
+					$("#trafficTypes").show();
+				}
+		}
+		
+		
+		function toTric(obj)
+		{
+			if(obj==0)
+				{
+					$("#flight").show();
+					$("#p1nav").attr("class", "onTab");
+					$("#huoche").hide();
+				   $("#p2nav").attr("class", "onDef");
+				}
+			else{
+				
+				$("#huoche").show();
+				$("#p2nav").attr("class", "onTab");
+				$("#flight").hide();
+				$("#p1nav").attr("class", "onDef");
+			}
+			
+		}
+		//保存
+		function savemyform()
+		{
+			tishi('保存交通成功！');  //保存弹出div提示	
+		}
+		
+		 
+
+ 
+		
+		
+	</script>
+</head>
+
+<body>
+<div class="ht_right">
+<table class="mainTable" cellspacing="0" cellpadding="0" >
+<tr>
+	    <td colspan="3">
+		<table class="inmainTable" cellspacing="0" cellpadding="0">
+					<tbody>
+						<tr class="inmainTable_title">
+							<td colspan="1"><strong class="f_16"> 选择交通</strong></td>
+						</tr>
+					</tbody>
+				</table>
+				</td>
+	
+</tr>
+
+	<tr>
+		<td id="p1nav" class="onTab" onclick="toTric(0)">飞机</td>
+		<td id="p2nav" class="onDef" onclick="toTric(1)">其他交通</td>
+		<td ></td>
+	</tr>
+	<!--flight start-->
+	<tbody id="flight">
+	<tr>
+	<td colspan="3">
+			<div class="h10 clearfix"></div>
+	<div class="h10 clearfix"></div>
+			
+		<table class="inmainTable" cellspacing="0" cellpadding="0">
+				<tr class="inmainTable_res">
+				<td colspan="10">
+					<strong>航程类型：</strong>
+					<input type="radio" onKeyUp="tobackflight();" onChange="tobackflight();" id="flightType1" name="flight_Type" checked="checked"  value="0" />
+					单程&nbsp;&nbsp;
+					<input id="flightType2"    onKeyUp="tobackflight();" onChange="tobackflight();" name="flight_Type" type="radio" value="2"/>往返
+					
+				</td>
+			</tr>
+					<tr class="inmainTable_title">
+						
+							<th class="form_td_ipt_100" >航程</th>
+							<th class="form_td_ipt_100">选择控位</th>
+							<th class="form_td_ipt_100">&nbsp;&nbsp;线路城市</th>
+							<th class="form_td_ipt_100">&nbsp;&nbsp;出发地</th>
+							<th class="form_td_ipt_100">&nbsp;&nbsp;目的地</th>
+							<th class="form_td_ipt_100">&nbsp;&nbsp;航班号</th>
+							<th class="form_td_ipt_100">&nbsp;&nbsp;航班日期</th>
+							<th class="form_td_ipt_100">&nbsp;&nbsp;登机时间</th>
+							<th class="form_td_ipt_100">&nbsp;&nbsp;是否转机</th>
+							<th class="form_td_ipt_100">&nbsp;&nbsp;操作</th>
+							
+					</tr>
+					<tr class="inmainTable_res table_td">
+							<td class="form_td_ipt_100">去程</td>
+							<td class="form_td_ipt_100"><a href="#">+请选择</a> </td>
+							<td class="form_td_ipt_100"><input type="text" id="orgcity" name="orgcity" align="left" class="tba_input" value="马来西亚"></td>
+							<td class="form_td_ipt_100"><input type="text" id="orgcity" name="orgcity" class="tba_input" value="上海虹桥"></td>
+							<td class="form_td_ipt_100"><input type="text" id="orgcity" name="orgcity" class="tba_input" value="香港"></td>
+							<td class="form_td_ipt_100"><input type="text" id="orgcity" name="orgcity" class="tba_input" value="FM1323"></td>
+							<td class="form_td_ipt_100"><input type="text" id="orgcity" name="orgcity" class="tba_input" value="2016-12-25"></td>
+							<td class="form_td_ipt_100"><input type="text" id="orgcity" name="orgcity" class="tba_input" value="12:00"></td>
+							<td class="form_td_ipt_100"></td>
+						<td class="form_td_ipt_100"><a href="#">添加</a></td>
+					</tr>
+					<tr class="inmainTable_res table_td">
+					<td class="form_td_ipt_100">去程</td>
+							<td class="form_td_ipt_100"><a href="#">+请选择</a> </td>
+							<td class="form_td_ipt_100"><input type="text" id="orgcity" name="orgcity" class="tba_input" value="马来西亚"></td>
+							<td class="form_td_ipt_100"><input type="text" id="orgcity" name="orgcity" class="tba_input" value="上海虹桥"></td>
+							<td class="form_td_ipt_100"><input type="text" id="orgcity" name="orgcity" class="tba_input" value="香港"></td>
+							<td class="form_td_ipt_100"><input type="text" id="orgcity" name="orgcity" class="tba_input" value="FM1323"></td>
+							<td class="form_td_ipt_100"><input type="text" id="orgcity" name="orgcity" class="tba_input" value="2016-12-25"></td>
+							<td class="form_td_ipt_100"><input type="text" id="orgcity" name="orgcity" class="tba_input" value="12:00"></td>
+							<td class="form_td_ipt_100"><input type="checkbox" id="orgcity" name="orgcity"  checked="checked" value="0"></td>
+						<td class="form_td_ipt_100"><a href="#">删除</a></td>
+					</tr>
+					<tbody id="backflights" style="display: none;">
+					<tr class="inmainTable_res table_td">
+					<td class="form_td_ipt_100">返程</td>
+							<td class="form_td_ipt_100"><a href="#">+请选择</a> </td>
+							<td class="form_td_ipt_100"><input type="text" id="orgcity1" name="backcity" class="tba_input" value="马来西亚"></td>
+							<td class="form_td_ipt_100"><input type="text" id="orgcity2" name="backcity" class="tba_input" value="上海虹桥"></td>
+							<td class="form_td_ipt_100"><input type="text" id="orgcity3" name="backcity" class="tba_input" value="香港"></td>
+							<td class="form_td_ipt_100"><input type="text" id="orgcity4" name="backcity" class="tba_input" value="FM1323"></td>
+							<td class="form_td_ipt_100"><input type="text" id="orgcity5" name="orgcity" class="tba_input" value="2016-12-25"></td>
+							<td class="form_td_ipt_100"><input type="text" id="orgcity6" name="orgcity" class="tba_input" value="12:00"></td>
+							<td class="form_td_ipt_100"><input type="checkbox" id="orgcity7" name="orgcity"  value="0"></td>
+							<td class="form_td_ipt_100"><a href="#">添加</a></td>
+					</tr>
+					</tbody>
+					<tr>
+						<td colspan="10" class="form_td_ipt_100" >
+						<strong class="f_14">出票时限:</strong>&nbsp;&nbsp;&nbsp;
+						<input type="text" id="ticketType" name="ticketType" style="width: 70px;" />
+							
+						</td>
+					</tr>
+						<tr>
+						<td colspan="10" class="form_td_ipt_100" >
+						<div class="h10 clearfix"></div>
+						<div class="h10 clearfix"></div>
+						<a href="javascript:void(0);" onClick="savemyform();" class="price_zone_ok" style="margin-left: 150px;">保存交通</a>
+		      <a href="javascript:void(0)" onClick="closewindowshow();" class="price_zone_cancel" style="margin-left: 5px;"><span class="f_darkgray">取消操作</span></a>
+						
+						<div class="h10 clearfix"></div>
+						<div class="h10 clearfix"></div>
+							
+						</td>
+					</tr>
+					
+					 
+		</table>		
+		
+		</td>
+	</tr>
+   </tbody>
+    <!-- flight end-->
+    
+    <!-- huoche start -->
+    <tbody id="huoche" style="display: none" >
+	    <tr >
+		<td colspan="3">
+			
+			<table class="inmainTable" cellspacing="0" cellpadding="0">
+				<tr class="inmainTable_res">
+				<td colspan="10">
+					<strong>类型：</strong>
+					<input type="radio" onKeyUp="tobacktraffic();" onChange="tobacktraffic();" id="trainType1" name="traffic_Type" checked="checked"  value="0" />
+					单程&nbsp;&nbsp;
+					<input id="trainType2"    onKeyUp="tobacktraffic();" onChange="tobacktraffic();" name="traffic_Type" type="radio" value="2"/>往返
+					
+				</td>
+			</tr>
+					<tr class="inmainTable_title">
+						
+							<th class="form_td_ipt_100" >行程</th>
+							<th class="form_td_ipt_100">&nbsp;&nbsp;线路城市</th>
+								<th class="form_td_ipt_100">乘车方式</th>
+							<th class="form_td_ipt_100">&nbsp;&nbsp;出发地</th>
+							<th class="form_td_ipt_100">&nbsp;&nbsp;目的地</th>
+							<th class="form_td_ipt_100">&nbsp;&nbsp;车次</th>
+							<th class="form_td_ipt_100">&nbsp;&nbsp;乘坐日期</th>
+							<th class="form_td_ipt_100">&nbsp;&nbsp;乘坐时间</th>
+							<th class="form_td_ipt_100">&nbsp;&nbsp;是否转程</th>
+							<th class="form_td_ipt_100">&nbsp;&nbsp;操作</th>
+							
+					</tr>
+					<tr class="inmainTable_res table_td">
+							<td class="form_td_ipt_100">去程</td>
+							<td class="form_td_ipt_100"><a href="#">+请选择</a> </td>
+							<td class="form_td_ipt_100"><input type="text" id="orgcity01" name="orgcity" align="left" class="tba_input" value="马来西亚"></td>
+							<td class="form_td_ipt_100"><input type="text" id="orgcity02" name="orgcity" class="tba_input" value="上海虹桥"></td>
+							<td class="form_td_ipt_100"><input type="text" id="orgcity03" name="orgcity" class="tba_input" value="香港"></td>
+							<td class="form_td_ipt_100"><input type="text" id="orgcity04" name="orgcity" class="tba_input" value="G1323"></td>
+							<td class="form_td_ipt_100"><input type="text" id="orgcity05" name="orgcity" class="tba_input" value="2016-12-25"></td>
+							<td class="form_td_ipt_100"><input type="text" id="orgcity06" name="orgcity" class="tba_input" value="12:00"></td>
+							<td class="form_td_ipt_100"></td>
+						<td class="form_td_ipt_100"><a href="#">添加</a></td>
+					</tr>
+					<tr class="inmainTable_res table_td">
+					<td class="form_td_ipt_100">去程</td>
+							<td class="form_td_ipt_100"><a href="#">+请选择</a> </td>
+							<td class="form_td_ipt_100"><input type="text" id="orgcity13" name="orgcity" class="tba_input" value="马来西亚"></td>
+							<td class="form_td_ipt_100"><input type="text" id="orgcity14" name="orgcity" class="tba_input" value="上海虹桥"></td>
+							<td class="form_td_ipt_100"><input type="text" id="orgcity15" name="orgcity" class="tba_input" value="香港"></td>
+							<td class="form_td_ipt_100"><input type="text" id="orgcity16" name="orgcity" class="tba_input" value="G1323"></td>
+							<td class="form_td_ipt_100"><input type="text" id="orgcity17" name="orgcity" class="tba_input" value="2016-12-25"></td>
+							<td class="form_td_ipt_100"><input type="text" id="orgcity18" name="orgcity" class="tba_input" value="12:00"></td>
+							<td class="form_td_ipt_100"><input type="checkbox" id="orgcity19" name="orgcity"  checked="checked" value="0"></td>
+						<td class="form_td_ipt_100"><a href="#">删除</a></td>
+					</tr>
+					<tbody id="trafficTypes" style="display: none;">
+					<tr class="inmainTable_res table_td">
+					<td class="form_td_ipt_100">返程</td>
+							<td class="form_td_ipt_100"><a href="#">+请选择</a> </td>
+							<td class="form_td_ipt_100"><input type="text" id="orgcity7" name="backcity" class="tba_input" value="马来西亚"></td>
+							<td class="form_td_ipt_100"><input type="text" id="orgcity8" name="backcity" class="tba_input" value="上海虹桥"></td>
+							<td class="form_td_ipt_100"><input type="text" id="orgcity9" name="backcity" class="tba_input" value="香港"></td>
+							<td class="form_td_ipt_100"><input type="text" id="orgcity10" name="backcity" class="tba_input" value="G1323"></td>
+							<td class="form_td_ipt_100"><input type="text" id="orgcity11" name="orgcity" class="tba_input" value="2016-12-25"></td>
+							<td class="form_td_ipt_100"><input type="text" id="orgcity12" name="orgcity" class="tba_input" value="12:00"></td>
+							<td class="form_td_ipt_100"><input type="checkbox" id="orgcity113" name="orgcity"  value="0"></td>
+							<td class="form_td_ipt_100"><a href="#">添加</a></td>
+					</tr>
+					</tbody>
+					
+						<tr>
+						<td colspan="10" class="form_td_ipt_100" >
+						<div class="h10 clearfix"></div>
+						<div class="h10 clearfix"></div>
+						<div class="h10 clearfix"></div>
+						<div class="h10 clearfix"></div>
+						<a href="javascript:void(0)" onClick="savemyform();" class="price_zone_ok" style="margin-left: 150px;">保存交通</a>
+		      <a href="javascript:void(0)" onClick="closewindowshow();"class="price_zone_cancel" style="margin-left: 5px;"><span class="f_darkgray">取消操作</span></a>
+						
+						<div class="h10 clearfix"></div>
+						<div class="h10 clearfix"></div>
+							
+						</td>
+					</tr>
+					
+					
+		</table>
+			
+			
+		</td>
+		
+		
+	</tr>
+	
+	
+	</table>
+
+
+</div>
+
+ <div class="overlay" id="overlay" style="display:none;"></div>
+ 
+ <div class="box" id="box">
+<span class="boxclose" id="boxclose" onclick="tishiclose();"></span>
+<span href="http://www.ablanxue.com" id="mess"></span>
+</div>
+
+</body>
+</html>

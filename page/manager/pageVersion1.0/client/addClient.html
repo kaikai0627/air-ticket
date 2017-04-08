@@ -1,0 +1,337 @@
+<!doctype html>
+<html>
+<head>
+	<title>部门与员工</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	<link href="../../../../commonSkin/css/html_tools.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../../../managerSkin/bluecssboot1.0/css/pageStyle.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../../../managerSkin/bluecssboot1.0/css/btnStyle.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../../../managerSkin/bluecssboot1.0/css/popModal.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../../../managerSkin/bluecssboot1.0/css/1.css" rel="stylesheet" type="text/css"/>
+	<link href="../../../../commonSkin/css/validForm.css" rel="stylesheet" type="text/css" media="screen" />
+	<script src="../../../commonSkin/js/jquery-1.8.3.min.js"></script>
+	<script language="javascript" >
+	function showcompany()
+	{
+		//获取选中单选按钮值
+		var userTypes= $('input[name="userType"]:checked').val();
+		if(userTypes==0) //当个人选中时
+			{
+				$("#personal").show();  //  个人显示
+				$("#company").hide();  //公司隐藏
+			}
+	      else //反之
+		 {
+				  	$("#personal").hide();  //  个人隐藏
+				$("#company").show();  //公司显示
+		  }
+	}
+	
+</script>
+</head>
+
+<body>
+	<div class="clearfix"></div>
+<form action=""  class="registerform" method="post" id="myform" name="myform">
+<!-- -right -->
+	<div class="ht_right">
+	<div class="clearfix h30"></div>
+	<div class="clearfix h20"></div>
+	<div class="clearfix h5"></div>
+	<div class="position">您的位置：<a href="#">首页</a>&nbsp;>&nbsp;<a href="../MyPage/customer_add.html">新增客户</a></div>
+
+	
+	<div class="clearfix h20"></div>
+	<table class="mainTable" cellspacing="0" cellpadding="0" >
+		<tr>
+			<td id="p1nav" class="onTab" onclick="">新增客户</td>
+			<td id="p2nav" class="onDef" onclick=""></td>
+			<td id="p3nav" class="onDef" onclick=""></td>
+			<td class="onNor">
+			</td>
+		</tr>
+		<tr>
+			<td colspan="4" class="mainTableBody">
+				<!-- 添加 -->
+				<span id="p4" style="display: ;">
+				<table class="inmainTable" cellspacing="0" cellpadding="0">
+				
+					<tr class="inmainTable_title">
+						<td colspan="2"><strong class="f_16">客户信息</strong></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td style="width: 130px;"><span class="pull-right f_14"><div class="ht_def_font f_red">*</div>客户名 称：</span></td>
+						<td ><input type="text" id="clientName" name="clientName" class="ht_def_text pull-left" dataType="*" nullmsg="请输入客户名称！" errormsg="你输入不少于4个字符的公司名称" sucmsg=" " style="width: 300px;" /></td>
+						<td><span class="Validform_checktip"></span></td>
+					</tr>
+					
+					<!-- 客户信息 -->
+					<tr class="inmainTable_res_noHover" >
+						<td style="width: 130px;"><span class="pull-right f_14"><div class="ht_def_font f_red">*</div>客户类型 :</span>
+						</td>	
+						<td> 
+					    <input name="userType" id="userType" checked="checked" type="radio" value="0" style="width:20px;" onChange="showcompany();" onKeyUp="showcompany();" />
+							<span>个人客户</span>
+							<input name="userType" id="userType" type="radio" value="1"  onChange="showcompany();" onKeyUp="showcompany();" />
+							<span>企业客户</span>
+							
+						</td>
+					</tr>
+					<tr  class="inmainTable_res_noHover" >
+					<td>
+						<span class="pull-right f_14"><div class="ht_def_font f_red">*</div>所在地 ： </span>
+					 	</td>
+					 	<td>
+						 	省/直辖市
+								<select id="u29_input" >
+								  <option value="请选择">请选择</option>
+								  <option value="湖南">湖南</option>
+								</select>
+								市/区
+							<select id="u30_input">
+							  <option value="普陀区">普陀区</option>
+							</select>
+							
+						</td>
+					</</tr>
+					<tr class="inmainTable_res_noHover">
+						<td>
+							<span class="pull-right f_14"><div class="ht_def_font f_red">*</div>客户所属 ： </span>
+					    </td>
+					    <td>
+					    	<select id="client"  style="width: 220px;" >
+								  <option value="">--请选择--</option>
+								  <option selected value="0">猴贱</option>
+								    <option value="0">猴贱</option>
+								      <option value="0">猴贱</option>
+								</select>
+					    	
+					    </td>
+					</tr>
+				   <tbody id="personal"  style="display:" >
+					<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14"><div class="ht_def_font f_red">*</div>联系人：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;" /></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14"><div class="ht_def_font f_red">*</div>联系电话：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;"/></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14"><div class="ht_def_font f_red">*</div>联系手机号：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;" /></td>
+					</tr>
+					
+					<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14">传真：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;" /></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14">email：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;" /></td>
+					</tr>
+					
+					<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14">QQ：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;" /></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14">微信 ：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;" /></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14">MSN：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;" /></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14">地址：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 500px;" /></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14">邮编：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;" /></td>
+					</tr>
+					</tbody>
+					<tbody id="company" style="display: none">
+						<tr class="inmainTable_res_noHover">
+						<td>
+							<span class="pull-right f_14"><div class="ht_def_font f_red">*</div>企业类型： </span>
+					    </td>
+					    <td>
+					    	<select id="client"  style="width: 220px;" >
+								  <option value="">--请选择--</option>
+								  <option selected value="0">商旅客</option>
+								    <option value="0">同行</option>
+								      <option value="0">旅行社</option>
+								</select>
+					    	
+					    </td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14"><div class="ht_def_font f_red">*</div>企业法人：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;" /></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14">企业成立时间：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;" /></td>
+					</tr>
+						<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14"><div class="ht_def_font f_red">*</div>企业简称：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;" /></td>
+					</tr>
+						<tr class="inmainTable_title">
+						<td colspan="2"><strong class="f_16">签约/合同</strong></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14">签约日期：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;" /></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14">合同有效期：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 200px;" /><div class="ht_def_font">至&nbsp;&nbsp;</div>
+						<input type="text" class="ht_def_text pull-left" style="width: 200px;" />
+						</td>
+					</tr>
+					<tr class="inmainTable_title">
+						<td colspan="2"><strong class="f_16">联系方式</strong></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14"><div class="ht_def_font f_red">*</div>联系人：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;" /></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14"><div class="ht_def_font f_red">*</div>联系电话：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;" /></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14"><div class="ht_def_font f_red">*</div>联系手机号：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;" /></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14">传真：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;" /></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14">email：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;" /></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14">QQ：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;" /></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14">微信号：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;" /></td>
+					</tr>
+						<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14">MSN：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;" /></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14">地址：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 500px;" /></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14">邮编：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;" /></td>
+					</tr>
+					</tbody>
+					
+					
+					<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14">备注：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px; height:100px" /></td>
+					</tr>
+				    <tr class="inmainTable_res_noHover"> 
+					</tr>
+				
+				   <tr class="inmainTable_title">
+						<td colspan="2"><strong class="f_16">账户信息</strong></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14"><div class="ht_def_font f_red">*</div>手机号码：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;" /></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td ><span class="pull-right f_14"><div class="ht_def_font f_red">*</div>密码：</span></td>
+						<td ><input type="text" class="ht_def_text pull-left" style="width: 300px;" /></td>
+					</tr>
+				</table> 
+				</span>				
+				
+				
+		</td>
+	</tr>
+</table>
+
+<!-- -right ed-->
+
+<!-- 底部 -->
+
+
+<div class="clearfix h20"></div>
+<div class="clearfix h20"></div>
+<div class="clearfix h20"></div>
+<div class="clearfix h20"></div>
+
+
+<div id="ht_bottom_price_zone" class="ht_bottom_price_zone">
+	<div class="clearfix h5"></div>
+	<a href="javascript:void(0)" onClick="toMyform();" class="price_zone_ok" style="margin-left: 150px;">确认</a>
+	<a href="../MyPage/customer_list.html" class="price_zone_cancel" style="margin-left: 5px;">取消</a>
+</div>
+
+</form>
+
+
+ 
+ 
+ 
+ 
+ 
+
+
+<script src="../../../managerSkin/bluecssboot1.0/js/page_public.js"></script>
+<script src="../../../commonSkin/js/popModal.js"/></script>
+       <script type="text/javascript"> 
+       
+       
+ $(function() {
+	 
+		$("#ht_bottom_price_zone").show();
+				
+        	$("#js_edit_btn").on('click', 'span', function(event) {
+				event.preventDefault();
+				if($(this).hasClass('confirm')){
+					$("#js_edit").fadeOut();
+				}else{
+					$("#js_edit").fadeOut();
+				}
+			});
+        	
+        	$("#js_add_btn").on('click', 'span', function(event) {
+				event.preventDefault();
+				if($(this).hasClass('confirm')){
+					$("#js_add").fadeOut();
+				}else{
+					$("#js_add").fadeOut();
+				}
+			});
+        	
+        	$("#js_del_btn").on('click', 'span', function(event) {
+				event.preventDefault();
+				if($(this).hasClass('confirm')){
+					$("#js_del").fadeOut();
+				}else{
+					$("#js_del").fadeOut();
+				}
+			});
+			
+});
+ </script>
+
+</body>
+</html>

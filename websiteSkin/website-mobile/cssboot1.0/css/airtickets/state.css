@@ -1,0 +1,70 @@
+/*大容器*/
+.content{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+/*顶部*/
+.state_title{
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    color: #fff;
+    background: #29B6F6;
+    display: flex;
+}
+.state_title>div:first-child{
+    flex: 2;
+}
+.state_title>div:last-child{
+    flex: 3;
+}
+.state_title span{
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin-left: 1rem;
+    font-weight: 900;
+}
+.state{
+    width: 100%;
+    color:#6D8791;
+}
+.state .hot{
+    font-size: .5rem;
+    height: 1rem;
+    width: 100%;
+    line-height: 1rem;
+    padding-left: 1rem;
+}
+.state .hot_list{
+    width: 100%;
+    background: #fff;
+}
+.state .hot_list li{
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    padding-left: 1rem;
+    border-bottom: 1px solid #F0EDF0;
+}
+.hot_list .cancel{
+    display: inline-block;
+    width: 3rem;
+    height: 2rem;
+    line-height: 2rem;
+    float: right;
+    color: #03A9F4;
+}
+.letter{
+    position: fixed;
+    top: 3rem;
+    color: #03A9F4;
+    right: .7rem;
+    z-index: 100;
+}

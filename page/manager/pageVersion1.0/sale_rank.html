@@ -1,0 +1,575 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>订单中心</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<link href="../../../commonSkin/css/html_tools.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="../../../commonSkin/css/hDate.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="../../../managerSkin/bluecssboot1.0/css/pageStyle.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="../../../managerSkin/bluecssboot1.0/css/btnStyle.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="../../../managerSkin/bluecssboot1.0/css/popModal.css" rel="stylesheet" type="text/css" media="screen"/>
+
+
+</head>
+<body>
+
+<!-- top-->
+<div class="ht_top">
+	<div class="logo">
+		<img src="../../../managerSkin/bluecssboot1.0/img/tempLog1o.png"  />
+	</div>
+	<div class="dh">
+		<ul>
+			<li class="mmouse on" id="t_sel1">大菜单1</li>
+			<li class="mmouse" id="t_sel2">大菜单2</li>
+			<li class="mmouse" id="t_sel3">大菜单3</li>
+		</ul>
+	</div>
+	
+	<div class="dh_r">
+		<ul >
+			<li><a class="mail" href="#"><div class="msgNum">11</div></a></li>
+			<li><div class="name">消息</div></li>
+			<li><div class="head"><img src="../../../managerSkin/bluecssboot1.0/img/icon_center_head.png" class="inhead"/></div></li>
+			<li class="mop">
+			<div class="name">小陈</div>
+			<div id="arrow_name" class="arrow"></div>
+				<div id="menuOpen_name" class="menuOpen">
+						<ul>
+							<li><a href="my_info.html">我的资料</a></li>
+							<li><a href="pwd_edit.html">密码修改</a></li>
+						</ul>
+				</div>
+			</li>
+			<li><a class="sett" href="#"></a></li>
+			<li class="mop">
+			<div class="name">设置</div>
+			<div id="arrow_sett" class="arrow"></div>
+				<div id="menuOpen_sett" class="menuOpen">
+						<ul>
+							<li><a href="company_info">公司信息</a></li>
+							<li><a href="emp_dep.html">部门与员工</a></li>
+							<li><a href="system_sett.html">系统设置</a></li>
+						</ul>
+				</div>
+			</li>
+			<li onclick="location.href='service.html'"><a class="service" href="#"></a></li>
+			<li onclick="location.href='service.html'"><div class="name">客服</div></li>
+			<li onclick="location.href='login.html'"><a class="exit" href="#"></a></li>
+			<li onclick="location.href='login.html'"><div class="name">退出</div></li>
+		</ul>
+	</div>
+</div>
+
+<!-- top ed-->
+<div class="clearfix"></div>
+
+<!-- left -->
+<div class="ht_left" style="display: ;">
+<div class="clearfix h30"></div>
+<div class="clearfix h30"></div>
+<div class="clearfix h10"></div>
+		<ul>
+			<li class="mop">
+				<a class="order" href="#"></a>
+				<div class="arrow"></div>
+				<div class="menuOpen">
+						<div class="one">
+						<ul>
+							<li><a href="order_manager.html">订单中心</a></li>
+							<li><a href="order_refund.html">退票订单</a></li>
+							<li><a href="order_temp.html">暂存订单</a></li>
+							<li><a href="order_faild.html">作废订单</a></li>
+						</ul>
+						</div>
+				</div>
+			</li>
+			
+				<li class="mop" onclick="location.href='customer_list.html'">
+				<a class="user" href="#"></a>
+<!-- 				<div class="menuOpen"> -->
+<!-- 					<div class="one"> -->
+<!-- 						<ul> -->
+<!-- 							<li><strong>个人资料</strong></li> -->
+<!-- 							<li><a href="#">修改个人信息</a></li> -->
+<!-- 							<li><a href="#">修改密码</a></li> -->
+<!-- 						</ul> -->
+<!-- 					</div> -->
+
+<!-- 				</div> -->
+			</li>
+			
+				<li class="mop">
+				<a class="report" href="#"></a>
+				<div class="arrow"></div>
+				<div class="menuOpen" style="width: 300px;">
+						<ul>
+							<li><strong class="f_gray_m f_15">财务报表</strong></li>
+							<li><a href="order_get.html">应收订单</a></li>
+							<li><a href="order_pay.html">应付订单</a></li>
+						</ul>
+						<ul>
+							<li><strong class="f_gray_m f_15">销售报表</strong></li>
+							<li><a href="sale_count.html">销售统计</a></li>
+							<li><a href="sale_rank.html">业绩排行</a></li>
+							<li><a href="receivable_count.html">未收款统计</a></li>
+						</ul>
+					
+						<ul>
+							<li><strong class="f_gray_m f_15">返扣报表</strong></li>
+							<li><a href="order_noReturn.html">未返扣订单</a></li>
+							<li><a href="order_hasReturn.html">已反扣订单</a></li>
+						</ul>
+				</div>
+			</li>
+			
+			
+		</ul>
+</div>
+<!-- left ed -->
+
+<!-- -right -->
+<div class="ht_right">
+<div class="clearfix h30"></div>
+<div class="clearfix h20"></div>
+<div class="clearfix h5"></div>
+<div class="position">您的位置：<a href="#">首页</a>&nbsp;>&nbsp;<a href="sale_rank.html">销售排行</a></div>
+
+	
+<div class="clearfix h20"></div>
+<table class="mainTable" cellspacing="0" cellpadding="0" >
+	<tr>
+		<td id="p1nav" class="onTab" onclick="">销售排行</td>
+		<td id="p2nav" class="onDef" ></td>
+		<td id="p3nav" class="onDef"></td>
+		<td class="onNor">
+<!-- 		<span id=""> -->
+<!-- 		<a id="order_add" class="ht_btn_blue_add pull-right MARGIN_R_10" href="order_add.html">新增订单</a> -->
+<!-- 		</span> -->
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" class="mainTableBody">
+
+				
+				<table id="dateGoT" class="" cellspacing="0" cellpadding="0" >
+					<tr>
+						<td class="form_td_title">客户类型：</td>
+						<td class="form_td_ipt_150">
+						<select class="ht_def_select" >
+								<option>1</option>
+								<option>2</option>
+							</select>
+						</td>
+						
+						
+						<td class="form_td_title">发票方式：</td>
+						<td class="form_td_ipt_200">
+						<select class="ht_def_select" >
+								<option>1</option>
+								<option>2</option>
+							</select>
+						</td>
+					</tr>
+				</table> 
+				
+				<table id="" class="" cellspacing="0" cellpadding="0" >
+					<tr>
+						<td class="form_td_title">结算时间：</td>
+						<td class="form_td_ipt_300">
+						<input id="startDate" type="text" class="ht_def_txt pull-left" placeholder="" style="width: 100px;" readonly />
+						<div class="pull-left" style="margin: 5px 5px 0px 5px;">-</div>
+						<input id="backDate" type="text" class="ht_def_txt pull-left" placeholder="" style="width: 100px;" readonly/>
+						</td>
+						<td class="form_td_title">下单时间：</td>
+						<td class="form_td_ipt_300">
+						<input id="startDate1" type="text" class="ht_def_txt pull-left" placeholder="" style="width: 100px;" readonly />
+						<div class="pull-left" style="margin: 5px 5px 0px 5px;">-</div>
+						<input id="backDate1" type="text" class="ht_def_txt pull-left" placeholder="" style="width: 100px;" readonly/>
+						</td>
+					</tr>
+					<tr>
+						<td class="form_td_title"></td>
+						<td class="form_td_ipt_300">
+						 <a class="ht_btn_blue_search pull-left" href="javascript:void(0);">立即查询</a>
+						 <a class="ht_btn_blue pull-left MARGIN_L_5" href="javascript:void(0);" style="height: 20px; line-height: 20px;">导出报表</a>
+<!-- 						 <a id="order_mg_adv_btn2" class="ht_btn_blue_arrow_down pull-left MARGIN_L_10"  href="javascript:void(0);">高级查询</a> -->
+						</td>
+					</tr>
+					</table>
+					<hr />
+		
+				
+				<div class="clearfix h10"></div>
+				
+					<!-- 员工账号 -->
+<h2>					
+<div class="pull-left MARGIN_L_10">卖家总利润：<span class="f_gray_m">&yen;</span><span class="f_red f_16 f_b">260</span></div>					
+<div class="pull-left MARGIN_L_10">预计利润：<span class="f_gray_m">&yen;</span><span class="f_red f_16 f_b">260</span></div>					
+<div class="pull-left MARGIN_L_10">实际利润：<span class="f_gray_m">&yen;</span><span class="f_red f_16 f_b">260</span></div>					
+<div class="pull-left MARGIN_L_10">总金额：<span class="f_gray_m">&yen;</span><span class="f_red f_16 f_b">260</span></div>					
+</h2>
+		<div class="clearfix h10"></div>
+				<table class="inmainTable" cellspacing="0" cellpadding="0">
+					<tr class="inmainTable_title">
+						<td><input type="checkbox" id="checkMain" /></td>
+						<td>排名</td>
+						<td>业务员</td>
+						<td>预计利润</td>
+						<td>实际利润</td>
+						<td>销售额</td>
+						<td>操作</td>
+					</tr>
+					<tr class="inmainTable_res">
+						<td><input type="checkbox"  class="check_chd"/></td>
+						<td>13578</td>
+						<td>小五</td>
+						<td><span class="f_gray_m">&yen;</span><span class="f_red f_14 ">260</span></td>
+						<td><span class="f_gray_m">&yen;</span><span class="f_red f_14 f_b">260</span></td>
+						<td><span class="f_gray_m">&yen;</span><span class="f_red f_14 f_b">160</span></td>
+						<td>
+							<a href="sale_det.html" class="ht_btn_default">详情</a>
+						</td>
+					</tr>
+					
+				</table> 
+				<div class="clearfix h10"></div>
+				<table class="ht_pageTab">
+					<tr>
+						<td class="td1"><a href="#" class="ht_btn_refs_orb " title="刷新列表"></a></td>
+						<td class="td2">
+								<div class="page_out">
+								<div class="page_f_font">共10条 </div>	
+								<div class="page_f_font">每页显示</div>
+								<select class="page_f_select">
+									<option>10</option>
+									<option>50</option>
+									<option>100</option>
+								</select>
+								<div class="page_f_font">条</div>
+								<div class="page_f_font">&nbsp;第</div>
+								<input type="text" class="page_f_input" />
+								<div class="page_f_font">页&nbsp;共1页</div>
+								<a href="#" class="page_f_btn_p" title="上一页"></a>
+								<a href="#" class="page_f_btn_n" title="下一页"></a>
+							</div>			
+						
+						</td>
+<!-- 						<td class="td1"></td> -->
+					</tr>
+				</table>
+	
+				<!-- 订单列表ed-->
+				
+				
+			
+			
+		</td>
+	</tr>
+</table>
+<div class="clearfix h20"></div>
+<div class="f_gray_q">Copyright © 2008-2020 LANTUTONG.COM All Rights Reserved 沪ICP备09032149号</div>
+</div>
+<!-- -right ed-->
+
+<div class="clearfix h20"></div>
+<div class="clearfix h20"></div>
+<div class="clearfix h20"></div>
+<div class="clearfix h20"></div>
+
+<div id="ht_bottom_price_zone" class="ht_bottom_price_zone">
+	<div class="clearfix h5"></div>
+	<a href="#" class="price_zone_ok" style="margin-left: 150px;">确认保存</a>
+	<a href="#" class="price_zone_cancel" style="margin-left: 5px;">取消</a>
+</div>
+
+
+
+<!-- 角色编辑-->
+
+<div id="js_edit" class="pop">
+	<div class="popMain">
+		<div class="popTop">修改角色名称</div>
+		<div class="popMiddle">
+				
+				<p>
+					<div class="bxpz_title">角色名称</div>
+					<div class="bxpz_zone"><input type="text" class="txt" value="系统管理员" placeholder='请填写角色名' style="width: 370px;"/></div>	
+<!-- 			    	<div class="clearfix"></div> -->
+<!-- 			    	<div class="bxpz_title">证件信息</div> -->
+<!-- 					<div class="bxpz_zone_select"> -->
+<!-- 						<select class="select"> -->
+<!-- 							<option>身份证</option> -->
+<!-- 							<option>护照</option> -->
+<!-- 							<option>港澳</option> -->
+							
+<!-- 							<option>军人证</option> -->
+<!-- 							<option>回乡证</option> -->
+<!-- 							<option>台胞证</option> -->
+<!-- 							<option>港澳通行证</option> -->
+<!-- 							<option>户口簿</option> -->
+<!-- 							<option>出生证明</option> -->
+<!-- 						</select> -->
+<!-- 						<input type="text"  class="txt" placeholder='请填证件号码'  style="width: 245px;"/> -->
+<!-- 					</div>	 -->
+<!-- 					<div class="clearfix"></div> -->
+<!-- 			    	<div class="bxpz_title">出生年月</div> -->
+<!-- 					<div class="bxpz_zone"><input type="text" class="txt" placeholder='出生日期 ，格式 YYYY-MM-DD' readonly="readonly" onclick="WdatePicker({startDate:'1980-05-10'})" style="width: 370px;"/></div>	 -->
+<!-- 			    	<div class="clearfix"></div>	 -->
+			
+			</p>
+		</div>
+		<div id="js_edit_btn" class="popBottom">
+			<span class="confirm">确认保存</span>
+			<span class="cancel">取消</span>
+		</div>
+	</div>
+</div>
+<!-- 角色编辑-->
+ 
+ 
+ 
+<!-- 角色添加-->
+
+<div id="js_add" class="pop">
+	<div class="popMain">
+		<div class="popTop">添加角色名称</div>
+		<div class="popMiddle">
+				
+				<p>
+					<div class="bxpz_title">角色名称</div>
+					<div class="bxpz_zone"><input type="text" class="txt" placeholder='请填写角色名' style="width: 370px;"/></div>	
+<!-- 			    	<div class="clearfix"></div> -->
+<!-- 			    	<div class="bxpz_title">证件信息</div> -->
+<!-- 					<div class="bxpz_zone_select"> -->
+<!-- 						<select class="select"> -->
+<!-- 							<option>身份证</option> -->
+<!-- 							<option>护照</option> -->
+<!-- 							<option>港澳</option> -->
+							
+<!-- 							<option>军人证</option> -->
+<!-- 							<option>回乡证</option> -->
+<!-- 							<option>台胞证</option> -->
+<!-- 							<option>港澳通行证</option> -->
+<!-- 							<option>户口簿</option> -->
+<!-- 							<option>出生证明</option> -->
+<!-- 						</select> -->
+<!-- 						<input type="text"  class="txt" placeholder='请填证件号码'  style="width: 245px;"/> -->
+<!-- 					</div>	 -->
+<!-- 					<div class="clearfix"></div> -->
+<!-- 			    	<div class="bxpz_title">出生年月</div> -->
+<!-- 					<div class="bxpz_zone"><input type="text" class="txt" placeholder='出生日期 ，格式 YYYY-MM-DD' readonly="readonly" onclick="WdatePicker({startDate:'1980-05-10'})" style="width: 370px;"/></div>	 -->
+<!-- 			    	<div class="clearfix"></div>	 -->
+			
+			</p>
+		</div>
+		<div id="js_add_btn" class="popBottom">
+			<span class="confirm">确认保存</span>
+			<span class="cancel">取消</span>
+		</div>
+	</div>
+</div>
+<!-- 角色添加-->
+ 
+ 
+ 
+ 
+<!-- 删除确认-->
+
+<div id="js_del" class="pop">
+	<div class="popMain">
+		<div class="popTop">操作提示</div>
+		<div class="popMiddle">
+				
+				<p>
+				确认要删除这个角色吗？
+			</p>
+		</div>
+		<div id="js_del_btn" class="popBottom">
+			<span class="confirm">确认删除</span>
+			<span class="cancel">取消</span>
+		</div>
+	</div>
+</div>
+<!-- 删除添加-->
+ 
+
+<script src="../../../commonSkin/js/jquery-1.8.3.min.js"></script>
+<script src="../../../managerSkin/bluecssboot1.0/js/page_public.js"></script>
+<script src="../../../commonSkin/js/popModal.js"/></script>
+<script src="../../../commonSkin/js/hDate.js"/></script>
+       <script type="text/javascript"> 
+       
+       function addOrder(){
+    	   
+    	   
+       }
+       
+       function showDiv(id,show_type){
+    	   
+    	   
+    	   if(show_type=='0'){
+    		   
+    		   $("#"+id).show();
+    		   
+    	   }else{
+    		   
+    		   $("#"+id).fadeIn();
+    	   }
+    	   
+       }
+       
+   
+       
+       
+ $(function() {
+	 
+	 
+	 $("#order_mg_adv_btn").click(function(){   //高级搜索点击后的框展开和收缩效果
+			
+			if($("#formTable_0").is(":hidden")){
+				$("#formTable_0").slideToggle();
+				$("#order_mg_adv_btn").removeClass().addClass('ht_btn_blue_arrow_up pull-left MARGIN_L_10').html("收起");
+				$("#order_mg_adv_btn2").removeClass().addClass('ht_btn_blue_arrow_up pull-left MARGIN_L_10').html("收起");
+			}else{
+				$("#formTable_0").slideToggle();
+				$("#order_mg_adv_btn").removeClass().addClass('ht_btn_blue_arrow_down pull-left MARGIN_L_10').html("高级查询");
+				$("#order_mg_adv_btn2").removeClass().addClass('ht_btn_blue_arrow_down pull-left MARGIN_L_10').html("高级查询");
+			}
+		 
+	});
+	 
+	 $("#order_mg_adv_btn2").click(function(){   //高级搜索点击后的框展开和收缩效果
+			
+			if($("#formTable_0").is(":hidden")){
+				$("#formTable_0").slideToggle();
+				$("#order_mg_adv_btn").removeClass().addClass('ht_btn_blue_arrow_up pull-left MARGIN_L_10').html("收起");
+				$("#order_mg_adv_btn2").removeClass().addClass('ht_btn_blue_arrow_up pull-left MARGIN_L_10').html("收起");
+			}else{
+				$("#formTable_0").slideToggle();
+				$("#order_mg_adv_btn").removeClass().addClass('ht_btn_blue_arrow_down pull-left MARGIN_L_10').html("高级查询");
+				$("#order_mg_adv_btn2").removeClass().addClass('ht_btn_blue_arrow_down pull-left MARGIN_L_10').html("高级查询");
+			}
+		 
+	});
+	 
+	 
+	 
+	 
+ $("#startDate").click(function(){   //开始日期控件
+	 
+	 $('html,body').animate({'scrollTop':$("#dateGoT").offset().top},500);
+		 var ths = this;
+
+		 calendar.show({
+				id: this,
+			});	
+	 
+});
+	 
+	
+	 $("#backDate").click(function(){   //结束日期控件
+		 
+		 $('html,body').animate({'scrollTop':$("#dateGoT").offset().top},500);
+	 
+		 var ths = this;
+		 var startDateGet = $("#startDate").val();  // 获得出发日期的值
+
+			if( startDateGet!="" ){    // 如果开始日期已选择，则结束日期只能在开始日期之后 或 开始日期当天
+				
+					calendar.show({
+						id: this,
+						minDay:startDateGet
+					});		
+
+			}else{  // 没选择则根据系统时间来
+				
+					calendar.show({
+						id: this,
+					});		
+
+			}
+
+		 
+		 
+	 
+});
+	 
+	 
+	 
+	 $("#startDate1").click(function(){   //开始日期控件
+		 
+		 $('html,body').animate({'scrollTop':$("#dateGoT").offset().top},500);
+			 var ths = this;
+
+			 calendar.show({
+					id: this,
+				});	
+		 
+	});
+		 
+		
+		 $("#backDate1").click(function(){   //结束日期控件
+			 
+			 $('html,body').animate({'scrollTop':$("#dateGoT").offset().top},500);
+		 
+			 var ths = this;
+			 var startDateGet = $("#startDate1").val();  // 获得出发日期的值
+
+				if( startDateGet!="" ){    // 如果开始日期已选择，则结束日期只能在开始日期之后 或 开始日期当天
+					
+						calendar.show({
+							id: this,
+							minDay:startDateGet
+						});		
+
+				}else{  // 没选择则根据系统时间来
+					
+						calendar.show({
+							id: this,
+						});		
+
+				}
+
+			 
+			 
+		 
+	});
+	 
+	 
+	 $("#checkMain").click(function(){   //列表中的全选
+			
+				if($("#checkMain").attr("checked")){
+					
+					$(".check_chd").each(function(){
+						
+						$(this).prop('checked',true);
+						
+					});
+					
+				}else{
+					
+					$(".check_chd").each(function(){
+						
+						$(this).prop('checked',false);
+						
+					});
+					
+				}
+		 
+	});
+	 
+				
+        
+});
+ </script>
+ 
+ 
+
+ 
+ 
+</body>
+</html>

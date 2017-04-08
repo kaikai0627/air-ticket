@@ -1,0 +1,602 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<title>添加团队</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link href="../../../../../commonSkin/css/html_tools.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../../../../commonSkin/css/hDate.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../../../../managerSkin/bluecssboot1.0/css/pageStyle.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../../../../managerSkin/bluecssboot1.0/css/btnStyle.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../../../../managerSkin/bluecssboot1.0/css/popModal.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../../../../managerSkin/bluecssboot1.0/css/page_new.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../../../../managerSkin/bluecssboot1.0/js/divjquery/popup.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../travelOrders/js/flight_popup.css" rel="stylesheet" type="text/css" media="screen"/>
+	<script language="javascript" src="../../../../../commonSkin/js/jquery-1.9.1.min.js"  ></script>
+	<!-- DIV 弹出层-->
+	<script language="javascript"  src="../travelOrders/js/popup.js"></script>
+	<script language="javascript"  src="../travelOrders/js/flight_popup.js"></script>
+	
+	<script language="javascript">
+		
+		// 开发人员自行移入js包下面
+		function   tobackflight()
+		{
+			//获取选中单选按钮值
+		     var flightTypes= $('input[name="flight_Type"]:checked').val();
+			if(flightTypes==0)
+				{
+					$("#backflights").hide();
+					
+				}
+			else
+				{
+					$("#backflights").show();
+				}
+		}
+		
+		function tobacktraffic()
+		{
+			
+			//获取选中单选按钮值
+		     var trafficTy= $('input[name="traffic_Type"]:checked').val();
+			if(trafficTy==0)
+				{
+					$("#trafficTypes").hide();
+					
+				}
+			else
+				{
+					$("#trafficTypes").show();
+				}
+		}
+		
+		
+		function toTric(obj)
+		{
+			if(obj==0)
+				{
+					$("#flight").show();
+					$("#p1nav").attr("class", "onTab");
+					$("#huoche").hide();
+				   $("#p2nav").attr("class", "onDef");
+				}
+			else{
+				
+				$("#huoche").show();
+				$("#p2nav").attr("class", "onTab");
+				$("#flight").hide();
+				$("#p1nav").attr("class", "onDef");
+			}
+			
+		}
+		//保存
+		function savemyform()
+		{
+			tishi('保存交通成功！');  //保存弹出div提示	
+		}
+		
+		 
+
+ 
+		
+		
+	</script>
+
+	</head>
+	<body>
+
+<!-- -right -->
+<div class="ht_right">
+      <div class="clearfix h30"></div>
+      <div class="clearfix h20"></div>
+      <div class="clearfix h5"></div>
+      <div class="position">您的位置：<a href="#">首页</a>&nbsp;>&nbsp;<a href="customer_add.html">计调管理</a>&nbsp;>&nbsp;<a href="customer_add.html">添加组团产品</a></div>
+      <div class="clearfix h20"></div>
+      <table class="mainTable" id="dateGoT" cellspacing="0" cellpadding="0" >
+    <tr>
+          <td colspan="4" class="mainTableBody"><!-- 添加 --> 
+        <span  style="display: ;">
+            <table class="inmainTable" cellspacing="0" cellpadding="0">
+          <tr class="inmainTable_title">
+                <td colspan="6"><strong class="f_16">基本信息</strong></td>
+              </tr>
+          <tr class="inmainTable_res_noHover">
+                <td style="width: 130px;"><span class="pull-right f_14">选择交通：</span></td>
+                <td style="width: 150px;"><center>
+                    <input type="text" id="selectTraffic" name="selectTraffic" class="ht_def_text pull-left" style="width: 200px;" />
+                  </center></td>
+                <td style="width: 130px;"><span class="pull-right f_14">选择线路：</span></td>
+                <td style="width: 150px;"><input type="text" class="ht_def_text pull-left" style="width: 200px;" /></td>
+                <td style="width: 130px;"><span class="pull-right f_14">线路城市：</span></td>
+                <td style="width: 150px;"><input type="text" class="ht_def_text pull-left" style="width: 200px;" /></td>
+              </tr>
+          <tr class="inmainTable_res_noHover">
+                <td style="width: 130px;"><span class="pull-right f_14">出团日期：</span></td>
+                <td style="width: 150px;"><input type="text" class="ht_def_text pull-left" style="width: 200px;" /></td>
+                <td style="width: 130px;"><span class="pull-right f_14">行程天数：</span></td>
+                <td style="width: 150px;"><input type="text" class="ht_def_text pull-left" style="width: 200px;" /></td>
+              </tr>
+          <tr class="inmainTable_res_noHover">
+                <td style="width: 130px;"><span class="pull-right f_14">组团类型：</span></td>
+                <td style="width: 150px;"><select class="ht_def_select pull-left" style="width: 200px;">
+                    <option>散拼团</option>
+                    <option>团队</option>
+                  </select></td>
+              </tr>
+        </table>
+            </span> 
+        <!-- 销售策略添加 --> 
+        <span class="text-left">
+            <table class="inmainTable" cellspacing="0" cellpadding="0">
+          <tr class="inmainTable_title">
+                <td colspan="1"><strong class="f_16"> 报名信息</strong></td>
+              </tr>
+        </table>
+            <div class="strategy_one">
+          <table id="Table2"  cellspacing="0" cellpadding="0" class="fj_table" >
+                <tr>
+              <td class="form_td_title">团编号</td>
+              <td class="form_td_ipt_150"><input type="text" class="ht_def_txt MARGIN_L_10" placeholder="" style="width:120px;"/></td>
+              <td class="form_td_title">总报名人数</td>
+              <td class="form_td_ipt_150"><input type="text" class="ht_def_txt MARGIN_L_10" placeholder="" style="width:120px;"/></td>
+              <td class="form_td_title">最大</td>
+              <td class="form_td_ipt_150"><input type="text" class="ht_def_txt MARGIN_L_10" placeholder="" style="width:120px;"/></td>
+              <td class="form_td_title">最小</td>
+              <td class="form_td_ipt_300"><input type="text" class="ht_def_txt MARGIN_L_10" placeholder="" style="width:120px;"/>
+                    <span class="MARGIN_L_5">陪同导游</span></td>
+            </tr>
+              </table>
+          <table  class="inmainTable" cellspacing="0" cellpadding="0" >
+                <thead>
+              <tr class="inmainTable_title">
+                    <th>结算项目</th>
+                    <th>销售底价</th>
+                    <th>销售单价</th>
+                    <th></th>
+                  </tr>
+            </thead>
+                <tbody>
+              <tr class="inmainTable_res table_td">
+                    <td class="form_td_ipt_100"><input type="text" class="tba_input" placeholder="成人"></td>
+                    <td class="form_td_ipt_100"><input type="text" class="tba_input"></td>
+                    <td class="form_td_ipt_100"><input type="text" class="tba_input"></td>
+                    <td class="form_td_ipt_100"><a href="###" class="ht_btn_blue">添加</a></td>
+                  </tr>
+              <tr class="inmainTable_res table_td">
+                    <td class="form_td_ipt_100"><input type="text" class="tba_input" placeholder="成人"></td>
+                    <td class="form_td_ipt_100"><input type="text" class="tba_input"></td>
+                    <td class="form_td_ipt_100"><input type="text" class="tba_input"></td>
+                    <td class="form_td_ipt_100"><a href="###" class="ht_btn_blue">删除</a></td>
+                  </tr>
+              <tr class="inmainTable_res table_td">
+                    <td class="form_td_ipt_100" align="right"><strong class="f_16">总计:</strong></td>
+                    <td class="form_td_ipt_100"> ￥<strong class="f_red f_16">23</strong></td>
+                    <td class="form_td_ipt_100"> ￥<strong class="f_red f_16">23</strong></td>
+                    <td class="form_td_ipt_100"></td>
+                  </tr>
+            </tbody>
+              </table>
+        </div>
+            </span> <span class="text-left">
+            <table class="inmainTable" cellspacing="0" cellpadding="0">
+              <tr class="inmainTable_title">
+                <td colspan="1"><strong class="f_16">行程内容</strong></td>
+              </tr>
+            </table>
+            <div class="strategy_one">
+              <h4 class="strategy_one_hread">第1天</h4>
+              <div class="xc_box">
+                <div class="input_mub MARGIN_L_20 pull-left">
+                  <label class="lit_add">区间</label>
+                  <input type="text" class="form_td_ipt_150">
+                </div>
+                <div class="input_mub MARGIN_L_20 pull-left">
+                  <label class="lit_add">住宿</label>
+                  <input type="text" class="form_td_ipt_150">
+                </div>
+                <div class="input_mub MARGIN_L_20 pull-left">
+                  <label class="lit_add">用餐：</label>
+                </div>
+                <div class=" MARGIN_L_20 pull-left">
+                  <label class="lit_add">
+                    <input type="checkbox"  value="0"  >
+                    早餐
+                    &nbsp;
+                    <input type="checkbox"  value="0"  >
+                    午餐
+                    &nbsp;
+                    <input type="checkbox"  value="0"  >
+                    晚餐 </label>
+                </div>
+                <div class="input_btn MARGIN_L_20 pull-left"> <a href="###" class="ht_btn_default">删除行程</a> </div>
+              </div>
+              <textarea class="tare_xc" placeholder="请填写交通、住宿、用餐、门票、导服、小孩标准、费用不含、购物、保险等!">
+								
+							</textarea>
+            </div>
+            <div class="strategy_one">
+              <h4 class="strategy_one_hread">第2天</h4>
+              <div class="xc_box">
+                <div class="input_mub MARGIN_L_20 pull-left">
+                  <label class="lit_add">区间</label>
+                  <input type="text" class="form_td_ipt_150">
+                </div>
+                <div class="input_mub MARGIN_L_20 pull-left">
+                  <label class="lit_add">住宿</label>
+                  <input type="text" class="form_td_ipt_150">
+                </div>
+                <div class="input_mub MARGIN_L_20 pull-left">
+                  <label class="lit_add">用餐：</label>
+                </div>
+                <div class=" MARGIN_L_20 pull-left">
+                  <label class="lit_add">
+                    <input type="checkbox"  value="0"  >
+                    早餐
+                    &nbsp;
+                    <input type="checkbox"  value="0"  >
+                    午餐
+                    &nbsp;
+                    <input type="checkbox"  value="0"  >
+                    晚餐 </label>
+                </div>
+                <div class="input_btn MARGIN_L_20 pull-left"> <a href="###" class="ht_btn_default">删除行程</a> </div>
+              </div>
+              <textarea class="tare_xc">
+								
+							</textarea>
+            </div>
+            <div class="btn_xincen" align="right"> <a href="###" class="ht_btn_blue">新增行程</a>&nbsp;&nbsp;&nbsp; </div>
+            <div class="strategy_one">
+              <h4 class="strategy_one_hread">服务标准</h4>
+              <textarea class="tare_xc">
+								
+							</textarea>
+            </div>
+            <div class="strategy_one">
+              <h4 class="strategy_one_hread">行程备注</h4>
+              <textarea class="tare_xc" placeholder="请填写温馨提示、自费项目、自由活动等">
+								
+							</textarea>
+            </div>
+            <div class="strategy_one">
+              <h4 class="strategy_one_hread">特色产品</h4>
+              <textarea class="tare_xc">
+								
+							</textarea>
+            </div>
+            <div class="strategy_one">
+              <h4 class="strategy_one_hread">报价分析</h4>
+              <textarea class="tare_xc">
+								
+							</textarea>
+            </div>
+            </span></td>
+        </tr>
+  </table>
+      <div class="clearfix h20"></div>
+      
+      <!-- -right ed-->
+      
+      <div class="clearfix h20"></div>
+      <div class="clearfix h20"></div>
+      <div class="clearfix h20"></div>
+      <div class="clearfix h20"></div>
+      <div id="ht_bottom_price_zone" class="ht_bottom_price_zone">
+    <div class="clearfix h5"></div>
+    <a href="#" class="price_zone_ok" style="margin-left: 150px;">保存产品</a> <a href="customer_list.html" class="price_zone_cancel" style="margin-left: 5px;">清空重填</a> </div>
+    </div>
+<script type="text/javascript"> 
+		 $(function() {
+				$("#ht_bottom_price_zone").show();
+				
+		});
+ </script> 
+<!--  选择交通开始  -->
+		<script language="javascript" >
+		
+		 function change_radio(obj)
+			{
+            $("#flightType1")
+			}
+		
+		
+		</script>
+
+<div id="popup">
+      <div class="title">
+    <p data-title="选择交通"></p>
+    <span>x</span> </div>
+      <div class="cont">
+    <table class="mainTable" cellspacing="0" cellpadding="0" >
+          <tr>
+        <td colspan="3"><table class="inmainTable" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr class="inmainTable_title">
+                <td colspan="1"><strong class="f_16"> 选择交通</strong></td>
+              </tr>
+            </tbody>
+          </table></td>
+      </tr>
+          <tr>
+        <td id="p1nav" class="onTab" onclick="toTric(0)">飞机</td>
+        <td id="p2nav" class="onDef" onclick="toTric(1)">其他交通</td>
+        <td ></td>
+      </tr>
+          <!--flight start-->
+          <tbody id="flight">
+        <tr>
+              <td colspan="3"><div class="h10 clearfix"></div>
+            <div class="h10 clearfix"></div>
+            <table class="inmainTable" cellspacing="0" cellpadding="0">
+                  <tr class="inmainTable_res">
+                <td colspan="3">
+                     <strong>航程类型：</strong>
+                      <input type="radio" onKeyUp="tobackflight();" checked onChange="tobackflight();" onClick="change_radio(0);" id="flightType1"  name="flight_Type"   value="0" />
+                      单程&nbsp;&nbsp;
+                      <input id="flightType2"    onKeyUp="tobackflight();" onChange="tobackflight();" onClick="change_radio(1);" name="flight_Type" type="radio" value="2"/>
+                      往返 </td>
+              </tr>
+                 
+                  <tr class="inmainTable_title">
+                <th class="form_td_ipt_100" >航程</th>
+                <th class="form_td_ipt_100">选择控位</th>
+                <th class="form_td_ipt_100">&nbsp;&nbsp;线路城市</th>
+                <th class="form_td_ipt_100">&nbsp;&nbsp;出发地</th>
+                <th class="form_td_ipt_100">&nbsp;&nbsp;目的地</th>
+                <th class="form_td_ipt_100">&nbsp;&nbsp;航班号</th>
+                <th class="form_td_ipt_100">&nbsp;&nbsp;航班日期</th>
+                <th class="form_td_ipt_100">&nbsp;&nbsp;登机时间</th>
+                <th class="form_td_ipt_100">&nbsp;&nbsp;是否转机</th>
+                <th class="form_td_ipt_100">&nbsp;&nbsp;操作</th>
+              </tr>
+                  <tr class="inmainTable_res table_td">
+                <td class="form_td_ipt_100">去程</td>
+                <td class="form_td_ipt_100"><center>
+                    <a id="pleaseSelect" href="#">+请选择</a>
+                  </center></td>
+                <td class="form_td_ipt_100"><input type="text" id="orgcity" name="orgcity" align="left" class="tba_input" value="马来西亚"></td>
+                <td class="form_td_ipt_100"><input type="text" id="orgcity" name="orgcity" class="tba_input" value="上海虹桥"></td>
+                <td class="form_td_ipt_100"><input type="text" id="orgcity" name="orgcity" class="tba_input" value="香港"></td>
+                <td class="form_td_ipt_100"><input type="text" id="orgcity" name="orgcity" class="tba_input" value="FM1323"></td>
+                <td class="form_td_ipt_100"><input type="text" id="orgcity" name="orgcity" class="tba_input" value="2016-12-25"></td>
+                <td class="form_td_ipt_100"><input type="text" id="orgcity" name="orgcity" class="tba_input" value="12:00"></td>
+                <td class="form_td_ipt_100"></td>
+                <td class="form_td_ipt_100"><a href="#">添加</a></td>
+              </tr>
+                  <tr class="inmainTable_res table_td">
+                <td class="form_td_ipt_100">去程</td>
+                <td class="form_td_ipt_100"></td>
+                <td class="form_td_ipt_100"><input type="text" id="orgcity" name="orgcity" class="tba_input" value="马来西亚"></td>
+                <td class="form_td_ipt_100"><input type="text" id="orgcity" name="orgcity" class="tba_input" value="上海虹桥"></td>
+                <td class="form_td_ipt_100"><input type="text" id="orgcity" name="orgcity" class="tba_input" value="香港"></td>
+                <td class="form_td_ipt_100"><input type="text" id="orgcity" name="orgcity" class="tba_input" value="FM1323"></td>
+                <td class="form_td_ipt_100"><input type="text" id="orgcity" name="orgcity" class="tba_input" value="2016-12-25"></td>
+                <td class="form_td_ipt_100"><input type="text" id="orgcity" name="orgcity" class="tba_input" value="12:00"></td>
+                <td class="form_td_ipt_100"><input type="checkbox" id="orgcity" name="orgcity"  checked="checked" value="0"></td>
+                <td class="form_td_ipt_100"><a href="#">删除</a></td>
+              </tr>
+                  <tbody id="backflights" style="display: none;">
+                <tr class="inmainTable_res table_td">
+                      <td class="form_td_ipt_100">返程</td>
+                      <td class="form_td_ipt_100"><a href="#">+请选择</a></td>
+                      <td class="form_td_ipt_100"><input type="text" id="orgcity1" name="backcity" class="tba_input" value="马来西亚"></td>
+                      <td class="form_td_ipt_100"><input type="text" id="orgcity2" name="backcity" class="tba_input" value="上海虹桥"></td>
+                      <td class="form_td_ipt_100"><input type="text" id="orgcity3" name="backcity" class="tba_input" value="香港"></td>
+                      <td class="form_td_ipt_100"><input type="text" id="orgcity4" name="backcity" class="tba_input" value="FM1323"></td>
+                      <td class="form_td_ipt_100"><input type="text" id="orgcity5" name="orgcity" class="tba_input" value="2016-12-25"></td>
+                      <td class="form_td_ipt_100"><input type="text" id="orgcity6" name="orgcity" class="tba_input" value="12:00"></td>
+                      <td class="form_td_ipt_100"><input type="checkbox" id="orgcity7" name="orgcity"  value="0"></td>
+                      <td class="form_td_ipt_100"><a href="#">添加</a></td>
+                    </tr>
+              </tbody>
+                  <tr>
+                <td colspan="10" class="form_td_ipt_100" ><strong class="f_14">出票时限:</strong>&nbsp;&nbsp;&nbsp;
+                      <input type="text" id="ticketType" name="ticketType" style="width: 70px;" /></td>
+              </tr>
+                  <tr>
+                <td colspan="10" class="form_td_ipt_100" ><div class="h10 clearfix"></div>
+                      <div class="h10 clearfix"></div>
+                      <a href="javascript:void(0);" onClick="savemyform();" class="price_zone_ok" style="margin-left: 150px;">保存交通</a> <a href="javascript:void(0)" onClick="closewindowshow();" class="price_zone_cancel" style="margin-left: 5px;"><span class="f_darkgray">取消操作</span></a>
+                      <div class="h10 clearfix"></div>
+                      <div class="h10 clearfix"></div></td>
+              </tr>
+                </table></td>
+            </tr>
+      </tbody>
+          <!-- flight end--> 
+          
+          <!-- huoche start -->
+          
+            <tbody id="huoche" style="display: none" >
+          
+          <tr >
+        <td colspan="3">
+           <table class="inmainTable" cellspacing="0" cellpadding="0">
+            <tr class="inmainTable_res">
+              <td colspan="10"><strong>类型：</strong>
+                <input type="radio" onKeyUp="tobacktraffic();" onChange="tobacktraffic();" id="trainType1" name="traffic_Type" checked="checked"  value="0" />
+                单程&nbsp;&nbsp;
+                <input id="trainType2"    onKeyUp="tobacktraffic();" onChange="tobacktraffic();" name="traffic_Type" type="radio" value="2"/>
+                往返 </td>
+            </tr>
+            <tr class="inmainTable_title">
+              <th class="form_td_ipt_100" >行程</th>
+              <th class="form_td_ipt_100">&nbsp;&nbsp;线路城市</th>
+              <th class="form_td_ipt_100">乘车方式</th>
+              <th class="form_td_ipt_100">&nbsp;&nbsp;出发地</th>
+              <th class="form_td_ipt_100">&nbsp;&nbsp;目的地</th>
+              <th class="form_td_ipt_100">&nbsp;&nbsp;车次</th>
+              <th class="form_td_ipt_100">&nbsp;&nbsp;乘坐日期</th>
+              <th class="form_td_ipt_100">&nbsp;&nbsp;乘坐时间</th>
+              <th class="form_td_ipt_100">&nbsp;&nbsp;是否转程</th>
+              <th class="form_td_ipt_100">&nbsp;&nbsp;操作</th>
+            </tr>
+            <tr class="inmainTable_res table_td">
+              <td class="form_td_ipt_100">去程</td>
+              <td class="form_td_ipt_100"><a href="#">+请选择</a></td>
+              <td class="form_td_ipt_100"><input type="text" id="orgcity01" name="orgcity" align="left" class="tba_input" value="马来西亚"></td>
+              <td class="form_td_ipt_100"><input type="text" id="orgcity02" name="orgcity" class="tba_input" value="上海虹桥"></td>
+              <td class="form_td_ipt_100"><input type="text" id="orgcity03" name="orgcity" class="tba_input" value="香港"></td>
+              <td class="form_td_ipt_100"><input type="text" id="orgcity04" name="orgcity" class="tba_input" value="G1323"></td>
+              <td class="form_td_ipt_100"><input type="text" id="orgcity05" name="orgcity" class="tba_input" value="2016-12-25"></td>
+              <td class="form_td_ipt_100"><input type="text" id="orgcity06" name="orgcity" class="tba_input" value="12:00"></td>
+              <td class="form_td_ipt_100"></td>
+              <td class="form_td_ipt_100"><a href="#">添加</a></td>
+            </tr>
+            <tr class="inmainTable_res table_td">
+              <td class="form_td_ipt_100">去程</td>
+              <td class="form_td_ipt_100"><a href="#">+请选择</a></td>
+              <td class="form_td_ipt_100"><input type="text" id="orgcity13" name="orgcity" class="tba_input" value="马来西亚"></td>
+              <td class="form_td_ipt_100"><input type="text" id="orgcity14" name="orgcity" class="tba_input" value="上海虹桥"></td>
+              <td class="form_td_ipt_100"><input type="text" id="orgcity15" name="orgcity" class="tba_input" value="香港"></td>
+              <td class="form_td_ipt_100"><input type="text" id="orgcity16" name="orgcity" class="tba_input" value="G1323"></td>
+              <td class="form_td_ipt_100"><input type="text" id="orgcity17" name="orgcity" class="tba_input" value="2016-12-25"></td>
+              <td class="form_td_ipt_100"><input type="text" id="orgcity18" name="orgcity" class="tba_input" value="12:00"></td>
+              <td class="form_td_ipt_100"><input type="checkbox" id="orgcity19" name="orgcity"  checked="checked" value="0"></td>
+              <td class="form_td_ipt_100"><a href="#">删除</a></td>
+            </tr>
+            <tbody id="trafficTypes" style="display: none;">
+              <tr class="inmainTable_res table_td">
+                <td class="form_td_ipt_100">返程</td>
+                <td class="form_td_ipt_100"><a href="#">+请选择</a></td>
+                <td class="form_td_ipt_100"><input type="text" id="orgcity7" name="backcity" class="tba_input" value="马来西亚"></td>
+                <td class="form_td_ipt_100"><input type="text" id="orgcity8" name="backcity" class="tba_input" value="上海虹桥"></td>
+                <td class="form_td_ipt_100"><input type="text" id="orgcity9" name="backcity" class="tba_input" value="香港"></td>
+                <td class="form_td_ipt_100"><input type="text" id="orgcity10" name="backcity" class="tba_input" value="G1323"></td>
+                <td class="form_td_ipt_100"><input type="text" id="orgcity11" name="orgcity" class="tba_input" value="2016-12-25"></td>
+                <td class="form_td_ipt_100"><input type="text" id="orgcity12" name="orgcity" class="tba_input" value="12:00"></td>
+                <td class="form_td_ipt_100"><input type="checkbox" id="orgcity113" name="orgcity"  value="0"></td>
+                <td class="form_td_ipt_100"><a href="#">添加</a></td>
+              </tr>
+            </tbody>
+            <tr>
+              <td colspan="10" class="form_td_ipt_100" >
+               <div class="h10 clearfix"></div>
+                <div class="h10 clearfix"></div>
+                <div class="h10 clearfix"></div>
+                <div class="h10 clearfix"></div>
+                <a href="javascript:void(0);" onClick="savemyform();" class="price_zone_ok" style="margin-left: 150px;">保存交通</a> 
+                <a href="javascript:void(0);" onClick="closewindowshow();"class="price_zone_cancel" style="margin-left: 5px;" >
+                <span class="f_darkgray">取消操作</span></a>
+                <div class="h10 clearfix"></div>
+                <div class="h10 clearfix"></div>
+                </td>
+            </tr>
+            
+            
+          </table>
+          </td>
+      </tr>
+          </tbody>
+        </table>
+  </div>
+    </div>
+<div id="mask_shadow"></div>
+<!--  选择交通结束  --> 
+<!--选择航班控位开始-->
+<div id="flight_popup">
+      <div class="flight_title">
+    <p data-title="航班控位"></p>
+    <span>x</span> </div>
+      <div class="flight_cont"> 
+    <!--航班控位弹跳页面--> 
+    <!--快速搜索-->
+    <table class="mainTable" cellspacing="0" cellpadding="0" >
+    <tr>
+    <td >
+    <table class="inmainTable" cellspacing="0" cellpadding="0">
+        <tr class="inmainTable_res">
+        <td  align="left"><span class="f_12 pull-left">快速搜索:</span></td>
+        <td><input type="text" id="selectTraffic" name="selectTraffic" class="ht_def_text" style="width: 100px;" /></td>
+        <td><span class="f_14 pull-left">温馨提示：(航司、航程、航班号、去程/回程、时间模糊查询、显示</span></td>
+      </tr>
+		</table>
+         </td>
+       </tr>
+        <tr>
+        <td>
+         <table class="inmainTable" cellspacing="0" cellpadding="0">
+          <tr class="inmainTable_title">
+        <th class="form_td_ipt_50" style="width: 70px;" >航空公司</th>
+        <th class="form_td_ipt_50" style="width: 70px;">航程</th>
+        <th class="form_td_ipt_50" style="width: 70px;">航班号</th>
+        <th class="form_td_ipt_50" style="width: 70px;">去程/回程 </th>
+        <th class="form_td_ipt_50" style="width: 70px;">航班日期</th> 
+        <th class="form_td_ipt_50" style="width: 70px;">时间</th>
+        <th class="form_td_ipt_50" style="width: 70px;">操作</th>
+      </tr>
+      <tr class="inmainTable_res">
+      	<td class="form_td_ipt_50" style="width: 70px;" >春秋航空</td>
+        <td class="form_td_ipt_50" style="width: 70px;">上海虹桥—昆明</td>
+        <td class="form_td_ipt_50" style="width: 70px;">SC1236</td>
+        <td class="form_td_ipt_50" style="width: 70px;">去程 </td>
+        <td class="form_td_ipt_50" style="width: 70px;">2016-12-27</td> 
+        <td class="form_td_ipt_50" style="width: 70px;">12:00</td>
+        <td class="form_td_ipt_50" style="width: 70px;"><a href="#">选择</a></td>
+      	
+      </tr>
+       </table>
+       </td>
+       </tr>
+       <tr>
+       	<td>
+       		<table class="ht_pageTab">
+					<tr>
+						<td class="td1"><a href="#" class="ht_btn_refs_orb " title="刷新列表"></a></td>
+						<td class="td2">
+								<div class="page_out">
+								<div class="page_f_font">共10条 </div>	
+								<div class="page_f_font">每页显示</div>
+								<select class="page_f_select">
+									<option>10</option>
+									<option>50</option>
+									<option>100</option>
+								</select>
+								<div class="page_f_font">条</div>
+								<div class="page_f_font">&nbsp;第</div>
+								<input type="text" class="page_f_input" />
+								<div class="page_f_font">页&nbsp;共1页</div>
+								<a href="#" class="page_f_btn_p" title="上一页"></a>
+								<a href="#" class="page_f_btn_n" title="下一页"></a>
+							</div>			
+						
+						</td>
+<!-- 						<td class="td1"></td> -->
+					</tr>
+				</table>
+       		
+       		
+       	</td>
+       	
+       </tr>
+    </table>
+    <!--航班控位弹跳页面结束--> 
+  </div> 
+    </div>
+<div id="flight_mask_shadow"></div>
+<!--选择航班控位结束--> 
+
+<script language="javascript">
+$(function () {
+  /**
+	  ifDrag: 是否拖拽
+	  dragLimit: 拖拽限制范围
+   */
+  $('#popup').popup({ifDrag: true, dragLimit: true});
+  
+});
+</script> 
+<script language="javascript">
+$(function () {
+  /**
+	  ifDrag: 是否拖拽
+	  dragLimit: 拖拽限制范围
+   */
+  $('#flight_popup').popup_flight({ifDrag: true, dragLimit: true});
+  
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<title>添加团队</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link href="../../commonSkin/css/html_tools.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../commonSkin/css/hDate.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../managerSkin/bluecssboot1.0/css/pageStyle.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../managerSkin/bluecssboot1.0/css/btnStyle.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../managerSkin/bluecssboot1.0/css/popModal.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../managerSkin/bluecssboot1.0/css/page_new.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../managerSkin/bluecssboot1.0/js/divjquery/popup.css"
+	<!--弹出层js与样式-->
+<link href="../../managerSkin/bluecssboot1.0/js/textsearchdiv/jquery-ui.min.css" rel="stylesheet" /> 
+<script type="text/javascript" src="../../websiteSkin/website-mobile/cssboot1.0/js/weui/lib/jquery-2.1.4.js"></script>
+<script src="../../managerSkin/bluecssboot1.0/js/textsearchdiv/jquery-ui.min.js" type="text/javascript"></script> 
+<script type="text/javascript">
+function keleyidialog() {
+$("#dialog").dialog(
+{
+	 autoOpen: true, // 是否打开
+	 resizable: false,
+     height:500,
+	 width:800,
+     modal: true //蒙层（弹出会影响页面大小） 
+	
+});
+}
+	
+	
+  //打开按钮ID
+	 function  opens()
+	{
+      $( "#dialog" ).dialog( "close" );
+   }
+</script>
+<style type="text/css">#dialog{display:none;}</style>
+</head>
+<body>
+
+<div style="width:338px;height:100px;margin:10px auto;"><input type="button" onclick="keleyidialog()" value="点击我" />
+
+</div>
+
+<div id="dialog" class="title" title="添加报名单">
+ <div class="cont"> 
+   <table class="mainTable" cellspacing="0" cellpadding="0" >
+          <tr>
+        <td colspan="3">
+        <a  class="ht_btn_blue_add pull-left MARGIN_R_10" href="javascript:void(0);">导入旅客</a> &nbsp;&nbsp;
+        <a  class=" ht_btn_blue_edit pull-left MARGIN_R_10" href="javascript:void(0);">下载摸版</a>
+        <input type="radio" name="dd" checked value="0"/> 男   <input type="radio" name="dd" value="1"/> 女  
+        </td>
+      </tr>
+          <tr>
+        <td colspan="3"><table class="inmainTable" cellspacing="0" cellpadding="0">
+            <tr class="inmainTable_title">
+              <td  style="width:50px;">序号</td>
+              <td style="width: 100px;">销售价￥</td>
+              <td>姓名</td>
+              <td>成人/儿童</td>
+              <td> 证件类型 </td>
+              <td>证件号</td>
+              <td>性别</td>
+              <td>年龄</td>
+              <td>联系电话</td>
+              <td>地区</td>
+              <td>操作</td>
+            </tr>
+            <tr class="inmainTable_res">
+              <td>1</td>
+              <td><input type="text" id="orgcity" name="orgcity" class="tba_input" value="555"></td>
+              <td class="form_td_ipt_100"><input type="text" id="name" name="name" class="tba_input" value="王小二"></td>
+              <td class="form_td_ipt_100"><select style="width: 60px;">
+              	<option>成人</option>
+              		<option>儿童</option>
+              </select></td>
+              <td class="form_td_ipt_100">
+              <select style="width: 70px;">
+              	<option>身份证</option>
+              		<option>护照</option>
+              		<option>其它</option>
+              </select></td>
+              <td class="form_td_ipt_100"><input type="text" id="idno" name="idno" class="tba_input" style="width: 120px;" value=""></td>
+              <td class="form_td_ipt_100">
+              <select>
+              <option>男</option>
+              		<option>女</option>
+              </select></td>	
+              	
+   
+              <td class="form_td_ipt_100"><input type="text" id="age" name="age" class="tba_input" style="width: 50px;" value=""></td>
+              <td class="form_td_ipt_100"><input type="text" id="tel" name="tel" class="tba_input" value=""></td>
+              <td class="form_td_ipt_100"><input type="text" id="city" name="city" class="tba_input" value=""></td>
+              <td class="form_td_ipt_100"><a href="#">删除</a></td>
+            </tr>
+            <tr class="inmainTable_res">
+              <td>1</td>
+              <td><input type="text" id="orgcity" name="orgcity" class="tba_input" value="555"></td>
+              <td class="form_td_ipt_100"><input type="text" id="name" name="name" class="tba_input" value="王小二"></td>
+              <td class="form_td_ipt_100"><select style="width: 60px;">
+              	<option>成人</option>
+              		<option>儿童</option>
+              </select></td>
+              <td class="form_td_ipt_100">
+              <select style="width: 70px;">
+              	<option>身份证</option>
+              		<option>护照</option>
+              		<option>其它</option>
+              </select></td>
+              <td class="form_td_ipt_100"><input type="text" id="idno" name="idno" class="tba_input" style="width: 120px;" value=""></td>
+              <td class="form_td_ipt_100">
+              <select>
+              <option>男</option>
+              		<option>女</option>
+              </select></td>	
+              	
+   
+              <td class="form_td_ipt_100"><input type="text" id="age" name="age" class="tba_input" style="width: 50px;" value=""></td>
+              <td class="form_td_ipt_100"><input type="text" id="tel" name="tel" class="tba_input" value=""></td>
+              <td class="form_td_ipt_100"><input type="text" id="city" name="city" class="tba_input" value=""></td>
+              <td class="form_td_ipt_100"><a href="#">删除</a></td>
+            </tr>
+            <tr class="inmainTable_res">
+              <td>1</td>
+              <td><input type="text" id="orgcity" name="orgcity" class="tba_input" value="555"></td>
+              <td class="form_td_ipt_100"><input type="text" id="name" name="name" class="tba_input" value="王小二"></td>
+              <td class="form_td_ipt_100"><select style="width: 60px;">
+              	<option>成人</option>
+              		<option>儿童</option>
+              </select></td>
+              <td class="form_td_ipt_100">
+              <select style="width: 70px;">
+              	<option>身份证</option>
+              		<option>护照</option>
+              		<option>其它</option>
+              </select></td>
+              <td class="form_td_ipt_100"><input type="text" id="idno" name="idno" class="tba_input" style="width: 120px;" value=""></td>
+              <td class="form_td_ipt_100">
+              <select>
+              <option>男</option>
+              		<option>女</option>
+              </select></td>	
+              	
+   
+              <td class="form_td_ipt_100"><input type="text" id="age" name="age" class="tba_input" style="width: 50px;" value=""></td>
+              <td class="form_td_ipt_100"><input type="text" id="tel" name="tel" class="tba_input" value=""></td>
+              <td class="form_td_ipt_100"><input type="text" id="city" name="city" class="tba_input" value=""></td>
+              <td class="form_td_ipt_100"><a href="#">删除</a></td>
+            </tr>
+            <tr class="inmainTable_res">
+              <td>1</td>
+              <td><input type="text" id="orgcity" name="orgcity" class="tba_input" value="555"></td>
+              <td class="form_td_ipt_100"><input type="text" id="name" name="name" class="tba_input" value="王小二"></td>
+              <td class="form_td_ipt_100"><select style="width: 60px;">
+              	<option>成人</option>
+              		<option>儿童</option>
+              </select></td>
+              <td class="form_td_ipt_100">
+              <select style="width: 70px;">
+              	<option>身份证</option>
+              		<option>护照</option>
+              		<option>其它</option>
+              </select></td>
+              <td class="form_td_ipt_100"><input type="text" id="idno" name="idno" class="tba_input" style="width: 120px;" value=""></td>
+              <td class="form_td_ipt_100">
+              <select>
+              <option>男</option>
+              		<option>女</option>
+              </select></td>	
+              	
+   
+              <td class="form_td_ipt_100"><input type="text" id="age" name="age" class="tba_input" style="width: 50px;" value=""></td>
+              <td class="form_td_ipt_100"><input type="text" id="tel" name="tel" class="tba_input" value=""></td>
+              <td class="form_td_ipt_100"><input type="text" id="city" name="city" class="tba_input" value=""></td>
+              <td class="form_td_ipt_100"><a href="#">删除</a></td>
+            </tr>
+                <tr class="inmainTable_res">
+              <td colspan="11"><a  class="ht_btn_blue_add pull-left MARGIN_R_10" href="javascript:void(0);" onClick="opens();">添加</a></td>
+           
+            </tr>
+          </table></td>
+      </tr>
+        </table>
+	</div>
+</div>
+
+
+     
+
+</body>
+</html>

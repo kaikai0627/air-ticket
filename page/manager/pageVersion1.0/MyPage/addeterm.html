@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>PID配置添加</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="../../../../commonSkin/css/html_tools.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="../../../../managerSkin/bluecssboot1.0/css/pageStyle.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="../../../../managerSkin/bluecssboot1.0/css/btnStyle.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="../../../../managerSkin/bluecssboot1.0/css/popModal.css" rel="stylesheet" type="text/css" media="screen"/>
+<script src="../../../../commonSkin/js/jquery-1.8.3.min.js"></script>
+<body>
+<div class="clearfix"></div>
+<div class="ht_right">
+<div class="clearfix h30"></div>
+<div class="clearfix h20"></div>
+<div class="clearfix h5"></div>
+<div class="position">您的位置：<a href="#">首页</a>&nbsp;&nbsp;<a  href="addeterm.html">PID配置添加</a></div>
+<div class="clearfix h20"></div>
+<table class="mainTable" cellspacing="0" cellpadding="0" >
+	<tr>
+		<td id="p1nav" class="onTab" onclick="">PID配置添加</td>
+		<td id="p2nav" class="onDef" onclick=""></td>
+		<td id="p3nav" class="onDef" onclick=""></td>
+		<td class="onNor">
+<!-- 		<span id="btn_zone"> -->
+<!-- 		<a id="" class="ht_btn_default_sm pull-right MARGIN_R_10" href="customer_list.html">返回</a> -->
+<!-- 		</span> -->
+		</td>
+	</tr>
+<tr>
+		<td colspan="4" class="mainTableBody">
+		
+		<!-- 添加 -->
+				<span id="p4" style="display: ;">
+					<table class="inmainTable" cellspacing="0" cellpadding="0">
+					<tr class="inmainTable_title">
+						<td colspan="2"><strong class="f_16">基本信息</strong></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td style="width: 130px;"><span class="pull-right f_14"><div class="ht_def_font f_red">*</div>配置名称：</span></td>
+						<td ><input type="text" id="configurationName" name="configurationName" class="ht_def_text pull-left" style="width: 300px;" /></td>
+						<td><span class="Validform_checktip"></span></td>
+					</tr>
+						<tr class="inmainTable_res_noHover">
+						<td style="width: 130px;"><span class="pull-right f_14"><div class="ht_def_font f_red">*</div>ETERM账号：</span></td>
+						<td ><input type="text" id="etermAccount" name="etermAccount" class="ht_def_text pull-left" style="width: 300px;" /></td>
+						<td><span class="Validform_checktip"></span></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td style="width: 130px;"><span class="pull-right f_14"><div class="ht_def_font f_red">*</div>ETERM密码：</span></td>
+						<td ><input type="text" id="ETERM password" name="ETERM password" class="ht_def_text pull-left" style="width: 300px;" /></td>
+						<td><span class="Validform_checktip"></span></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td style="width: 130px;"><span class="pull-right f_14"><div class="ht_def_font f_red">*</div>配置连接地址：</span></td>
+						<td ><input type="text" id="address" name="address" class="ht_def_text pull-left" style="width: 300px;" /></td>
+						<td><span class="Validform_checktip"></span></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td style="width: 130px;"><span class="pull-right f_14"><div class="ht_def_font f_red">*</div>配置端口号：</span></td>
+						<td ><input type="text" id="number" name="number" class="ht_def_text pull-left" style="width: 110px;" /></td>
+						<td><span class="Validform_checktip"></span></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td style="width: 130px;"><span class="pull-right f_14"><div class="ht_def_font f_red">*</div>连接通道：</span></td>
+						<td >
+							<select id="aisle" name="aisle" class="ht_def_text pull-left" style="width:300px">
+								<option selected="" value="请选择连接通道">请选择连接通道</option>
+								<option value="原始配置加密通道">原始配置加密通道</option>
+								<option value="原始新配置加密通道">原始新配置加密通道</option>
+								<option value="放大配置通道一">放大配置通道一</option>
+								<option value="放大配置通道二">放大配置通道二</option>
+							</select>
+						</td>
+						<td><span class="Validform_checktip"></span></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td style="width: 130px;"><span class="pull-right f_14"><div class="ht_def_font f_red">*</div>OFFICE号：</span></td>
+						<td ><input type="text" id="OFFICE" name="OFFICE" class="ht_def_text pull-left" style="width: 110px;" /></td>
+						<td><span class="Validform_checktip"></span></td>
+					</tr>
+					
+					<tr class="inmainTable_res_noHover">
+						<td style="width: 130px;"><span class="pull-right f_14"><div class="ht_def_font f_red">*</div>配置对应组：</span></td>
+						<td >
+							<select id="port" name="port" class="ht_def_text pull-left" style="width:300px">
+								<option selected="" value="请选择配置组">请选择配置组</option>
+								<option value="预订组">预订组</option>
+								<option value="放大组">放大组</option>
+								
+							</select>
+						</td>
+						<td><span class="Validform_checktip"></span></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td style="width: 130px;"><span class="pull-right f_14"><div class="ht_def_font f_red">*</div>工作号(SI)：</span></td>
+						<td ><input type="text" id="WorkNumber" name="WorkNumber" class="ht_def_text pull-left" style="width: 300px;" /></td>
+						<td><span class="Validform_checktip"></span></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td style="width: 130px;"><span class="pull-right f_14"><div class="ht_def_font f_red">*</div>SI密码：</span></td>
+						<td ><input type="text" id="password" name="password" class="ht_def_text pull-left" style="width: 300px;" /></td>
+						<td><span class="Validform_checktip"></span></td>
+					</tr>
+					<tr class="inmainTable_title">
+						<td colspan="2"><strong class="f_16">其它</strong></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td style="width: 130px;"><span class="pull-right f_14"><div class="ht_def_font f_red">*</div>是否进控配置：</span></td>
+						<td>是<input type="radio" id="radio1" name="radio" style="width: 50px"/>
+						否<input type="radio" id="radio2" name="radio" value="0"/></td>
+						<td><span class="Validform_checktip"></span></td>
+					</tr>
+					
+					<tr class="inmainTable_res_noHover">
+						<td style="width: 130px;"><span class="pull-right f_14"><div class="ht_def_font f_red">*</div>自动建立控制：</span></td>
+						<td>是<input type="radio" id="control" name="control" style="width: 50px"/>
+						否<input type="radio" id="radio" name="radio" /></td>
+						<td><span class="Validform_checktip"></span></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td style="width: 130px;"><span class="pull-right f_14"><div class="ht_def_font f_red">*</div>启用流量控制：</span></td>
+						<td>是<input type="radio" id="control" name="control" style="width: 50px" value="0"/>
+						否<input type="radio" id="control" name="control" value="0"/></td>
+						<td><span class="Validform_checktip"></span></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td style="width: 130px;"><span class="pull-right f_14"><div class="ht_def_font f_red">*</div>限制流量控制：</span></td>
+						<td ><input type="text" id="flow" name="flow" class="ht_def_text pull-left" style="width: 300px;" /></td>
+						<td><span class="Validform_checktip"></span></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td style="width: 130px;"><span class="pull-right f_14"><div class="ht_def_font f_red">*</div>剩余指令流量：</span></td>
+						<td ><input type="text" id="Remaining" name="Remaining" class="ht_def_text pull-left" style="width: 300px;" disabled value="20000"/></td>
+						<td><span class="Validform_checktip"></span></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td style="width: 130px;"><span class="pull-right f_14"><div class="ht_def_font f_red">*</div>打票机号：</span></td>
+						<td ><input type="text" id="flow" name="flow" class="ht_def_text pull-left" style="width: 300px;" /><span>多个配置以','分隔</span></td>
+						<td><span class="Validform_checktip"></span></td>
+					</tr>
+					<tr class="inmainTable_res_noHover">
+						<td style="width: 130px;"><span class="pull-right f_14"><div class="ht_def_font f_red">*</div>配置描述：</span></td>
+						<td ><textarea id="u152_input"></textarea></td>
+						<td><span class="Validform_checktip"></span></td>
+					</tr>
+					
+					
+					
+					
+					</table>
+					
+				
+			</span>
+		
+	</td>
+	</tr>
+
+	
+
+</table>
+	<div class="clearfix h20"></div>
+	<div class="clearfix h20"></div>
+	<div class="clearfix h20"></div>
+	<div class="clearfix h20"></div>
+	<div id="ht_bottom_price_zone" class="ht_bottom_price_zone">
+		<div class="clearfix h5"></div>
+		<a href="javascript:void(0)" onClick="toMyform();" class="price_zone_ok" style="margin-left: 150px;">确认</a>
+		<a href="customer_list.html" class="price_zone_cancel" style="margin-left: 5px;">取消</a>
+	</div>
+
+	
+	<script src="../../../../managerSkin/bluecssboot1.0/js/page_public.js"></script>
+<script src="../../../../commonSkin/js/popModal.js"/></script>
+       <script type="text/javascript"> 
+       
+       
+ $(function() {
+	 /*控制按钮悬浮*/
+		$("#ht_bottom_price_zone").show();
+				  
+			
+});
+ </script>
+
+
+</body>
+</html>

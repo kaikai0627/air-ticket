@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>信用卡支付</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<link href="../../../../commonSkin/css/flights_logo.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="../../../../commonSkin/css/html_tools.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="../../../../websiteSkin/website-mobile/cssboot1.0/css/fg_bid_old.css" rel="stylesheet" type="text/css" />
+<link href="../../../../websiteSkin/website-mobile/cssboot1.0/css/fg_pub_style_old.css" rel="stylesheet" type="text/css" />
+<link href="../../../../websiteSkin/website-mobile/cssboot1.0/js/weui/lib/weui.min.css" rel="stylesheet" type="text/css" />
+<link href="../../../../websiteSkin/website-mobile/cssboot1.0/js/weui/css/jquery-weui.css" rel="stylesheet" type="text/css" />
+</head>
+
+
+<body>
+
+<div class="pubMain">
+<table id="tempTitle" width="100%" class="MARGINAUTO bgWhite" style="border-bottom: 1px #ccc solid;">
+			<tr>
+				<td  height="35" class="cur td_w"  onClick="location.href='flight_pay.html'" valign="middle"><img src="../../../../websiteSkin/website-mobile/cssboot1.0/img/back_icon_w@3x.png" class='date_arrow_pubstyle' /></td>
+				<td class="text-center">
+					
+					<span class="titleFont_style">信用卡支付</span>
+				</td>
+					<td class="cur td_w" onClick="location.href='index.html'" valign="middle">
+<!-- 					<img src="../../../../websiteSkin/website-mobile/cssboot1.0/img/fg_index_icon_00.png" class='date_arrow_pubstyle_spicon' /> -->
+					</td>
+			</tr>
+		</table>
+
+	<div class="sky_pay">
+		
+		<!---bot end--->
+		<div class="bot_def">
+		<div class="clearfix h5"></div>
+			<table class="in_bot_def_pay f_en" cellspacing="0" cellpadding="0">
+				<tr>
+					<td class="td_1">
+					<div class="clearfix h5"></div>
+					<span class="title">机票订单</span>
+					<br />
+					<span class="hud">应付总额：&yen;</span>&nbsp;<span class="price">814.00</span>
+					<div class="clearfix h5"></div>
+					</td>
+				</tr>
+			</table>
+			<div class="clearfix h5"></div>
+		</div>
+		<!---bot end--->
+	</div>
+
+
+
+	<div class="clearfix h10"></div>
+
+
+<table id="bx_mx5"  class="oneGuestNb cur" onClick="selectThisFp(0);" style="display: none; border-top: 0px;">
+	<tr>
+		<td class="text-left" >
+		<div class="clearfix h5"></div>
+		<label class="pull-left"><img src="../../../../websiteSkin/website-mobile/cssboot1.0/img/pay_w.png" class="wx_icon" /></label>
+		<span class="pay_font"><label id="fp_title_0" class="titleSel">微信支付</label></span>
+		<div class="clearfix h5"></div>
+		
+		</td>
+		<td class="hySelect" id="fp_sel_0"><img src="../../../../websiteSkin/website-mobile/cssboot1.0/img/icon_sel.png" class="icon_sel" /></td>
+	</tr>
+
+</table>
+
+
+
+<div class="clearfix h10"></div>
+
+
+
+<table id="bx_mx1" class="oneGuestNb cur" style="display: ; border-top: 1px #dedbdb solid;" onClick="location.href='flight_pay.html'">
+		<tr>
+			<td class="text-left">
+			<div class="clearfix h10"></div> 
+		<img src="../../../../websiteSkin/website-mobile/cssboot1.0/img/bank/bank_6.gif" class="MARGIN_LEFT_5" />
+		<div class="clearfix h5"></div> 
+			</td>
+			<td class="boSelect_pay " >更换
+<!-- 			&nbsp;<img src="../../../../websiteSkin/website-mobile/cssboot1.0/img/date_right.png" class='date_arrow_pubstyle' /> -->
+			
+			</td>
+		</tr>
+		
+</table>
+
+<table id="bx_mx1" class="oneGuestNb cur" onClick="" style="display: ; border-top: 0px;">
+		<tr>
+			<td class="text-left">
+			<input type="text" class="inputPb f_en" placeholder="" value="4392 2540 4111 4544" readonly="readonly" style="background-color: white; color: #333;" disabled="disabled" />
+			</td>
+			
+		</tr>
+		
+</table>
+
+<table id="bx_mx1" class="oneGuestNb cur" onClick="" style="display: ; border-top: 0px;">
+		<tr>
+			<td class="text-left" style="width: 50%;">
+			<input type="text" class="inputPb" placeholder="有效期年份" />
+			</td>
+			<td style="border-left: 1px #dedbdb solid; text-align: left;">
+			<input type="text" class="inputPb" placeholder="有效期月份" />
+			</td>
+			
+		</tr>
+		
+</table>
+<table id="bx_mx1" class="oneGuestNb cur" onClick="" style="display: ; border-top: 0px;">
+		<tr>
+			<td class="text-left">
+			<input type="text" class="inputPb" placeholder="输入背后三位数CVV2验证码" />
+			</td>
+			
+		</tr>
+		
+</table>
+
+<table id="bx_mx2" class="oneGuestNb cur" onClick="" style="display: ; border-top: 0px;">
+		<tr>
+			<td class="text-left">
+			<input type="text" class="inputPb" placeholder="输入银行办卡预留手机号" />
+			</td>
+			<td class="boSelect_mobile_code_td mainColor">获取验证码</td>
+		</tr>
+		
+</table>
+
+<table id="bx_mx2" class="oneGuestNb cur" onClick="" style="display: ; border-top: 0px;">
+		<tr>
+			<td class="text-left">
+			<input type="text" class="inputPb" placeholder="输入手机短信验证码" />
+			</td>
+			
+		</tr>
+		
+</table>
+
+
+<p class="text-center">
+<div class="clearfix h10"></div>
+<img src="../../../../websiteSkin/website-mobile/cssboot1.0/img/pay_b.png" />
+</p>
+
+
+</div>
+
+
+
+
+<div class="clearfix h30"></div>
+<div class="clearfix h30"></div>
+<div class="clearfix h30"></div>
+
+
+
+
+
+	<!--lan--->	
+	<div id="lanview" class="lanview" style="width: 100%;">
+		<table class="lanTabPay">
+			<tr>
+			 <td>
+		
+			  <button id="pay_confirm" class="btn">确认支付</button>
+			 </td>
+			</tr>
+			
+		</table>
+	</div>
+	<!---lan end-->
+
+
+
+<!---引入顺序不能乱--->
+<script src="../../../../websiteSkin/website-mobile/cssboot1.0/js/weui/lib/jquery-2.1.4.js"></script>   
+<script src="../../../../websiteSkin/website-mobile/cssboot1.0/js/weui/lib/fastclick.js"></script>
+<script src="../../../../websiteSkin/website-mobile/cssboot1.0/js/weui/js/jquery-weui.js"></script>
+<script src="../../../../websiteSkin/website-mobile/cssboot1.0/js/weui/js/city-picker.js"></script>
+
+<script src="../../../../websiteSkin/website-mobile/cssboot1.0/js/fg_page_public.js"></script>
+
+<script>
+
+$(function(){
+	
+$("#pay_confirm").on("click", function(){
+		
+		$.confirm("", "确认进行支付？", function() {
+			
+			$.showLoading("银行通信中..");
+			
+			setTimeout(function() {
+				$.hideLoading();
+				$.toast("支付成功");
+				window.location.href='flight_pay_success.html'
+			}, 3000);
+			
+			
+		}, function() {
+			//取消操作
+		});
+	});
+	
+	
+});
+
+	
+	
+
+	
+	
+
+</script>
+</body>
+</html>

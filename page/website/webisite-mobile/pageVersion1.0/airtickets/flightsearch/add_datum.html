@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>填写资料</title>
+    <link rel="stylesheet" href="../../../../../../websiteSkin/website-mobile/cssboot1.0/css/airtickets/light7.css">
+    <link rel="stylesheet"
+          href="../../../../../../websiteSkin/website-mobile/cssboot1.0/css/airtickets/light7-swiper.css">
+    <link rel="stylesheet" href="../../../../../../websiteSkin/website-mobile/cssboot1.0/css/airtickets/demos.css">
+    <link rel="stylesheet" href="../../../../../../websiteSkin/website-mobile/cssboot1.0/css/airtickets/weui.min.css">
+    <link rel="stylesheet" href="../../../../../../websiteSkin/website-mobile/cssboot1.0/css/airtickets/font/demo.css"/>
+    <link rel="stylesheet" href="../../../../../../websiteSkin/website-mobile/cssboot1.0/css/airtickets/font/iconfont.css"/>
+    <link rel="stylesheet" href="../../../../../../websiteSkin/website-mobile/cssboot1.0/css/airtickets/base.css"/>
+    <link rel="stylesheet" href="../../../../../../websiteSkin/website-mobile/cssboot1.0/css/airtickets/add_datum.css"/>
+</head>
+<body>
+<div class="main">
+    <div class="top">
+        <div class="top_box">
+            &nbsp;03-17周五 &nbsp;&nbsp;SHA-YVR&nbsp;&nbsp;&nbsp;<strong style="font-size: 14px" class="iconfont">&#xe67c;</strong> 35h45m
+        </div>
+    </div>
+    <div class="add">
+        <div class="select">
+            <p>选择乘机人 <span class="f_12">请仔细核对证件号及有效期</span></p>
+        </div>
+        <!--选择乘客 跳转新增乘客人 在新增乘客人点击完成 跳转回本页面 添加乘客人成功-->
+        <div class="passenger">
+            <div class="not_add" onclick="window.open('added_ passenger.html')">
+                <span>选择乘客人</span>
+            </div>
+            <div class="added" style="display: none;">
+                <span>HOU JIAN</span>
+            </div>
+        </div>
+        <!--乘机人详情-->
+        <div class="particulars">
+            <!--点击 - 删除乘机人-->
+            <div class="lf">
+                <b>-</b>
+            </div>
+            <!--点击下列信息 跳转到编辑乘机人-->
+            <div class="lf">
+                <div class="lf_top">
+                    HOU JIAN
+                </div>
+                <div class="lf_bottom">
+                    护照 4302211989230&nbsp;|&nbsp;有效期2017-12-01
+                </div>
+            </div>
+        </div>
+        <div class="add_passenger">
+            <strong><b>+</b>新增乘客人</strong>
+        </div>
+    </div>
+    <!--填写手机号 & email-->
+    <div class="add_phone">
+        <ul class="bottom_bor">
+            <li class="area_code right_bor">+国家区号</li>
+            <li class="phone"><input type="text" placeholder="手机号"/></li>
+            <li class="frontier">
+                <select>
+                    <option>境外手机</option>
+                    <option>境内手机</option>
+                </select>
+            </li>
+        </ul>
+        <div class="email"><input type="text" placeholder="&nbsp;Email用于接收通知"/></div>
+    </div>
+    <!--保险-->
+    <div class="insurance">
+        <!--航空意外险-->
+        <div class="accident">
+            <ul class="left">
+                <li><span>航空意外险<i class="iconfont">&#xe620;
+                </i></span><p class="rt">¥6060/人X0</p></li>
+                <li class="f_12">起飞到落地,一路为你守护</li>
+            </ul>
+            <ul class="right">
+               <li>
+                   <div class="item-input rt">
+                       <label class="label-switch">
+                           <input type="checkbox">
+                           <div class="checkbox"></div>
+                       </label>
+                   </div>
+               </li>
+            </ul>
+
+        </div>
+        <!--延误险-->
+        <div class="delay">
+            <ul class="left">
+                <li><span>航空延误险<i class="iconfont">&#xe620;
+                </i></span><p class="rt">¥6060/人X0</p></li>
+                <li class="f_12">起飞到落地,一路为你守护</li>
+            </ul>
+            <ul class="right">
+                <li>
+                    <div class="item-input rt">
+                        <label class="label-switch">
+                            <input type="checkbox">
+                            <div class="checkbox"></div>
+                        </label>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--报销 凭证-->
+        <div class="certificate">
+            <ul class="left">
+                <li>
+                    报销/购票凭证
+                </li>
+
+            </ul>
+            <ul class="right">
+                <li>
+                    <div class="item-input">
+                        <label class="label-switch">
+                            <input type="checkbox">
+                            <div class="checkbox"></div>
+                        </label>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--优惠券-->
+    <div class="favorable">
+        <div>优惠券</div>
+        <div><b class="iconfont">&#xe605;</b></div>
+    </div>
+    <div class="footer">
+        <div>点击去支付表示已阅读并同意 <a href="#">机票须知预订</a></div>
+    </div>
+    <div class="payment">
+        <div class="pay" onclick="window.open('pay.html','_self')">
+            <strong>¥23213</strong><span>明细<i class="iconfont">&#xe74d;</i></span><a href="#">去支付</a>
+        </div>
+    </div>
+</div>
+<script src="../../../../../../commonSkin/js/jquery-1.8.3.min.js"> </script>
+<script>
+
+$(function(){
+    $('.added').toggle(function(){
+        $('.add>.particulars').css('display','block');
+        $('.added').css('border','1px solid #039be5');
+        $('.added').css('color','#039be5');
+
+    },function(){
+        $('.add>.particulars').css('display','none');
+        $('.added').css('border','1px solid #9c989c');
+        $('.added').css('color','#9c989c');
+    });
+
+    $('.not_add').click(function () {
+        $('.added').css('display','block');
+        $('.not_add').css('display','none');
+    })
+
+
+
+})
+
+
+
+</script>
+</body>
+</html>

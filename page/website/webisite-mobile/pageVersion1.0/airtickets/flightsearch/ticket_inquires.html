@@ -1,0 +1,679 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>选择日期</title>
+    <meta content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=0;"
+          name="viewport"/>
+    <meta name="screen-orientation" content="portrait">
+    <!-- uc强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+    <link href="../../../../../../websiteSkin/website-mobile/cssboot1.0/css/fg_pageMain_old.css" rel="stylesheet" type="text/css"/>
+    <link href="../../../../../../commonSkin/css/html_tools.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="../../../../../../websiteSkin/website-mobile/cssboot1.0/js/weui/lib/weui.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../../../../../../websiteSkin/website-mobile/cssboot1.0/js/weui/css/jquery-weui.css" rel="stylesheet" type="text/css"/>
+    <!--后追加样式-->
+    <link rel="stylesheet" href="../../../../../../websiteSkin/website-mobile/cssboot1.0/css/airtickets/godate.css"/>
+
+</head>
+
+
+<body>
+
+<input type="hidden" value="2015-12-20" id="gdd"/>
+<input type="hidden" value="2015-12-22" id="bkk"/>
+<input type="hidden" value="1" id="toCur"/> <!--from prev page  0-left  1-right -->
+
+
+<div class="pubMain">
+
+    <div class="fixtop">
+        <div class="ttop_changed" id="ttop_changed">
+            <table width="95%" class="MARGINAUTO">
+                <tr>
+                    <td width="35" class="tpp_tab_height cur" onclick="location.href='index.html'">
+                        <img src="../../../../../../websiteSkin/website-mobile/cssboot1.0/img/date_left.png"
+                             class='date_arrow_pubstyle'/>
+                    </td>
+                    <td class="text-center">
+                        <span class="f_12 f_gray"><span id="dateSel_hand_go">上海</span>&nbsp;&rarr;&nbsp;<span
+                                id="dateSel_hand_back">深圳</span></span>
+                        <br/>
+                        <span class="f_15">选择<span id="dateSel_hand">去</span>程日期</span>
+                    </td>
+                    <td class="font_finish_td_w"><a class="mainColor font_finish" href="index.html">完成</a></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="clearfix h10 bgWhite"></div>
+        <div class="bgWhite">
+            <table width="90%" class="MARGINAUTO" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td id="td_l" class="td_l_sel" onClick="toSelectFlightDate(0);">
+                        <input type="text" id="date_l_ip" class="dd_l" value="" readonly="readonly"/>
+
+                        <div class="icon_fg_go">去程日期</div>
+                        <div class="icon_fg_date_l" id="date_l"></div>
+
+                    </td>
+                    <td width="51">
+
+                    </td>
+                    <td id="td_r" class="td_l" onClick="toSelectFlightDate(1);">
+                        <input type="text" id="date_r_ip" class="dd_r_date" dir="rtl" value="" readonly="readonly"/>
+
+                        <div class="icon_fg_back">回程日期</div>
+                        <div id="date_r" class="icon_fg_date_r"></div>
+                        <div id="icon_x" class="icon_x" onClick="cleanTheDate();"></div>
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="clearfix h20 bgWhite"></div>
+    </div>
+
+    <div class="clearfix selClearHeight clearfixBgColor"></div>
+
+
+    <!--date start--->
+    <table width="100%" cellspacing="2" cellpadding="0" class="MARGINAUTO dateBgColor">
+        <tr>
+            <td colspan="7" height="40"><span class="dateFontStyle_date">2015年12月</span></td>
+        </tr>
+        <tr class="dateFontStyle_cnTitle">
+            <td><span class="f_orange">日</span></td>
+            <td>一</td>
+            <td>二</td>
+            <td>三</td>
+            <td>四</td>
+            <td>五</td>
+            <td><span class="f_orange">六</span></td>
+        </tr>
+        <tr>
+            <td colspan="7">
+                <div class="dot"></div>
+            </td>
+        </tr>
+        <tr class="dateFontStyle_date_s">
+            <td></td>
+            <td></td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr class="dateFontStyle_date_s">
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+        </tr>
+        <tr class="dateFontStyle_date_s">
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+            <td>16</td>
+            <td>
+                <div class="hasPrice" id="2015-12-17" onClick="selectMyDate(this,'2015-12-17','周四');">今天</div>
+            </td>
+            <td>
+                <div class="hasPrice" id="2015-12-18" onClick="selectMyDate(this,'2015-12-18','周五');">18</div>
+            </td>
+            <td>
+                <div class="hasPrice" id="2015-12-19" onClick="selectMyDate(this,'2015-12-19','周六');">19</div>
+            </td>
+        </tr>
+
+        <tr class="dateFontStyle_date_s">
+            <td>
+                <div class="hasPrice" id="2015-12-20" onClick="selectMyDate(this,'2015-12-20','周日');">20</div>
+            </td>
+            <td>
+                <div class="hasPrice" id="2015-12-21" onClick="selectMyDate(this,'2015-12-21','周一');">21</div>
+            </td>
+            <td>
+                <div class="hasPrice" id="2015-12-22" onClick="selectMyDate(this,'2015-12-22','周二');">22</div>
+            </td>
+            <td>
+                <div class="hasPrice" id="2015-12-23" onClick="selectMyDate(this,'2015-12-23','周三');">23</div>
+            </td>
+            <td>
+                <div class="hasPrice" id="2015-12-24" onClick="selectMyDate(this,'2015-12-24','周四');">24</div>
+            </td>
+            <td>
+                <div class="hasPrice" id="2015-12-25" onClick="selectMyDate(this,'2015-12-25','周五');">25</div>
+            </td>
+            <td>
+                <div class="hasPrice" id="2015-12-26" onClick="selectMyDate(this,'2015-12-26','周六');">26</div>
+            </td>
+        </tr>
+
+        <tr class="dateFontStyle_date_s">
+            <td>
+                <div class="hasPrice" id="2015-12-27" onClick="selectMyDate(this,'2015-12-27','周日');">27</div>
+            </td>
+            <td>
+                <div class="hasPrice" id="2015-12-28" onClick="selectMyDate(this,'2015-12-28','周一');">28</div>
+            </td>
+            <td>
+                <div class="hasPrice" id="2015-12-29" onClick="selectMyDate(this,'2015-12-29','周二');">29</div>
+            </td>
+            <td>
+                <div class="hasPrice" id="2015-12-30" onClick="selectMyDate(this,'2015-12-30','周三');">30</div>
+            </td>
+            <td>
+                <div class="hasPrice" id="2015-12-31" onClick="selectMyDate(this,'2015-12-31','周四');">31</div>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+
+    </table>
+    <div class="clearfix h30 clearfixBgColor"></div>
+    <!--date end--->
+
+
+    <!--date start--->
+    <table width="100%" cellspacing="2" cellpadding="0" class="MARGINAUTO dateBgColor">
+        <tr>
+            <td colspan="7" height="40"><span class="dateFontStyle_date">2016年1月</span></td>
+        </tr>
+        <tr class="dateFontStyle_cnTitle">
+            <td><span class="f_orange">日</span></td>
+            <td>一</td>
+            <td>二</td>
+            <td>三</td>
+            <td>四</td>
+            <td>五</td>
+            <td><span class="f_orange">六</span></td>
+        </tr>
+        <tr>
+            <td colspan="7">
+                <div class="dot"></div>
+            </td>
+        </tr>
+        <tr class="dateFontStyle_date_s">
+            <td></td>
+            <td></td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr class="dateFontStyle_date_s">
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+        </tr>
+        <tr class="dateFontStyle_date_s">
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+            <td>16</td>
+            <td>
+                <div class="hasPrice" id="2016-01-17" onClick="selectMyDate(this,'2016-01-17','周四');">17</div>
+            </td>
+            <td>
+                <div class="hasPrice" id="2016-01-18" onClick="selectMyDate(this,'2016-01-18','周五');">18</div>
+            </td>
+            <td>
+                <div class="hasPrice" id="2016-01-19" onClick="selectMyDate(this,'2016-01-19','周六');">19</div>
+            </td>
+        </tr>
+
+        <tr class="dateFontStyle_date_s">
+            <td>
+                <div class="hasPrice" id="2016-01-20" onClick="selectMyDate(this,'2016-01-20','周日');">20</div>
+            </td>
+            <td>
+                <div class="hasPrice" id="2016-01-21" onClick="selectMyDate(this,'2016-01-21','周一');">21</div>
+            </td>
+            <td>
+                <div class="hasPrice" id="2016-01-22" onClick="selectMyDate(this,'2016-01-22','周二');">22</div>
+            </td>
+            <td>
+                <div class="hasPrice" id="2016-01-23" onClick="selectMyDate(this,'2016-01-23','周三');">23</div>
+            </td>
+            <td>
+                <div class="hasPrice" id="2016-01-24" onClick="selectMyDate(this,'2016-01-24','周四');">24</div>
+            </td>
+            <td>
+                <div class="hasPrice" id="2016-01-25" onClick="selectMyDate(this,'2016-01-25','周五');">25</div>
+            </td>
+            <td>
+                <div class="hasPrice" id="2016-01-26" onClick="selectMyDate(this,'2016-01-26','周六');">26</div>
+            </td>
+        </tr>
+
+        <tr class="dateFontStyle_date_s">
+            <td>
+                <div class="hasPrice" id="2016-01-27" onClick="selectMyDate(this,'2016-01-27','周日');">27</div>
+            </td>
+            <td>
+                <div class="hasPrice" id="2016-01-28" onClick="selectMyDate(this,'2016-01-28','周一');">28</div>
+            </td>
+            <td>
+                <div class="hasPrice" id="2016-01-29" onClick="selectMyDate(this,'2016-01-29','周二');">29</div>
+            </td>
+            <td>
+                <div class="hasPrice" id="2016-01-30" onClick="selectMyDate(this,'2016-01-30','周三');">30</div>
+            </td>
+            <td>
+                <div class="hasPrice" id="2016-01-31" onClick="selectMyDate(this,'2016-01-31','周四');">31</div>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+
+    </table>
+    <div class="clearfix h30 clearfixBgColor"></div>
+    <!--date end--->
+
+    <div class="clearfix h20 clearfixBgColor"></div>
+    <div class="clearfix h20 clearfixBgColor"></div>
+    <div class="clearfix h20 clearfixBgColor"></div>
+
+
+    <div class="select_info_alert" id="select_info_alert" onClick="AirFightList()">
+        立即查询
+        <!-- <img src="../../../../websiteSkin/website-mobile/cssboot1.0/img/seDate_bottom_arrow.png" class="selDate_bottom_arrow"  /> -->
+    </div>
+
+
+    <!---引入顺序不能乱--->
+    <script src="../../../../../../websiteSkin/website-mobile/cssboot1.0/js/weui/lib/jquery-2.1.4.js"></script>
+    <script src="../../../../../../websiteSkin/website-mobile/cssboot1.0/js/weui/lib/fastclick.js"></script>
+    <script src="../../../../../../websiteSkin/website-mobile/cssboot1.0/js/weui/js/jquery-weui.js"></script>
+
+    <script src="../../../../../../websiteSkin/website-mobile/cssboot1.0/js/fg_order_add.js"></script>
+    <script src="../../../../../../websiteSkin/website-mobile/cssboot1.0/js/fg_page_private.js"></script>
+    <script src="../../../../../../websiteSkin/website-mobile/cssboot1.0/js/fg_bid_add.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $("#select_info_alert").show();
+        });
+        function AirFightList() {
+            // showIndexSearch();
+            // setTimeout("andGo()", 3000);
+
+            $.showLoading("正在查询中..");
+
+            setTimeout(function() {
+                $.hideLoading();
+                // $.toast("下单成功");
+                window.location.href = 'reserve.html';
+            }, 3000)
+
+        }
+
+        function andGo() {
+            window.location.href = 'reserve.html';
+        }
+
+        /***** core code ****/
+
+
+        var theDateType = "0";  //0 大框停留在去程; 1 停留在回程
+        var goSeled = "0";  //0  去程未选  1 去程已选
+        var backSeled = "0";  //0  回程未选  1 回程已选
+        var cutDate = "" //去除年份的日期
+        var startCity = $("#dateSel_hand_go").html();
+        var backCity = $("#dateSel_hand_back").html();
+        var saveGoDate = ""; //对比用出发日期
+        var saveBackDate = ""; //对比用回程日期
+        var last_id = ""; //上一次点击得obj的id值
+        var isOpenChange = "0";  //关闭
+        var prev_cur = $("#toCur").val();
+
+        $(function () {
+
+
+            if (prev_cur == '0') { //传来的去程停留
+
+                theDateType = "0";
+                isOpenChange = "1";
+                $("#dateSel_hand_go").html(startCity);
+                $("#dateSel_hand_back").html(backCity);
+                $("#dateSel_hand").html("去");
+                $("#td_l").removeClass().addClass("td_l_sel");
+                $("#td_r").removeClass().addClass("td_l");
+
+            } else {
+
+                theDateType = "1";
+                isOpenChange = "1";
+                $("#dateSel_hand_go").html(backCity);
+                $("#dateSel_hand_back").html(startCity);
+                $("#dateSel_hand").html("回");
+                $("#td_l").removeClass().addClass("td_l");
+                $("#td_r").removeClass().addClass("td_l_sel");
+
+
+            }
+
+            var gdd = $("#gdd").val(); // go date in session
+            var bkk = $("#bkk").val();  // back date in session
+
+            if (gdd == '') {  //去程日期加载时取值
+                $("#date_l_ip").val("--");  //session中无值，设置默认标示
+            } else {
+                $("#date_l_ip").val(gdd.substr(gdd.length - 5));  //如果有值，截取掉年份后放入左大框
+                $("#" + gdd).removeClass().addClass("hasSelect");
+                goSeled = "1"; //标注去程已选
+                last_id = gdd;
+                saveGoDate = gdd;
+
+            }
+
+
+            if (bkk == '') { //回程日期加载时取值
+                $("#date_r_ip").val("--"); //session中无值，设置默认标示
+            } else {
+                $("#date_r_ip").val(bkk.substr(bkk.length - 5));  //如果有值，截取掉年份后放入右大框
+                $("#" + bkk).removeClass().addClass("hasSelect");
+                backSeled = "1"; //标注回程已选
+                last_id = bkk;
+                saveBackDate = bkk;
+            }
+
+        });
+
+
+        function changeIt() {
+
+            var dateSel_hand_go = $("#dateSel_hand_go").html();
+            var dateSel_hand_back = $("#dateSel_hand_back").html();
+
+            $("#dateSel_hand_go").html(dateSel_hand_back);
+            $("#dateSel_hand_back").html(dateSel_hand_go);
+        }
+
+        function getYourPosition() {
+
+            alert("将自动获得您的所在城市");
+            $("#startCity").val("上海");
+        }
+
+
+        function changeTabs(j) {
+            var Tabs = new Array("one", "two");
+
+            for (var i = 0; i < Tabs.length; i++) {
+                if (i == j) {
+                    //document.getElementById(Tabs[i]).style.display = "block";
+                    document.getElementById(Tabs[i] + "nav").className = "i_t i_t_on";
+                } else if (document.getElementById(Tabs[i] + "nav") != null) {
+                    //	document.getElementById(Tabs[i]).style.display = "none";
+                    document.getElementById(Tabs[i] + "nav").className = "i_t i_t_def";
+                } else {
+
+                }
+            }
+        }
+
+
+        //回到顶部
+        function goTop() {
+            $('html,body').animate({'scrollTop': 0}, 600);
+        }
+
+
+        function cleanTheDate() {
+
+            $("#date_r_ip").val("--");
+            $("#date_r_ip").css("text-align", "right");
+            $("#date_r").html("");
+            $("#icon_x").hide();
+
+            backSeled = "0";
+            saveBackDate = "";
+            $("#" + last_id).removeClass().addClass("hasPrice");
+            $("#date_total_back").hide();
+        }
+
+
+        function toSelectFlightDate(i) {  //按了大日期框
+
+            switch (i) {
+                case 0:
+                    theDateType = "0";
+                    isOpenChange = "1";
+                    $("#dateSel_hand_go").html(startCity);
+                    $("#dateSel_hand_back").html(backCity);
+                    $("#dateSel_hand").html("去");
+                    $("#td_l").removeClass().addClass("td_l_sel");
+                    $("#td_r").removeClass().addClass("td_l");
+
+                    break;
+                case 1:
+                    theDateType = "1";
+                    isOpenChange = "1";
+                    $("#dateSel_hand_go").html(backCity);
+                    $("#dateSel_hand_back").html(startCity);
+                    $("#dateSel_hand").html("回");
+                    $("#td_l").removeClass().addClass("td_l");
+                    $("#td_r").removeClass().addClass("td_l_sel");
+
+                    break;
+                default:
+
+            }
+
+        }
+
+
+        function selectMyDate(obj, date, week) {    //按了小日历
+
+
+            cutDate = date.substr(date.length - 5); //去除年份
+
+            if (goSeled == "0") {  // 如果第一次去程未选进这里
+
+                $(".hasSelect").removeClass().addClass("hasPrice");
+                $("#" + $(obj).attr("id")).removeClass().addClass("hasSelect");
+
+                $("#date_l_ip").val(cutDate); //左大框赋值
+                $("#date_l").html(week); //星期
+// 		$("#select_info_alert").show();  //出现下方的去程回程日期提示栏
+//      	$("#date_total_go").html("<strong>去程</strong>："+date); //第一次去程选择日期显示
+
+                toSelectFlightDate(0);
+
+                saveGoDate = date; //将去程日期保存在参数内用于对比
+                goSeled = "1"; //标注去程已选
+                last_id = $(obj).attr("id"); //标注一个选中的日期
+                theDateType = "0"; //标注大框停留
+                isOpenChange = "0"; //关闭
+
+            } else if (backSeled == "0") {  //如果回程未被选择进这里
+
+
+                if (checkEndTime(saveGoDate, date) == false) { // 回程未选的情况 ，如果返回日期大于去程日期; 认作是依然做去程的选择
+
+                    $(".hasSelect").removeClass().addClass("hasPrice");
+                    $(obj).removeClass().addClass("hasSelect").siblings().removeClass().addClass("hasPrice");
+                    $("#date_l_ip").val(cutDate); //左大框赋值
+                    $("#date_l").html(week); //星期
+// 			$("#date_total_go").html("<strong>去程</strong>："+date); //去程选择日期显示
+                    saveGoDate = date; //将去程日期保存在参数内用于对比
+                    last_id = $(obj).attr("id"); //标注一个选中的日期
+                    theDateType = "0"; //标注大框停留
+                    isOpenChange = "0"; //关闭
+
+                } else { //通过日期对比验证
+
+
+                    if (isOpenChange == "1" && theDateType == "0") {  //如果刚刚开启了去程修改框激活
+
+                        $("#" + saveGoDate).removeClass().addClass("hasPrice");
+                        $("#" + $(obj).attr("id")).removeClass().addClass("hasSelect");
+                        saveGoDate = date; //将去程日期保存在参数内用于对比
+                        last_id = $(obj).attr("id"); //标注一个选中的日期
+                        theDateType = "0"; //标注大框停留
+                        isOpenChange = "0"; //关闭
+// 					$("#date_total_go").html("<strong>去程</strong>："+date); //第一次去程选择日期显示
+                        $("#date_l").html(week); //星期
+                        $("#date_l_ip").val(cutDate); //左大框赋值
+
+                    } else {
+
+
+                        $(obj).removeClass().addClass("hasSelect"); //选中效果
+                        $("#date_total_back").html("<strong>回程</strong>：" + date).show();  //第一次回程选择日期显示
+
+                        $("#date_r_ip").val(cutDate); //右侧大框赋值一系列操作
+                        $("#date_r_ip").css("text-align", "left");
+                        $("#date_r").html(week);
+                        $("#icon_x").show();
+
+                        toSelectFlightDate(1);
+
+                        saveBackDate = date;
+                        backSeled = "1"; //回程已选
+                        theDateType = "1"; //标注大框停留
+                        last_id = $(obj).attr("id"); //标注一个选中的日期
+                        isOpenChange = "0"; //关闭
+
+                    }
+
+
+                }
+
+
+            } else {  //去程回程都选择过了，进这里
+
+
+                if (isOpenChange == "1" && theDateType == "0") {  //如果刚刚开启了去程修改框激活  ??
+
+
+                    if (checkEndTime(date, saveBackDate) == false) { //如果返回日期大于去程日期; 洗牌
+
+                        $(".hasSelect").removeClass().addClass("hasPrice");
+                        $(obj).removeClass().addClass("hasSelect").siblings().removeClass().addClass("hasPrice");
+
+                        $("#date_l_ip").val(cutDate); //左大框赋值
+                        $("#date_l").html(week); //星期
+// 							$("#select_info_alert").show();  //出现下方的去程回程日期提示栏
+// 							$("#date_total_go").html("<strong>去程</strong>："+date); //第一次去程选择日期显示
+
+                        $("#date_total_back").hide();
+                        saveGoDate = date; //将去程日期保存在参数内用于对比
+                        goSeled = "1"; //标注去程已选
+                        backSeled = "0"; //标注回程没选
+                        theDateType = "0"; //标注大框停留
+                        cleanTheDate();
+                        toSelectFlightDate(0);
+                        last_id = $(obj).attr("id"); //标注一个选中的日期
+                        isOpenChange = "0"; //关闭
+
+                    } else {
+
+                        $("#" + saveGoDate).removeClass().addClass("hasPrice");
+                        $("#" + $(obj).attr("id")).removeClass().addClass("hasSelect");
+                        saveGoDate = date; //将去程日期保存在参数内用于对比
+
+
+// 						$("#date_total_go").html("<strong>去程</strong>："+date); //第一次去程选择日期显示
+                        $("#date_l").html(week); //星期
+                        $("#date_l_ip").val(cutDate); //左大框赋值
+                        theDateType = "0"; //标注大框停留
+                        isOpenChange = "0"; //关闭
+
+
+                    }
+
+
+                } else {
+
+
+                    //alert("go:"+saveGoDate+"back:"+saveBakDate);
+                    if (checkEndTime(saveGoDate, date) == false) { //如果返回日期大于去程日期; 洗牌
+
+                        $(".hasSelect").removeClass().addClass("hasPrice");
+                        $(obj).removeClass().addClass("hasSelect").siblings().removeClass().addClass("hasPrice");
+
+                        $("#date_l_ip").val(cutDate); //左大框赋值
+                        $("#date_l").html(week); //星期
+// 			$("#select_info_alert").show();  //出现下方的去程回程日期提示栏
+// 			$("#date_total_go").html("<strong>去程</strong>："+date); //第一次去程选择日期显示
+
+                        $("#date_total_back").hide();
+                        saveGoDate = date; //将去程日期保存在参数内用于对比
+                        goSeled = "1"; //标注去程已选
+                        backSeled = "0"; //标注回程没选
+                        theDateType = "0"; //标注大框停留
+                        cleanTheDate();
+                        toSelectFlightDate(0);
+                        last_id = $(obj).attr("id"); //标注一个选中的日期
+                        isOpenChange = "0"; //关闭
+
+                    } else {   //去程回程都选择过了，且通过日期对比验证
+
+
+                        $("#" + last_id).removeClass().addClass("hasPrice");
+                        $("#" + $(obj).attr("id")).removeClass().addClass("hasSelect");
+                        last_id = $(obj).attr("id");
+                        $("#date_total_back").html("<strong>回程</strong>：" + date).show();
+
+                        $("#date_r_ip").val(cutDate); //右侧大框赋值一系列操作
+                        $("#date_r_ip").css("text-align", "left");
+                        $("#date_r").html(week);
+                        $("#icon_x").show();
+
+                        toSelectFlightDate(1);
+                        saveBackDate = date;
+                        theDateType = "1"; //标注大框停留
+                        isOpenChange = "0"; //关闭
+
+                    }
+
+
+                }
+
+
+            }
+
+
+        }
+
+
+        function checkEndTime(t1, t2) {   // 时间对比函数
+
+            var start = new Date(t1.replace("-", "/").replace("-", "/"));
+            var end = new Date(t2.replace("-", "/").replace("-", "/"));
+
+            //alert("go:"+start+"back:"+end);
+
+            if (end < start) {
+                return false;
+            }
+            return true;
+        }
+
+
+    </script>
+
+
+</div>
+</body>
+</html>

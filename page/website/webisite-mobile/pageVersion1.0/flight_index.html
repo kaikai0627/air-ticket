@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>机票查询</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<link href="../../../../commonSkin/css/flights_logo.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="../../../../commonSkin/css/html_tools.css" rel="stylesheet" type="text/css" media="screen"/>
+
+
+<link href="../../../../websiteSkin/website-mobile/cssboot1.0/css/fg_toolsAdd.css" rel="stylesheet" type="text/css" />
+<link href="../../../../websiteSkin/website-mobile/cssboot1.0/css/fg_pageMain.css" rel="stylesheet" type="text/css" />
+
+<link href="../../../../websiteSkin/website-mobile/cssboot1.0/js/weui/lib/weui.min.css" rel="stylesheet" type="text/css" />
+<link href="../../../../websiteSkin/website-mobile/cssboot1.0/js/weui/css/jquery-weui.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body >
+
+<div id="onMy">
+    <div id="myblock">
+		  <p style="margin-top: 40px;">
+			  <h3>翔游度假</h3>
+			  <h2>为您查询中</h2>
+		  </p>
+    </div>
+</div>
+
+
+<div id="main_visual" class="main_visual">
+	<!---in--->
+		<div class="index_bb_black"></div>
+		<div class="myLogin">
+			<img onclick="location.href='flight_login.html'" class="pic2" src="../../../../websiteSkin/website-mobile/cssboot1.0/img/icon_users.png"  />
+<!-- 			<img class="pic" src="../../../../websiteSkin/website-mobile/cssboot1.0/img/icon_power.png"  /> -->
+<!-- 			<div class="name"><strong>13010201021</strong></div> -->
+		</div>
+		<div id="index_bb_select" onclick="changeType(0)"></div>
+		<div id="index_bb_def" onclick="changeType(1)"></div>
+	<!---in--->
+</div>
+
+
+<div class="inlargeBg" >
+
+	 <form id="airConditionForm" action="" method="post">
+            <input type="hidden" id="pathType" name="pathType" value=""/>
+	
+		<table cellspacing="0" cellpadding="5" style="margin: 0px auto; width: 90%;">
+		
+<!-- 			<tr> -->
+<!-- 				<td valign="bottom" class="text-left f12 f_gray_q" >出发</td> -->
+<!-- 				<td class=""></td> -->
+<!-- 				<td valign="bottom" class="text-right f12 f_gray_q">抵达</td> -->
+<!-- 			</tr> -->
+			
+			<tr>
+				<td class="ipt_1" onclick="location.href='flight_selCity.html'"><input type="text" id="cityNameZone"   class="ipt_1_text" value="上海" placeholder="出发城市" readonly="readonly"  />
+<!-- 				<input id="orgCityCode" type="hidden" name="orgCityCode" value="${sessionScope.city.orgCityCode eq null || sessionScope.city.orgCityCode eq '' ? 'SSS' : sessionScope.city.orgCityCode }"/> -->
+<!--                 <input id="orgCityName" type="hidden" name="orgCityName" value="${sessionScope.city.orgCityName eq null || sessionScope.city.orgCityName eq '' ? '上海' : sessionScope.city.orgCityName }"/> -->
+				</td>
+				<td class="ipt_2" onclick="changeCity();" >
+				<img src="../../../../websiteSkin/website-mobile/cssboot1.0/img/back_forth.png"  />
+				</td>
+				<td class="ipt_3" onclick="location.href='flight_selCity.html'" ><input id="cityNameZone2"   type="text" class="ipt_3_text"  value="" placeholder="抵达城市" readonly="readonly" />
+                   
+<!--                     <input id="desCityCode" type="hidden" name="desCityCode" value="${sessionScope.city.desCityCode }"/> -->
+<!--                    <input id="desCityName" type="hidden" name="desCityName" value="${sessionScope.city.desCityName }"/> -->
+				</td>
+			</tr>
+			
+			<tr>
+				<td valign="bottom" class="text-left f12 f_gray_q h30">出发日期</td>
+				<td class=""></td>
+				<td valign="bottom" class="text-right f12 f_gray_q">返回日期</td>
+			</tr>
+			
+				<tr>
+				<td class="ipt_1_2"><input id="gDate" value="12-13" onclick="location.href='flight_selDate.html'" name="orgDate"  readonly="readonly" type="text" class="ipt_1_text_2"  placeholder="出发日期"  /></td>
+				<td class="ipt_4"></td>
+				<td class="ipt_3_2">
+				<input id="bDate" name="desDate" value="12-15" onclick="location.href='flight_selDate.html'" readonly="readonly" type="text" class="ipt_3_text_2"  value="" placeholder="返回日期"  />
+				<div id="clear_btn" class="clearIconIndex" ><img src="../../../../websiteSkin/website-mobile/cssboot1.0/img/icon_ljt.png"/></div>
+				</td>
+			</tr>
+			
+			</tr>
+			
+<!-- 				<tr> -->
+<!-- 				<td class="ipt_1_2"> -->
+				
+<!-- 				 <input id="cwType" name="cwType"  type="text" class="ipt_1_text_2"  placeholder="舱位不限"  /> -->
+
+<!-- 				</td> -->
+<!-- 				<td class="ipt_4"></td> -->
+<!-- 				<td class="ipt_3_3" > -->
+				
+<!-- 	 <div class="weui_cells weui_cells_checkbox" style="border: 0px; margin: 0px;"> -->
+<!--         <label class="weui_cell weui_check_label" for="s11" > -->
+<!--           <div class="weui_cell_hd" > -->
+<!--             <input type="checkbox" class="weui_check" name="checkbox1" id="s11"> -->
+<!--             <i class="weui_icon_checked"></i> -->
+<!--           </div> -->
+<!--           <div class="weui_cell_bd weui_cell_primary" style="text-align: left;"> -->
+<!--             <p style="line-height: 18px;">携带儿童<br /><span class="f12">2-12岁</span></p> -->
+<!--           </div> -->
+<!--         </label> -->
+      
+<!--       </div> -->
+					
+		
+<!-- 				</td> -->
+<!-- 			</tr> -->
+			
+			<tr>
+				<td class="newIndex_btn_z" colspan="3">
+<!-- 					<input id="index_sub"  onclick="cashAirFightList()" type="button" class="newIndex_btn" value="查询航班" /> -->
+<a href="javascript:AirFightList();"  id="index_sub" class="newIndex_btn" style="display: block; text-decoration: none; ">查询航班</a>
+				</td>
+				
+			</tr>
+			
+		</table>
+		
+		 </form>
+		
+	
+	</div>
+	
+	<p class="feihua">
+		全程预订保障，去哪里都放心
+	</p>
+	
+<div class="clearfix h100"></div>
+
+
+<div class="newIndexBottom">
+		<table cellspacing="0" class="xiaoTb">
+			<tr>
+				<td>
+					<a href="flight_order.html">
+					<img src="../../../../websiteSkin/website-mobile/cssboot1.0/img/icc_1.png" class="icon_myorder" />
+					<div class="clearfix"></div>
+					我的订单
+					</a>
+				</td>
+				<td>
+					<a href="javascript:void(0);">   
+					<img src="../../../../websiteSkin/website-mobile/cssboot1.0/img/icc_2.png" class="icon_dt" />
+					<div class="clearfix"></div>
+					航班动态
+					</a>
+				</td>
+			</tr>
+		</table>	
+			
+	
+	
+</div>
+
+
+
+<!---引入顺序不能乱--->
+<script src="../../../../websiteSkin/website-mobile/cssboot1.0/js/weui/lib/jquery-2.1.4.js"></script>   
+<script src="../../../../websiteSkin/website-mobile/cssboot1.0/js/weui/lib/fastclick.js"></script>
+<script src="../../../../websiteSkin/website-mobile/cssboot1.0/js/weui/js/jquery-weui.js"></script>
+<script src="../../../../websiteSkin/website-mobile/cssboot1.0/js/weui/js/city-picker.js"></script>
+
+<script src="../../../../websiteSkin/website-mobile/cssboot1.0/js/fg_order_add.js"></script>
+<script src="../../../../websiteSkin/website-mobile/cssboot1.0/js/fg_page_private.js"></script>
+<script src="../../../../websiteSkin/website-mobile/cssboot1.0/js/fg_page_public.js"></script>
+<script src="../../../../websiteSkin/website-mobile/cssboot1.0/js/fg_bid_add.js"></script>
+
+</body>
+</html>

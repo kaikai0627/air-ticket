@@ -1,0 +1,306 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>修改行程</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link href="../../../../../commonSkin/css/html_tools.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../../../../commonSkin/css/hDate.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../../../../managerSkin/bluecssboot1.0/css/pageStyle.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../../../../managerSkin/bluecssboot1.0/css/btnStyle.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../../../../managerSkin/bluecssboot1.0/css/popModal.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../../../../managerSkin/bluecssboot1.0/css/page_new.css" rel="stylesheet" type="text/css" media="screen"/>
+	<script src="../../../../../commonSkin/js/jquery-1.8.3.min.js"></script>
+</head>
+
+<body>
+	<!-- -right -->
+	<div class="ht_right">
+		<div class="clearfix h20"></div>
+		<div class="clearfix h5"></div>
+		<div class="position">您的位置：<a href="#">首页 - 组团管理 - 团队详情 - 修改行程</a></div>
+
+	<div class="clearfix h20"></div>
+	<table class="mainTable" cellspacing="0" cellpadding="0" >
+		<tr>
+		<td id="p1nav" class="onTab" onclick="">修改行程</td>
+		<td id="p2nav" class="onDef" onclick=""></td>
+		<td id="p3nav" class="onDef" onclick=""></td>
+		<td class="onNor">
+<!-- 		<span id="btn_zone"> -->
+<!-- 		<a id="" class="ht_btn_default_sm pull-right MARGIN_R_10" href="customer_list.html">返回</a> -->
+<!-- 		</span> -->
+		</td>
+	</tr>
+		<tr>
+			<td colspan="4" class="mainTableBody">
+				<table id="dateGoT" class="inmainTable" cellspacing="0" cellpadding="0" >
+				<tr class="inmainTable_title">
+						<td colspan="6"><strong class="f_16">基本信息</strong></td>
+					</tr>
+					<tr>
+						<td class="form_td_title">选择交通：</td>
+							<td class="form_td_ipt_200">
+							<select class="ht_def_select" >
+									<option>12路公交</option>
+									<option>21路公交</option>
+								</select>
+							</td>
+							<td class="form_td_title">选择线路：</td>
+							<td class="form_td_ipt_200">
+							<select class="ht_def_select" >
+									<option>1</option>
+									<option>2</option>
+								</select>
+
+							</td>
+							<td class="form_td_title">线路城市：</td>
+							<td class="form_td_ipt_200">
+							<select class="ht_def_select" >
+									<option>昆明</option>
+									<option>西藏</option>
+								</select>
+
+							</td>
+					</tr>
+					<tr>
+							<td class="form_td_title">出团日期：</td>
+							<td class="form_td_ipt_200">
+							<select class="ht_def_select" >
+									<option>2016/5/1</option>
+									<option>2016/10/1</option>
+								</select>
+							</td>
+							<td class="form_td_title">行程天数：</td>
+							<td class="form_td_ipt_200">
+							<select class="ht_def_select" >
+									<option>3</option>
+									<option>5</option>
+								</select>
+
+							</td>
+							<td class="form_td_title">组团类型：</td>
+							<td class="form_td_ipt_200">
+							<select class="ht_def_select" >
+									<option>集体</option>
+									<option>导游</option>
+								</select>
+
+							</td>
+						</tr>
+				</table>
+				<div class="clearfix h20"></div>
+					
+					<!-- 员工账号 -->
+				<table class="inmainTable" cellspacing="0" cellpadding="0">
+					<tr class="inmainTable_title">
+						<td>报名信息</td>
+					</tr>
+					
+				</table>
+				<table>
+					<tr>
+							<td class="form_td_title">团编号：</td>
+							<td class="form_td_ipt_150"><input type="text" class="ht_def_txt" placeholder="请输入关键词" /></td>
+							<td class="form_td_title">总报名人数：</td>
+							<td class="form_td_ipt_200"><input type="text" class="ht_def_txt" placeholder="" /></td>
+							<td class="form_td_title">最大：</td>
+							<td class="form_td_ipt_200"><input type="text" class="ht_def_txt" placeholder="" /></td>
+							<td class="form_td_title">最小：</td>
+							<td class="form_td_ipt_200"><input type="text" class="ht_def_txt" placeholder="" /></td>
+						</tr>
+				</table>
+				<div class="clearfix h20"></div>
+					
+					<!-- 报名信息 -->
+					<table class="inmainTable" cellspacing="0" cellpadding="0">
+						<tr class="inmainTable_title">
+							<td>结算项目</td>
+							<td>销售底价</td>
+							<td>销售单价</td>
+							<td>人数</td>
+							<td>总价</td>
+							<td>其它</td>
+						</tr>
+						<tr class="inmainTable_res">
+							<td>成人</td>
+							<td><span style="color:red;">12312</span></td>
+							<td><span style="color:red;">12312</span></td>
+							<td>1</td>
+							<td><span style="color:red;">12312</span></td>
+							<td><button>添加</button></td>
+						</tr>
+						<tr class="inmainTable_res">
+							<td>儿童</td>
+							<td><span style="color:red;">321321</span></td>
+							<td><span style="color:red;">321321</span></td>
+							<td>1</td>
+							<td><span style="color:red;">321321</span></td>
+							<td><button>删除</button></td>
+						</tr>
+						<tr class="inmainTable_title">
+							<td>总计</td>
+							<td><span style="color:red;">12312</span></td>
+							<td><span style="color:red;">321321</span></td>
+							<td>23</td>
+							<td><span style="color:red;">333333</span></td>
+							<td></td>
+						</tr>
+	
+					</table>
+				<table class="inmainTable" cellspacing="0" cellpadding="0">
+					<tr class="inmainTable_title">
+						<td>行程内容</td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+							<td class="form_td_title"><span style="color:red;">第一天</span> : 区间</td>
+							<td class="form_td_ipt_150"><input type="text" class="ht_def_txt" placeholder="请输入关键词" /></td>
+							<td class="form_td_title">住宿：</td>
+							<td class="form_td_ipt_200"><input type="text" class="ht_def_txt" placeholder="" /></td>
+							<td class="form_td_title">用餐：</td>
+							<td class="form_td_ipt_200"><input type="text" class="ht_def_txt" placeholder="" /></td>
+							<td class="form_td_title"></td>
+							<td class="form_td_ipt_200"><button>删除行程</button></td>
+						</tr>
+						
+						<!-- 文本域 -->
+						<tr>
+							<td colspan="3"></td>
+							<td class="form_td_title"><textarea id="u171_input" cols="80" rows="5">请填写行程</textarea>
+							</td>	
+							<td colspan="4"></td>	
+						</tr>
+							<tr>
+							<td class="form_td_title"><span style="color:red;">第一天</span> : 区间</td>
+							<td class="form_td_ipt_150"><input type="text" class="ht_def_txt" placeholder="请输入关键词" /></td>
+							<td class="form_td_title">住宿：</td>
+							<td class="form_td_ipt_200"><input type="text" class="ht_def_txt" placeholder="" /></td>
+							<td class="form_td_title">用餐：</td>
+							<td class="form_td_ipt_200"><input type="text" class="ht_def_txt" placeholder="" /></td>
+							<td class="form_td_title"></td>
+							<td class="form_td_ipt_200"><button>删除行程</button></td>
+					</tr>
+					<!-- 文本域 -->
+					<tr>
+						<td colspan="3"></td>
+						<td class="form_td_title"><textarea id="u171_input" cols="80" rows="5">请填写行程</textarea>
+						</td>	
+						<td colspan="4"></td>	
+					</tr>
+					<!-- 新增行程 -->
+					<tr>
+						<td colspan="3"></td>
+						<td class="form_td_title">
+							<a class="ht_btn_blue pull-left" href="javascript:showDiv('Div1','0');" style="height: 20px; line-height: 20px;">新增行程</a>  
+						</td>	
+						
+						<td colspan="4"></td>	
+					</tr>
+				
+				</table>
+				
+				<!-- 服务标准 -->
+				<div class="clearfix h20"></div>
+				<table>
+					
+						<!-- 文本域 -->
+						<tr>
+							<td>服务标准 : </td>
+							<td colspan="3"></td>
+							<td class="form_td_title"><textarea id="u171_input" cols="80" rows="5">请填写交通、住宿、用餐、门票、导服、小孩标准、费用不含、购物、保险等</textarea>
+							</td>	
+							<td colspan="4"></td>	
+						</tr>
+						<tr>
+							<td>行程备注 : </td>
+							<td colspan="3"></td>
+							<td class="form_td_title"><textarea id="u171_input" cols="80" rows="5">请填写温馨提示、自费项目、自由活动等</textarea>
+							</td>	
+							<td colspan="4"></td>	
+						</tr>	
+						<tr>
+							<td>特色产品 : </td>
+							<td colspan="3"></td>
+							<td class="form_td_title"><textarea id="u171_input" cols="80" rows="5">提示：赠送、自由选择</textarea>
+							</td>	
+							<td colspan="4"></td>	
+						</tr>
+						<tr>
+							<td>报价分析 : </td>
+							<td colspan="3"></td>
+							<td class="form_td_title"><textarea id="u171_input" cols="80" rows="5">设计思路、主要卖点、市场定位、销售渠道、利润产生点、执行周期等等</textarea>
+							</td>	
+							<td colspan="4"></td>	
+						</tr>
+		
+				</table>
+			<div class="clearfix h20"></div>
+			<div class="clearfix h20"></div>
+			<div class="clearfix h20"></div>
+			<div class="clearfix h20"></div>
+			<div class="f_gray_q">版权所有 © 旅盟网络科技有限公司</div>	
+				<!-- 页面底部 -->
+	<div class="clearfix h20"></div>
+	<div class="clearfix h20"></div>
+	<div class="clearfix h20"></div>
+	<div class="clearfix h20"></div>
+	<div id="ht_bottom_price_zone" class="ht_bottom_price_zone">
+		<div class="clearfix h5"></div>
+		<a href="customer_list.html" class="price_zone_cancel" style="margin-left: 5px;"><span class="f_darkgray">保存行程</span></a>
+		
+		<a href="customer_list.html" class="price_zone_ok" style="margin-left: 5px;"><span class="f_darkgray">新增行程</span></a>
+		
+		<a href="javascript:void(0)" onClick="toMyform();" class="price_zone_cancel" style="margin-left: 5px;"><span class="f_darkgray">清空重填</span></a>
+	</div>
+
+	
+	<script src="../../../../managerSkin/bluecssboot1.0/js/page_public.js"></script>
+	<script src="../../../../commonSkin/js/popModal.js"/></script>
+      <script type="text/javascript"> 
+ 		$(function() {
+	 		/*控制按钮悬浮*/
+			$("#ht_bottom_price_zone").show();
+		});
+	</script>
+				
+			</td>
+		</tr>
+	</table>
+			
+	</div>	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

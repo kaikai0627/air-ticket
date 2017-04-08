@@ -1,0 +1,450 @@
+/* CSS Document */
+/*订单*/
+.f_gray{
+	color:#CBCFD7;
+}
+
+.lf{
+	float: left;
+}
+/*********************** top *******************/
+.ht_top,.ht_top .logo,.ht_top .dh,.ht_top .dh_r .mop .menuOpen a,.ht_top .dh ul li,.ht_top .dh_r,.ht_top .dh_r ul li{
+	height: 66px;
+}
+/*logo图*/
+.ht_top .logo_img{
+	display: inline-block;
+	width: 130px;
+	height: 25px;
+	background: url(../../../managerSkin/bluecssboot1.0/img/tempLog1o.png)no-repeat;
+}
+.ht_top .logo{
+	line-height: 80px;
+}
+.ht_top .menu{
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	background: url("../img/menu_01.png")no-repeat;
+}
+.ht_top .addmenu{
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	background: url("../img/menu_02.png")no-repeat;
+}
+
+/*左侧菜单栏图片*/
+.ht_top .dh span{
+	display: inline-block;
+}
+.ht_top .dh .ticket_img{
+	width: 25px;
+	height: 20px;
+	background: url(../../../managerSkin/bluecssboot1.0/img/ticket.png)no-repeat;
+}
+.ht_top .dh .tour_img{
+	width: 31px;
+	height: 25px;
+	background: url(../../../managerSkin/bluecssboot1.0/img/tour.png)no-repeat;
+}
+.ht_top .dh .client_img{
+	width: 26px;
+	height: 18px;
+	background: url(../../../managerSkin/bluecssboot1.0/img/client_01.png)no-repeat;
+}
+.ht_top .dh .system_img{
+	width: 25px;
+	height: 25px;
+	background: url(../../../managerSkin/bluecssboot1.0/img/system.png)no-repeat;
+}
+
+
+
+.ht_top .dh{
+	margin-left: 60px;
+}
+.ht_top .dh span{
+	margin-left: 17px;
+}
+.ht_top .dh .on{
+	background: #005A96;
+	color:#fff
+}
+.ht_top .dh>ul li{
+	width: 100px;
+}
+.ht_top .dh>ul{
+	position: relative;
+}
+.ht_top .dh>ul i{
+	display: inline-block;
+	position: absolute;
+	top:-5px;
+}
+
+
+.ht_top div.dh ul li{
+	line-height: 75px;
+}
+.ht_top .lf_animate span{
+	margin-top: 20px;
+}
+.ht_top .lf_animate a{
+	display:inline-block;
+	width:60px;
+	height:66px;
+	margin-left: 10px;
+	line-height: 66px;
+}
+.ht_top .lf_animate a:hover{
+	background: #005A96;
+}
+.ht_top{
+	line-height:66px;
+	
+}
+.ht_top{
+	background: #0071BC;
+}
+.ht_top .dh ul:after,
+.ht_top .dh_r ul:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+/*右侧*/
+.ht_top .dh_r ul li{
+	text-align: center;
+}
+.ht_top .dh_r>ul>li{
+	width: 66px;
+	line-height: 66px;
+	text-align: center;
+	padding:0;
+} 
+.ht_top .dh_r .mail .msgNum{
+	position: absolute;
+	top: 15px;
+	left: 10px;
+	z-index: 999999999;
+}
+/*消息*/
+.ht_top .dh_r ul a.mail:link { margin: 0px 5px 0px 0px; position:relative; text-decoration: none;  height: 66px; display: block; width: 100px;  background-position:-244px -47px;}
+.ht_top .dh_r ul a.mail:visited { margin: 0px 5px 0px 0px; position:relative; text-decoration: none;  height: 66px; display: block; width: 100px;background-position:-244px -47px;}
+.ht_top .dh_r ul a.mail:hover { margin: 0px 5px 0px 0px; position:relative; text-decoration: none; height: 66px; display: block; width: 100px;background-position:-244px -47px;}
+/*用户*/
+.ht_top .dh_r .mail span,
+.ht_top .dh_r .mop,
+.ht_top .dh_r .service,
+.ht_top .dh_r .news{
+	position: relative;
+}
+.ht_top .dh_r .mail span{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top:17px;
+	left:20px;
+}
+	
+.ht_top .dh_r .mop_user span,
+.ht_top .dh_r .service span,
+.ht_top .dh_r .news span{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	top:17px;
+	left:22px;
+}
+/*消息*/
+.ht_top .dh_r .mail span{
+	background: url(../img/xiaox.png) no-repeat;
+	margin-top: 5px;
+}
+/*个人中心*/
+.ht_top .dh_r .mop_user span{
+	background:url(../img/client.png) no-repeat;
+}
+/*客服*/
+.ht_top .dh_r .service span{
+	background:url(../img/service.png) no-repeat;
+}
+/*关闭*/
+.ht_top .dh_r .news span{
+	background:url(../img/close.png) no-repeat;
+}
+
+.ht_top .dh_r .menuOpen{
+	width: 150px;
+	background: #fff;
+	top:66px;
+	left: -43px;
+	border-radius: 4px;
+	padding: 0;
+}
+.ht_top .dh_r .menuOpen li{
+	height: 50px;
+}
+.ht_top .dh_r .mop .menuOpen a{
+	color:#7C868E;
+	display: inline-block;
+	width: 150px;
+	line-height: 50px;
+}
+.ht_top .dh_r .mop .menuOpen a:hover{
+	
+	background: #DEE3ED;
+	height: 50px;
+	color:#4F9FDF;
+	
+}
+.ht_top .dh_r li.active{
+	background: #005A96;
+	
+}
+
+/********************** left *******************/
+#crippled a{
+	background-image: url(../img/1111111.png)/*打乱以前的属性*/
+}
+.ht_left:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.ht_left{
+	width:200px;
+	background: #fff;
+	color:#6E7781;
+	margin: 75px 0 0 10px;
+}
+.ht_left ul li span{
+	width: 30px;
+	height: 32px;
+}
+.mop{
+	position: relative;
+	height: 70px;
+	line-height: 70px;
+}
+.ht_left ul .mop a:hover b{
+	color:#fff
+}
+.mop b{
+	color:#0071BC;
+	font-size: 14px;
+	padding-right: 5px;
+	display: inline-block;
+	height: 80px;
+	width: 100px;
+	line-height: 50px;
+	text-align: center;
+	vertical-align:middle;
+}
+
+
+.ht_left ul .mop a.order,
+.ht_left ul .mop a.calculate,
+.ht_left ul .mop a.report,
+.ht_left ul .mop a.circuit,
+.ht_left ul .mop a.operator,
+.ht_left ul .mop a.configuration{
+	height: 50px;
+	width: 100%;
+	padding: 10px 0;
+}
+.ht_left ul .mop a.calculate:hover,
+.ht_left ul .mop a.order:hover,
+.ht_left ul .mop a.report:hover,
+.ht_left ul .mop a.circuit:hover,
+.ht_left ul .mop a.operator:hover,
+.ht_left ul .mop a.configuration:hover{
+	background: #0071BC;
+}
+
+.ht_left ul .mop span{
+	display: inline-block;
+	margin: 13px 0 0 30px;
+	
+}
+
+
+
+.ht_left ul a.circuit:link { margin: 0px 10px 0px 0px;  text-decoration: none;  height: 50px; display: block; }
+.ht_left ul a.circuit:visited { margin: 0px 10px 0px 0px;  text-decoration: none;  height: 50px; display: block; }
+.ht_left ul a.circuit:hover { margin: 0px 10px 0px 0px;  text-decoration: none; height: 50px; display: block; } 
+
+
+.ht_left ul a.operator:link { margin: 0px 10px 0px 0px;  text-decoration: none;  height: 50px; display: block; }
+.ht_left ul a.operator:visited { margin: 0px 10px 0px 0px;  text-decoration: none;  height: 50px; display: block; }
+.ht_left ul a.operatort:hover { margin: 0px 10px 0px 0px;  text-decoration: none; height: 50px; display: block; } 
+
+.ht_left ul a.configuration:link { margin: 0px 10px 0px 0px;  text-decoration: none;  height: 50px; display: block; }
+.ht_left ul a.configuration:visited { margin: 0px 10px 0px 0px;  text-decoration: none;  height: 50px; display: block;} 
+.ht_left ul a.configuration:hover { margin: 0px 10px 0px 0px;  text-decoration: none; height: 50px; display: block; } 
+
+/*订单*/
+.ht_left ul .mop a.order span.order_img{	
+	background: url(../img/lf_20.png) no-repeat;
+	margin-top: 10px;
+}
+.ht_left ul .mop a.order:hover span.order_img{	
+	background: url(../img/lf_21.png) no-repeat;	
+}
+/*结算*/
+.ht_left ul .mop a.calculate span.calculate_img{
+	background: url(../img/lf_40.png) no-repeat;
+}
+.ht_left ul .mop a.calculate:hover span.calculate_img{
+	background: url(../img/lf_41.png) no-repeat;
+}
+/*报表*/
+.ht_left ul .mop a.report span.report_img{
+	background: url(../img/lf_201.png) no-repeat;
+}
+.ht_left ul .mop a.report:hover span.report_img{
+	background: url(../img/lf_200.png) no-repeat
+}
+/*线路*/
+.ht_left ul .mop a.circuit span.circuit_img{
+	background: url(../img/lf_00.png) no-repeat
+}
+.ht_left ul .mop a.circuit:hover span.circuit_img{
+	background: url(../img/lf_01.png) no-repeat
+}
+/*计调*/
+.ht_left ul .mop a.operator span.operator_img{
+	background: url(../img/lf_jid.png) no-repeat;
+}
+.ht_left ul .mop a.operator:hover span.operator_img{
+	background: url(../img/lf_jidb.png) no-repeat
+}
+/*配置*/
+.ht_left ul .mop a.configuration span.configuration_img{
+	background: url(../img/lf_50.png)0 -1px no-repeat;
+		height: 33px;
+}
+.ht_left ul .mop a.configuration:hover span.configuration_img{
+	background: url(../img/lf_51.png) no-repeat
+}
+
+/*鼠标显示样式*/
+.ht_left ul .mop .menuOpen.lf100{
+	left:100px;
+}
+.ht_left ul .mop .suspend.lf100{
+	left:105px;
+}
+.ht_left ul .mop .suspend>.suspend{
+	box-shadow:0  0 0 #ddd,0 0  1px #ddd,0 0  1px #000,0 0  1px #ddd;
+}
+.ht_left ul .mop .menuOpen strong{
+	text-align: center;
+	width: 100px;
+	display: inline-block;
+}
+.ht_left ul .mop .menuOpen ul li a{
+	color: #415161;
+	display: inline-block;
+	width: 100px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+}
+.ht_left ul .mop .menuOpen ul li{
+	height: 50px;
+}
+.ht_left ul .mop .menuOpen{
+	left:200px;
+	background: #fff;
+	border-left: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 0;
+	text-align: center;
+
+}
+
+.ht_left ul .mop .menuOpen a:hover{
+	background: #DEE3ED;
+	color:#0071BC;
+	height: 50px;
+}
+.ht_left ul .mop .menuOpen .one{
+	text-align: center;
+}
+.ht_left ul .mop .menuOpen .one:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+
+/*侧边栏动画效果*/
+.ht_top .lf{
+	float:left;
+	width: 66px;
+	height: 66px;
+	text-align: center;
+	line-height: 66px;
+}
+.ht_top .lf img{
+	line-height: 66px;
+}
+b{
+	font-weight: 100;
+}
+
+/***********************************后加属性  鼠标移入菜单栏**************************************/
+.ht_left ul .mop_report{
+	position: relative;
+}
+.suspend{
+	background: #fff;
+	position:absolute;
+
+	left: 99px;
+	
+	display: none;
+	top:0px;
+	font-size: 14px;
+	border-left: 1px solid #DDDDDD;
+	border-radius: 4px;
+	
+	z-index: 99999;
+}
+.suspend>.suspend{
+	min-width: 200px;
+	height: 200px;
+}
+.suspend ul{
+	padding:5px 20px;
+}
+.suspend li{
+	line-height: 50px;
+}
+.suspend a{
+	color: #415161;
+	display: inline-block;
+	width: 100px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	border-radius: 4px;
+}
+.suspend strong{
+	display: inline-block;
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	width: 100px;
+}
+.suspend li{
+	width: 100px;
+	height: 50px;
+}
+.suspend a:hover{
+	color: #0071BC;
+	background: #DEE3ED;
+}
+

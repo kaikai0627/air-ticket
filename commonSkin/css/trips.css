@@ -1,0 +1,114 @@
+.pf_A6,.pf_a6,.pf_TV, .pf_tv,.pf_UQ,.pf_uq,.pf_DR,.pf_dr,.pf_FU,.pf_fu,.pf_qw,.pf_QW,.pf_DZ,.pf_dz,.pf_YI,.pf_yi,.pf_gj,.pf_GJ,.pf_3u,.pf_3U,.pf_8c,.pf_8C,.pf_8l,.pf_8L,.pf_bk,.pf_BK,.pf_ca,.pf_CA,.pf_cn,.pf_CN,.pf_cz,.pf_CZ,.pf_eu,.pf_EU,.pf_fm,.pf_FM,.pf_g5,.pf_G5,.pf_gs,.pf_GS,.pf_ho,.pf_HO,.pf_hu,.pf_HU,.pf_kn,.pf_KN,.pf_mf,.pf_MF,.pf_mu,.pf_MU,.pf_ns,.pf_NS,.pf_pn,.pf_PN,.pf_sc,.pf_SC,.pf_zh,.pf_ZH,.pf_vd,.pf_VD,.pf_jr,.pf_JR,.pf_9w,.pf_9W,.pf_aa,.pf_AA,.pf_ab,.pf_AB,.pf_ac,.pf_AC,.pf_af,.pf_AF,.pf_ai,.pf_AI,.pf_ay,.pf_AY,.pf_az,.pf_AZ,.pf_ba,.pf_BA,.pf_bd,.pf_BD,.pf_bi,.pf_BI,.pf_br,.pf_BR,.pf_ci,.pf_CI,.pf_co,.pf_CO,.pf_cx,.pf_CX,.pf_dl,.pf_DL,.pf_ek,.pf_EK,.pf_et,.pf_ET,.pf_ft,.pf_FT,.pf_ga,.pf_GA,.pf_jk,.pf_JK,.pf_jl,.pf_JL,.pf_jp,.pf_JP,.pf_ka,.pf_KA,.pf_ke,.pf_KE,.pf_kl,.pf_KL,.pf_kq,.pf_KQ,.pf_la,.pf_LA,.pf_lh,.pf_LH,.pf_lo,.pf_LO,.pf_lx,.pf_LX,.pf_ly,.pf_LY,.pf_ma,.pf_MA,.pf_mh,.pf_MH,.pf_nh,.pf_NH,.pf_nw,.pf_NW,.pf_nx,.pf_NX,.pf_nz,.pf_NZ,.pf_ok,.pf_OK,.pf_os,.pf_OS,.pf_oz,.pf_OZ,.pf_pg,.pf_PG,.pf_pr,.pf_PR,.pf_qf,.pf_QF,.pf_qr,.pf_QR,.pf_sk,.pf_SK,.pf_sn,.pf_SN,.pf_sq,.pf_SQ,.pf_su,.pf_SU,.pf_tg,.pf_TG,.pf_tk,.pf_TK,.pf_ua,.pf_UA,.pf_ul,.pf_UL,.pf_un,.pf_UN,.pf_vn,.pf_VN,.pf_vs,.pf_VS,.pf_vv,.pf_VV,.pf_hx,.pf_HX,.pf_uo,.pf_UO,.pf_jd,.pf_JD,.pf_ey,.pf_EY,.pf_us,.pf_US,.pf_ky,.pf_KY, .pf_ae, .pf_AE, .pf_ge, .pf_GE,.pf_b7,.pf_B7,.pf_qr,.pf_QR{
+
+	width: 16px;
+	height: 15px;
+	background:url(../img/flightslogo.gif) no-repeat;
+	background-color:transparent;
+	text-align:left;
+	line-height:15px;
+
+	
+}
+
+.pf_3u, .pf_3U { background-position:0 0; }
+.pf_8c, .pf_8C { background-position:0 -48px; }
+.pf_8l, .pf_8L { background-position:0 -96px; }
+.pf_bk, .pf_BK { background-position:0 -144px; }
+.pf_ca, .pf_CA { background-position:0 -192px; }
+.pf_cn, .pf_CN { background-position:0 -240px; }
+.pf_cz, .pf_CZ { background-position:0 -288px; }
+.pf_eu, .pf_EU { background-position:0 -336px; }
+.pf_fm, .pf_FM { background-position:0 -384px; }
+.pf_g5, .pf_G5 { background-position:0 -432px; }
+.pf_gs, .pf_GS { background-position:0 -480px; }
+.pf_ho, .pf_HO { background-position:0 -528px; }
+.pf_hu, .pf_HU { background-position:0 -576px; }
+.pf_kn, .pf_KN { background-position:0 -624px; }
+.pf_mf, .pf_MF { background-position:0 -672px; }
+.pf_mu, .pf_MU { background-position:0 -720px; }
+.pf_ns, .pf_NS { background-position:0 -768px; }
+.pf_pn, .pf_PN { background-position:0 -816px; }
+.pf_sc, .pf_SC { background-position:0 -864px; }
+.pf_zh, .pf_ZH { background-position:0 -912px; }
+.pf_vd, .pf_VD { background-position:0 -960px; }
+.pf_jr, .pf_JR { background-position:0 -3008px; }
+.pf_ky, .pf_KY { background-position:0 -3040px; }
+/*international ICON begin*/
+.pf_9w, .pf_9W { background-position:0 -992px; }
+.pf_aa, .pf_AA { background-position:0 -1024px; }
+.pf_ab, .pf_AB { background-position:0 -1056px; }
+.pf_ac, .pf_AC { background-position:0 -1088px; }
+.pf_af, .pf_AF { background-position:0 -1120px; }
+.pf_ai, .pf_AI { background-position:0 -1152px; }
+.pf_ay, .pf_AY { background-position:0 -1184px; }
+.pf_az, .pf_AZ { background-position:0 -1216px; }
+.pf_ba, .pf_BA { background-position:0 -1248px; }
+.pf_bd, .pf_BD { background-position:0 -1280px; }
+.pf_bi, .pf_BI { background-position:0 -1312px; }
+.pf_br, .pf_BR { background-position:0 -1344px; }
+.pf_ci, .pf_CI { background-position:0 -1376px; }
+.pf_co, .pf_CO { background-position:0 -1408px; }
+.pf_cx, .pf_CX { background-position:0 -1440px; }
+.pf_dl, .pf_DL { background-position:0 -1472px; }
+.pf_ek, .pf_EK { background-position:0 -1504px; }
+.pf_et, .pf_ET { background-position:0 -1536px; }
+.pf_ft, .pf_FT { background-position:0 -1568px; }
+.pf_ga, .pf_GA { background-position:0 -1600px; }
+.pf_jk, .pf_JK { background-position:0 -1632px; }
+.pf_jl, .pf_JL { background-position:0 -1664px; }
+.pf_jp, .pf_JP { background-position:0 -1696px; }
+.pf_ka, .pf_KA { background-position:0 -1728px; }
+.pf_ke, .pf_KE { background-position:0 -1760px; }
+.pf_kl, .pf_KL { background-position:0 -1792px; }
+.pf_kq, .pf_KQ { background-position:0 -1824px; }
+.pf_la, .pf_LA { background-position:0 -1856px; }
+.pf_lh, .pf_LH { background-position:0 -1888px; }
+.pf_lo, .pf_LO { background-position:0 -1920px; }
+.pf_lx, .pf_LX { background-position:0 -1952px; }
+.pf_ly, .pf_LY { background-position:0 -1984px; }
+.pf_ma, .pf_MA { background-position:0 -2016px; }
+.pf_mh, .pf_MH { background-position:0 -2048px; }
+.pf_nh, .pf_NH { background-position:0 -2080px; }
+.pf_nw, .pf_NW { background-position:0 -2112px; }
+.pf_nx, .pf_NX { background-position:0 -2144px; }
+.pf_nz, .pf_NZ { background-position:0 -2176px; }
+.pf_ok, .pf_OK { background-position:0 -2208px; }
+.pf_os, .pf_OS { background-position:0 -2240px; }
+.pf_oz, .pf_OZ { background-position:0 -2272px; }
+.pf_pg, .pf_PG { background-position:0 -2304px; }
+.pf_pr, .pf_PR { background-position:0 -2336px; }
+.pf_qf, .pf_QF { background-position:0 -2368px; }
+.pf_qr, .pf_QR { background-position:0 -2400px; }
+.pf_sk, .pf_SK { background-position:0 -2432px; }
+.pf_sn, .pf_SN { background-position:0 -2464px; }
+.pf_sq, .pf_SQ { background-position:0 -2496px; }
+.pf_su, .pf_SU { background-position:0 -2528px; }
+.pf_tg, .pf_TG { background-position:0 -2560px; }
+.pf_tk, .pf_TK { background-position:0 -2592px; }
+.pf_ua, .pf_UA { background-position:0 -2624px; }
+.pf_ul, .pf_UL { background-position:0 -2656px; }
+.pf_un, .pf_UN { background-position:0 -2688px; }
+.pf_vn, .pf_VN { background-position:0 -2720px; }
+.pf_vs, .pf_VS { background-position:0 -2752px; }
+.pf_vv, .pf_VV { background-position:0 -2784px; }
+.pf_hx, .pf_HX { background-position:0 -2832px; }
+.pf_uo, .pf_UO { background-position:0 -2880px; }
+.pf_jd, .pf_JD { background-position:0 -2913px; }
+.pf_ey, .pf_EY { background-position:0 -2944px; }
+.pf_us, .pf_US { background-position:0 -2976px; }
+.pf_ae, .pf_AE { background-position:0 -3072px; }
+.pf_ge, .pf_GE { background-position:0 -3104px; }
+.pf_b7, .pf_B7 { background-position:0 -3136px; }
+.pf_qr, .pf_QR { background-position:0 -3168px; }
+/*international ICON end*/
+
+/*china ICON add*/
+.pf_gj, .pf_GJ { background-position:0 -3236px; }
+.pf_YI, .pf_yi { background-position:0 -3270px; }
+.pf_DZ, .pf_dz { background-position:0 -3305px; }
+.pf_qw, .pf_QW { background-position:0 -3339px; }
+.pf_FU, .pf_fu { background-position:0 -3373px; }
+.pf_DR, .pf_dr { background-position:0 -3405px; }
+.pf_UQ, .pf_uq { background-position:0 -3440px; }
+.pf_TV, .pf_tv { background-position:0 -3476px; }
+.pf_A6, .pf_a6 { background-position:0 -3508px; }

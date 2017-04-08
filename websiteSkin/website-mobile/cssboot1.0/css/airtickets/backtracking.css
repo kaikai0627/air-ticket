@@ -1,0 +1,85 @@
+/*往返总价*/
+.price div{
+    height: 3rem;
+    /*line-height: 3rem;*/
+}
+.price div .txt{
+    font-size: .6rem;
+    /*float: right;*/
+}
+.price b{
+    position: absolute;
+    top:-5%;
+    left:-64%;
+    color:#6B676B;
+}
+.price>div span{
+    color: #D5D5D5;
+}
+.price>div span span{
+    color: #FF984F;
+}
+
+/*往返时间*/
+.tracking_date{
+    width: 100%;
+    font-size: .5rem;
+}
+.tracking_date .go{
+    background: #FAF5ED;
+    color:#6E8891;
+    padding-left: .5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+}
+.tracking_date span{
+    display: inline-block;
+    width: 1.1rem;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    border-radius: 3px;
+    background: #29B6F6;
+    color: #fff;
+    text-align: center;
+}
+.tracking_date .return_date{
+    background: #EBE8EB;
+    color: #A3A3A3;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    padding-left: .5rem;
+}
+
+
+/*********************************确定航班***********************************************/
+.tank .date span{
+    display: inline-block;
+    width: 1.1rem;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    border-radius: 3px;
+    background: #29B6F6;
+    color: #fff;
+    text-align: center;
+}
+
+/************************填写资料 返航***********************************/
+.main .top .top_box{
+    height: 3.5rem;
+    line-height: 1.7rem;
+}
+
+.main .top .top_box div{
+    height: 1.5rem;
+}
+.main .top .top_box b{
+    display: inline-block;
+    width: 1.1rem;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    border-radius: 3px;
+    background: #29B6F6;
+    color: #fff;
+    text-align: center;
+    margin-left: .5rem;
+}

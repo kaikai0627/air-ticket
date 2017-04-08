@@ -1,0 +1,604 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<title>添加订单</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link href="../../../../../commonSkin/css/html_tools.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../../../../commonSkin/css/hDate.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../../../../managerSkin/bluecssboot1.0/css/pageStyle.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../../../../managerSkin/bluecssboot1.0/css/btnStyle.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../../../../managerSkin/bluecssboot1.0/css/popModal.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../../../../managerSkin/bluecssboot1.0/css/page_new.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="../../../../../managerSkin/bluecssboot1.0/js/divjquery/popup.css" rel="stylesheet" type="text/css" media="screen" />
+	<script src="../../../../../websiteSkin/website-mobile/cssboot1.0/js/weui/lib/jquery-2.1.4.js"></script>
+	<!-- DIV 弹出层-->
+	<script language="javascript" src="../../../../../managerSkin/bluecssboot1.0/js/divjquery/popup.js"></script>
+		<script  language="javascript" src="../../../../../commonSkin/js/window_open.js"> </script>
+		<!-- 文本框模糊搜索的弹出层-->
+		<link href="../../../../../managerSkin/bluecssboot1.0/js/textsearchdiv/jquery-ui.css" rel="stylesheet" type="text/css" media="screen"/>
+		<script language="javascript" src="../../../../../managerSkin/bluecssboot1.0/js/textsearchdiv/jquery-ui.js"></script>
+		
+	</head>
+   
+   <script language="javascript" >
+		 $(function() {
+    var availableTags = [
+  "121-青岛三日游",
+  "120-上海四日游",
+  "123-三亚双飞三日游"
+  ];
+    var clients = [
+  "192-小胖子有限公司*",
+  "193-通通上海分公司+",
+  "195-傻逼公司+",
+   "198-上海览途信息技术有限公司"
+  ];
+
+  $( "#teamName" ).autocomplete({
+   source: availableTags
+  });
+			 
+    $( "#clientName" ).autocomplete({
+   source: clients
+  });
+		
+
+//  $("#tags2").autocomplete({
+//   source: ["a", "b", "c"]
+//  });
+
+//  //页面加载
+//  $("#tags3").autocomplete({
+//   source: DataSouce1()
+//  });
+  
+//  //数据库
+//  $("#tags4").autocomplete({
+//   source: function( request, response ) {
+//    var name=$.ui.autocomplete.escapeRegex( request.term );
+//    response( $.grep( DataSouce2(name), function( item ){
+//     return  item;
+//    }) );
+//   }
+//  });
+
+  //利用ajax页面加载就获取到数据源
+  function DataSouce1()
+  {
+   var mycars=new Array()
+   for (var i = 0; i <100; i++) {
+    mycars[i]="高"+i;
+   };
+   return mycars;
+  }
+
+  //利用ajax根据输入的到数据库查找 相当于
+  function DataSouce2(name)
+  {
+   var mycars=new Array()
+   for (var i = 0; i <100; i++) {
+    mycars[i]=name+"_"+i;
+   };
+   return mycars;
+  }
+
+ });
+	</script>
+   
+   
+    <script language="javascript" >
+	
+	<!--费用明细 添加 删除-->
+	 function addmoneytexts()
+	 {
+		 var addsize=$("#addsize").val();
+		 addsize=parseInt(addsize)+1;
+		 $("#addsize").val(addsize);
+		 var moeny=" <tr class=\"inmainTable_res\" id=\"addmoney"+addsize+"\">";
+		moeny+="<td><input class=\"input_mub\" type=\"text\" value=\"\" /></td>";
+                      moeny+="<td><select id=\"moneyType\" name=\"moneyType\"><option value=\"0\">每人</option><option value=\"0\">每单</option></select></td>";
+                      moeny+="<td><textarea class=\"input_mub\" style=\"width:200px; right:300px;\"></textarea></td>";
+                      moeny+="   <td  >";
+                      moeny+="<span>￥<input class=\"input_mub\" type=\"text\" value=\"\" /></span>";
+                     moeny+=" <span class=\"f_18\">×</span> ";
+                     moeny+=" <span><input class=\"input_mub\" type=\"text\" value=\"10\"  style=\"width:40px;\"/>人</span> ";
+                     moeny+=" <span class=\"f_18\">=</span> ";
+                    moeny+="  ￥<span class=\"f_16 f_red\">190.00</span> ";
+                     moeny+=" </td> ";
+					  moeny+="   <td  >";
+                      moeny+="<span>￥<input class=\"input_mub\" type=\"text\" value=\"\" /></span>";
+                     moeny+=" <span class=\"f_18\">×</span> ";
+                     moeny+=" <span><input class=\"input_mub\" type=\"text\" value=\"10\"  style=\"width:40px;\"/>人</span> ";
+                     moeny+=" <span class=\"f_18\">=</span> ";
+                    moeny+="  ￥<span class=\"f_16 f_red\">190.00</span> ";
+                     moeny+=" </td> ";
+					 moeny+="<td><a href=\"javascript:void(0)\" onclick=\"deletemoney("+addsize+");\">删除</a></td>"
+                     moeny+=" </tr>";
+		 
+		 $("#addmoneytxt").append(moeny);
+	 }
+	
+	 function  deletemoney(addsize)
+	 {
+		 $("#addmoney"+addsize).remove();  
+	 }
+	 <!--费用明细 添加 删除-->
+	
+	</script>
+
+	<body>
+<div class="ht_right">
+      <div class="clearfix h30"></div>
+      <div class="clearfix h20"></div>
+      <div class="clearfix h5"></div>
+      <div class="position">您的位置：<a href="#">首页</a>&nbsp;>&nbsp;<a href="customer_add.html">提交销售单</a></div>
+      <div class="clearfix h20"></div>
+      <table class="mainTable" cellspacing="0" cellpadding="0" >
+    <tr>
+          <td id="p1nav" class="onTab" onclick="" >提交销售单</td>
+          <td id="p1nav" colspan="2" ></td>
+        </tr>
+    <tr>
+            <td colspan="3">
+          <table class="inmainTable" cellspacing="0" cellpadding="0">
+         
+        <tr class="inmainTable_title">
+              <td colspan="10">
+              <strong class="f_16">产品信息</strong>
+              </td>
+            </tr>
+            <tr>
+            <td colspan="10">
+            <div class="clearfix h5"></div>
+             <a class="ht_btn_blue_search pull-left MARGIN_R_10"  href="javascript:void(0);"  onClick="newopenwindowshow('../Team/addTeamGroup.html');">查看行程</a> 
+                     <a class="ht_btn_blue_search pull-left MARGIN_R_10" href="javascript:void(0)" onClick="newopenwindowshow('../Team/chooseTraffic.html');">查看交通</a> 
+            <div class="clearfix h20"></div>
+            </td>
+            
+            </tr>
+        <tr class="inmainTable_res">
+              <td style="width: 150px;"><span class="pull-right f_14">请选择团队： </span></td>
+              <td style="width: 150px;"><input type="text" id="teamName" class="ht_def_text pull-left" style="width: 200px;" name="teamName" value="" placeholder="请输入团队名称！" /></td>
+              <td >
+              <td style="width: 150px;"><span class="pull-right f_14"> 请选择报名客户：</span></td>
+              </td>
+            
+        
+              <td  style="width: 150px;"><input type="text" id="clientName" class="ht_def_text_width pull-left"  name="clientName" value="" placeholder="请输入客户名称！" /></td>
+              <td  style="width: 150px;"><span  class="pull-right f_14">所属销售：</span></td>
+              <td><input type="text" id="clientName" class="ht_def_text_width pull-left" name="clientName" value="程老板" placeholder="请选择销售员" /></td>
+            </tr>
+        <tr class="inmainTable_res">
+              <td colspan="7"><table class="inmainTable" >
+                  <tr class="inmainTable_res_noHover">
+                  <td colspan="0"><span  class="pull-right f_14">产品名称:</span></td>
+                  <td>【纵情版纳】直飞五日</td>
+                  <td><span  class="pull-right f_14">组团类型：</span></td>
+                  <td>散拼</td>
+                  <td><span  class="pull-right f_14">团队状态：</span></td>
+                  <td><strong class="f_red">销售中</strong></td>
+                  <td><span  class="pull-right f_14">责任计调：</span></td>
+                  <td>吴美玲</td>
+                </tr>
+                  <tr class="inmainTable_res_noHover">
+                  <td colspan="0"><span  class="pull-right f_14">团编号：</span></td>
+                  <td><a  href="#">SH160910024</a></td>
+                  <td><span  class="pull-right f_14">出团日期：</span></td>
+                  <td>2016-11-12</td>
+                  <td><span  class="pull-right f_14">返程日期：</span></td>
+                  <td>2016-12-11</td>
+                  <td><span  class="pull-right f_14">组团日期：</span></td>
+                  <td>2016-12-11</td>
+                </tr>
+                  <tr class="inmainTable_res_noHover">
+                  <td colspan="0"><span  class="pull-right f_14">计划人数：</span></td>
+                  <td>3人</td>
+                  <td><span  class="pull-right f_14">实际人数：</span></td>
+                  <td>0人</td>
+                  <td><span  class="pull-right f_14">全程导游：</span></td>
+                  <td>侯贱婢</td>
+                  <td><span  class="pull-right f_14">地接导游：</span></td>
+                  <td>张童童</td>
+                </tr>
+                  <tr class="inmainTable_res_noHover">
+                  <td colspan="0"><span  class="pull-right f_14">行程：</span></td>
+                  <td colspan="7"><span class="f_15 f_blue">昆明  共3人  去程：09-10  虹桥-版纳 FM9453 (08 ：35 ) - 回程：09-14  版纳-虹桥 FM9454 (15 ：00) </span></td>
+                </tr>
+                </table>
+                
+                </td>
+            </tr>
+      </table>
+            </td>
+        </tr>
+        <!--团队费用明细-->
+         <tr>
+          <td colspan="3">
+           
+        <table class="inmainTable" cellspacing="0" cellpadding="0">
+              <tr class="inmainTable_title">
+            <td  style="width: 100px;"  ><strong class="f_16">费用信息</strong></td>
+            <td align="left"><a  class="ht_btn_blue_add pull-left MARGIN_R_10" style="width:80px;" href="javasprict:void(0);" onClick="addmoneytexts();">添加费用</a>
+            <input type="hidden" id="addsize" name="addsize" value="0"/>
+            </td>
+            </tr>
+            <tr class="inmainTable_res">
+            <td colspan="2">
+            <table class="inmainTable" cellspacing="0" cellpadding="0">
+                <tr class="inmainTable_title">
+                      <td><span class="f_14">费用名称</span></td>
+                       <td><span class="f_14">费用所属</td>
+                     
+                      <td><span class="f_14">费用说明</td>
+                       <td><span class="f_14">销售价费用小计</td>
+                         <td><span class="f_14">销售底价费用小计</td>
+                      <td><span class="f_14">操作</td>
+                 </tr>
+                 <tr class="inmainTable_res">
+                      <td><input class="input_mub" type="text" value="成人" disabled/></td>
+                      <td>每人</td>
+                     
+                      <td><textarea class="input_mub" style="width:200px; right:300px;">成人费用</textarea></td>
+                       <td>
+                      <span>￥<input class="input_mub" type="text" value="190" /></span>
+                      <span class="f_18">×</span>
+                      <span><input class="input_mub" type="text" value="10"  style="width:40px;"/>人</span>
+        
+                      <span class="f_18">=</span>
+                      ￥<span class="f_16 f_red">190.00</span>
+                      </td>
+                     <td  >
+                      <span>￥<span class="f_14 f_red">190.00</span></span>
+                      <span class="f_18">×</span>
+                      <span><span class="f_14">10</span>人</span>
+                    
+                      <span class="f_18">=</span>
+                      ￥<span class="f_16 f_red" >190.00</span>
+                      </td>
+                      <td></td>
+                 </tr>
+                 <tr class="inmainTable_res">
+                      <td><input class="input_mub" type="text" value="成人" disabled/></td>
+                      <td>每人</td>
+                   
+                      <td><textarea class="input_mub" style="width:200px; right:300px;">儿童费用</textarea></td>
+                         <td  >
+                      <span>￥<input class="input_mub" type="text" value="190" /></span>
+                      <span class="f_18">×</span>
+                      <span><input class="input_mub" type="text" value="10"  style="width:40px;"/>人</span>
+                    
+                      <span class="f_18">=</span>
+                      ￥<span class="f_16 f_red">190.00</span>
+                      </td>
+                       <td  >
+                      <span>￥<span class="f_14 f_red">190.00</span></span>
+                      <span class="f_18">×</span>
+                      <span><span class="f_14">10</span>人</span>
+                    
+                      <span class="f_18">=</span>
+                      ￥<span class="f_16 f_red" >190.00</span>
+                      </td>
+                      <td></td>
+                 </tr>
+                 <tbody id="addmoneytxt"> </tbody>
+                  <tr class="inmainTable_res">
+                      <td></td>
+                      <td></td>
+                      
+                      <td></td>
+                      <td>
+                      销售总价合计：￥ <strong class="f_16 f_red">19889.00</span></strong>
+                      </td>
+                       <td>销售底价合计：￥ <strong class="f_16 f_red">19889.00</span></strong></td>
+                      <td></td>
+                 </tr>
+                </table>
+                </td>
+                </tr>
+            
+            </table>
+            
+            
+          </td>
+          </tr>
+        
+        
+         <!--团队费用明细end-->
+        
+        <!--报名信息-->
+         <tr>
+          <td colspan="3">
+        
+        <table class="inmainTable" cellspacing="0" cellpadding="0">
+              <tr class="inmainTable_title">
+            <td style="width: 100px;"><strong class="f_16">报名信息</strong></td>
+            <td align="left"><center>
+                <a id="divbtn"   class="ht_btn_blue_add pull-left MARGIN_R_10"   href="javascript:void(0);">我要报名</a>
+              </center></td>
+          </tr>
+              <tr class="inmainTable_res">
+            <td colspan="2"><!--报名信息字表开始-->
+                  
+                  <table class="inmainTable" cellspacing="0" cellpadding="0">
+                <tr class="inmainTable_title">
+                      <td>序号</td>
+                      <td>销售价</td>
+                      <td>姓名</td>
+                      <td>年龄阶段</td>
+                      <td> 证件类型 </td>
+                      <td>证件号</td>
+                      <td>性别</td>
+                      <td>年龄</td>
+                      <td>联系电话</td>
+                      <td>地区</td>
+                      <td>操作</td>
+                    </tr>
+                <tr class="inmainTable_res">
+                      <td>1</td>
+                      <td>￥<span class="f_red">34324</span></td>
+                      <td>张三</td>
+                      <td>成人</td>
+                      <td> 身份证 </td>
+                      <td>2122222222222</td>
+                      <td>男</td>
+                      <td>16</td>
+                      <td>13122123213</td>
+                      <td>湖南株洲</td>
+                      <td><a hhref="#">删除</a></td>
+                    </tr>
+                <tr class="inmainTable_res">
+                      <td>2</td>
+                      <td>￥<span class="f_red">34324</span></td>
+                      <td>张三</td>
+                      <td>成人</td>
+                      <td> 身份证 </td>
+                      <td>2122222222222</td>
+                      <td>男</td>
+                      <td>16</td>
+                      <td>13122123213</td>
+                      <td>湖南株洲</td>
+                      <td><a hhref="#">删除</a></td>
+                    </tr>
+                <tr class="inmainTable_res">
+                      <td>3</td>
+                      <td>￥<span class="f_red">34324</span></td>
+                      <td>张三</td>
+                      <td>成人</td>
+                      <td> 身份证 </td>
+                      <td>2122222222222</td>
+                      <td>男</td>
+                      <td>16</td>
+                      <td>13122123213</td>
+                      <td>湖南株洲</td>
+                      <td><a hhref="#">删除</a></td>
+                    </tr>
+                <tr class="inmainTable_res">
+                      <td>4</td>
+                      <td>￥<span class="f_red">34324</span></td>
+                      <td>张三</td>
+                      <td>成人</td>
+                      <td> 身份证 </td>
+                      <td>2122222222222</td>
+                      <td>男</td>
+                      <td>16</td>
+                      <td>13122123213</td>
+                      <td>湖南株洲</td>
+                      <td><a hhref="#">删除</a></td>
+                    </tr>
+              </table>
+                  
+                  <!--报名信息字表结束--></td>
+          </tr>
+            </table>
+            </td>
+        </tr>
+    <!--报名信息end-->
+    <tr>
+          <td colspan="3">
+        
+        <table class="inmainTable" cellspacing="0" cellpadding="0">
+              <tr class="inmainTable_title">
+            <td colspan="10"><strong class="f_16">毛利统计</strong></td>
+          </tr>
+              <tr class="inmainTable_title">
+            <td style="width: 300px;"><strong class="pull-left f_14">收入合计:</strong></td>
+            <td style="width: 300px;"><strong class="pull-left f_14">成本合计:</strong></td>
+            <td style="width: 300px;"><strong class="pull-left f_14">毛利:</strong></td>
+          </tr>
+              <tr class="inmainTable_res">
+            <td><sapn class="pull-left f_14">
+                  ￥<strong class="f_red ">3434.00</strong></span></td>
+            <td><sapn class="pull-left f_14">
+                  ￥<strong class="f_red ">3434.00</strong></span></td>
+            <td><sapn class="pull-left f_14">
+                  ￥<strong class="f_red ">0.00</strong></span></td>
+          </tr>
+            </table>
+    <tr>
+          <td colspan="3" align="left">&nbsp;&nbsp;结算备注：
+        <textarea  style="width: 500px;height: 50px;"></textarea>
+        <div class="clearfix h20"></div></td>
+        </tr>
+  </table>
+      <div class="clearfix h20"></div>
+      <div class="clearfix h20"></div>
+      <div class="clearfix h20"></div>
+      <div class="clearfix h20"></div>
+      <div class="clearfix h20"></div>
+      <div class="clearfix h20"></div>
+      <div id="ht_bottom_price_zone" class="ht_bottom_price_zone">
+    <div class="clearfix h5"></div>
+    <a href="javascript:void(0)" onClick="toMyform();" class="price_zone_ok" style="margin-left: 150px;">提交订单</a> <a href="customer_list.html" class="price_zone_cancel" style="margin-left: 5px;"><span class="f_darkgray">取消</span></a> </div>
+    </div>
+<div id="popup" style="">
+      <div class="title">
+    <p data-title="我要报名"></p>
+    <span>x</span> </div>
+      <div class="cont">
+    <table class="mainTable" cellspacing="0" cellpadding="0" >
+          <tr>
+        <td colspan="3">
+        <a  class="ht_btn_blue_add pull-left MARGIN_R_10" href="javascript:void(0);">导入旅客</a> &nbsp;&nbsp;
+        <a  class=" ht_btn_blue_edit pull-left MARGIN_R_10" href="javascript:void(0);">下载摸版</a>
+        </td>
+      </tr>
+          <tr>
+        <td colspan="3"><table class="inmainTable" cellspacing="0" cellpadding="0">
+            <tr class="inmainTable_title">
+              <td  style="width:50px;">序号</td>
+              <td style="width: 100px;">销售价￥</td>
+              <td>姓名</td>
+              <td>成人/儿童</td>
+              <td> 证件类型 </td>
+              <td>证件号</td>
+              <td>性别</td>
+              <td>年龄</td>
+              <td>联系电话</td>
+              <td>地区</td>
+              <td>操作</td>
+            </tr>
+            <tr class="inmainTable_res">
+              <td>1</td>
+              <td><input type="text" id="orgcity" name="orgcity" class="tba_input" value="555"></td>
+              <td class="form_td_ipt_100"><input type="text" id="name" name="name" class="tba_input" value="王小二"></td>
+              <td class="form_td_ipt_100"><select style="width: 60px;">
+              	<option>成人</option>
+              		<option>儿童</option>
+              </select></td>
+              <td class="form_td_ipt_100">
+              <select style="width: 70px;">
+              	<option>身份证</option>
+              		<option>护照</option>
+              		<option>其它</option>
+              </select></td>
+              <td class="form_td_ipt_100"><input type="text" id="idno" name="idno" class="tba_input" style="width: 120px;" value=""></td>
+              <td class="form_td_ipt_100">
+              <select>
+              <option>男</option>
+              		<option>女</option>
+              </select></td>	
+              	
+   
+              <td class="form_td_ipt_100"><input type="text" id="age" name="age" class="tba_input" style="width: 50px;" value=""></td>
+              <td class="form_td_ipt_100"><input type="text" id="tel" name="tel" class="tba_input" value=""></td>
+              <td class="form_td_ipt_100"><input type="text" id="city" name="city" class="tba_input" value=""></td>
+              <td class="form_td_ipt_100"><a href="#">删除</a></td>
+            </tr>
+            <tr class="inmainTable_res">
+              <td>1</td>
+              <td><input type="text" id="orgcity" name="orgcity" class="tba_input" value="555"></td>
+              <td class="form_td_ipt_100"><input type="text" id="name" name="name" class="tba_input" value="王小二"></td>
+              <td class="form_td_ipt_100"><select style="width: 60px;">
+              	<option>成人</option>
+              		<option>儿童</option>
+              </select></td>
+              <td class="form_td_ipt_100">
+              <select style="width: 70px;">
+              	<option>身份证</option>
+              		<option>护照</option>
+              		<option>其它</option>
+              </select></td>
+              <td class="form_td_ipt_100"><input type="text" id="idno" name="idno" class="tba_input" style="width: 120px;" value=""></td>
+              <td class="form_td_ipt_100">
+              <select>
+              <option>男</option>
+              		<option>女</option>
+              </select></td>	
+              	
+   
+              <td class="form_td_ipt_100"><input type="text" id="age" name="age" class="tba_input" style="width: 50px;" value=""></td>
+              <td class="form_td_ipt_100"><input type="text" id="tel" name="tel" class="tba_input" value=""></td>
+              <td class="form_td_ipt_100"><input type="text" id="city" name="city" class="tba_input" value=""></td>
+              <td class="form_td_ipt_100"><a href="#">删除</a></td>
+            </tr>
+            <tr class="inmainTable_res">
+              <td>1</td>
+              <td><input type="text" id="orgcity" name="orgcity" class="tba_input" value="555"></td>
+              <td class="form_td_ipt_100"><input type="text" id="name" name="name" class="tba_input" value="王小二"></td>
+              <td class="form_td_ipt_100"><select style="width: 60px;">
+              	<option>成人</option>
+              		<option>儿童</option>
+              </select></td>
+              <td class="form_td_ipt_100">
+              <select style="width: 70px;">
+              	<option>身份证</option>
+              		<option>护照</option>
+              		<option>其它</option>
+              </select></td>
+              <td class="form_td_ipt_100"><input type="text" id="idno" name="idno" class="tba_input" style="width: 120px;" value=""></td>
+              <td class="form_td_ipt_100">
+              <select>
+              <option>男</option>
+              		<option>女</option>
+              </select></td>	
+              	
+   
+              <td class="form_td_ipt_100"><input type="text" id="age" name="age" class="tba_input" style="width: 50px;" value=""></td>
+              <td class="form_td_ipt_100"><input type="text" id="tel" name="tel" class="tba_input" value=""></td>
+              <td class="form_td_ipt_100"><input type="text" id="city" name="city" class="tba_input" value=""></td>
+              <td class="form_td_ipt_100"><a href="#">删除</a></td>
+            </tr>
+            <tr class="inmainTable_res">
+              <td>1</td>
+              <td><input type="text" id="orgcity" name="orgcity" class="tba_input" value="555"></td>
+              <td class="form_td_ipt_100"><input type="text" id="name" name="name" class="tba_input" value="王小二"></td>
+              <td class="form_td_ipt_100"><select style="width: 60px;">
+              	<option>成人</option>
+              		<option>儿童</option>
+              </select></td>
+              <td class="form_td_ipt_100">
+              <select style="width: 70px;">
+              	<option>身份证</option>
+              		<option>护照</option>
+              		<option>其它</option>
+              </select></td>
+              <td class="form_td_ipt_100"><input type="text" id="idno" name="idno" class="tba_input" style="width: 120px;" value=""></td>
+              <td class="form_td_ipt_100">
+              <select>
+              <option>男</option>
+              		<option>女</option>
+              </select></td>	
+              	
+   
+              <td class="form_td_ipt_100"><input type="text" id="age" name="age" class="tba_input" style="width: 50px;" value=""></td>
+              <td class="form_td_ipt_100"><input type="text" id="tel" name="tel" class="tba_input" value=""></td>
+              <td class="form_td_ipt_100"><input type="text" id="city" name="city" class="tba_input" value=""></td>
+              <td class="form_td_ipt_100"><a href="#">删除</a></td>
+            </tr>
+                <tr class="inmainTable_res">
+              <td colspan="11"><a  class="ht_btn_blue_add pull-left MARGIN_R_10" href="javascript:void(0);">添加</a></td>
+           
+            </tr>
+          </table></td>
+      </tr>
+        </table>
+  </div>
+    </div>
+<div id="mask_shadow"></div>
+<script language="javascript" >
+ $(function() {
+	 
+		$("#ht_bottom_price_zone").show();
+				
+        	
+			
+});
+	
+	
+
+</script> 
+<script language="javascript">
+$(function () {
+
+  /**
+	  ifDrag: 是否拖拽
+	  dragLimit: 拖拽限制范围
+   */
+  $('#popup').popup({ifDrag: true, dragLimit: true});
+  
+});
+</script>
+</body>
+</html>
